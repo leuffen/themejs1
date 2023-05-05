@@ -1,0 +1,19 @@
+
+tt-container
+
+.tt-container-fluid {
+  --tjs-container: 'container-fluid';
+}
+
+.tt-section {
+  --tjs-attach: "root";
+
+  /* replace the Element with this code */
+  --tjs-replace-by: "@container > @row §row >| Hello World"
+}
+
+
+.tt-card {
+
+  --tjs-replace-by: "@card > @card-body >| Card Hello World"
+}

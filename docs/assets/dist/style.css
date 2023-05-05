@@ -1,0 +1,17 @@
+/*!*****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./style.scss ***!
+  \*****************************************************************************************************/
+@charset "UTF-8";
+tt-container .tt-container-fluid {
+  --tjs-container: "container-fluid";
+}
+
+.tt-section {
+  --tjs-attach: "root";
+  /* replace the Element with this code */
+  --tjs-replace-by: "@container > @row §row >| Hello World" ;
+}
+
+.tt-card {
+  --tjs-replace-by: "@card > @card-body >| Card Hello World" ;
+}
