@@ -31,7 +31,6 @@ export class TtContentComponent extends HTMLElement {
 
         Array.from(source.children).forEach((child) => {
             child.classList.forEach((className) => {
-                console.log("class", className);
 
                 let rule = getCSSRule("." + className);
 
@@ -43,9 +42,13 @@ export class TtContentComponent extends HTMLElement {
                         return;
                     }
                     let ret = commands[variable.name](variable.cmd, target, child);
-                    if (ret !== null)
+                    if (ret !== null) {
+                        ret.setAttribute("data-dodo-orig", child.tagName.toLowerCase() + "@" + child.getAttribute("class"));
                         child = ret as HTMLElement;
+                    }
+
                 });
+
                 target.appendChild(child);
             });
 

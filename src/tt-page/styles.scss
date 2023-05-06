@@ -1,5 +1,54 @@
 
-tt-container
+joda-content {
+  /* indicates the stylesheet is loaded */
+  --joda-init: 1;
+
+  &.debug {
+    * {
+      border: 1px solid red;
+      margin-left: 10px;
+      padding: 5px;
+    }
+  }
+}
+
+img {
+  --joda-wrap: "@image";
+
+  aspect-ratio: 1;
+
+  max-width: 100px;
+}
+
+
+
+.mask {
+  --mask-image: url(/assets/morphing.svg);
+  mask-image: var(--mask-image);
+  mask-mode: alpha;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
+h1 {
+  --joda-attach: "/";
+  --joda-box: "header";
+}
+
+h2 {
+  --joda-attach: "/";
+  --joda-box: "section"
+}
+
+hr {
+  --joda-attach: "&";
+  --joda-box: "style"
+}
+
+h3 {
+  --joda-attach: "row";
+  --joda-box: "col";
+}
 
 .tt-container-fluid {
   --tjs-container: 'container-fluid';
@@ -14,6 +63,13 @@ tt-container
 
 
 .tt-card {
+  --tjs-param-def--title: "Hier können Sie einen Titel eingeben";
+  --title: "Default Title";
 
-  --tjs-replace-by: "@card > @card-body >| Card Hello World"
+  --tjs-replace-by: "@card :: col-12 :xl: col-6 > @card-body >| Card Hello World"
+}
+
+
+.jau-form {
+
 }

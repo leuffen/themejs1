@@ -3,23 +3,42 @@ layout: default
 permalink: /
 ---
 
----
+
 
 
 # Willkommen in der Praxis Dr. med. Yvonne Fuchs
-{: .tt-section .tt-card}
+
+![](https://cdn.leuffen.de//leu-stock/v/54/992x661/AdobeStock_349906385.jpeg){: .mask}
+
+![](/assets/ani.svg)
 
 
 Welcome stuff of title section
 
 
 
----
-{: .tt-card}
+
+## Unsere Leistungen
+
+Some TExt
 
 
 ---
-{: .tt-row-h2}
+{: .row}
 
+### Leistung A
 
-# 
+aa
+
+### Leistung B
+aaa
+### Leistung C
+aaa
+
+## Über mich
+
+Some Text 2
+
+## Wurst und Bohnen
+
+Some Text 3
