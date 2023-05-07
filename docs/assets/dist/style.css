@@ -12,6 +12,10 @@ joda-content.debug * {
   padding: 5px;
 }
 
+* {
+  --joda-wrap: unset;
+}
+
 img {
   --joda-wrap: "@image";
   aspect-ratio: 1;
@@ -42,8 +46,8 @@ hr {
 }
 
 h3 {
-  --joda-attach: "row";
-  --joda-box: "col";
+  --joda-attach: "row @row";
+  --joda-box: "col @col";
 }
 
 .tt-container-fluid {

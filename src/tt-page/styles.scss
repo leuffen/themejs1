@@ -12,6 +12,10 @@ joda-content {
   }
 }
 
+* {
+  --joda-wrap: unset;
+}
+
 img {
   --joda-wrap: "@image";
 
@@ -46,8 +50,8 @@ hr {
 }
 
 h3 {
-  --joda-attach: "row";
-  --joda-box: "col";
+  --joda-attach: "row @row";
+  --joda-box: "col @col";
 }
 
 .tt-container-fluid {

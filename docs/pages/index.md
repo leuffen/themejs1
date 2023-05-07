@@ -24,7 +24,7 @@ Some TExt
 
 
 ---
-{: .row}
+{: .--row}
 
 ### Leistung A
 

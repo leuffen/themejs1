@@ -84,9 +84,53 @@ function getJodaParams (element : HTMLElement) : JodaCommand {
             console.warn("Joda command", value, "is undefined");
             return;
         }
+        if (styles.getPropertyValue(value) === getComputedStyle(element.parentElement).getPropertyValue(value)) {
+            // The value is not inherited (not original)
+            return;
+        }
+        console.log(element, value, styles.getPropertyValue(value), styles.getPropertyPriority(value));
         ret[value] = styles.getPropertyValue(value).replace(/\"(.*)\"/g, "$1").trim();
     });
     return ret;
+}
+
+
+function parseElementString(input : string) : {elementName: string|null, classes: string[], attributes: {[key: string]: string}} {
+    let ret = {
+        elementName: null,
+        classes: [],
+        attributes: {}
+    }
+    input = input.replace(/^([a-z\-_&\/]+)/i, (match, p1) => {ret.elementName = p1; return "";});
+
+    input = input.replace(/@(.*)/g, (match, p1 :string) => {
+        if (p1.includes("=")) {
+            p1.replace(/([a-z0-9\-_]+)\s*=(.*)/ig, (match, p1, p2) => ret.attributes[p1] = p2.trim());
+        } else {
+            p1.split(" ").filter((v) => v.trim() !== "").forEach((v) => ret.classes.push(v));
+        }
+        return "";
+    });
+    return ret;
+}
+
+function createElementFromString(input : string) : HTMLElement {
+    let elemStr = parseElementString(input);
+
+    if (elemStr.elementName === null) {
+        elemStr.elementName = "div";
+    }
+
+    elemStr.attributes["class"] += " " + elemStr.classes.join(" ");
+    if (elemStr.attributes.class.trim() === "") {
+        delete elemStr.attributes.class;
+    }
+    return ka_create_element(elemStr.elementName, elemStr.attributes);
+}
+
+
+function getElementTagName(elem : string) : string {
+    return ["div", "section", "article"].includes(elem) ? elem : "div";
 }
 
 
@@ -108,11 +152,13 @@ export class JodaContentComponent extends HTMLElement {
             if (child instanceof HTMLElement) {
                 console.log("input", child, getJodaParams(child))
                 let cmd = getJodaParams(child);
-                let jodaBoxName = cmd["--joda-box"];
-                let jodaBoxElementNames = ["article", "section" ]
-                if (jodaBoxName !== null) {
-                    let wrapperElement = ka_create_element(jodaBoxElementNames.includes(jodaBoxName) ? jodaBoxName : "div", {rel: jodaBoxName}) as HTMLDivElement;
-                    switch (cmd["--joda-attach"]) {
+                let jodaBoxDef = parseElementString(cmd["--joda-box"] ?? "");
+
+                if (jodaBoxDef.elementName !== null) {
+                    let wrapperElement = ka_create_element(getElementTagName(jodaBoxDef.elementName), {rel: jodaBoxDef.elementName, class: jodaBoxDef.classes.join(" ")});
+
+                    let jodaAttachDef = parseElementString(cmd["--joda-attach"] ?? "");
+                    switch (jodaAttachDef.elementName) {
                         case "/":
                             // Attach to root element
                             parents.length = 0;
@@ -125,23 +171,23 @@ export class JodaContentComponent extends HTMLElement {
                             break;
                         case "&":
                             // Attach to the last position the same Box was attached or current element if it is the first time
-                            if (boxMap[cmd["--joda-box"]] === undefined) {
-                                boxMap[cmd["--joda-box"]] = currentParent;
+                            if (boxMap[jodaAttachDef.elementName] === undefined) {
+                                boxMap[jodaAttachDef.elementName] = currentParent;
                             }
-                            boxMap[cmd["--joda-box"]].appendChild(wrapperElement);
+                            boxMap[jodaAttachDef.elementName].appendChild(wrapperElement);
                             currentParent = wrapperElement;
                             break;
                         default:
                             // Find the element
-                            while (parents.length > 0 && parents[parents.length - 1].name !== cmd["--joda-attach"]) {
+                            while (parents.length > 0 && parents[parents.length - 1].name !== jodaAttachDef.elementName) {
                                 parents.pop();
                             }
                             if (parents.length === 0) {
                                 // Create the parent Todo: Use a Template for creating one
-                                let jodaAttachName = cmd["--joda-attach"];
-                                let parentElement = ka_create_element(jodaBoxElementNames.includes(jodaAttachName) ? jodaAttachName : "div", {rel: jodaAttachName}) as HTMLDivElement;
+
+                                let parentElement = ka_create_element(getElementTagName(jodaAttachDef.elementName), {rel: jodaAttachDef.elementName, class: jodaAttachDef.classes}) as HTMLDivElement;
                                 currentParent.appendChild(parentElement);
-                                parents.push({name: jodaAttachName, element: parentElement});
+                                parents.push({name: jodaAttachDef.elementName, element: parentElement});
                             }
                             currentParent = parents[parents.length - 1].element;
                             currentParent.appendChild(wrapperElement);
@@ -150,7 +196,7 @@ export class JodaContentComponent extends HTMLElement {
 
                     }
                     // register the current element as a parent
-                    parents.push({name: jodaBoxName, element: wrapperElement});
+                    parents.push({name: jodaBoxDef.elementName, element: wrapperElement});
                     currentParent.appendChild(child);
                     return;
                 }
