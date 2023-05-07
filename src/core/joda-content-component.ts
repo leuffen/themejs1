@@ -197,12 +197,12 @@ export class JodaContentComponent extends HTMLElement {
                     }
                     // register the current element as a parent
                     parents.push({name: jodaBoxDef.elementName, element: wrapperElement});
-                    currentParent.appendChild(child);
+                    currentParent.appendChild(child.cloneNode(true));
                     return;
                 }
 
             }
-            currentParent.appendChild(child);
+            currentParent.appendChild(child.cloneNode(true));
 
 
         });

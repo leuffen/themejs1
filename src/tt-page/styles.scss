@@ -44,6 +44,12 @@ h2 {
   --joda-box: "section"
 }
 
+
+h2:nth-of-type(2) {
+  --joda-attach: "/";
+  --joda-box: "section @bg-primary";
+}
+
 hr {
   --joda-attach: "&";
   --joda-box: "style"
