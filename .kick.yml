@@ -19,7 +19,7 @@ command:
 
   init-workspaces:
     - "mkdir -p workspaces"
-    - "git -C ./workspaces/ clone  git@github.com:dermatthes/leu-web-components.git"
+    - "git -C ./workspaces/ clone  git@github.com:leuffen/jodastyle.git"
     - "npm install"
 
   update:

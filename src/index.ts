@@ -1,4 +1,5 @@
 
 
-import "./core/tt-content";
-import "./core/joda-content-component"
+import "@leuffen/jodastyle";
+
+import "./template/navbar/navbar";

@@ -24,9 +24,10 @@ Some TExt
 
 
 ---
-{: .--row}
+{: .row}
 
 ### Leistung A
+{: .col-12}
 
 aa
 
@@ -42,3 +43,9 @@ Some Text 2
 ## Wurst und Bohnen
 
 Some Text 3
+
+
+## Unsere Leistungen
+
+Some TExt
+

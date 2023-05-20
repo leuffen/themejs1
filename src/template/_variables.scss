@@ -1,0 +1,14 @@
+
+$primary: #007bff !default;
+$secondary: #6c757d !default;
+$light: #f8f9fa !default;
+
+
+$as-mainbar-bg: white !default;
+$as-minibar-color: $primary !default;
+
+
+:root {
+  --as-minibar-color: $as-minibar-color;
+  --as-mainbar-color: $as-mainbar-bg;
+}

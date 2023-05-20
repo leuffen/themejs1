@@ -1,72 +1,114 @@
 /*!*********************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./style.scss ***!
   \*********************************************************************************************************************************/
-@charset "UTF-8";
-joda-content {
-  /* indicates the stylesheet is loaded */
-  --joda-init: 1;
-}
-joda-content.debug * {
-  border: 1px solid red;
-  margin-left: 10px;
-  padding: 5px;
+:root {
+  --as-minibar-color: $as-minibar-color;
+  --as-mainbar-color: $as-mainbar-bg;
 }
 
-* {
-  --joda-wrap: unset;
+.navbar {
+  --joda-use: navbar();
 }
 
-img {
-  --joda-wrap: "@image";
-  aspect-ratio: 1;
-  max-width: 100px;
+.as__navbar {
+  height: auto;
+  top: 0;
+  width: 100%;
+  transition: opacity 1s ease-in-out;
+  position: fixed;
+  z-index: 999;
+  isolation: isolate;
+  opacity: 1;
+}
+.as__navbar.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.as__navbar.absolute {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.as__navbar.auto-fixed.scrolled {
+  opacity: 0;
+}
+.as__navbar.auto-fixed.scrolled.fixed {
+  opacity: 1;
+  position: fixed;
+}
+.as__navbar .as__minibar {
+  background-color: var(--as-minibar-color);
+  height: var(--as-minibar-height, 24px);
+  transition: height 0.3s ease-in-out;
+  z-index: 9999;
+}
+.as__navbar .as__minibar ul {
+  text-align: right;
+  text-decoration: none;
+  list-style-type: none;
+}
+.as__navbar .as__minibar ul li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+.as__navbar .as__minibar ul li a {
+  text-decoration: none;
+  color: var(--as-minibar-text-color);
+}
+.as__navbar .as__minibar ul li a:hover {
+  text-decoration: underline;
+}
+.as__navbar .as__mainbar .nav-link {
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
+}
+.as__navbar .as__mainbar .navbar-collapse.show {
+  background-color: var(--as-mainbar-bg, white);
+}
+.as__navbar .as__mainbar .navbar-toggler {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-.mask {
-  --mask-image: url(/assets/morphing.svg);
-  mask-image: var(--mask-image);
-  mask-mode: alpha;
-  mask-size: contain;
-  mask-repeat: no-repeat;
+.as__navbar.scrolled .as__minibar {
+  height: 0;
 }
 
-h1 {
-  --joda-attach: "/";
-  --joda-box: "header";
+/* Theme specific styles */
+.as__navbar.default .as__mainbar {
+  background-color: var(--as-mainbar-bg, white);
+  border-bottom: 1px solid #007bff;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.as__navbar.default .as__minibar {
+  font-size: 13px;
+  line-height: 24px;
+  background-color: var(--as-minibar-bg, #007bff);
+}
+.as__navbar.default .as__minibar a {
+  color: white;
 }
 
-h2 {
-  --joda-attach: "/";
-  --joda-box: "section" ;
+.as__navbar.transparent .as__minibar {
+  border: 0;
+  font-size: 13px;
+  line-height: 24px;
+}
+.as__navbar.transparent .as__mainbar {
+  background-color: transparent !important;
+  transition: all 0.3s ease-in-out;
+  border: 0;
+}
+.as__navbar.transparent .as__mainbar a {
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px #f8f9fa, -1px -1px 1px #f8f9fa, 1px -1px 1px #f8f9fa, -1px 1px 1px #f8f9fa;
 }
 
-h2:nth-of-type(2) {
-  --joda-attach: "/";
-  --joda-box: "section @bg-primary";
+.as__navbar.transparent.scrolled .as__mainbar {
+  background-color: var(--as-mainbar-bg, white) !important;
+  border-bottom: 1px solid #007bff;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
-
-hr {
-  --joda-attach: "&";
-  --joda-box: "style" ;
-}
-
-h3 {
-  --joda-attach: "row @row";
-  --joda-box: "col @col";
-}
-
-.tt-container-fluid {
-  --tjs-container: "container-fluid";
-}
-
-.tt-section {
-  --tjs-attach: "root";
-  /* replace the Element with this code */
-  --tjs-replace-by: "@container > @row §row >| Hello World" ;
-}
-
-.tt-card {
-  --tjs-param-def--title: "Hier können Sie einen Titel eingeben";
-  --title: "Default Title";
-  --tjs-replace-by: "@card :: col-12 :xl: col-6 > @card-body >| Card Hello World" ;
+.as__navbar.transparent.scrolled .as__minibar {
+  height: 0;
 }
