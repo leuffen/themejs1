@@ -50,12 +50,11 @@ export class NavbarLayout extends DefaultLayout {
 }
 
 
-@jodaRenderer("navbar")
+@jodaRenderer("navbar", NavbarLayout)
 class Navbar implements JodaRendererInterface {
 
     public render(element: HTMLElement, layout: NavbarLayout) {
-        layout = Object.assign(new NavbarLayout(), layout);
-
+        console.log(layout);
 
         let original = element.cloneNode(true) as HTMLElement;
 
@@ -106,10 +105,10 @@ class Navbar implements JodaRendererInterface {
 
         window.setInterval(() => {
             if (window.scrollY > 0 && !scolled) {
-                result.firstElementChild.classList.add("scrolled");
+                result.classList.add("scrolled");
                 scolled = true;
             } else if (window.scrollY === 0 && scolled) {
-                result.firstElementChild.classList.remove("scrolled");
+                result.classList.remove("scrolled");
                 scolled = false;
             } else {
                 // nothing
@@ -117,10 +116,10 @@ class Navbar implements JodaRendererInterface {
             if (layout.fixed_scroll_distance === null)
                 return;
             if (window.scrollY > layout.fixed_scroll_distance && !fixed) {
-                result.firstElementChild.classList.add("fixed");
+                result.classList.add("fixed");
                 fixed = true;
             } else if (window.scrollY <= layout.fixed_scroll_distance && fixed) {
-                result.firstElementChild.classList.remove("fixed");
+                result.classList.remove("fixed");
                 fixed = false;
             }
         }, 300)

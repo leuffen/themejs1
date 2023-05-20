@@ -1,13 +1,17 @@
-/*!*********************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./style.scss ***!
-  \*********************************************************************************************************************************/
-:root {
-  --as-minibar-color: $as-minibar-color;
-  --as-mainbar-color: $as-mainbar-bg;
+/*!**************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./demo/style.scss ***!
+  \**************************************************************************************************************************************/
+.row > div {
+  --joda-class: "col";
 }
 
-.navbar {
-  --joda-use: navbar();
+:root {
+  --as-minibar-color: #007bff;
+  --as-mainbar-color: $as-mainbar-color;
+}
+
+joda-content {
+  --joda-init: true;
 }
 
 .as__navbar {
@@ -38,6 +42,7 @@
   position: fixed;
 }
 .as__navbar .as__minibar {
+  overflow: hidden;
   background-color: var(--as-minibar-color);
   height: var(--as-minibar-height, 24px);
   transition: height 0.3s ease-in-out;
@@ -111,4 +116,75 @@
 }
 .as__navbar.transparent.scrolled .as__minibar {
   height: 0;
+}
+
+.hc-section .section-1 {
+  background-color: #007bff;
+}
+
+.hc-section .odd {
+  background-color: #007bff;
+}
+
+.hc-section .even {
+  background-color: #007bff;
+}
+
+.as__hero1 .full_height {
+  min-height: max(100vh - 0px, 600px);
+}
+.as__hero1 .v-hide {
+  visibility: hidden;
+}
+.as__hero1 .as__hero1_content-row.mobile {
+  min-height: 66vh;
+  align-content: center;
+}
+.as__hero1 .as__hero1_image-mobile img {
+  max-height: 60vh;
+  height: 100%;
+  width: 100%;
+  min-height: 33vh;
+  min-width: inherit;
+  object-fit: cover;
+  object-position: center center;
+}
+.as__hero1 .as__hero1_image {
+  overflow: hidden;
+}
+.as__hero1 .as__hero1_image img {
+  height: 100%;
+  width: 100%;
+  min-height: inherit;
+  min-width: inherit;
+  object-fit: cover;
+  object-position: center center;
+}
+.as__hero1 .image-overlay {
+  background-color: var(--as-image-overlay-color);
+  top: 0;
+  z-index: 999;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.as__hero1 .image-overlay.overlay-fade {
+  background-color: unset;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(255, 255, 255));
+}
+
+nav {
+  --joda-use: navbar();
+  --layout-brand-logo: '<img src="">';
+  --layout-container: container-fluid;
+}
+
+.section-h1 {
+  --joda-use: hero1();
+  --layout-break1: "xl";
+}
+
+:root {
+  --layout-navbar-color: #fff;
+  --layout-minibar-color: #007bff;
 }

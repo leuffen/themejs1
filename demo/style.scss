@@ -1,0 +1,19 @@
+
+
+@import "../style";
+
+nav {
+  --joda-use: navbar();
+  --layout-brand-logo: '<img src="">';
+  --layout-container: container-fluid;
+}
+
+.section-h1 {
+  --joda-use: hero1();
+  --layout-break1: "xl";
+}
+
+:root {
+  --layout-navbar-color: #fff;
+  --layout-minibar-color: #007bff;
+}

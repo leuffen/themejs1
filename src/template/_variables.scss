@@ -4,11 +4,26 @@ $secondary: #6c757d !default;
 $light: #f8f9fa !default;
 
 
-$as-mainbar-bg: white !default;
+$as-mainbar-color: white !default;
 $as-minibar-color: $primary !default;
+
+$content-height-adjustment: 0px !default;
+$min-page-height: 600px !default;
+
+.row {
+  & > div {
+    --joda-class: 'col';
+
+  }
+}
 
 
 :root {
-  --as-minibar-color: $as-minibar-color;
-  --as-mainbar-color: $as-mainbar-bg;
+  --as-minibar-color: #007bff;
+  --as-mainbar-color: $as-mainbar-color;
+}
+
+
+joda-content {
+  --joda-init: true;
 }

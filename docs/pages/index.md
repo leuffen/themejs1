@@ -8,9 +8,9 @@ permalink: /
 
 # Willkommen in der Praxis Dr. med. Yvonne Fuchs
 
-![](https://cdn.leuffen.de//leu-stock/v/54/992x661/AdobeStock_349906385.jpeg){: .mask}
+![](https://cdn.leuffen.de//leu-stock/v/54/992x661/AdobeStock_349906385.jpeg){: .background}
 
-![](/assets/ani.svg)
+
 
 
 Welcome stuff of title section
