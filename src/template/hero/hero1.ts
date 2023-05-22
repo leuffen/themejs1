@@ -1,6 +1,5 @@
 import {ka_html, KaTemplate} from "@kasimirjs/embed";
-import {DefaultLayout} from "../../core/DefaultLayout";
-import {jodaRenderer, JodaRendererInterface, JodaUseRenderer} from "@leuffen/jodastyle";
+import {DefaultLayout, jodaRenderer, JodaRendererInterface, JodaUseRenderer} from "@leuffen/jodastyle";
 import {QTemplate} from "@leuffen/jodastyle/src/helper/QTemplate";
 
 
