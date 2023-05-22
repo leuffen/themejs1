@@ -18,7 +18,7 @@
   ],
   "author": "",
   "dependencies": {
-    "@leuffen/jodastyle": "*"
+    "@leuffen/jodastyle": "^1.0.1"
   },
   "devDependencies": {
     "dart-sass": "^1.25.0",
