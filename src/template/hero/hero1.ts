@@ -1,10 +1,4 @@
-import {AutosectionInterface} from "../../autosection-interface";
 import {ka_html, KaTemplate} from "@kasimirjs/embed";
-import {autoSectionConfig} from "../../autosection-defaults";
-import {HcAutosection} from "../../hc-autosection";
-import {AsDefaultLayout, AsLayoutInterface} from "../../as-default-layout";
-import {AsTemplate} from "../../functions";
-import {parseAttributeMethod} from "../../methods";
 import {DefaultLayout} from "../../core/DefaultLayout";
 import {jodaRenderer, JodaRendererInterface, JodaUseRenderer} from "@leuffen/jodastyle";
 import {QTemplate} from "@leuffen/jodastyle/src/helper/QTemplate";
