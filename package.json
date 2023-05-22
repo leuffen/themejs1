@@ -1,5 +1,5 @@
 {
-  "name": "@leu/themejs1",
+  "name": "@leuffen/themejs1",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
@@ -10,7 +10,8 @@
   },
   "files": [
     "/dist",
-    "/src"
+    "/src",
+    "*.scss"
   ],
   "workspaces": [
     "workspaces/*"
