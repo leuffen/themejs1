@@ -1,16 +1,8 @@
 
-
-.hc-section .section-1 {
-    background-color: $primary;
+:root {
+    --layout-hero-offset: 100px;
+    --layout-hero-style: fullsize;
 }
-.hc-section .odd {
-    background-color: $primary;
-}
-.hc-section .even {
-    background-color: $primary;
-}
-
-
 
 
 .as__hero1 {
@@ -18,7 +10,7 @@
         min-height: max(calc(100vh - $content-height-adjustment), $min-page-height);
     }
 
-
+    margin-top: var(--layout-hero-offset);
 
 
     .v-hide {

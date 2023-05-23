@@ -5,7 +5,7 @@ import {QTemplate} from "@leuffen/jodastyle/src/helper/QTemplate";
 
 // language=HTML
 const tpl = ka_html(`
-<div class="autosection as__hero1 position-relative" style="isolation: isolate">
+<div class="as__hero1 position-relative" style="isolation: isolate">
     <div class="as__hero1_image-mobile :: d-block :[[layout.break1]]: d-none   col-[[12 - layout.content_cols]] " data-ref="image-mobile"></div>
 
     <div class="[[layout.container]] ">

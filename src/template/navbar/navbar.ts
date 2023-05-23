@@ -6,7 +6,7 @@ import {QTemplate} from "@leuffen/jodastyle/src/helper/QTemplate";
 
 // language=HTML
 const tpl = ka_html(`
-<nav class="as__navbar [[layout.position]]" style="z-index: 999">
+<nav class="as__navbar [[layout.style]] [[layout.position]]" style="z-index: 999">
 
     <div id="as__minibar" class="as__minibar top" >
         <div class="[[layout.container]]" data-ref="minibar"></div>
@@ -35,7 +35,7 @@ export class NavbarLayout extends DefaultLayout {
      * a additional class name added to the main element
      * to allow for custom styling. Defaults to "default" (see as-navbar.scss for details)
      */
-    style_class = "default";
+    style = "default";
 
     /**
      * default position: Fixed on top
@@ -98,7 +98,7 @@ class Navbar implements JodaRendererInterface {
         if (layout.fixed_scroll_distance !== null)
             result.firstElementChild.classList.add("auto-fixed");
 
-        result.firstElementChild.classList.add(layout.style_class);
+        result.firstElementChild.classList.add(layout.style);
         let scolled = false;
         let fixed = false;
 

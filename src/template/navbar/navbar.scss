@@ -1,4 +1,10 @@
-
+:root {
+    --layout-navbar-style: default;
+    --layout-navbar-position: fixed;
+    --as-minibar-height: 24px;
+    --as-minibar-background: #21446b;
+    --as-minibar-text-color: #6c757d;
+}
 
 
 .as__navbar {
@@ -36,7 +42,7 @@
 
     .as__minibar {
         overflow: hidden;
-        background-color: var(--as-minibar-color);
+        background: var(--as-minibar-background);
         height: var(--as-minibar-height, 24px);
         transition: height 0.3s ease-in-out;
         z-index: 9999;
@@ -66,7 +72,7 @@
         }
 
         .navbar-collapse.show {
-            background-color: var(--as-mainbar-bg, white);
+            background-color: var(--as-mainbar-background, white);
 
         }
         .navbar-toggler {
@@ -85,14 +91,14 @@
 .as__navbar.default {
 
     .as__mainbar {
-        background-color: var(--as-mainbar-bg, white);
+        background-color: var(--as-mainbar-background, white);
         border-bottom: 1px solid $primary;
         box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
     }
     .as__minibar {
         font-size: 13px;
         line-height: 24px;
-        background-color: var(--as-minibar-bg, $primary);
+        background: var(--as-minibar-background, $primary);
         a {
             color: white;
         }
@@ -122,7 +128,7 @@
 }
 .as__navbar.transparent.scrolled {
     .as__mainbar {
-        background-color: var(--as-mainbar-bg, white) !important;
+        background-color: var(--as-mainbar-background, white) !important;
         border-bottom: 1px solid $primary;
         box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 
