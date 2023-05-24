@@ -2,12 +2,13 @@
 :root {
     --layout-hero-offset: 100px;
     --layout-hero-style: fullsize;
+    --as-hero-height-adjustement: var(--layout-hero-offset);
 }
 
 
 .as__hero1 {
     .full_height {
-        min-height: max(calc(100vh - $content-height-adjustment), $min-page-height);
+        min-height: max(calc(100vh - var(--as-hero-height-adjustement)), $min-page-height);
     }
 
     margin-top: var(--layout-hero-offset);

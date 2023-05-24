@@ -1,0 +1,18 @@
+
+:root {
+    --icontext-color: #0d6efd;
+}
+
+
+.as__textstyle-icontext {
+    position:relative;
+    .text {
+      padding-top: 1.2rem;
+      padding-left: 3rem !important;
+    }
+    .icon {
+      font-size: 38px;
+      //color: var(--icontext-color, #0d6efd);
+      position: absolute;
+    }
+}

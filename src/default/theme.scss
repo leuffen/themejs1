@@ -11,24 +11,42 @@ footer {
     --joda-use: footer();
     --joda-class: dark;
 }
+.website {
+    section.section-h1 {
+        --joda-use: hero1();
+        background: white;
+    }
 
-section.section-h1 {
-    --joda-use: hero1();
-    background: white;
-}
+    :nth-child(1 of section.section-h2) {
+        --joda-use: col2();
 
-:nth-child(1 of section.section-h2) {
-    --joda-use: col2();
+        .section-h3 {
+            --joda-class: col;
+            --joda-group: @row;
+            --joda-use: textstyle(template:'icontext');
 
-    .section-h3 {
-        --joda-class: col-xl-6;
-        --joda-group: @row;
+            &.col {
+                min-width: 300px;
+            }
+        }
+    }
+
+    section.section-h2 {
+        margin-top: var(--section-spacing);
     }
 }
 
-section.section-h2 {
-    margin-top: var(--section-spacing);
+.article {
+    section.section-h1 {
+        --joda-use: hero1();
+        background: white;
+    }
+
+    section.section-h2 {
+        --joda-use: textstyle(template:'icontext');
+    }
 }
+
 
 .dark {
     h1,h2,h3,h4,h5,h6,p,span,li,td,th,a {

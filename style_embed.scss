@@ -1,1 +1,19 @@
 
+@import "@leuffen/jodastyle/style_embed";
+@import "src/default/loader";
+
+body > * {
+  display: none;
+}
+body.loaded > * {
+  display: block;
+}
+
+body {
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+body.loaded {
+  opacity: 1;
+}

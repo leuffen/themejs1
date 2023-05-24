@@ -1,0 +1,32 @@
+html::before {
+  content: "Seite lädt...";
+  font-family: sans-serif;
+  font-size: 12px;
+  line-height: 10px;
+  position: fixed;
+  text-align: center;
+  color: white;
+  margin-top: 1px;
+  -webkit-animation: leu--site-loader 60s ease-out;
+  animation: leu--site-loader 60s ease-out;
+  display: block;
+  background-color: gray;
+  height: 12px;
+  width: 2%;
+}
+
+@keyframes leu--site-loader {
+  3% {
+    width: 2%;
+
+  }
+  5% {
+    width: 50%;
+  }
+  10% {
+    width: 80%;
+  }
+  100% {
+    width: 100%;
+  }
+}

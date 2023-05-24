@@ -65,9 +65,10 @@ class Hero1 implements JodaRendererInterface {
             main.select("image-mobile").append(el);
         });
 
-        console.log("hero1");
 
-        main.select("main").append(element.querySelector("*"))
+        Array.from(element.children).forEach((el: HTMLElement) => {
+            main.select("main").append(el);
+        })
         element.innerHTML = "";
         element.append(main.content);
         return main.content;
