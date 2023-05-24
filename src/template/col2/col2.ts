@@ -4,7 +4,7 @@ import {QTemplate} from "@leuffen/jodastyle/src/helper/QTemplate";
 
 class Col2Layout extends DefaultLayout {
 
-    public order: string = "row-reverse";
+    public order: string = "";
 
     public cols: number = 8;
 
@@ -15,9 +15,9 @@ class Col2Layout extends DefaultLayout {
 // language=HTML
 const tpl = `
 <div class="as__2col [[layout.container]]">
-    <div class="row [[layout.order]]">
-        <div class=":: col-12 :[[layout.break1]]: col-[[ layout.cols ]] " data-ref="main"></div>
-        <div class=":: col-12 :[[layout.break1]]: col-[[ 12-layout.cols ]]" data-ref="side">[[ layout.side_content]]</div>
+    <div class="row [[layout.order]] ">
+        <div class=":: col-12 order-2 :[[layout.break1]]: col-[[ layout.cols ]] " data-ref="main"></div>
+        <div class=":: col-12 order-1 :[[layout.break1]]: col-[[ 12-layout.cols ]]" data-ref="side">[[ layout.side_content]]</div>
     </div>
     
 </div>

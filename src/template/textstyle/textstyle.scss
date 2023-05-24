@@ -1,6 +1,6 @@
 
 :root {
-    --icontext-color: #0d6efd;
+    --icontext-color: #{$primary};
 }
 
 
@@ -12,7 +12,7 @@
     }
     .icon {
       font-size: 38px;
-      //color: var(--icontext-color, #0d6efd);
+      color: var(--icontext-color, $primary);
       position: absolute;
     }
 }

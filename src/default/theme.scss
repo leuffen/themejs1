@@ -18,6 +18,10 @@ map {
     --joda-use: map();
 }
 
+h2,h3 {
+    color: var(--as-primary-text-color, $primary);
+}
+
 section.section-h2 {
     padding-top: var(--as-section-padding, 2rem);
     padding-bottom: var(--as-section-padding, 2rem);
@@ -43,7 +47,18 @@ section.section-h2 {
             }
         }
     }
+    section.section-h2 {
+        --joda-use: autocontent();
 
+        .section-h3 {
+            --joda-class: col;
+            --joda-group: @row;
+
+            &.col {
+                min-width: 300px;
+            }
+        }
+    }
 
 }
 
@@ -84,7 +99,7 @@ section.section-h2:nth-child(even) {
 
 
 .sprechzeiten {
-    --joda-wrap: '@card > @card-body';
+    --joda-wrap: '@card @mb-5 > @card-body';
     --joda-class: text-center;
     h3 {
         --joda-class: text-center mb-3;
