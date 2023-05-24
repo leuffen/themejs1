@@ -53,7 +53,7 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
     },
-    //devtool: 'source-map',
+    devtool: 'source-map',
     mode: "development",
     devServer: {
         static: {

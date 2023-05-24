@@ -1,6 +1,8 @@
 :root {
     --layout-break1: xl;
     --section-spacing: 4.5rem;
+    --background-light: #ffffff;
+    --as-section-spacing: 4.5rem;
 }
 
 nav {
@@ -11,6 +13,17 @@ footer {
     --joda-use: footer();
     --joda-class: dark;
 }
+
+map {
+    --joda-use: map();
+}
+
+section.section-h2 {
+    padding-top: var(--as-section-padding, 2rem);
+    padding-bottom: var(--as-section-padding, 2rem);
+}
+
+
 .website {
     section.section-h1 {
         --joda-use: hero1();
@@ -31,22 +44,31 @@ footer {
         }
     }
 
-    section.section-h2 {
-        margin-top: var(--section-spacing);
-    }
+
 }
 
 .article {
     section.section-h1 {
-        --joda-use: hero1();
-        background: white;
+        --joda-use: header();
+
     }
 
     section.section-h2 {
-        --joda-use: textstyle(template:'icontext');
+
+        --joda-use: autocontent();
+
+        .section-h3 {
+            --joda-group: @row;
+            --joda-class: col g-5;
+            min-width: 500px;
+        }
     }
+
 }
 
+section.section-h2:nth-child(even) {
+    background: var(--background-light);
+}
 
 .dark {
     h1,h2,h3,h4,h5,h6,p,span,li,td,th,a {

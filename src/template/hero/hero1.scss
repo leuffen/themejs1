@@ -10,6 +10,8 @@
     .full_height {
         min-height: max(calc(100vh - var(--as-hero-height-adjustement)), $min-page-height);
     }
+    border-bottom: 10px solid;
+    border-bottom-color: var(--as--border-color, $primary);
 
     margin-top: var(--layout-hero-offset);
 
