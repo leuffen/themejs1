@@ -6,12 +6,12 @@ import {QTemplate} from "@leuffen/jodastyle/src/helper/QTemplate";
 // language=HTML
 const tpl = ka_html(`
 <div class="as__hero1 position-relative" style="isolation: isolate">
-    <div class="as__hero1_image-mobile :: d-block :[[layout.break1]]: d-none   col-[[12 - layout.content_cols]] " data-ref="image-mobile"></div>
+    <div class="as__hero1_image-mobile :: d-block :[[layout.break1]]: d-none   col-[[12 - layout.cols]] " data-ref="image-mobile"></div>
 
     <div class="[[layout.container]] ">
         <div class="as__hero1_content-row row :: mobile :[[layout.break1]]: full_height align-items-center">
             
-            <div class="as__hero1_content [[layout.content_classes]] [[layout.content_space]] :: col-12 :[[layout.break1]]:  col-[[layout.content_cols]] " data-ref="main"></div>
+            <div class="as__hero1_content [[layout.content_classes]] :: col-12 :[[layout.break1]]:  col-[[layout.cols]] " data-ref="main"></div>
         </div>
     </div>
     <div class="position-absolute top-0 bottom-0 w-100" style="z-index: -1">
@@ -34,9 +34,7 @@ export class HeroLayout extends DefaultLayout {
     /**
      * Columns of the content overlay
      */
-    content_cols : number = 6
-
-    content_space : string = "my-5"
+    cols : number = 6
 
     /**
      * set Classes of the content div

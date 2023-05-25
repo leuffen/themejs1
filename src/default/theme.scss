@@ -18,19 +18,25 @@ map {
     --joda-use: map();
 }
 
+h1 {
+    font-weight: 100;
+    font-style: normal;
+}
 h2,h3 {
     color: var(--as-primary-text-color, $primary);
 }
 
 section.section-h2 {
-    padding-top: var(--as-section-padding, 2rem);
-    padding-bottom: var(--as-section-padding, 2rem);
+    padding-top: var(--as-section-padding, 3rem);
+    padding-bottom: var(--as-section-padding, 3rem);
 }
 
 
 .website {
     section.section-h1 {
         --joda-use: hero1();
+        --layout-cols: 6;
+        --layout-image-cols: 6;
         background: white;
     }
 

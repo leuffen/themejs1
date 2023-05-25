@@ -1,19 +1,21 @@
 
 :root {
-    --layout-hero-offset: 100px;
+
     --layout-hero-style: fullsize;
-    --as-hero-height-adjustement: var(--layout-hero-offset);
+    --as-hero-offset: 110px;
+    --as-hero-height-adjustement: 10px;
+    --as-min-hero-height: 500px;
 }
 
 
 .as__hero1 {
     .full_height {
-        min-height: max(calc(100vh - var(--as-hero-height-adjustement)), $min-page-height);
+        min-height: max(calc(100svh - var(--as-hero-height-adjustement) - var(--as-hero-offset)), var(--as-min-hero-height));
     }
     border-bottom: 10px solid;
     border-bottom-color: var(--as--border-color, $primary);
 
-    margin-top: var(--layout-hero-offset);
+    margin-top: var(--as-hero-offset);
 
 
     .v-hide {
@@ -28,10 +30,10 @@
 
     .as__hero1_image-mobile {
         img {
-            max-height: 60vh;
+            max-height: 60svh;
             height: 100%;
             width: 100%;
-            min-height: 33vh;
+            min-height: 33svh;
             min-width: inherit;
             object-fit: cover;
             object-position: center center;
