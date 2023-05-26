@@ -174,6 +174,13 @@ joda-content {
   text-decoration: none;
   list-style: none;
 }
+.as__footer .as__footer-minifooter {
+  text-align: left;
+  margin-top: 2rem;
+}
+.as__footer .as__footer-minifooter > * {
+  margin-bottom: 0;
+}
 
 :root {
   --as-layout-offset-top: 100px;
@@ -301,6 +308,7 @@ nav {
 footer {
   --joda-use: footer();
   --joda-class: dark;
+  --layout-minifooter: #minifooter;
 }
 
 map {
