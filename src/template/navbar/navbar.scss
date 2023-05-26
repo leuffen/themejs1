@@ -7,6 +7,10 @@
 }
 
 
+.do-navbar {
+    --joda-use: navbar();
+}
+
 .as__navbar {
     height: auto;
     top: 0;

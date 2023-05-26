@@ -17,6 +17,10 @@ joda-content {
   --as-minibar-text-color: white;
 }
 
+.do-navbar {
+  --joda-use: navbar();
+}
+
 .as__navbar {
   height: auto;
   top: 0;
@@ -119,6 +123,10 @@ joda-content {
 }
 .as__navbar.transparent.scrolled .as__minibar {
   height: 0;
+}
+
+.do-map {
+  --joda-use: map();
 }
 
 .as__map {

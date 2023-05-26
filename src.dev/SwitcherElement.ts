@@ -1,5 +1,7 @@
 import {customElement, KaCustomElement, KaCustomWrapper, template} from "@kasimirjs/embed";
 import {ka_session_storage} from "@kasimirjs/embed";
+import {JodaDescriptionManager} from "@leuffen/jodastyle";
+
 
 // language=HTML
 const tpl = `
@@ -30,7 +32,7 @@ const tpl = `
             background: linear-gradient(90deg, rgb(68, 63, 63) 0%, rgba(0, 0, 0, 1) 100%);
             z-index: 99999;
             color: #fff;
-            border-radius: 10% 0 0 10%;
+            border-radius: 20% 0 0 20%;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
             opacity: 0.8;
             transition: opacity 0.3s ease-in-out;
@@ -88,7 +90,6 @@ export class SwitcherElement extends KaCustomWrapper {
         if (config === null)
             config = new SidebarConfig();
 
-        console.log(config);
         let state = ka_session_storage({active: false}, "switcher-element");
         let scope = this.init({
             state: state,
@@ -111,18 +112,62 @@ export class SwitcherElement extends KaCustomWrapper {
 
 }
 
+// language=HTML
+const tpl2 = `
+<div>
+    <select ka.options="$scope.desc" ka.bind="$scope.className" style="width:100%"></select>
+    <input ka.bind="$scope.text">
+</div>
+`;
+
+
 @customElement("switcher-element")
-@template("<b>Hello World</b>")
+@template(tpl2)
 class SubElement extends KaCustomElement {
     static html;
     constructor() {
         super();
         this.wrap(new SwitcherElement());
 
+        console.log(JodaDescriptionManager.classes);
         let scope = this.init({
-
+            desc: JodaDescriptionManager.classes,
+            text: "test",
+            className: "test",
+            $on: {
+                change: (e) => {
+                    window.history.pushState({}, "", "?className=" + scope.className);
+                }
+            }
         });
+
+        let last = "";
+        setInterval(() => {
+            if (last === window.location.href) {
+                return;
+            }
+            console.log(window.location.href, last)
+            last = window.location.href;
+            let url = new URL(window.location.href);
+            let className = url.searchParams.get("className");
+            scope.className = className;
+            let daba = document.getElementsByTagName("joda-content")[0];
+            let newElement = document.createElement("joda-content");
+
+            var MarkdownIt = require('markdown-it');
+            var markdownItAttrs = require('markdown-it-attrs');
+
+            var md = new MarkdownIt({
+                html: true  // Erlaubt HTML-Input.
+            });
+
+            md.use(markdownItAttrs);
+
+            newElement.innerHTML = md.render(JodaDescriptionManager.getDescription(className)?.example ?? "No example found");
+            console.log(newElement.innerHTML);
+            daba.replaceWith(newElement);
+        }, 100);
+
     }
 }
 
-document.body.appendChild(new SubElement());
