@@ -12,6 +12,8 @@ class FooterLayout extends DefaultLayout {
 
     public max_cols: number = 4;
 
+    public minifooter : string = null;
+
 }
 
 // language=HTML
@@ -19,6 +21,9 @@ const tpl = `
 <div class="as__footer">
     <div class="[[layout.container]]">
         <div class="row [[layout.order]]" data-ref="row">
+        </div>
+        <div class="as__footer-minifooter" data-ref="mini">
+            
         </div>
     </div>
 </div>
@@ -45,6 +50,17 @@ class Footer implements JodaRendererInterface {
             let row = tplCol2.clone().select("main").append(child);
             main.select("row").append(row);
         });
+
+        if (layout.minifooter) {
+            let minifooter = document.querySelector(layout.minifooter);
+            if (minifooter === null) {
+                console.warn("Minifooter not found: ", layout.minifooter);
+            } else {
+                main.select("mini").append(minifooter);
+            }
+
+        }
+
         element.append(main.content);
         return main.content;
     }
