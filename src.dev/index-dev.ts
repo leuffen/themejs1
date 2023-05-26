@@ -1,0 +1,3 @@
+
+import "./SwitcherElement";
+import "../index";

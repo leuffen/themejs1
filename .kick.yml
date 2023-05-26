@@ -20,6 +20,7 @@ command:
   init-workspaces:
     - "mkdir -p workspaces"
     - "git -C ./workspaces/ clone  git@github.com:leuffen/jodastyle.git"
+    - "git -C ./workspaces/ clone  git@github.com:kasimirjs/kasi-embed.git"
     - "npm install"
 
   update:

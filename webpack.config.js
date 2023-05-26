@@ -5,7 +5,7 @@ module.exports = {
     entry: {
         'assets/dist/style': './demo/style.scss',
 
-        'assets/dist/index': './index.ts',
+        'assets/dist/index': './src.dev/index-dev.ts'
 
     },
     cache: true,

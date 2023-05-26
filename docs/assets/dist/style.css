@@ -5,13 +5,16 @@
   --joda-class: "col";
 }
 
-:root {
-  --as-minibar-color: #007bff;
-  --as-mainbar-color: $as-mainbar-color;
-}
-
 joda-content {
   --joda-init: true;
+}
+
+:root {
+  --layout-navbar-style: default;
+  --layout-navbar-position: fixed;
+  --as-minibar-height: 24px;
+  --as-minibar-background: #21446b;
+  --as-minibar-text-color: white;
 }
 
 .as__navbar {
@@ -43,7 +46,8 @@ joda-content {
 }
 .as__navbar .as__minibar {
   overflow: hidden;
-  background-color: var(--as-minibar-color);
+  color: var(--as-minibar-text-color);
+  background: var(--as-minibar-background);
   height: var(--as-minibar-height, 24px);
   transition: height 0.3s ease-in-out;
   z-index: 9999;
@@ -59,7 +63,6 @@ joda-content {
 }
 .as__navbar .as__minibar ul li a {
   text-decoration: none;
-  color: var(--as-minibar-text-color);
 }
 .as__navbar .as__minibar ul li a:hover {
   text-decoration: underline;
@@ -69,10 +72,10 @@ joda-content {
   padding-left: 0.8rem;
 }
 .as__navbar .as__mainbar .navbar-collapse.show {
-  background-color: var(--as-mainbar-bg, white);
+  background: var(--as-mainbar-background, white);
 }
 .as__navbar .as__mainbar .navbar-toggler {
-  background-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .as__navbar.scrolled .as__minibar {
@@ -81,14 +84,14 @@ joda-content {
 
 /* Theme specific styles */
 .as__navbar.default .as__mainbar {
-  background-color: var(--as-mainbar-bg, white);
+  background: var(--as-mainbar-background, white);
   border-bottom: 1px solid #007bff;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 .as__navbar.default .as__minibar {
   font-size: 13px;
   line-height: 24px;
-  background-color: var(--as-minibar-bg, #007bff);
+  background: var(--as-minibar-background, #007bff);
 }
 .as__navbar.default .as__minibar a {
   color: white;
@@ -110,7 +113,7 @@ joda-content {
 }
 
 .as__navbar.transparent.scrolled .as__mainbar {
-  background-color: var(--as-mainbar-bg, white) !important;
+  background-color: var(--as-mainbar-background, white) !important;
   border-bottom: 1px solid #007bff;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
@@ -118,20 +121,114 @@ joda-content {
   height: 0;
 }
 
-.hc-section .section-1 {
-  background-color: #007bff;
+.as__map {
+  width: 100%;
+  aspect-ratio: 21/9;
+  position: relative;
+}
+.as__map .as__map-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.as__map .as__map-overlay > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: opacity(0.5);
+}
+.as__map .as__map-overlay > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  text-align: center;
+}
+:root {
+  --layout-cols: 8;
+  --layout-side-content: "This is some side-content from --layout-side-content" ;
 }
 
-.hc-section .odd {
-  background-color: #007bff;
+.as__footer {
+  background: var(--as-footer-background, #f0f0f0);
+  color: var(--as-footer-text-color, #333333);
+  padding-top: 4.5rem;
+}
+.as__footer a {
+  color: var(--as-footer-text-color, #333333);
+}
+.as__footer .as__footer-column {
+  margin-bottom: 3.5rem;
+}
+.as__footer .as__footer-column p {
+  margin-bottom: 0.5rem;
+}
+.as__footer .as__footer-column ul {
+  padding-left: 0;
+}
+.as__footer .as__footer-column ul li {
+  text-decoration: none;
+  list-style: none;
 }
 
-.hc-section .even {
-  background-color: #007bff;
+:root {
+  --as-layout-offset-top: 100px;
 }
 
+.as__header .as__header-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.as__header .as__header-main {
+  position: relative;
+  bottom: 0;
+}
+
+.as__header.default .no-image {
+  height: 38vh;
+  min-height: 250px;
+  background: var(--as-border-color, #007bff);
+}
+.as__header.default .as__header-background {
+  width: 100%;
+  height: 61.8vh;
+  min-height: var(--as-header-min-height, 350px);
+  overflow: hidden;
+  position: relative;
+  border-bottom: 10px solid;
+  border-bottom-color: var(--as-border-color, #007bff);
+}
+.as__header.default .as__header-background.no-image {
+  min-height: unset;
+  height: calc(var(--as-layout-offset-top) + 95px);
+  background: var(--as-border-color, #007bff);
+}
+.as__header.default .as__header-main {
+  position: relative;
+  bottom: 0;
+  padding-top: 1.5rem;
+}
+
+:root {
+  --layout-hero-style: fullsize;
+  --as-hero-offset: 110px;
+  --as-hero-height-adjustement: 10px;
+  --as-min-hero-height: 500px;
+}
+
+.as__hero1 {
+  border-bottom: 10px solid;
+  border-bottom-color: var(--as--border-color, #007bff);
+  margin-top: var(--as-hero-offset);
+}
 .as__hero1 .full_height {
-  min-height: max(100vh - 0px, 600px);
+  min-height: max(100svh - var(--as-hero-height-adjustement) - var(--as-hero-offset), var(--as-min-hero-height));
 }
 .as__hero1 .v-hide {
   visibility: hidden;
@@ -141,10 +238,10 @@ joda-content {
   align-content: center;
 }
 .as__hero1 .as__hero1_image-mobile img {
-  max-height: 60vh;
+  max-height: 60svh;
   height: 100%;
   width: 100%;
-  min-height: 33vh;
+  min-height: 33svh;
   min-width: inherit;
   object-fit: cover;
   object-position: center center;
@@ -173,6 +270,120 @@ joda-content {
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(255, 255, 255));
 }
 
+:root {
+  --icontext-color: #007bff;
+}
+
+.as__textstyle-icontext {
+  position: relative;
+}
+.as__textstyle-icontext .text {
+  padding-top: 1.2rem;
+  padding-left: 3rem !important;
+}
+.as__textstyle-icontext .icon {
+  font-size: 38px;
+  color: var(--icontext-color, #007bff);
+  position: absolute;
+}
+
+:root {
+  --layout-break1: xl;
+  --section-spacing: 4.5rem;
+  --background-light: #ffffff;
+  --as-section-spacing: 4.5rem;
+}
+
+nav {
+  --joda-use: navbar();
+}
+
+footer {
+  --joda-use: footer();
+  --joda-class: dark;
+}
+
+map {
+  --joda-use: map();
+}
+
+h1 {
+  font-weight: 100;
+  font-style: normal;
+}
+
+h2, h3 {
+  color: var(--as-primary-text-color, #007bff);
+}
+
+section.section-h2 {
+  padding-top: var(--as-section-padding, 3rem);
+  padding-bottom: var(--as-section-padding, 3rem);
+}
+
+.website section.section-h1 {
+  --joda-use: hero1();
+  --layout-cols: 6;
+  --layout-image-cols: 6;
+  background: white;
+}
+.website :nth-child(1 of section.section-h2) {
+  --joda-use: col2();
+}
+.website :nth-child(1 of section.section-h2) .section-h3 {
+  --joda-class: col;
+  --joda-group: @row;
+  --joda-use: textstyle(template:"icontext");
+}
+.website :nth-child(1 of section.section-h2) .section-h3.col {
+  min-width: 300px;
+}
+.website section.section-h2 {
+  --joda-use: autocontent();
+}
+.website section.section-h2 .section-h3 {
+  --joda-class: col;
+  --joda-group: @row;
+}
+.website section.section-h2 .section-h3.col {
+  min-width: 300px;
+}
+
+.article section.section-h1 {
+  --joda-use: header();
+}
+.article section.section-h2 {
+  --joda-use: autocontent();
+}
+.article section.section-h2 .section-h3 {
+  --joda-group: @row;
+  --joda-class: col g-5;
+  min-width: 500px;
+}
+
+section.section-h2:nth-child(even) {
+  background: var(--background-light);
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark p, .dark span, .dark li, .dark td, .dark th, .dark a {
+  color: var(--as-dark-text-color, rgba(255, 255, 255, 0.85));
+}
+.dark a:hover {
+  color: var(--as-dark-text-color-hover, rgb(255, 255, 255));
+  opacity: 1;
+}
+
+.sprechzeiten {
+  --joda-wrap: "@card @mb-5 > @card-body";
+  --joda-class: text-center;
+}
+.sprechzeiten h3 {
+  --joda-class: text-center mb-3;
+}
+.sprechzeiten table {
+  --joda-class: table table-hover;
+}
+
 nav {
   --joda-use: navbar();
   --layout-brand-logo: '<img src="">';
@@ -188,3 +399,5 @@ nav {
   --layout-navbar-color: #fff;
   --layout-minibar-color: #007bff;
 }
+
+/*# sourceMappingURL=style.css.map*/
