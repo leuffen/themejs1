@@ -1,4 +1,4 @@
 
-import "./src/template/navbar/navbar.dev"
-import "./src/template/map/map.dev"
-import "./src/template/hero/hero.dev"
+import "./theme/elements/navbar/navbar.dev"
+import "./theme/elements/map/map.dev"
+import "./theme/heros/hero1/hero.dev"

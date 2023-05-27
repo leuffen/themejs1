@@ -16,4 +16,4 @@ const example = `
 `;
 
 
-JodaDescriptionManager.addClass(".do-navbar", "This is a description", example, []);
+JodaDescriptionManager.addClass("element", ".do-navbar", "This is a description", example, []);

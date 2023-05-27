@@ -1,6 +1,6 @@
-/*!**************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./demo/style.scss ***!
-  \**************************************************************************************************************************************/
+/*!***************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./demo_styles.scss ***!
+  \***************************************************************************************************************************************/
 .row > div {
   --joda-class: "col";
 }
@@ -9,6 +9,37 @@ joda-content {
   --joda-init: true;
 }
 
+.do-map {
+  --joda-use: map();
+}
+
+.as__map {
+  width: 100%;
+  aspect-ratio: 21/9;
+  position: relative;
+}
+.as__map .as__map-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.as__map .as__map-overlay > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: opacity(0.5);
+}
+.as__map .as__map-overlay > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  text-align: center;
+}
 :root {
   --layout-navbar-style: default;
   --layout-navbar-position: fixed;
@@ -125,37 +156,28 @@ joda-content {
   height: 0;
 }
 
-.do-map {
-  --joda-use: map();
+:root {
+  --icontext-color: #007bff;
 }
 
-.as__map {
-  width: 100%;
-  aspect-ratio: 21/9;
+.as__textstyle-icontext {
   position: relative;
 }
-.as__map .as__map-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.as__textstyle-icontext .text {
+  padding-top: 1.2rem;
+  padding-left: 3rem !important;
 }
-.as__map .as__map-overlay > img {
+.as__textstyle-icontext .icon {
+  font-size: 38px;
+  color: var(--icontext-color, #007bff);
   position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: opacity(0.5);
 }
-.as__map .as__map-overlay > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 99;
-  text-align: center;
+
+:root {
+  --layout-cols: 8;
+  --layout-side-content: "This is some side-content from --layout-side-content" ;
 }
+
 :root {
   --layout-cols: 8;
   --layout-side-content: "This is some side-content from --layout-side-content" ;
@@ -237,6 +259,10 @@ joda-content {
   --as-min-hero-height: 500px;
 }
 
+.do-hero1 {
+  --joda-use: hero1();
+}
+
 .as__hero1 {
   border-bottom: 10px solid;
   border-bottom-color: var(--as--border-color, #007bff);
@@ -283,23 +309,6 @@ joda-content {
 .as__hero1 .image-overlay.overlay-fade {
   background-color: unset;
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(255, 255, 255));
-}
-
-:root {
-  --icontext-color: #007bff;
-}
-
-.as__textstyle-icontext {
-  position: relative;
-}
-.as__textstyle-icontext .text {
-  padding-top: 1.2rem;
-  padding-left: 3rem !important;
-}
-.as__textstyle-icontext .icon {
-  font-size: 38px;
-  color: var(--icontext-color, #007bff);
-  position: absolute;
 }
 
 :root {
@@ -400,20 +409,54 @@ section.section-h2:nth-child(even) {
   --joda-class: table table-hover;
 }
 
-nav {
-  --joda-use: navbar();
-  --layout-brand-logo: '<img src="">';
-  --layout-container: container-fluid;
+showcase-element .preview {
+  --scale: 0.2;
+  --aspect-ratio: calc(16 / 9);
+  --width: 350px;
+  --height: calc(var(--width) / var(--aspect-ratio));
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  overflow: hidden;
+  display: inline-block;
+  border: 3px solid #ccc;
+}
+showcase-element .preview iframe {
+  position: relative;
+  right: calc(var(--width) / var(--scale) / 2 - var(--width) / 2);
+  bottom: calc(var(--height) / var(--scale) / 2 - var(--height) / 2);
+  width: calc(var(--width) / var(--scale));
+  height: calc(var(--height) / var(--scale));
+  transform: scale(var(--scale));
+}
+showcase-element .preview .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+showcase-element .preview .overlay:hover {
+  opacity: 1;
 }
 
-.section-h1 {
-  --joda-use: hero1();
-  --layout-break1: "xl";
+joda-content {
+  display: none;
 }
 
-:root {
-  --layout-navbar-color: #fff;
-  --layout-minibar-color: #007bff;
+joda-content.loaded {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map*/

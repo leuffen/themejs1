@@ -1,10 +1,13 @@
 
 :root {
-
     --layout-hero-style: fullsize;
     --as-hero-offset: 110px;
     --as-hero-height-adjustement: 10px;
     --as-min-hero-height: 500px;
+}
+
+.do-hero1 {
+    --joda-use: hero1();
 }
 
 

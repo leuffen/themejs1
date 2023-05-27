@@ -9,9 +9,9 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _src_template_navbar_navbar_dev__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/template/navbar/navbar.dev */ "./src/template/navbar/navbar.dev.ts");
-/* harmony import */ var _src_template_map_map_dev__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./src/template/map/map.dev */ "./src/template/map/map.dev.ts");
-/* harmony import */ var _src_template_hero_hero_dev__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./src/template/hero/hero.dev */ "./src/template/hero/hero.dev.ts");
+/* harmony import */ var _theme_elements_navbar_navbar_dev__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./theme/elements/navbar/navbar.dev */ "./theme/elements/navbar/navbar.dev.ts");
+/* harmony import */ var _theme_elements_map_map_dev__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./theme/elements/map/map.dev */ "./theme/elements/map/map.dev.ts");
+/* harmony import */ var _theme_heros_hero1_hero_dev__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./theme/heros/hero1/hero.dev */ "./theme/heros/hero1/hero.dev.ts");
 
 
 
@@ -29,7 +29,93 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/index */ "./src/index.ts");
+/* harmony import */ var _theme_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./theme/styles */ "./theme/styles.ts");
 
+
+
+
+/***/ }),
+
+/***/ "./src.dev/ShowcaseElement.ts":
+/*!************************************!*\
+  !*** ./src.dev/ShowcaseElement.ts ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+/* harmony import */ var _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @kasimirjs/embed */ "./workspaces/kasi-embed/index.ts");
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getProtoOf = Object.getPrototypeOf;
+var __reflectGet = Reflect.get;
+var __decorateClass = (decorators, target, key, kind) => {
+  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
+  for (var i = decorators.length - 1, decorator; i >= 0; i--)
+    if (decorator = decorators[i])
+      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
+  if (kind && result)
+    __defProp(target, key, result);
+  return result;
+};
+var __superGet = (cls, obj, key) => __reflectGet(__getProtoOf(cls), key, obj);
+var __async = (__this, __arguments, generator) => {
+  return new Promise((resolve, reject) => {
+    var fulfilled = (value) => {
+      try {
+        step(generator.next(value));
+      } catch (e) {
+        reject(e);
+      }
+    };
+    var rejected = (value) => {
+      try {
+        step(generator.throw(value));
+      } catch (e) {
+        reject(e);
+      }
+    };
+    var step = (x) => x.done ? resolve(x.value) : Promise.resolve(x.value).then(fulfilled, rejected);
+    step((generator = generator.apply(__this, __arguments)).next());
+  });
+};
+
+
+const tpl = `
+<div class="row">
+    <div class="col col-auto" ka.for="let i of desc ">
+        <div class="card">
+            <div class="card-body p-1 m-1">
+                <div class="preview">
+                    <iframe ka.prop.src="'/html?className=' + i.className"></iframe>
+                    <div class="overlay"><a ka.prop.href="'/html?className=' + i.className">Show</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+`;
+let ShowcaseElement = class extends _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_1__.KaCustomElement {
+  constructor() {
+    super();
+    let scope = this.init({
+      desc: _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.data,
+      $on: {}
+    });
+  }
+  connectedCallback() {
+    return __async(this, null, function* () {
+      yield (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_1__.ka_sleep)(1);
+      this.scope.desc = _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.data.filter((e) => e.category === this.getAttribute("data-category"));
+      __superGet(ShowcaseElement.prototype, this, "connectedCallback").call(this);
+    });
+  }
+};
+ShowcaseElement = __decorateClass([
+  (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_1__.template)(tpl),
+  (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_1__.customElement)("showcase-element")
+], ShowcaseElement);
 
 
 /***/ }),
@@ -227,17 +313,11 @@ SubElement = __decorateClass([
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
-/* harmony import */ var _template_autocontent_autocontent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./template/autocontent/autocontent */ "./src/template/autocontent/autocontent.ts");
-/* harmony import */ var _template_navbar_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./template/navbar/navbar */ "./src/template/navbar/navbar.ts");
-/* harmony import */ var _template_footer_footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./template/footer/footer */ "./src/template/footer/footer.ts");
-/* harmony import */ var _template_header_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./template/header/header */ "./src/template/header/header.ts");
-/* harmony import */ var _template_hero_hero1__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./template/hero/hero1 */ "./src/template/hero/hero1.ts");
-/* harmony import */ var _template_map_map__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./template/map/map */ "./src/template/map/map.ts");
-/* harmony import */ var _template_col2_col2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./template/col2/col2 */ "./src/template/col2/col2.ts");
-/* harmony import */ var _template_textstyle_textstyle__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./template/textstyle/textstyle */ "./src/template/textstyle/textstyle.ts");
-
-
-
+/* harmony import */ var _theme_sections_autocontent_autocontent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../theme/sections/autocontent/autocontent */ "./theme/sections/autocontent/autocontent.ts");
+/* harmony import */ var _theme_elements_navbar_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../theme/elements/navbar/navbar */ "./theme/elements/navbar/navbar.ts");
+/* harmony import */ var _theme_footer_footer1_footer1__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../theme/footer/footer1/footer1 */ "./theme/footer/footer1/footer1.ts");
+/* harmony import */ var _theme_heros_header_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../theme/heros/header/header */ "./theme/heros/header/header.ts");
+/* harmony import */ var _theme_sections_col2_col2__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../theme/sections/col2/col2 */ "./theme/sections/col2/col2.ts");
 
 
 
@@ -248,388 +328,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/template/autocontent/autocontent.ts":
-/*!*************************************************!*\
-  !*** ./src/template/autocontent/autocontent.ts ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
-/* harmony import */ var _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @leuffen/jodastyle/src/helper/QTemplate */ "./workspaces/jodastyle/src/helper/QTemplate.ts");
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __decorateClass = (decorators, target, key, kind) => {
-  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
-  for (var i = decorators.length - 1, decorator; i >= 0; i--)
-    if (decorator = decorators[i])
-      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
-  if (kind && result)
-    __defProp(target, key, result);
-  return result;
-};
-
-
-class AutocontentLayout extends _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.DefaultLayout {
-  constructor() {
-    super(...arguments);
-    this.style = "fullsize";
-  }
-}
-let tpl = {};
-tpl["fullsize"] = `
-<div class="as__autocontent">
-    <div class="[[ layout.container ]]" data-ref="main">
-        
-    </div>
-</div>
-`;
-let AutoContent = class {
-  render(element, layout) {
-    let tplHtml = tpl[layout.style];
-    if (!tplHtml)
-      throw new Error("Unknown style: " + layout.style);
-    let main = new _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__.QTemplate(tplHtml);
-    main.parse({ layout });
-    main.select("main").append(element.childNodes);
-    element.append(main.content);
-    return main.content;
-  }
-};
-AutoContent = __decorateClass([
-  (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.jodaRenderer)("autocontent", AutocontentLayout)
-], AutoContent);
-
-
-/***/ }),
-
-/***/ "./src/template/col2/col2.ts":
-/*!***********************************!*\
-  !*** ./src/template/col2/col2.ts ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
-/* harmony import */ var _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @leuffen/jodastyle/src/helper/QTemplate */ "./workspaces/jodastyle/src/helper/QTemplate.ts");
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __decorateClass = (decorators, target, key, kind) => {
-  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
-  for (var i = decorators.length - 1, decorator; i >= 0; i--)
-    if (decorator = decorators[i])
-      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
-  if (kind && result)
-    __defProp(target, key, result);
-  return result;
-};
-
-
-class Col2Layout extends _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.DefaultLayout {
-  constructor() {
-    super(...arguments);
-    this.order = "";
-    this.cols = 8;
-    this.side_content = "";
-  }
-}
-const tpl = `
-<div class="as__2col [[layout.container]]">
-    <div class="row [[layout.order]] ">
-        <div class=":: col-12 order-2 :[[layout.break1]]: col-[[ layout.cols ]] " data-ref="main"></div>
-        <div class=":: col-12 order-1 :[[layout.break1]]: col-[[ 12-layout.cols ]]" data-ref="side">[[ layout.side_content]]</div>
-    </div>
-    
-</div>
-`;
-let Col2 = class {
-  render(element, layout) {
-    let main = new _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__.QTemplate(tpl);
-    main.parse({ layout });
-    main.select("main").append(element.childNodes);
-    element.append(main.content);
-    return main.content;
-  }
-};
-Col2 = __decorateClass([
-  (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.jodaRenderer)("col2", Col2Layout)
-], Col2);
-
-
-/***/ }),
-
-/***/ "./src/template/footer/footer.ts":
+/***/ "./theme/elements/map/map.dev.ts":
 /*!***************************************!*\
-  !*** ./src/template/footer/footer.ts ***!
+  !*** ./theme/elements/map/map.dev.ts ***!
   \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
-/* harmony import */ var _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @leuffen/jodastyle/src/helper/QTemplate */ "./workspaces/jodastyle/src/helper/QTemplate.ts");
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __decorateClass = (decorators, target, key, kind) => {
-  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
-  for (var i = decorators.length - 1, decorator; i >= 0; i--)
-    if (decorator = decorators[i])
-      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
-  if (kind && result)
-    __defProp(target, key, result);
-  return result;
-};
-
-
-class FooterLayout extends _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.DefaultLayout {
-  constructor() {
-    super(...arguments);
-    this.max_cols = 4;
-    this.minifooter = null;
-  }
-}
-const tpl = `
-<div class="as__footer">
-    <div class="[[layout.container]]">
-        <div class="row [[layout.order]]" data-ref="row">
-        </div>
-        <div class="as__footer-minifooter" data-ref="mini">
-            
-        </div>
-    </div>
-</div>
-`;
-const tplCol = `
-<div class="as__footer-column :: col-12 :[[layout.break1]]: col-[[ cols ]] " data-ref="main">
-    
-</div>
-`;
-let Footer = class {
-  render(element, layout) {
-    let main = new _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__.QTemplate(tpl);
-    main.parse({ layout });
-    let children = (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.splitChildrenBySelector)(element, "h2");
-    let tplCol2 = new _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__.QTemplate(tplCol);
-    tplCol2.parse({ layout, cols: (12 / children.length).toFixed(0) });
-    children.forEach((child) => {
-      let row = tplCol2.clone().select("main").append(child);
-      main.select("row").append(row);
-    });
-    if (layout.minifooter) {
-      let minifooter = document.querySelector(layout.minifooter);
-      if (minifooter === null) {
-        console.warn("Minifooter not found: ", layout.minifooter);
-      } else {
-        main.select("mini").append(minifooter);
-      }
-    }
-    element.append(main.content);
-    return main.content;
-  }
-};
-Footer = __decorateClass([
-  (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.jodaRenderer)("footer", FooterLayout)
-], Footer);
-
-
-/***/ }),
-
-/***/ "./src/template/header/header.ts":
-/*!***************************************!*\
-  !*** ./src/template/header/header.ts ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   HeaderLayout: () => (/* binding */ HeaderLayout)
-/* harmony export */ });
-/* harmony import */ var _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @kasimirjs/embed */ "./workspaces/kasi-embed/index.ts");
-/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
-/* harmony import */ var _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @leuffen/jodastyle/src/helper/QTemplate */ "./workspaces/jodastyle/src/helper/QTemplate.ts");
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __decorateClass = (decorators, target, key, kind) => {
-  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
-  for (var i = decorators.length - 1, decorator; i >= 0; i--)
-    if (decorator = decorators[i])
-      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
-  if (kind && result)
-    __defProp(target, key, result);
-  return result;
-};
-
-
-
-const tpl = (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_html)(`
-<div class="as__header [[ layout.style ]]">
-    <div class="as__header-background" data-ref="img">
-    </div>
-    <div class="as__header-main" >
-        <div class="[[ layout.container ]]" data-ref="main">
-        </div>
-    </div>
-</div>
-`);
-class HeaderLayout extends _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.DefaultLayout {
-  constructor() {
-    super(...arguments);
-    this.style = "default";
-  }
-}
-let Hero1 = class {
-  render(element, layout) {
-    let main = new _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_2__.QTemplate(tpl);
-    main.parse({ layout });
-    let hasImage = false;
-    Array.from(element.querySelectorAll("img")).forEach((el) => {
-      main.select("img").append(el);
-      hasImage = true;
-    });
-    if (!hasImage) {
-      main.select("img").selected.classList.add("no-image");
-    }
-    Array.from(element.children).forEach((el) => {
-      main.select("main").append(el);
-    });
-    element.innerHTML = "";
-    element.append(main.content);
-    return main.content;
-  }
-};
-Hero1 = __decorateClass([
-  (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.jodaRenderer)("header", HeaderLayout)
-], Hero1);
-
-
-/***/ }),
-
-/***/ "./src/template/hero/hero.dev.ts":
-/*!***************************************!*\
-  !*** ./src/template/hero/hero.dev.ts ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
-
-const example = `
-
-# Hero Text 1
-
-Some text
-
-![Some Image](cdn:///leu-stock/v/50/1920x1282_1200x801_992x662_768x513_480x321_256x256/AdobeStock_361612440.avif_jpeg){: .background}
-
-`;
-_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass(".do-hero", "This is a description", example, []);
-
-
-/***/ }),
-
-/***/ "./src/template/hero/hero1.ts":
-/*!************************************!*\
-  !*** ./src/template/hero/hero1.ts ***!
-  \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   HeroLayout: () => (/* binding */ HeroLayout)
-/* harmony export */ });
-/* harmony import */ var _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @kasimirjs/embed */ "./workspaces/kasi-embed/index.ts");
-/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
-/* harmony import */ var _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @leuffen/jodastyle/src/helper/QTemplate */ "./workspaces/jodastyle/src/helper/QTemplate.ts");
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __decorateClass = (decorators, target, key, kind) => {
-  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
-  for (var i = decorators.length - 1, decorator; i >= 0; i--)
-    if (decorator = decorators[i])
-      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
-  if (kind && result)
-    __defProp(target, key, result);
-  return result;
-};
-
-
-
-const tpl = (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_html)(`
-<div class="as__hero1 position-relative" style="isolation: isolate">
-    <div class="as__hero1_image-mobile :: d-block :[[layout.break1]]: d-none   col-[[12 - layout.cols]] " data-ref="image-mobile"></div>
-
-    <div class="[[layout.container]] ">
-        <div class="as__hero1_content-row row :: mobile :[[layout.break1]]: full_height align-items-center">
-            
-            <div class="as__hero1_content [[layout.content_classes]] :: col-12 :[[layout.break1]]:  col-[[layout.cols]] " data-ref="main"></div>
-        </div>
-    </div>
-    <div class="position-absolute top-0 bottom-0 w-100" style="z-index: -1">
-        <div class="container-fluid p-0 h-100 :: d-none :[[layout.break1]]: d-block">
-            <div class="row g-0 flex-lg-row-reverse h-100">
-                <div class="col-[[layout.image_cols]] position-relative as__hero1_image h-100" data-ref="image">
-                    <div class="position-absolute image-overlay [[ layout.content_cols-layout.image_cols < 0 ? 'overlay-fade' : '']]"></div>
-                </div>
-               
-            </div>
-            
-        </div>
-    </div>
-</div>
-`);
-class HeroLayout extends _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.DefaultLayout {
-  constructor() {
-    super(...arguments);
-    /**
-     * Columns of the content overlay
-     */
-    this.cols = 6;
-    /**
-     * set Classes of the content div
-     */
-    this.content_classes = "";
-    /**
-     * Size of the image in Background
-     */
-    this.image_cols = 6;
-    /**
-     *
-     */
-    this.image_content = "contentSelector(img)";
-  }
-}
-let Hero1 = class {
-  render(element, layout) {
-    let main = new _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_2__.QTemplate(tpl);
-    main.parse({ layout });
-    Array.from(element.querySelectorAll(".background img, img.background")).forEach((el) => {
-      main.select("image").append(el.cloneNode(true));
-      main.select("image-mobile").append(el);
-    });
-    Array.from(element.children).forEach((el) => {
-      main.select("main").append(el);
-    });
-    element.innerHTML = "";
-    element.append(main.content);
-    return main.content;
-  }
-};
-Hero1 = __decorateClass([
-  (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.jodaRenderer)("hero1", HeroLayout)
-], Hero1);
-
-
-/***/ }),
-
-/***/ "./src/template/map/map.dev.ts":
-/*!*************************************!*\
-  !*** ./src/template/map/map.dev.ts ***!
-  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -643,15 +345,15 @@ const example = `
 <map data-map-url=""></div>
 
 `;
-_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass(".do-map", "This is a description", example, []);
+_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass("element", ".do-map", "This is a description", example, []);
 
 
 /***/ }),
 
-/***/ "./src/template/map/map.ts":
-/*!*********************************!*\
-  !*** ./src/template/map/map.ts ***!
-  \*********************************/
+/***/ "./theme/elements/map/map.ts":
+/*!***********************************!*\
+  !*** ./theme/elements/map/map.ts ***!
+  \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -720,10 +422,10 @@ Map = __decorateClass([
 
 /***/ }),
 
-/***/ "./src/template/navbar/navbar.dev.ts":
-/*!*******************************************!*\
-  !*** ./src/template/navbar/navbar.dev.ts ***!
-  \*******************************************/
+/***/ "./theme/elements/navbar/navbar.dev.ts":
+/*!*********************************************!*\
+  !*** ./theme/elements/navbar/navbar.dev.ts ***!
+  \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -743,15 +445,15 @@ const example = `
 </div>
 
 `;
-_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass(".do-navbar", "This is a description", example, []);
+_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass("element", ".do-navbar", "This is a description", example, []);
 
 
 /***/ }),
 
-/***/ "./src/template/navbar/navbar.ts":
-/*!***************************************!*\
-  !*** ./src/template/navbar/navbar.ts ***!
-  \***************************************/
+/***/ "./theme/elements/navbar/navbar.ts":
+/*!*****************************************!*\
+  !*** ./theme/elements/navbar/navbar.ts ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -884,10 +586,10 @@ Navbar = __decorateClass([
 
 /***/ }),
 
-/***/ "./src/template/textstyle/textstyle.ts":
-/*!*********************************************!*\
-  !*** ./src/template/textstyle/textstyle.ts ***!
-  \*********************************************/
+/***/ "./theme/elements/textstyle/textstyle.ts":
+/*!***********************************************!*\
+  !*** ./theme/elements/textstyle/textstyle.ts ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -937,6 +639,412 @@ let TextStyle = class {
 TextStyle = __decorateClass([
   (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.jodaRenderer)("textstyle", TextStyleLayout)
 ], TextStyle);
+
+
+/***/ }),
+
+/***/ "./theme/footer/footer1/footer1.ts":
+/*!*****************************************!*\
+  !*** ./theme/footer/footer1/footer1.ts ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+/* harmony import */ var _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @leuffen/jodastyle/src/helper/QTemplate */ "./workspaces/jodastyle/src/helper/QTemplate.ts");
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __decorateClass = (decorators, target, key, kind) => {
+  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
+  for (var i = decorators.length - 1, decorator; i >= 0; i--)
+    if (decorator = decorators[i])
+      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
+  if (kind && result)
+    __defProp(target, key, result);
+  return result;
+};
+
+
+class FooterLayout extends _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.DefaultLayout {
+  constructor() {
+    super(...arguments);
+    this.max_cols = 4;
+    this.minifooter = null;
+  }
+}
+const tpl = `
+<div class="as__footer">
+    <div class="[[layout.container]]">
+        <div class="row [[layout.order]]" data-ref="row">
+        </div>
+        <div class="as__footer-minifooter" data-ref="mini">
+            
+        </div>
+    </div>
+</div>
+`;
+const tplCol = `
+<div class="as__footer-column :: col-12 :[[layout.break1]]: col-[[ cols ]] " data-ref="main">
+    
+</div>
+`;
+let Footer1 = class {
+  render(element, layout) {
+    let main = new _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__.QTemplate(tpl);
+    main.parse({ layout });
+    let children = (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.splitChildrenBySelector)(element, "h2");
+    let tplCol2 = new _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__.QTemplate(tplCol);
+    tplCol2.parse({ layout, cols: (12 / children.length).toFixed(0) });
+    children.forEach((child) => {
+      let row = tplCol2.clone().select("main").append(child);
+      main.select("row").append(row);
+    });
+    if (layout.minifooter) {
+      let minifooter = document.querySelector(layout.minifooter);
+      if (minifooter === null) {
+        console.warn("Minifooter not found: ", layout.minifooter);
+      } else {
+        main.select("mini").append(minifooter);
+      }
+    }
+    element.append(main.content);
+    return main.content;
+  }
+};
+Footer1 = __decorateClass([
+  (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.jodaRenderer)("footer1", FooterLayout)
+], Footer1);
+
+
+/***/ }),
+
+/***/ "./theme/heros/header/header.ts":
+/*!**************************************!*\
+  !*** ./theme/heros/header/header.ts ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   HeaderLayout: () => (/* binding */ HeaderLayout)
+/* harmony export */ });
+/* harmony import */ var _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @kasimirjs/embed */ "./workspaces/kasi-embed/index.ts");
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+/* harmony import */ var _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @leuffen/jodastyle/src/helper/QTemplate */ "./workspaces/jodastyle/src/helper/QTemplate.ts");
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __decorateClass = (decorators, target, key, kind) => {
+  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
+  for (var i = decorators.length - 1, decorator; i >= 0; i--)
+    if (decorator = decorators[i])
+      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
+  if (kind && result)
+    __defProp(target, key, result);
+  return result;
+};
+
+
+
+const tpl = (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_html)(`
+<div class="as__header [[ layout.style ]]">
+    <div class="as__header-background" data-ref="img">
+    </div>
+    <div class="as__header-main" >
+        <div class="[[ layout.container ]]" data-ref="main">
+        </div>
+    </div>
+</div>
+`);
+class HeaderLayout extends _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.DefaultLayout {
+  constructor() {
+    super(...arguments);
+    this.style = "default";
+  }
+}
+let Hero1 = class {
+  render(element, layout) {
+    let main = new _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_2__.QTemplate(tpl);
+    main.parse({ layout });
+    let hasImage = false;
+    Array.from(element.querySelectorAll("img")).forEach((el) => {
+      main.select("img").append(el);
+      hasImage = true;
+    });
+    if (!hasImage) {
+      main.select("img").selected.classList.add("no-image");
+    }
+    Array.from(element.children).forEach((el) => {
+      main.select("main").append(el);
+    });
+    element.innerHTML = "";
+    element.append(main.content);
+    return main.content;
+  }
+};
+Hero1 = __decorateClass([
+  (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.jodaRenderer)("header", HeaderLayout)
+], Hero1);
+
+
+/***/ }),
+
+/***/ "./theme/heros/hero1/hero.dev.ts":
+/*!***************************************!*\
+  !*** ./theme/heros/hero1/hero.dev.ts ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+
+const example = `
+
+# Hero Text 1{: .do-hero1}
+
+Some text
+
+![Some Image](cdn:///leu-stock/v/50/1920x1282_1200x801_992x662_768x513_480x321_256x256/AdobeStock_361612440.avif_jpeg){: .background}
+
+`;
+_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass("hero", ".do-hero", "This is a description", example, []);
+
+
+/***/ }),
+
+/***/ "./theme/heros/hero1/hero1.ts":
+/*!************************************!*\
+  !*** ./theme/heros/hero1/hero1.ts ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   HeroLayout: () => (/* binding */ HeroLayout)
+/* harmony export */ });
+/* harmony import */ var _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @kasimirjs/embed */ "./workspaces/kasi-embed/index.ts");
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+/* harmony import */ var _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @leuffen/jodastyle/src/helper/QTemplate */ "./workspaces/jodastyle/src/helper/QTemplate.ts");
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __decorateClass = (decorators, target, key, kind) => {
+  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
+  for (var i = decorators.length - 1, decorator; i >= 0; i--)
+    if (decorator = decorators[i])
+      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
+  if (kind && result)
+    __defProp(target, key, result);
+  return result;
+};
+
+
+
+const tpl = (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_html)(`
+<div class="as__hero1 position-relative" style="isolation: isolate">
+    <div class="as__hero1_image-mobile :: d-block :[[layout.break1]]: d-none   col-[[12 - layout.cols]] " data-ref="image-mobile"></div>
+
+    <div class="[[layout.container]] ">
+        <div class="as__hero1_content-row row :: mobile :[[layout.break1]]: full_height align-items-center">
+            
+            <div class="as__hero1_content [[layout.content_classes]] :: col-12 :[[layout.break1]]:  col-[[layout.cols]] " data-ref="main"></div>
+        </div>
+    </div>
+    <div class="position-absolute top-0 bottom-0 w-100" style="z-index: -1">
+        <div class="container-fluid p-0 h-100 :: d-none :[[layout.break1]]: d-block">
+            <div class="row g-0 flex-lg-row-reverse h-100">
+                <div class="col-[[layout.image_cols]] position-relative as__hero1_image h-100" data-ref="image">
+                    <div class="position-absolute image-overlay [[ layout.content_cols-layout.image_cols < 0 ? 'overlay-fade' : '']]"></div>
+                </div>
+               
+            </div>
+            
+        </div>
+    </div>
+</div>
+`);
+class HeroLayout extends _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.DefaultLayout {
+  constructor() {
+    super(...arguments);
+    /**
+     * Columns of the content overlay
+     */
+    this.cols = 6;
+    /**
+     * set Classes of the content div
+     */
+    this.content_classes = "";
+    /**
+     * Size of the image in Background
+     */
+    this.image_cols = 6;
+    /**
+     *
+     */
+    this.image_content = "contentSelector(img)";
+  }
+}
+let Hero1 = class {
+  render(element, layout) {
+    let main = new _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_2__.QTemplate(tpl);
+    main.parse({ layout });
+    Array.from(element.querySelectorAll(".background img, img.background")).forEach((el) => {
+      main.select("image").append(el.cloneNode(true));
+      main.select("image-mobile").append(el);
+    });
+    Array.from(element.children).forEach((el) => {
+      main.select("main").append(el);
+    });
+    element.innerHTML = "";
+    element.append(main.content);
+    return main.content;
+  }
+};
+Hero1 = __decorateClass([
+  (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.jodaRenderer)("hero1", HeroLayout)
+], Hero1);
+
+
+/***/ }),
+
+/***/ "./theme/sections/autocontent/autocontent.ts":
+/*!***************************************************!*\
+  !*** ./theme/sections/autocontent/autocontent.ts ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+/* harmony import */ var _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @leuffen/jodastyle/src/helper/QTemplate */ "./workspaces/jodastyle/src/helper/QTemplate.ts");
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __decorateClass = (decorators, target, key, kind) => {
+  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
+  for (var i = decorators.length - 1, decorator; i >= 0; i--)
+    if (decorator = decorators[i])
+      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
+  if (kind && result)
+    __defProp(target, key, result);
+  return result;
+};
+
+
+class AutocontentLayout extends _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.DefaultLayout {
+  constructor() {
+    super(...arguments);
+    this.style = "fullsize";
+  }
+}
+let tpl = {};
+tpl["fullsize"] = `
+<div class="as__autocontent">
+    <div class="[[ layout.container ]]" data-ref="main">
+        
+    </div>
+</div>
+`;
+let AutoContent = class {
+  render(element, layout) {
+    let tplHtml = tpl[layout.style];
+    if (!tplHtml)
+      throw new Error("Unknown style: " + layout.style);
+    let main = new _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__.QTemplate(tplHtml);
+    main.parse({ layout });
+    main.select("main").append(element.childNodes);
+    element.append(main.content);
+    return main.content;
+  }
+};
+AutoContent = __decorateClass([
+  (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.jodaRenderer)("autocontent", AutocontentLayout)
+], AutoContent);
+
+
+/***/ }),
+
+/***/ "./theme/sections/col2/col2.ts":
+/*!*************************************!*\
+  !*** ./theme/sections/col2/col2.ts ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+/* harmony import */ var _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @leuffen/jodastyle/src/helper/QTemplate */ "./workspaces/jodastyle/src/helper/QTemplate.ts");
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __decorateClass = (decorators, target, key, kind) => {
+  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
+  for (var i = decorators.length - 1, decorator; i >= 0; i--)
+    if (decorator = decorators[i])
+      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
+  if (kind && result)
+    __defProp(target, key, result);
+  return result;
+};
+
+
+class Col2Layout extends _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.DefaultLayout {
+  constructor() {
+    super(...arguments);
+    this.order = "";
+    this.cols = 8;
+    this.side_content = "";
+  }
+}
+const tpl = `
+<div class="as__2col [[layout.container]]">
+    <div class="row [[layout.order]] ">
+        <div class=":: col-12 order-2 :[[layout.break1]]: col-[[ layout.cols ]] " data-ref="main"></div>
+        <div class=":: col-12 order-1 :[[layout.break1]]: col-[[ 12-layout.cols ]]" data-ref="side">[[ layout.side_content]]</div>
+    </div>
+    
+</div>
+`;
+let Col2 = class {
+  render(element, layout) {
+    let main = new _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__.QTemplate(tpl);
+    main.parse({ layout });
+    main.select("main").append(element.childNodes);
+    element.append(main.content);
+    return main.content;
+  }
+};
+Col2 = __decorateClass([
+  (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.jodaRenderer)("col2", Col2Layout)
+], Col2);
+
+
+/***/ }),
+
+/***/ "./theme/styles.ts":
+/*!*************************!*\
+  !*** ./theme/styles.ts ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _elements_map_map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./elements/map/map */ "./theme/elements/map/map.ts");
+/* harmony import */ var _elements_navbar_navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./elements/navbar/navbar */ "./theme/elements/navbar/navbar.ts");
+/* harmony import */ var _elements_textstyle_textstyle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./elements/textstyle/textstyle */ "./theme/elements/textstyle/textstyle.ts");
+/* harmony import */ var _footer_footer1_footer1__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./footer/footer1/footer1 */ "./theme/footer/footer1/footer1.ts");
+/* harmony import */ var _sections_autocontent_autocontent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sections/autocontent/autocontent */ "./theme/sections/autocontent/autocontent.ts");
+/* harmony import */ var _sections_col2_col2__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sections/col2/col2 */ "./theme/sections/col2/col2.ts");
+/* harmony import */ var _heros_hero1_hero1__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./heros/hero1/hero1 */ "./theme/heros/hero1/hero1.ts");
+/* harmony import */ var _heros_header_header__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./heros/header/header */ "./theme/heros/header/header.ts");
+
+
+
+
+
+
+
+
 
 
 /***/ }),
@@ -1197,14 +1305,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   __JodaDescriptionManager: () => (/* binding */ __JodaDescriptionManager)
 /* harmony export */ });
 class __JodaDescriptionManager {
-  addClass(className, description, example, modifiers) {
+  addClass(category, className, description, example, modifiers) {
     if (window["jodastyle"] === void 0) {
       window["jodastyle"] = {};
     }
     if (window["jodastyle"]["descriptions"] === void 0) {
       window["jodastyle"]["descriptions"] = [];
     }
-    window["jodastyle"]["descriptions"].push({ className, description, example, modifiers });
+    window["jodastyle"]["descriptions"].push({ category, className, description, example, modifiers });
   }
   get data() {
     return window["jodastyle"]["descriptions"];
@@ -2831,16 +2939,16 @@ var __async = (__this, __arguments, generator) => {
 class KaCustomElement extends HTMLElement {
   constructor() {
     super(...arguments);
-    this.__html = "<div>No template defined</div>";
+    this.html = null;
     this.scope = (0,_types__WEBPACK_IMPORTED_MODULE_0__.createScopeObject)();
     this.tplPrototype = null;
     this.wrapper = null;
   }
   init(scope) {
     if ((0,_functions__WEBPACK_IMPORTED_MODULE_1__.isset)(this.constructor["html"]))
-      this.__html = this.constructor["html"];
+      this.html = this.constructor["html"];
     if (this.tplPrototype === null) {
-      this.tplPrototype = (0,_tpl_templatify__WEBPACK_IMPORTED_MODULE_2__.ka_templatify)((0,_ce_html__WEBPACK_IMPORTED_MODULE_3__.ka_html)(this.__html));
+      this.tplPrototype = (0,_tpl_templatify__WEBPACK_IMPORTED_MODULE_2__.ka_templatify)((0,_ce_html__WEBPACK_IMPORTED_MODULE_3__.ka_html)(this.html));
     }
     this.scope.init(scope);
     return this.scope;
@@ -14502,6 +14610,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../index */ "./index.ts");
 /* harmony import */ var _index_dev__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../index.dev */ "./index.dev.ts");
 /* harmony import */ var _SwitcherElement__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SwitcherElement */ "./src.dev/SwitcherElement.ts");
+/* harmony import */ var _ShowcaseElement__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ShowcaseElement */ "./src.dev/ShowcaseElement.ts");
+
 
 
 

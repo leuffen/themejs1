@@ -10,4 +10,4 @@ const example = `
 `;
 
 
-JodaDescriptionManager.addClass(".do-map", "This is a description", example, []);
+JodaDescriptionManager.addClass("element", ".do-map", "This is a description", example, []);

@@ -3,7 +3,7 @@ import {JodaDescriptionManager} from "@leuffen/jodastyle";
 
 const example = `
 
-# Hero Text 1
+# Hero Text 1{: .do-hero1}
 
 Some text
 
@@ -12,4 +12,4 @@ Some text
 `;
 
 
-JodaDescriptionManager.addClass(".do-hero", "This is a description", example, []);
+JodaDescriptionManager.addClass("hero", ".do-hero", "This is a description", example, []);

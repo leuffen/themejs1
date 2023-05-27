@@ -37,8 +37,8 @@ const tplCol = `
 `;
 
 
-@jodaRenderer("footer", FooterLayout)
-class Footer implements JodaRendererInterface {
+@jodaRenderer("footer1", FooterLayout)
+class Footer1 implements JodaRendererInterface {
     render(element: HTMLElement, layout: FooterLayout): HTMLElement {
         let main = new QTemplate(tpl);
         main.parse({layout});

@@ -2,12 +2,11 @@
 
 import "@leuffen/jodastyle";
 
-import "./template/autocontent/autocontent";
-import "./template/navbar/navbar";
-import "./template/footer/footer";
-import "./template/header/header";
+import "../theme/sections/autocontent/autocontent";
+import "../theme/elements/navbar/navbar";
+import "../theme/footer/footer1/footer1";
+import "../theme/heros/header/header";
 
-import "./template/hero/hero1";
-import "./template/map/map";
-import "./template/col2/col2";
-import "./template/textstyle/textstyle";
+
+import "../theme/sections/col2/col2";
+
