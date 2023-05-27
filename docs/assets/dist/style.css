@@ -418,9 +418,14 @@ section.section-h2:nth-child(even) {
   --joda-class: table table-hover;
 }
 
+showcase-element {
+  --aspect-ratio: calc(16 / 9);
+}
+showcase-element.big {
+  --aspect-ratio: 0.5;
+}
 showcase-element .preview {
   --scale: 0.2;
-  --aspect-ratio: calc(16 / 9);
   --width: 350px;
   --height: calc(var(--width) / var(--aspect-ratio));
   position: relative;

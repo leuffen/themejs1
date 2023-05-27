@@ -986,9 +986,6 @@ __webpack_require__.r(__webpack_exports__);
 
 const example = `
 
-<div id="minifooter">
-    Minifoooter
-</div>
 
 
 # Praxis 1
@@ -1029,9 +1026,9 @@ Some Content Here
         Minifoooter
     </div> 
     <h3>Footer 1</h3>
-    Bla
+    <p>Blaasdf</p>
     <h3>Footer 2</h3>
-    Blum
+    <p>Blum</p>
     <h3>Footer 3</h3>
 </footer>
 

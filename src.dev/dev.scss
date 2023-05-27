@@ -1,8 +1,14 @@
 
+
+
 showcase-element {
+  --aspect-ratio: calc(16 / 9);
+  &.big {
+    --aspect-ratio: 0.5;
+  }
   .preview {
     --scale: 0.2;
-    --aspect-ratio: calc(16 / 9);
+
     --width: 350px;
     --height: calc(var(--width) / var(--aspect-ratio));
     position: relative;
@@ -10,6 +16,7 @@ showcase-element {
     height: var(--height);
     overflow: hidden;
     display: inline-block;
+
 
     border: 3px solid #ccc;
     iframe {
