@@ -9,10 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _theme_elements_navbar_navbar_dev__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./theme/elements/navbar/navbar.dev */ "./theme/elements/navbar/navbar.dev.ts");
-/* harmony import */ var _theme_elements_map_map_dev__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./theme/elements/map/map.dev */ "./theme/elements/map/map.dev.ts");
-/* harmony import */ var _theme_heros_hero1_hero_dev__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./theme/heros/hero1/hero.dev */ "./theme/heros/hero1/hero.dev.ts");
-
+/* harmony import */ var _theme_styles_dev__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./theme/styles.dev */ "./theme/styles.dev.ts");
 
 
 
@@ -272,7 +269,7 @@ let SubElement = class extends _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.KaC
     });
     let last = "";
     setInterval(() => {
-      var _a, _b;
+      var _a, _b, _c;
       if (last === window.location.href) {
         return;
       }
@@ -290,7 +287,18 @@ let SubElement = class extends _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.KaC
         // Erlaubt HTML-Input.
       });
       md.use(markdownItAttrs);
-      newElement.innerHTML = md.render((_b = (_a = _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.JodaDescriptionManager.getDescription(className)) == null ? void 0 : _a.example) != null ? _b : "No example found");
+      let desc = _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.JodaDescriptionManager.getDescription(className);
+      if (desc === null) {
+        newElement.innerHTML = "No description found";
+        daba.replaceWith(newElement);
+        return;
+      }
+      document.body.setAttribute("class", (_a = desc.config.bodyClass) != null ? _a : "");
+      if (desc.config.parseMarkdown) {
+        newElement.innerHTML = md.render((_b = desc.example) != null ? _b : "No example found");
+      } else {
+        newElement.innerHTML = (_c = desc.example) != null ? _c : "No example found";
+      }
       console.log(newElement.innerHTML);
       daba.replaceWith(newElement);
     }, 100);
@@ -643,6 +651,38 @@ TextStyle = __decorateClass([
 
 /***/ }),
 
+/***/ "./theme/footer/footer1/footer1.dev.ts":
+/*!*********************************************!*\
+  !*** ./theme/footer/footer1/footer1.dev.ts ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+
+const example = `
+
+
+<footer class="do-footer1">
+    <div id="minifooter">
+        Minifoooter
+    </div>
+    
+    <h3>Footer 1</h3>
+    <h3>Footer 2</h3>
+    <h3>Footer 3</h3>
+
+</footer>
+
+`;
+_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass("footer", "footer1", "This is a description", example, [], {
+  parseMarkdown: false
+});
+
+
+/***/ }),
+
 /***/ "./theme/footer/footer1/footer1.ts":
 /*!*****************************************!*\
   !*** ./theme/footer/footer1/footer1.ts ***!
@@ -670,6 +710,7 @@ class FooterLayout extends _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.Defau
   constructor() {
     super(...arguments);
     this.max_cols = 4;
+    this.splitby = "h3";
     this.minifooter = null;
   }
 }
@@ -693,7 +734,7 @@ let Footer1 = class {
   render(element, layout) {
     let main = new _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__.QTemplate(tpl);
     main.parse({ layout });
-    let children = (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.splitChildrenBySelector)(element, "h2");
+    let children = (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.splitChildrenBySelector)(element, layout.splitby);
     let tplCol2 = new _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__.QTemplate(tplCol);
     tplCol2.parse({ layout, cols: (12 / children.length).toFixed(0) });
     children.forEach((child) => {
@@ -715,6 +756,30 @@ let Footer1 = class {
 Footer1 = __decorateClass([
   (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.jodaRenderer)("footer1", FooterLayout)
 ], Footer1);
+
+
+/***/ }),
+
+/***/ "./theme/heros/header/header.dev.ts":
+/*!******************************************!*\
+  !*** ./theme/heros/header/header.dev.ts ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+
+const example = `
+
+# Hero Text 1{: .do-header}
+
+Some text
+
+![Some Image](cdn:///leu-stock/v/50/1920x1282_1200x801_992x662_768x513_480x321_256x256/AdobeStock_361612440.avif_jpeg){: .background}
+
+`;
+_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass("hero", "header", "This is a description", example, []);
 
 
 /***/ }),
@@ -790,10 +855,10 @@ Hero1 = __decorateClass([
 
 /***/ }),
 
-/***/ "./theme/heros/hero1/hero.dev.ts":
-/*!***************************************!*\
-  !*** ./theme/heros/hero1/hero.dev.ts ***!
-  \***************************************/
+/***/ "./theme/heros/hero1/hero1.dev.ts":
+/*!****************************************!*\
+  !*** ./theme/heros/hero1/hero1.dev.ts ***!
+  \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -909,6 +974,76 @@ Hero1 = __decorateClass([
 
 /***/ }),
 
+/***/ "./theme/pages/page1/page1.dev.ts":
+/*!****************************************!*\
+  !*** ./theme/pages/page1/page1.dev.ts ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+
+const example = `
+
+<div id="minifooter">
+    Minifoooter
+</div>
+
+
+# Praxis 1
+
+Hello world some text
+
+
+## Section 2
+
+Some Content Here
+
+### Subsection 1
+
+### Subsection 2
+
+### Subsection 3
+
+
+
+## Footer 1
+
+
+## Footer 2
+
+### Kontakt
+
+
+
+### Info
+
+
+
+### Links
+
+
+<footer class="do-footer1">
+    <div id="minifooter">
+        Minifoooter
+    </div> 
+    <h3>Footer 1</h3>
+    Bla
+    <h3>Footer 2</h3>
+    Blum
+    <h3>Footer 3</h3>
+</footer>
+
+`;
+_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass("page", "page1", "This is a description", example, [], {
+  bodyClass: "website",
+  parseMarkdown: true
+});
+
+
+/***/ }),
+
 /***/ "./theme/sections/autocontent/autocontent.ts":
 /*!***************************************************!*\
   !*** ./theme/sections/autocontent/autocontent.ts ***!
@@ -1017,6 +1152,30 @@ let Col2 = class {
 Col2 = __decorateClass([
   (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.jodaRenderer)("col2", Col2Layout)
 ], Col2);
+
+
+/***/ }),
+
+/***/ "./theme/styles.dev.ts":
+/*!*****************************!*\
+  !*** ./theme/styles.dev.ts ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _elements_map_map_dev__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./elements/map/map.dev */ "./theme/elements/map/map.dev.ts");
+/* harmony import */ var _elements_navbar_navbar_dev__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./elements/navbar/navbar.dev */ "./theme/elements/navbar/navbar.dev.ts");
+/* harmony import */ var _footer_footer1_footer1_dev__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./footer/footer1/footer1.dev */ "./theme/footer/footer1/footer1.dev.ts");
+/* harmony import */ var _heros_hero1_hero1_dev__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./heros/hero1/hero1.dev */ "./theme/heros/hero1/hero1.dev.ts");
+/* harmony import */ var _heros_header_header_dev__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./heros/header/header.dev */ "./theme/heros/header/header.dev.ts");
+/* harmony import */ var _pages_page1_page1_dev__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/page1/page1.dev */ "./theme/pages/page1/page1.dev.ts");
+
+
+
+
+
+
 
 
 /***/ }),
@@ -1305,14 +1464,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   __JodaDescriptionManager: () => (/* binding */ __JodaDescriptionManager)
 /* harmony export */ });
 class __JodaDescriptionManager {
-  addClass(category, className, description, example, modifiers) {
+  addClass(category, className, description, example, modifiers, config = { parseMarkdown: true }) {
     if (window["jodastyle"] === void 0) {
       window["jodastyle"] = {};
     }
     if (window["jodastyle"]["descriptions"] === void 0) {
       window["jodastyle"]["descriptions"] = [];
     }
-    window["jodastyle"]["descriptions"].push({ category, className, description, example, modifiers });
+    window["jodastyle"]["descriptions"].push({ category, className, description, example, modifiers, config });
   }
   get data() {
     return window["jodastyle"]["descriptions"];
@@ -1634,7 +1793,9 @@ function splitChildrenBySelector(element, splitBySelctor) {
     if (child.matches(splitBySelctor)) {
       ret.push(document.createDocumentFragment());
     }
-    ret[ret.length - 1].append(child);
+    if (ret.length > 0) {
+      ret[ret.length - 1].append(child);
+    }
   });
   return ret;
 }
@@ -2086,10 +2247,14 @@ class Jodasplit {
     let lastLayer = 1;
     __privateGet(this, _target).append(__privateGet(this, _currentParent));
     Array.from(source.children).forEach((child) => {
+      if (child instanceof HTMLElement && child.matches("footer")) {
+        __privateGet(this, _target).appendChild(child);
+        return;
+      }
       if (child instanceof HTMLElement && child.matches("h1, h2, h3, h4, h5, h6, h7, h8, h9, hr")) {
         let layer = 1;
         let tag = "div";
-        if (child.matches("h1, h2")) {
+        if (child.matches("h1,h2")) {
           layer = lastLayer = 1;
           tag = "section";
         } else if (child.matches("h3, h4, h5, h6, h7, h8, h9")) {

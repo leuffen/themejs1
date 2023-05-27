@@ -163,7 +163,21 @@ class SubElement extends KaCustomElement {
 
             md.use(markdownItAttrs);
 
-            newElement.innerHTML = md.render(JodaDescriptionManager.getDescription(className)?.example ?? "No example found");
+            let desc = JodaDescriptionManager.getDescription(className);
+            if (desc === null) {
+                newElement.innerHTML = "No description found";
+                daba.replaceWith(newElement);
+                return;
+            }
+
+            document.body.setAttribute("class", desc.config.bodyClass ?? "");
+
+            if (desc.config.parseMarkdown) {
+                newElement.innerHTML = md.render(desc.example ?? "No example found");
+            } else {
+                newElement.innerHTML = desc.example ?? "No example found";
+            }
+
             console.log(newElement.innerHTML);
             daba.replaceWith(newElement);
         }, 100);

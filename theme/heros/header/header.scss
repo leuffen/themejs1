@@ -3,6 +3,10 @@
   --as-layout-offset-top: 100px;
 }
 
+.do-header{
+  --joda-use: header();
+}
+
 .as__header {
 
   .as__header-background {

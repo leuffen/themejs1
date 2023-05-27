@@ -183,6 +183,11 @@ joda-content {
   --layout-side-content: "This is some side-content from --layout-side-content" ;
 }
 
+.do-footer1 {
+  --joda-use: footer1();
+  --layout-minifooter: #minifooter;
+}
+
 .as__footer {
   background: var(--as-footer-background, #f0f0f0);
   color: var(--as-footer-text-color, #333333);
@@ -214,6 +219,10 @@ joda-content {
 
 :root {
   --as-layout-offset-top: 100px;
+}
+
+.do-header {
+  --joda-use: header();
 }
 
 .as__header .as__header-background img {
