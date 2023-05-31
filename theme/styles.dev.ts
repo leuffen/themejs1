@@ -2,6 +2,7 @@
 import "./elements/image/image.dev";
 import "./elements/map/map.dev";
 import "./elements/navbar/navbar.dev";
+import "./elements/accordion/accordion.dev";
 
 import "./footer/footer1/footer1.dev";
 

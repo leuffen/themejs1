@@ -3,6 +3,7 @@ import "./elements/image/image";
 import "./elements/map/map";
 import "./elements/navbar/navbar";
 import "./elements/textstyle/textstyle";
+import "./elements/accordion/accordion";
 
 import "./footer/footer1/footer1";
 

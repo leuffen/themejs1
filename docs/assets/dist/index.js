@@ -336,6 +336,131 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./theme/elements/accordion/accordion.dev.ts":
+/*!***************************************************!*\
+  !*** ./theme/elements/accordion/accordion.dev.ts ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+
+const example = `
+
+## Accordion
+
+---{: .use-accordion}
+
+### Accordion 1
+
+Test
+
+Anderer Titel
+
+### Accordion 2
+
+Test
+
+Test 2 slakjsalkfjdlaksdjfl\xF6askjdflkjas sadlfkjasldkfjlaskj fdlaskd jflaskjdflkjasldkfj laskjdf lksdj lksdj las
+
+
+`;
+_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass("element", ".use-accordion", "This is a description", example, []);
+
+
+/***/ }),
+
+/***/ "./theme/elements/accordion/accordion.ts":
+/*!***********************************************!*\
+  !*** ./theme/elements/accordion/accordion.ts ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ImageLayout: () => (/* binding */ ImageLayout)
+/* harmony export */ });
+/* harmony import */ var _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @kasimirjs/embed */ "./workspaces/kasi-embed/index.ts");
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __decorateClass = (decorators, target, key, kind) => {
+  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
+  for (var i = decorators.length - 1, decorator; i >= 0; i--)
+    if (decorator = decorators[i])
+      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
+  if (kind && result)
+    __defProp(target, key, result);
+  return result;
+};
+var __async = (__this, __arguments, generator) => {
+  return new Promise((resolve, reject) => {
+    var fulfilled = (value) => {
+      try {
+        step(generator.next(value));
+      } catch (e) {
+        reject(e);
+      }
+    };
+    var rejected = (value) => {
+      try {
+        step(generator.throw(value));
+      } catch (e) {
+        reject(e);
+      }
+    };
+    var step = (x) => x.done ? resolve(x.value) : Promise.resolve(x.value).then(fulfilled, rejected);
+    step((generator = generator.apply(__this, __arguments)).next());
+  });
+};
+
+
+const tpl = `
+    <div class="as__image">
+        <div class="header" data-ref="header"></div>
+        <div class="image" data-ref="image">
+        </div>
+        <div class="footer" data-ref="footer"></div>
+    </div>
+`;
+class ImageLayout extends _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.DefaultLayout {
+}
+let Accordion = class {
+  render(element, layout) {
+    Array.from(element.querySelectorAll(":scope > .children > .section-h3 > .content h3")).forEach((e, i) => __async(this, null, function* () {
+      let newElem = (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_create_element)("a", { class: "as__accordion-header" });
+      e.parentNode.parentNode.insertBefore(newElem, e.parentNode);
+      newElem.append(e);
+      let update = () => {
+        element.querySelectorAll(".section-h3 > .content,.children").forEach((e2) => __async(this, null, function* () {
+          e2.style.setProperty("--orig-height", e2.scrollHeight + "px");
+        }));
+      };
+      newElem.onclick = () => {
+        var _a;
+        update();
+        Array.from(newElem.closest(".children").children).forEach((e2) => {
+          if (e2 === newElem.closest(".section-h3"))
+            return;
+          e2.classList.remove("open");
+        });
+        (_a = newElem.closest(".section-h3")) == null ? void 0 : _a.classList.toggle("open");
+      };
+      e.parentNode.insertBefore(newElem, e);
+      newElem.append(e);
+    }));
+    return element;
+  }
+};
+Accordion = __decorateClass([
+  (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.jodaRenderer)("accordion", ImageLayout)
+], Accordion);
+
+
+/***/ }),
+
 /***/ "./theme/elements/image/image.dev.ts":
 /*!*******************************************!*\
   !*** ./theme/elements/image/image.dev.ts ***!
@@ -348,12 +473,12 @@ __webpack_require__.r(__webpack_exports__);
 
 const example = `
 
-## Map zeigen
+## Image Zeiten
 
 <map data-map-url=""></div>
 
 `;
-_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass("element", ".do-map", "This is a description", example, []);
+_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass("element", ".do-image", "This is a description", example, []);
 
 
 /***/ }),
@@ -1395,12 +1520,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _elements_image_image_dev__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./elements/image/image.dev */ "./theme/elements/image/image.dev.ts");
 /* harmony import */ var _elements_map_map_dev__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./elements/map/map.dev */ "./theme/elements/map/map.dev.ts");
 /* harmony import */ var _elements_navbar_navbar_dev__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./elements/navbar/navbar.dev */ "./theme/elements/navbar/navbar.dev.ts");
-/* harmony import */ var _footer_footer1_footer1_dev__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./footer/footer1/footer1.dev */ "./theme/footer/footer1/footer1.dev.ts");
-/* harmony import */ var _sections_col2_col2_dev__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sections/col2/col2.dev */ "./theme/sections/col2/col2.dev.ts");
-/* harmony import */ var _sections_row_row_dev__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sections/row/row.dev */ "./theme/sections/row/row.dev.ts");
-/* harmony import */ var _heros_hero1_hero1_dev__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./heros/hero1/hero1.dev */ "./theme/heros/hero1/hero1.dev.ts");
-/* harmony import */ var _heros_header_header_dev__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./heros/header/header.dev */ "./theme/heros/header/header.dev.ts");
-/* harmony import */ var _pages_page1_page1_dev__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/page1/page1.dev */ "./theme/pages/page1/page1.dev.ts");
+/* harmony import */ var _elements_accordion_accordion_dev__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./elements/accordion/accordion.dev */ "./theme/elements/accordion/accordion.dev.ts");
+/* harmony import */ var _footer_footer1_footer1_dev__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./footer/footer1/footer1.dev */ "./theme/footer/footer1/footer1.dev.ts");
+/* harmony import */ var _sections_col2_col2_dev__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sections/col2/col2.dev */ "./theme/sections/col2/col2.dev.ts");
+/* harmony import */ var _sections_row_row_dev__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sections/row/row.dev */ "./theme/sections/row/row.dev.ts");
+/* harmony import */ var _heros_hero1_hero1_dev__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./heros/hero1/hero1.dev */ "./theme/heros/hero1/hero1.dev.ts");
+/* harmony import */ var _heros_header_header_dev__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./heros/header/header.dev */ "./theme/heros/header/header.dev.ts");
+/* harmony import */ var _pages_page1_page1_dev__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/page1/page1.dev */ "./theme/pages/page1/page1.dev.ts");
+
 
 
 
@@ -1426,12 +1553,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _elements_map_map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./elements/map/map */ "./theme/elements/map/map.ts");
 /* harmony import */ var _elements_navbar_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./elements/navbar/navbar */ "./theme/elements/navbar/navbar.ts");
 /* harmony import */ var _elements_textstyle_textstyle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./elements/textstyle/textstyle */ "./theme/elements/textstyle/textstyle.ts");
-/* harmony import */ var _footer_footer1_footer1__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./footer/footer1/footer1 */ "./theme/footer/footer1/footer1.ts");
-/* harmony import */ var _sections_autocontent_autocontent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sections/autocontent/autocontent */ "./theme/sections/autocontent/autocontent.ts");
-/* harmony import */ var _sections_col2_col2__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sections/col2/col2 */ "./theme/sections/col2/col2.ts");
-/* harmony import */ var _sections_row_row__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sections/row/row */ "./theme/sections/row/row.ts");
-/* harmony import */ var _heros_hero1_hero1__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./heros/hero1/hero1 */ "./theme/heros/hero1/hero1.ts");
-/* harmony import */ var _heros_header_header__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./heros/header/header */ "./theme/heros/header/header.ts");
+/* harmony import */ var _elements_accordion_accordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./elements/accordion/accordion */ "./theme/elements/accordion/accordion.ts");
+/* harmony import */ var _footer_footer1_footer1__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./footer/footer1/footer1 */ "./theme/footer/footer1/footer1.ts");
+/* harmony import */ var _sections_autocontent_autocontent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sections/autocontent/autocontent */ "./theme/sections/autocontent/autocontent.ts");
+/* harmony import */ var _sections_col2_col2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sections/col2/col2 */ "./theme/sections/col2/col2.ts");
+/* harmony import */ var _sections_row_row__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sections/row/row */ "./theme/sections/row/row.ts");
+/* harmony import */ var _heros_hero1_hero1__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./heros/hero1/hero1 */ "./theme/heros/hero1/hero1.ts");
+/* harmony import */ var _heros_header_header__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./heros/header/header */ "./theme/heros/header/header.ts");
+
 
 
 
@@ -2005,7 +2134,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   getCleanVariableValue: () => (/* binding */ getCleanVariableValue),
 /* harmony export */   jodaRenderer: () => (/* binding */ jodaRenderer),
 /* harmony export */   registerJodaRenderer: () => (/* binding */ registerJodaRenderer),
-/* harmony export */   splitChildrenBySelector: () => (/* binding */ splitChildrenBySelector)
+/* harmony export */   splitChildrenBySelector: () => (/* binding */ splitChildrenBySelector),
+/* harmony export */   wrapElement: () => (/* binding */ wrapElement)
 /* harmony export */ });
 /* harmony import */ var _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @kasimirjs/embed */ "./workspaces/kasi-embed/index.ts");
 var __async = (__this, __arguments, generator) => {
@@ -2055,6 +2185,11 @@ function await_property(object, property, wait = 10) {
     }
     return value;
   });
+}
+function wrapElement(element, wrapper) {
+  var _a;
+  (_a = element.parentNode) == null ? void 0 : _a.insertBefore(wrapper, element);
+  wrapper.appendChild(element);
 }
 function registerJodaRenderer(name, renderer, config) {
   if (window["jodastyle"] === void 0) {
@@ -2240,7 +2375,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   jodaRenderer: () => (/* reexport safe */ _helper_functions__WEBPACK_IMPORTED_MODULE_3__.jodaRenderer),
 /* harmony export */   registerJodaRenderer: () => (/* reexport safe */ _helper_functions__WEBPACK_IMPORTED_MODULE_3__.registerJodaRenderer),
 /* harmony export */   splitChildrenBySelector: () => (/* reexport safe */ _helper_functions__WEBPACK_IMPORTED_MODULE_3__.splitChildrenBySelector),
-/* harmony export */   template_parse: () => (/* reexport safe */ _helper_QTemplate__WEBPACK_IMPORTED_MODULE_4__.template_parse)
+/* harmony export */   template_parse: () => (/* reexport safe */ _helper_QTemplate__WEBPACK_IMPORTED_MODULE_4__.template_parse),
+/* harmony export */   wrapElement: () => (/* reexport safe */ _helper_functions__WEBPACK_IMPORTED_MODULE_3__.wrapElement)
 /* harmony export */ });
 /* harmony import */ var _helper_JodaRenderer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helper/JodaRenderer */ "./workspaces/jodastyle/src/helper/JodaRenderer.ts");
 /* harmony import */ var _helper_JodaRenderer__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_helper_JodaRenderer__WEBPACK_IMPORTED_MODULE_0__);
@@ -2251,7 +2387,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _component_joda_fetch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component/joda-fetch */ "./workspaces/jodastyle/src/component/joda-fetch.ts");
 /* harmony import */ var _helper_functions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./helper/functions */ "./workspaces/jodastyle/src/helper/functions.ts");
 /* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
-/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _helper_JodaRenderer__WEBPACK_IMPORTED_MODULE_0__) if(["default","JodaContentElement","await_property","getCleanVariableValue","jodaRenderer","registerJodaRenderer","splitChildrenBySelector"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _helper_JodaRenderer__WEBPACK_IMPORTED_MODULE_0__[__WEBPACK_IMPORT_KEY__]
+/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _helper_JodaRenderer__WEBPACK_IMPORTED_MODULE_0__) if(["default","JodaContentElement","await_property","getCleanVariableValue","jodaRenderer","registerJodaRenderer","splitChildrenBySelector","wrapElement"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _helper_JodaRenderer__WEBPACK_IMPORTED_MODULE_0__[__WEBPACK_IMPORT_KEY__]
 /* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
 /* harmony import */ var _helper_QTemplate__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./helper/QTemplate */ "./workspaces/jodastyle/src/helper/QTemplate.ts");
 /* harmony import */ var _types_DefaultLayout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./types/DefaultLayout */ "./workspaces/jodastyle/src/types/DefaultLayout.ts");
@@ -2521,21 +2657,17 @@ class Jodasplit {
   createNewElement(tagName, layer, tag) {
     tagName = tagName.toLowerCase();
     let curParent = this.findParentElement(layer);
-    if (__privateGet(this, _currentContent).children.length === 0) {
-      __privateGet(this, _currentContent).remove();
-    }
-    if (__privateGet(this, _currentChildren).children.length === 0) {
-      __privateGet(this, _currentChildren).remove();
-    }
-    if (__privateGet(this, _currentParent).children.length === 0) {
-      __privateGet(this, _currentParent).remove();
-    }
+    let curParentChildren = curParent.childNodes[1];
     __privateSet(this, _currentParent, (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_create_element)(tag, { class: "section-" + tagName }));
     while (__privateGet(this, _parents).length < layer) {
       __privateGet(this, _parents).push(void 0);
     }
     __privateGet(this, _parents).push(__privateGet(this, _currentParent));
-    curParent.appendChild(__privateGet(this, _currentParent));
+    if (curParent === __privateGet(this, _target)) {
+      curParent.appendChild(__privateGet(this, _currentParent));
+    } else {
+      curParentChildren.append(__privateGet(this, _currentParent));
+    }
     __privateSet(this, _currentContent, (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_create_element)("div", { class: "content" }, [], __privateGet(this, _currentParent)));
     __privateSet(this, _currentChildren, (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_create_element)("div", { class: "children" }, [], __privateGet(this, _currentParent)));
     return __privateGet(this, _currentParent);
@@ -2566,6 +2698,16 @@ class Jodasplit {
         e.classList.add(...child.classList);
       }
       __privateGet(this, _currentContent).appendChild(child);
+    });
+    Array.from(__privateGet(this, _target).querySelectorAll(".children")).forEach((child) => {
+      if (child.children.length === 0) {
+        child.remove();
+      }
+    });
+    Array.from(__privateGet(this, _target).querySelectorAll(".content")).forEach((child) => {
+      if (child.children.length === 0) {
+        child.remove();
+      }
     });
     return __privateGet(this, _target);
   }

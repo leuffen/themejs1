@@ -3,11 +3,11 @@ import {JodaDescriptionManager} from "@leuffen/jodastyle";
 
 const example = `
 
-## Map zeigen
+## Image Zeiten
 
 <map data-map-url=""></div>
 
 `;
 
 
-JodaDescriptionManager.addClass("element", ".do-map", "This is a description", example, []);
+JodaDescriptionManager.addClass("element", ".do-image", "This is a description", example, []);
