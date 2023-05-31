@@ -1,0 +1,28 @@
+
+:root {
+    --as-image-aspect-ratio: 16 / 9;
+}
+
+.do-image {
+    --joda-use: image();
+}
+
+img {
+    --joda-use: image();
+}
+
+.as__image {
+    width: 100%;
+    position: relative;
+
+    &>.image {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: var(--as-image-aspect-ratio, 4 / 5);
+        &>img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

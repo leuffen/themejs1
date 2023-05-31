@@ -1,8 +1,12 @@
 
+import "./elements/image/image.dev";
 import "./elements/map/map.dev";
 import "./elements/navbar/navbar.dev";
 
 import "./footer/footer1/footer1.dev";
+
+import "./sections/col2/col2.dev";
+import "./sections/row/row.dev";
 
 
 import "./heros/hero1/hero1.dev";

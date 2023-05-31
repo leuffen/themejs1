@@ -1,117 +1,122 @@
-:root {
-    --layout-break1: xl;
-    --section-spacing: 4.5rem;
-    --background-light: #ffffff;
-    --as-section-spacing: 4.5rem;
-}
 
-nav {
-    --joda-use: navbar();
-}
-
-footer {
-    --joda-use: footer();
-    --joda-class: dark;
-    --layout-minifooter: #minifooter;
-}
-
-map {
-    --joda-use: map();
-}
-
-h1 {
-    font-weight: 100;
-    font-style: normal;
-}
-h2,h3 {
-    color: var(--as-primary-text-color, $primary);
-}
-
-section.section-h2 {
-    padding-top: var(--as-section-padding, 3rem);
-    padding-bottom: var(--as-section-padding, 3rem);
-}
-
-
-.website {
-    section.section-h1 {
-        --joda-use: hero1();
-        --layout-cols: 6;
-        --layout-image-cols: 6;
-        background: white;
+.page1 {
+    :root {
+        --layout-break1: xl;
+        --section-spacing: 4.5rem;
+        --background-light: #ffffff;
+        --as-section-spacing: 4.5rem;
     }
 
-    :nth-child(1 of section.section-h2) {
-        --joda-use: col2();
-
-        .section-h3 {
-            --joda-class: col;
-            --joda-group: @row;
-            --joda-use: textstyle(template:'icontext');
-
-            &.col {
-                min-width: 300px;
-            }
-        }
-    }
-    section.section-h2 {
-        --joda-use: autocontent();
-
-        .section-h3 {
-            --joda-class: col;
-            --joda-group: @row;
-
-            &.col {
-                min-width: 300px;
-            }
-        }
+    nav {
+        --joda-use: navbar();
     }
 
-}
+    footer {
+        --joda-use: footer1();
+        --joda-class: dark;
+        --layout-minifooter: #minifooter;
+    }
 
-.article {
-    section.section-h1 {
-        --joda-use: header();
+    map {
+        --joda-use: map();
+    }
 
+    h1 {
+        font-weight: 100;
+        font-style: normal;
+    }
+    h2,h3 {
+        color: var(--as-primary-text-color, $primary);
     }
 
     section.section-h2 {
+        padding-top: var(--as-section-padding, 3rem);
+        padding-bottom: var(--as-section-padding, 3rem);
+    }
 
-        --joda-use: autocontent();
 
-        .section-h3 {
-            --joda-group: @row;
-            --joda-class: col g-5;
-            min-width: 500px;
+    .website {
+        section.section-h1 {
+            --joda-use: hero1();
+            --layout-cols: 6;
+            --layout-image-cols: 6;
+            background: white;
+        }
+
+        :nth-child(1 of section.section-h2) {
+            --joda-use: col2();
+
+            .section-h3 {
+                --joda-class: col;
+                --joda-group: @row;
+                --joda-use: textstyle(template:'icontext');
+
+                &.col {
+                    min-width: 300px;
+                }
+            }
+        }
+        section.section-h2 {
+            --joda-use: autocontent();
+
+            .section-h3 {
+                --joda-class: col;
+                --joda-group: @row;
+
+                &.col {
+                    min-width: 300px;
+                }
+            }
+        }
+
+    }
+
+    .article {
+        section.section-h1 {
+            --joda-use: header();
+
+        }
+
+        section.section-h2 {
+
+            --joda-use: autocontent();
+
+            .section-h3 {
+                --joda-group: @row;
+                --joda-class: col g-5;
+                min-width: 500px;
+            }
+        }
+
+    }
+
+    section.section-h2:nth-child(even) {
+        background: var(--background-light);
+    }
+
+    .dark {
+        h1,h2,h3,h4,h5,h6,p,span,li,td,th,a {
+            color: var(--as-dark-text-color, rgba(255,255,255,0.85));
+        }
+        a {
+            &:hover {
+                color: var(--as-dark-text-color-hover, rgba(255,255,255,1));
+                opacity: 1;
+            }
+        }
+    }
+
+
+    .sprechzeiten {
+        --joda-wrap: '@card @mb-5 > @card-body';
+        --joda-class: text-center;
+        h3 {
+            --joda-class: text-center mb-3;
+        }
+        table {
+            --joda-class: table table-hover;
         }
     }
 
 }
 
-section.section-h2:nth-child(even) {
-    background: var(--background-light);
-}
-
-.dark {
-    h1,h2,h3,h4,h5,h6,p,span,li,td,th,a {
-        color: var(--as-dark-text-color, rgba(255,255,255,0.85));
-    }
-    a {
-        &:hover {
-            color: var(--as-dark-text-color-hover, rgba(255,255,255,1));
-            opacity: 1;
-        }
-    }
-}
-
-
-.sprechzeiten {
-    --joda-wrap: '@card @mb-5 > @card-body';
-    --joda-class: text-center;
-    h3 {
-        --joda-class: text-center mb-3;
-    }
-    table {
-        --joda-class: table table-hover;
-    }
-}

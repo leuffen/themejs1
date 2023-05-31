@@ -170,7 +170,7 @@ class SubElement extends KaCustomElement {
                 return;
             }
 
-            document.body.setAttribute("class", desc.config.bodyClass ?? "");
+            document.body.classList.add(...desc.config.bodyClasses);
 
             if (desc.config.parseMarkdown) {
                 newElement.innerHTML = md.render(desc.example ?? "No example found");

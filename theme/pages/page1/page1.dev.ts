@@ -53,6 +53,6 @@ Some Content Here
 
 
 JodaDescriptionManager.addClass("page", "page1", "This is a description", example, [], {
-    bodyClass: "website",
+    bodyClasses: ["website",  "page1"],
     parseMarkdown: true
 });

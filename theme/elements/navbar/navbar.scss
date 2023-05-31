@@ -43,6 +43,18 @@
         }
     }
 
+    .navbar-brand {
+        display: block;
+        height: 84px;
+        max-width: 220px; // max width for mobile
+        width: 220px;
+        img {
+            object-fit: contain;
+            object-position: left center;
+            height: 100%;
+            width: 100%;
+        }
+    }
 
     .as__minibar {
         overflow: hidden;

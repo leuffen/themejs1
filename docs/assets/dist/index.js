@@ -269,7 +269,7 @@ let SubElement = class extends _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.KaC
     });
     let last = "";
     setInterval(() => {
-      var _a, _b, _c;
+      var _a, _b;
       if (last === window.location.href) {
         return;
       }
@@ -293,11 +293,11 @@ let SubElement = class extends _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.KaC
         daba.replaceWith(newElement);
         return;
       }
-      document.body.setAttribute("class", (_a = desc.config.bodyClass) != null ? _a : "");
+      document.body.classList.add(...desc.config.bodyClasses);
       if (desc.config.parseMarkdown) {
-        newElement.innerHTML = md.render((_b = desc.example) != null ? _b : "No example found");
+        newElement.innerHTML = md.render((_a = desc.example) != null ? _a : "No example found");
       } else {
-        newElement.innerHTML = (_c = desc.example) != null ? _c : "No example found";
+        newElement.innerHTML = (_b = desc.example) != null ? _b : "No example found";
       }
       console.log(newElement.innerHTML);
       daba.replaceWith(newElement);
@@ -332,6 +332,86 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+/***/ }),
+
+/***/ "./theme/elements/image/image.dev.ts":
+/*!*******************************************!*\
+  !*** ./theme/elements/image/image.dev.ts ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+
+const example = `
+
+## Map zeigen
+
+<map data-map-url=""></div>
+
+`;
+_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass("element", ".do-map", "This is a description", example, []);
+
+
+/***/ }),
+
+/***/ "./theme/elements/image/image.ts":
+/*!***************************************!*\
+  !*** ./theme/elements/image/image.ts ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ImageLayout: () => (/* binding */ ImageLayout)
+/* harmony export */ });
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+/* harmony import */ var _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @leuffen/jodastyle/src/helper/QTemplate */ "./workspaces/jodastyle/src/helper/QTemplate.ts");
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __decorateClass = (decorators, target, key, kind) => {
+  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
+  for (var i = decorators.length - 1, decorator; i >= 0; i--)
+    if (decorator = decorators[i])
+      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
+  if (kind && result)
+    __defProp(target, key, result);
+  return result;
+};
+
+
+const tpl = `
+    <div class="as__image">
+        <div class="header" data-ref="header"></div>
+        <div class="image" data-ref="image">
+        </div>
+        <div class="footer" data-ref="footer"></div>
+    </div>
+`;
+class ImageLayout extends _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.DefaultLayout {
+}
+let Image = class {
+  render(element, layout) {
+    let main = new _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__.QTemplate(tpl);
+    main.parse({ layout });
+    let imageDiv = main.select("image");
+    let e = element;
+    if (e.tagName !== "IMG") {
+      e = e.querySelector("img");
+    }
+    main.content.classList.add(...e.classList);
+    element.replaceWith(main.content);
+    main.selected.append(e);
+    return main.content;
+  }
+};
+Image = __decorateClass([
+  (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.jodaRenderer)("image", ImageLayout)
+], Image);
 
 
 /***/ }),
@@ -1034,7 +1114,7 @@ Some Content Here
 
 `;
 _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass("page", "page1", "This is a description", example, [], {
-  bodyClass: "website",
+  bodyClasses: ["website", "page1"],
   parseMarkdown: true
 });
 
@@ -1097,6 +1177,36 @@ AutoContent = __decorateClass([
 
 /***/ }),
 
+/***/ "./theme/sections/col2/col2.dev.ts":
+/*!*****************************************!*\
+  !*** ./theme/sections/col2/col2.dev.ts ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+
+const example = `
+
+## Two Column Section{.do-col-2}
+
+### Column 1
+
+Some Column 1 Text
+
+### Column 2
+
+Some Column 2 Text
+
+![Some Image](cdn:///leu-stock/v/50/1920x1282_1200x801_992x662_768x513_480x321_256x256/AdobeStock_361612440.avif_jpeg){: .background}
+
+`;
+_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass("section", "col2", "This is a description", example, []);
+
+
+/***/ }),
+
 /***/ "./theme/sections/col2/col2.ts":
 /*!*************************************!*\
   !*** ./theme/sections/col2/col2.ts ***!
@@ -1153,6 +1263,127 @@ Col2 = __decorateClass([
 
 /***/ }),
 
+/***/ "./theme/sections/row/row.dev.ts":
+/*!***************************************!*\
+  !*** ./theme/sections/row/row.dev.ts ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+
+const example = `
+
+## Row Section{.do-row}
+
+Some subtext
+
+
+![Some Image](cdn:///leu-stock/v/50/1920x1282_1200x801_992x662_768x513_480x321_256x256/AdobeStock_361612440.avif_jpeg){: .image .order-2}
+
+### Column 1
+
+Some Column 1 Text
+
+### Column 2
+
+Some Column 2 Text
+
+
+## Row Section{.do-row}
+
+
+
+### Column 1
+
+![Some Image](cdn:///leu-stock/v/50/1920x1282_1200x801_992x662_768x513_480x321_256x256/AdobeStock_361612440.avif_jpeg){: .image .order-2}
+
+Some Column 1 Text
+
+### Column 2
+
+Some Column 2 Text
+
+
+
+`;
+_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass("section", "row", "This is a description", example, []);
+
+
+/***/ }),
+
+/***/ "./theme/sections/row/row.ts":
+/*!***********************************!*\
+  !*** ./theme/sections/row/row.ts ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+/* harmony import */ var _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @leuffen/jodastyle/src/helper/QTemplate */ "./workspaces/jodastyle/src/helper/QTemplate.ts");
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __decorateClass = (decorators, target, key, kind) => {
+  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
+  for (var i = decorators.length - 1, decorator; i >= 0; i--)
+    if (decorator = decorators[i])
+      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
+  if (kind && result)
+    __defProp(target, key, result);
+  return result;
+};
+
+
+class RowLayout extends _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.DefaultLayout {
+  constructor() {
+    super(...arguments);
+    this.order = "";
+    this.center_image_selector = ":root > img";
+  }
+}
+const tpl = `
+<div class="as__row [[layout.container]]">
+    <div class="wrapper1">
+        <div class="wrapper2">
+            <div class="header" data-ref="header"></div>
+            <div class="row [[layout.order]] " data-ref="row">
+            </div>
+            <div class="header" data-ref="footer"></div>
+            <div class="overlay1" data-ref="overlay1"></div>
+            <div class="overlay2" data-ref="overlay2"></div>
+        </div>
+    </div>
+</div>
+`;
+let Row = class {
+  render(element, layout) {
+    let main = new _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__.QTemplate(tpl);
+    main.parse({ layout });
+    let secIndex = 1;
+    main.select("header").pick(element, "h2,.header");
+    main.select("row").pick(element, ".image ", (e) => {
+      e.classList.add("col");
+      return e;
+    });
+    main.select("row").pick(element, ".section-h3", (e) => {
+      e.classList.add("col");
+      e.classList.add("order-" + secIndex++ * 2);
+      return e;
+    });
+    main.select("footer").pick(element, ".footer");
+    element.append(main.content);
+    return main.content;
+  }
+};
+Row = __decorateClass([
+  (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.jodaRenderer)("row", RowLayout)
+], Row);
+
+
+/***/ }),
+
 /***/ "./theme/styles.dev.ts":
 /*!*****************************!*\
   !*** ./theme/styles.dev.ts ***!
@@ -1161,12 +1392,18 @@ Col2 = __decorateClass([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _elements_map_map_dev__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./elements/map/map.dev */ "./theme/elements/map/map.dev.ts");
-/* harmony import */ var _elements_navbar_navbar_dev__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./elements/navbar/navbar.dev */ "./theme/elements/navbar/navbar.dev.ts");
-/* harmony import */ var _footer_footer1_footer1_dev__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./footer/footer1/footer1.dev */ "./theme/footer/footer1/footer1.dev.ts");
-/* harmony import */ var _heros_hero1_hero1_dev__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./heros/hero1/hero1.dev */ "./theme/heros/hero1/hero1.dev.ts");
-/* harmony import */ var _heros_header_header_dev__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./heros/header/header.dev */ "./theme/heros/header/header.dev.ts");
-/* harmony import */ var _pages_page1_page1_dev__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/page1/page1.dev */ "./theme/pages/page1/page1.dev.ts");
+/* harmony import */ var _elements_image_image_dev__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./elements/image/image.dev */ "./theme/elements/image/image.dev.ts");
+/* harmony import */ var _elements_map_map_dev__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./elements/map/map.dev */ "./theme/elements/map/map.dev.ts");
+/* harmony import */ var _elements_navbar_navbar_dev__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./elements/navbar/navbar.dev */ "./theme/elements/navbar/navbar.dev.ts");
+/* harmony import */ var _footer_footer1_footer1_dev__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./footer/footer1/footer1.dev */ "./theme/footer/footer1/footer1.dev.ts");
+/* harmony import */ var _sections_col2_col2_dev__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sections/col2/col2.dev */ "./theme/sections/col2/col2.dev.ts");
+/* harmony import */ var _sections_row_row_dev__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sections/row/row.dev */ "./theme/sections/row/row.dev.ts");
+/* harmony import */ var _heros_hero1_hero1_dev__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./heros/hero1/hero1.dev */ "./theme/heros/hero1/hero1.dev.ts");
+/* harmony import */ var _heros_header_header_dev__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./heros/header/header.dev */ "./theme/heros/header/header.dev.ts");
+/* harmony import */ var _pages_page1_page1_dev__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/page1/page1.dev */ "./theme/pages/page1/page1.dev.ts");
+
+
+
 
 
 
@@ -1185,14 +1422,18 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _elements_map_map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./elements/map/map */ "./theme/elements/map/map.ts");
-/* harmony import */ var _elements_navbar_navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./elements/navbar/navbar */ "./theme/elements/navbar/navbar.ts");
-/* harmony import */ var _elements_textstyle_textstyle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./elements/textstyle/textstyle */ "./theme/elements/textstyle/textstyle.ts");
-/* harmony import */ var _footer_footer1_footer1__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./footer/footer1/footer1 */ "./theme/footer/footer1/footer1.ts");
-/* harmony import */ var _sections_autocontent_autocontent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sections/autocontent/autocontent */ "./theme/sections/autocontent/autocontent.ts");
-/* harmony import */ var _sections_col2_col2__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sections/col2/col2 */ "./theme/sections/col2/col2.ts");
-/* harmony import */ var _heros_hero1_hero1__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./heros/hero1/hero1 */ "./theme/heros/hero1/hero1.ts");
-/* harmony import */ var _heros_header_header__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./heros/header/header */ "./theme/heros/header/header.ts");
+/* harmony import */ var _elements_image_image__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./elements/image/image */ "./theme/elements/image/image.ts");
+/* harmony import */ var _elements_map_map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./elements/map/map */ "./theme/elements/map/map.ts");
+/* harmony import */ var _elements_navbar_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./elements/navbar/navbar */ "./theme/elements/navbar/navbar.ts");
+/* harmony import */ var _elements_textstyle_textstyle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./elements/textstyle/textstyle */ "./theme/elements/textstyle/textstyle.ts");
+/* harmony import */ var _footer_footer1_footer1__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./footer/footer1/footer1 */ "./theme/footer/footer1/footer1.ts");
+/* harmony import */ var _sections_autocontent_autocontent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sections/autocontent/autocontent */ "./theme/sections/autocontent/autocontent.ts");
+/* harmony import */ var _sections_col2_col2__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sections/col2/col2 */ "./theme/sections/col2/col2.ts");
+/* harmony import */ var _sections_row_row__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sections/row/row */ "./theme/sections/row/row.ts");
+/* harmony import */ var _heros_hero1_hero1__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./heros/hero1/hero1 */ "./theme/heros/hero1/hero1.ts");
+/* harmony import */ var _heros_header_header__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./heros/header/header */ "./theme/heros/header/header.ts");
+
+
 
 
 
@@ -1239,6 +1480,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _processor_jodaresponsive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../processor/jodaresponsive */ "./workspaces/jodastyle/src/processor/jodaresponsive.ts");
 /* harmony import */ var _helper_logger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../helper/logger */ "./workspaces/jodastyle/src/helper/logger.ts");
 /* harmony import */ var _processor_jodaimageproc__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../processor/jodaimageproc */ "./workspaces/jodastyle/src/processor/jodaimageproc.ts");
+/* harmony import */ var _processor_jodavisualize__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../processor/jodavisualize */ "./workspaces/jodastyle/src/processor/jodavisualize.ts");
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __decorateClass = (decorators, target, key, kind) => {
@@ -1289,6 +1531,7 @@ var __async = (__this, __arguments, generator) => {
   });
 };
 var _origContentTemplate, _outputDiv;
+
 
 
 
@@ -1353,6 +1596,10 @@ let JodaContentElement = class extends HTMLElement {
       }
       ;
       jodaresponsive.process(__privateGet(this, _outputDiv));
+      if (this.hasAttribute("visualize")) {
+        logger.log("Adding class and tag names");
+        new _processor_jodavisualize__WEBPACK_IMPORTED_MODULE_6__.Jodavisualize().process(__privateGet(this, _outputDiv));
+      }
       yield (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_sleep)(1);
       this.classList.add("loaded");
       yield (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_sleep)(1);
@@ -1370,6 +1617,10 @@ let JodaContentElement = class extends HTMLElement {
         });
       });
     });
+  }
+  setContent(content) {
+    this.innerHTML = content;
+    this.connectedCallback();
   }
 };
 _origContentTemplate = new WeakMap();
@@ -1460,8 +1711,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   JodaDescriptionManager: () => (/* binding */ JodaDescriptionManager),
 /* harmony export */   __JodaDescriptionManager: () => (/* binding */ __JodaDescriptionManager)
 /* harmony export */ });
+var __defProp = Object.defineProperty;
+var __getOwnPropSymbols = Object.getOwnPropertySymbols;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __propIsEnum = Object.prototype.propertyIsEnumerable;
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues = (a, b) => {
+  for (var prop in b || (b = {}))
+    if (__hasOwnProp.call(b, prop))
+      __defNormalProp(a, prop, b[prop]);
+  if (__getOwnPropSymbols)
+    for (var prop of __getOwnPropSymbols(b)) {
+      if (__propIsEnum.call(b, prop))
+        __defNormalProp(a, prop, b[prop]);
+    }
+  return a;
+};
 class __JodaDescriptionManager {
-  addClass(category, className, description, example, modifiers, config = { parseMarkdown: true }) {
+  addClass(category, className, description, example, modifiers, config = {}) {
+    let defaultConfig = {
+      bodyClasses: [],
+      parseMarkdown: true
+    };
+    config = __spreadValues(__spreadValues({}, defaultConfig), config);
     if (window["jodastyle"] === void 0) {
       window["jodastyle"] = {};
     }
@@ -1669,6 +1941,21 @@ class QTemplate {
       console.error("Element with data-ref '" + data_ref + "' not found.", this.content);
       throw "Element with data-ref '" + data_ref + "' not found.";
     }
+    return this;
+  }
+  /**
+   * Pick elements by selector and append them to the selected element
+   *
+   * @param source
+   * @param selector
+   */
+  pick(source, selector, modifier = null) {
+    Array.from(source.querySelectorAll(selector)).forEach((e) => {
+      if (modifier !== null) {
+        e = modifier(e);
+      }
+      this.selected.append(e);
+    });
     return this;
   }
   /**
@@ -2211,7 +2498,7 @@ var __privateSet = (obj, member, value, setter) => {
   setter ? setter.call(obj, value) : member.set(obj, value);
   return value;
 };
-var _target, _parents, _currentParent;
+var _target, _parents, _currentParent, _currentContent, _currentChildren;
 
 class Jodasplit {
   constructor(logger) {
@@ -2219,6 +2506,8 @@ class Jodasplit {
     __privateAdd(this, _target, document.createDocumentFragment());
     __privateAdd(this, _parents, [__privateGet(this, _target)]);
     __privateAdd(this, _currentParent, (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_create_element)("section", { class: "section-h1pre" }));
+    __privateAdd(this, _currentContent, (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_create_element)("div", { class: "content" }, [], __privateGet(this, _currentParent)));
+    __privateAdd(this, _currentChildren, (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_create_element)("div", { class: "children" }, [], __privateGet(this, _currentParent)));
   }
   findParentElement(layer) {
     while (__privateGet(this, _parents).length > layer) {
@@ -2232,12 +2521,23 @@ class Jodasplit {
   createNewElement(tagName, layer, tag) {
     tagName = tagName.toLowerCase();
     let curParent = this.findParentElement(layer);
+    if (__privateGet(this, _currentContent).children.length === 0) {
+      __privateGet(this, _currentContent).remove();
+    }
+    if (__privateGet(this, _currentChildren).children.length === 0) {
+      __privateGet(this, _currentChildren).remove();
+    }
+    if (__privateGet(this, _currentParent).children.length === 0) {
+      __privateGet(this, _currentParent).remove();
+    }
     __privateSet(this, _currentParent, (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_create_element)(tag, { class: "section-" + tagName }));
     while (__privateGet(this, _parents).length < layer) {
       __privateGet(this, _parents).push(void 0);
     }
     __privateGet(this, _parents).push(__privateGet(this, _currentParent));
     curParent.appendChild(__privateGet(this, _currentParent));
+    __privateSet(this, _currentContent, (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_create_element)("div", { class: "content" }, [], __privateGet(this, _currentParent)));
+    __privateSet(this, _currentChildren, (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_create_element)("div", { class: "children" }, [], __privateGet(this, _currentParent)));
     return __privateGet(this, _currentParent);
   }
   process(source) {
@@ -2265,7 +2565,7 @@ class Jodasplit {
         e.setAttribute("style", child.getAttribute("style") || "");
         e.classList.add(...child.classList);
       }
-      __privateGet(this, _currentParent).appendChild(child);
+      __privateGet(this, _currentContent).appendChild(child);
     });
     return __privateGet(this, _target);
   }
@@ -2273,6 +2573,8 @@ class Jodasplit {
 _target = new WeakMap();
 _parents = new WeakMap();
 _currentParent = new WeakMap();
+_currentContent = new WeakMap();
+_currentChildren = new WeakMap();
 
 
 /***/ }),
@@ -2440,6 +2742,30 @@ class Jodastyle {
           child = yield command(styleValue, node, child, this.logger);
         }
       }
+    });
+  }
+}
+
+
+/***/ }),
+
+/***/ "./workspaces/jodastyle/src/processor/jodavisualize.ts":
+/*!*************************************************************!*\
+  !*** ./workspaces/jodastyle/src/processor/jodavisualize.ts ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Jodavisualize: () => (/* binding */ Jodavisualize)
+/* harmony export */ });
+/* harmony import */ var _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @kasimirjs/embed */ "./workspaces/kasi-embed/index.ts");
+
+class Jodavisualize {
+  process(element) {
+    [element, ...Array.from(element.querySelectorAll("*"))].forEach((e) => {
+      e.insertBefore((0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_create_element)("div", { class: "joda-visualize" }, `<${e.tagName.toLowerCase()}  class="${Array.from(e.classList).join(", ")}">`), e.firstElementChild);
     });
   }
 }

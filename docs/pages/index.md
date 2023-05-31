@@ -12,6 +12,11 @@ permalink: /
 <showcase-element data-category="hero">
 </showcase-element>
 
+## Sections
+
+<showcase-element data-category="section">
+</showcase-element>
+
 
 ## Footer
 

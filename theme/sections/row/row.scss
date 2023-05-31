@@ -5,8 +5,12 @@
   --layout-side-content: "This is some side-content from --layout-side-content"
 }
 
+.do-row {
+  --joda-use: row();
+}
 
-.do-two-col {
-  --joda-use: col2();
+.as__row {
 
 }
+
+

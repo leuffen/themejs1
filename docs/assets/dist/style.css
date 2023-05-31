@@ -9,6 +9,33 @@ joda-content {
   --joda-init: true;
 }
 
+:root {
+  --as-image-aspect-ratio: 16 / 9;
+}
+
+.do-image {
+  --joda-use: image();
+}
+
+img {
+  --joda-use: image();
+}
+
+.as__image {
+  width: 100%;
+  position: relative;
+}
+.as__image > .image {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: var(--as-image-aspect-ratio, 4/5);
+}
+.as__image > .image > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 .do-map {
   --joda-use: map();
 }
@@ -78,6 +105,18 @@ joda-content {
 .as__navbar.auto-fixed.scrolled.fixed {
   opacity: 1;
   position: fixed;
+}
+.as__navbar .navbar-brand {
+  display: block;
+  height: 84px;
+  max-width: 220px;
+  width: 220px;
+}
+.as__navbar .navbar-brand img {
+  object-fit: contain;
+  object-position: left center;
+  height: 100%;
+  width: 100%;
 }
 .as__navbar .as__minibar {
   overflow: hidden;
@@ -176,6 +215,19 @@ joda-content {
 :root {
   --layout-cols: 8;
   --layout-side-content: "This is some side-content from --layout-side-content" ;
+}
+
+.do-two-col {
+  --joda-use: col2();
+}
+
+:root {
+  --layout-cols: 8;
+  --layout-side-content: "This is some side-content from --layout-side-content" ;
+}
+
+.do-row {
+  --joda-use: row();
 }
 
 :root {
@@ -320,101 +372,90 @@ joda-content {
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(255, 255, 255));
 }
 
-:root {
+.page1 :root {
   --layout-break1: xl;
   --section-spacing: 4.5rem;
   --background-light: #ffffff;
   --as-section-spacing: 4.5rem;
 }
-
-nav {
+.page1 nav {
   --joda-use: navbar();
 }
-
-footer {
-  --joda-use: footer();
+.page1 footer {
+  --joda-use: footer1();
   --joda-class: dark;
   --layout-minifooter: #minifooter;
 }
-
-map {
+.page1 map {
   --joda-use: map();
 }
-
-h1 {
+.page1 h1 {
   font-weight: 100;
   font-style: normal;
 }
-
-h2, h3 {
+.page1 h2, .page1 h3 {
   color: var(--as-primary-text-color, #007bff);
 }
-
-section.section-h2 {
+.page1 section.section-h2 {
   padding-top: var(--as-section-padding, 3rem);
   padding-bottom: var(--as-section-padding, 3rem);
 }
-
-.website section.section-h1 {
+.page1 .website section.section-h1 {
   --joda-use: hero1();
   --layout-cols: 6;
   --layout-image-cols: 6;
   background: white;
 }
-.website :nth-child(1 of section.section-h2) {
+.page1 .website :nth-child(1 of section.section-h2) {
   --joda-use: col2();
 }
-.website :nth-child(1 of section.section-h2) .section-h3 {
+.page1 .website :nth-child(1 of section.section-h2) .section-h3 {
   --joda-class: col;
   --joda-group: @row;
   --joda-use: textstyle(template:"icontext");
 }
-.website :nth-child(1 of section.section-h2) .section-h3.col {
+.page1 .website :nth-child(1 of section.section-h2) .section-h3.col {
   min-width: 300px;
 }
-.website section.section-h2 {
+.page1 .website section.section-h2 {
   --joda-use: autocontent();
 }
-.website section.section-h2 .section-h3 {
+.page1 .website section.section-h2 .section-h3 {
   --joda-class: col;
   --joda-group: @row;
 }
-.website section.section-h2 .section-h3.col {
+.page1 .website section.section-h2 .section-h3.col {
   min-width: 300px;
 }
-
-.article section.section-h1 {
+.page1 .article section.section-h1 {
   --joda-use: header();
 }
-.article section.section-h2 {
+.page1 .article section.section-h2 {
   --joda-use: autocontent();
 }
-.article section.section-h2 .section-h3 {
+.page1 .article section.section-h2 .section-h3 {
   --joda-group: @row;
   --joda-class: col g-5;
   min-width: 500px;
 }
-
-section.section-h2:nth-child(even) {
+.page1 section.section-h2:nth-child(even) {
   background: var(--background-light);
 }
-
-.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark p, .dark span, .dark li, .dark td, .dark th, .dark a {
+.page1 .dark h1, .page1 .dark h2, .page1 .dark h3, .page1 .dark h4, .page1 .dark h5, .page1 .dark h6, .page1 .dark p, .page1 .dark span, .page1 .dark li, .page1 .dark td, .page1 .dark th, .page1 .dark a {
   color: var(--as-dark-text-color, rgba(255, 255, 255, 0.85));
 }
-.dark a:hover {
+.page1 .dark a:hover {
   color: var(--as-dark-text-color-hover, rgb(255, 255, 255));
   opacity: 1;
 }
-
-.sprechzeiten {
+.page1 .sprechzeiten {
   --joda-wrap: "@card @mb-5 > @card-body";
   --joda-class: text-center;
 }
-.sprechzeiten h3 {
+.page1 .sprechzeiten h3 {
   --joda-class: text-center mb-3;
 }
-.sprechzeiten table {
+.page1 .sprechzeiten table {
   --joda-class: table table-hover;
 }
 

@@ -29,6 +29,7 @@ class Col2 implements JodaRendererInterface {
         main.parse({layout});
 
         main.select("main").append(element.childNodes);
+
         element.append(main.content);
         return main.content;
     }
