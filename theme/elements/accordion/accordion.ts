@@ -14,13 +14,14 @@ const tpl = `
 `;
 
 
-export class ImageLayout extends DefaultLayout {
+export class AccordionLayout extends DefaultLayout {
 
+    accordion_auto_open : boolean = true;
 }
 
-@jodaRenderer("accordion", ImageLayout)
+@jodaRenderer("accordion", AccordionLayout)
 class Accordion implements JodaRendererInterface {
-    render(element: HTMLElement, layout: ImageLayout): HTMLElement {
+    render(element: HTMLElement, layout: AccordionLayout): HTMLElement {
         Array.from(element.querySelectorAll(":scope > .children > .section-h3 > .content h3")).forEach( async (e, i) => {
             let newElem = ka_create_element("a", {class: "as__accordion-header"});
             e.parentNode.parentNode.insertBefore(newElem, e.parentNode);
@@ -45,13 +46,15 @@ class Accordion implements JodaRendererInterface {
             }
 
 
-            e.parentNode.insertBefore(newElem, e);
-            newElem.append(e);
         });
+
+
+
+        console.log("auto open", layout);
+        if (layout.accordion_auto_open) {
+            element.querySelector(".section-h3")?.classList.add("open");
+        }
         return element;
-
-
-
 
     }
 

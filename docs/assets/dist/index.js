@@ -362,8 +362,14 @@ Anderer Titel
 
 Test
 
-Test 2 slakjsalkfjdlaksdjfl\xF6askjdflkjas sadlfkjasldkfjlaskj fdlaskd jflaskjdflkjasldkfj laskjdf lksdj lksdj las
+Test 2 slakjsalkfjdlaksdjfl\xF6askjdflkjas sadlfkjasldkfjlaskj fdlaskd jflaskjdflkjasldkfj 
+laskjdf lksdj lksdj las
 
+wurst
+
+##### Some Child content
+
+Some Content
 
 `;
 _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass("element", ".use-accordion", "This is a description", example, []);
@@ -380,7 +386,7 @@ _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass(
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   ImageLayout: () => (/* binding */ ImageLayout)
+/* harmony export */   AccordionLayout: () => (/* binding */ AccordionLayout)
 /* harmony export */ });
 /* harmony import */ var _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @kasimirjs/embed */ "./workspaces/kasi-embed/index.ts");
 /* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
@@ -425,10 +431,15 @@ const tpl = `
         <div class="footer" data-ref="footer"></div>
     </div>
 `;
-class ImageLayout extends _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.DefaultLayout {
+class AccordionLayout extends _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.DefaultLayout {
+  constructor() {
+    super(...arguments);
+    this.accordion_auto_open = true;
+  }
 }
 let Accordion = class {
   render(element, layout) {
+    var _a;
     Array.from(element.querySelectorAll(":scope > .children > .section-h3 > .content h3")).forEach((e, i) => __async(this, null, function* () {
       let newElem = (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_create_element)("a", { class: "as__accordion-header" });
       e.parentNode.parentNode.insertBefore(newElem, e.parentNode);
@@ -439,23 +450,25 @@ let Accordion = class {
         }));
       };
       newElem.onclick = () => {
-        var _a;
+        var _a2;
         update();
         Array.from(newElem.closest(".children").children).forEach((e2) => {
           if (e2 === newElem.closest(".section-h3"))
             return;
           e2.classList.remove("open");
         });
-        (_a = newElem.closest(".section-h3")) == null ? void 0 : _a.classList.toggle("open");
+        (_a2 = newElem.closest(".section-h3")) == null ? void 0 : _a2.classList.toggle("open");
       };
-      e.parentNode.insertBefore(newElem, e);
-      newElem.append(e);
     }));
+    console.log("auto open", layout);
+    if (layout.accordion_auto_open) {
+      (_a = element.querySelector(".section-h3")) == null ? void 0 : _a.classList.add("open");
+    }
     return element;
   }
 };
 Accordion = __decorateClass([
-  (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.jodaRenderer)("accordion", ImageLayout)
+  (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.jodaRenderer)("accordion", AccordionLayout)
 ], Accordion);
 
 

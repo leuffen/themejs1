@@ -1,4 +1,8 @@
 
+:root {
+    --layout-accordion-auto-open: true;
+}
+
 .use-accordion {
     --joda-use: accordion();
     --joda-class: as__accordion;
@@ -26,7 +30,7 @@
         background-color: var(--as-accordion-open-bg, rgba(0, 0, 0, 0.1));
     }
 
-    .section-h3 > .content {
+    .section-h3 > .content, .section-h3 > .children {
         padding-left: 2.5rem;
     }
 

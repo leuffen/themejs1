@@ -212,6 +212,10 @@ img {
   position: absolute;
 }
 
+:root {
+  --layout-accordion-auto-open: true;
+}
+
 .use-accordion {
   --joda-use: accordion();
   --joda-class: as__accordion;
@@ -232,7 +236,7 @@ img {
 .as__accordion .section-h3.open {
   background-color: var(--as-accordion-open-bg, rgba(0, 0, 0, 0.1));
 }
-.as__accordion .section-h3 > .content {
+.as__accordion .section-h3 > .content, .as__accordion .section-h3 > .children {
   padding-left: 2.5rem;
 }
 .as__accordion .as__accordion-header {
