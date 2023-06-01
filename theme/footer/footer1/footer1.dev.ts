@@ -4,7 +4,7 @@ import {JodaDescriptionManager} from "@leuffen/jodastyle";
 const example = `
 
 
-<footer class="do-footer1">
+<footer class="use-footer1">
     <div id="minifooter">
         Minifoooter
     </div>
