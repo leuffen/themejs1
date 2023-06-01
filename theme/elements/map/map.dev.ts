@@ -5,9 +5,9 @@ const example = `
 
 ## Map zeigen
 
-<map data-map-url=""></div>
+<map data-map-url="" class="use-map"></div>
 
 `;
 
 
-JodaDescriptionManager.addClass("element", ".do-map", "This is a description", example, []);
+JodaDescriptionManager.addClass("element", ".use-map", "This is a description", example, []);

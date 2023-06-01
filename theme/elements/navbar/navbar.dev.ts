@@ -3,7 +3,7 @@ import {JodaDescriptionManager} from "@leuffen/jodastyle";
 
 const example = `
 
-<div class="do-navbar">
+<div class="use-navbar">
     <a class="navbar-brand" href="/" aria-label="Home">
         <img id="logo" src="/assets/logo64b.svg" height="84" width="72" alt="Logo">
     </a>
@@ -16,4 +16,4 @@ const example = `
 `;
 
 
-JodaDescriptionManager.addClass("element", ".do-navbar", "This is a description", example, []);
+JodaDescriptionManager.addClass("element", ".use-navbar", "This is a description", example, []);

@@ -4,6 +4,7 @@ import "./elements/map/map";
 import "./elements/navbar/navbar";
 import "./elements/textstyle/textstyle";
 import "./elements/accordion/accordion";
+import "./elements/hamburger/hamburger";
 
 import "./footer/footer1/footer1";
 
