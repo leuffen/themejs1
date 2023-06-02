@@ -19,7 +19,7 @@ const tpl = `
 
 
 
-@customElement("showcase-element")@template(tpl)
+@template(tpl)@customElement("showcase-element")
 class ShowcaseElement extends KaCustomElement {
 
     constructor() {

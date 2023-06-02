@@ -118,8 +118,8 @@ let ShowcaseElement = class extends _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_1_
   }
 };
 ShowcaseElement = __decorateClass([
-  (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_1__.customElement)("showcase-element"),
-  (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_1__.template)(tpl)
+  (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_1__.template)(tpl),
+  (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_1__.customElement)("showcase-element")
 ], ShowcaseElement);
 
 
@@ -1883,12 +1883,13 @@ let JodaContentElement = class extends HTMLElement {
       let index = 0;
       while (true) {
         index++;
-        if (getComputedStyle(this).getPropertyValue("--joda-init").indexOf("true") !== -1) {
+        let initValue = getComputedStyle(this).getPropertyValue("--joda-init");
+        if (initValue.indexOf("true") !== -1) {
           break;
         }
         if (index > 100) {
           index = 0;
-          console.warn("Still waiting for --joda-init: true", this, "current value:", getComputedStyle(this).getPropertyValue("--joda-init"));
+          console.warn("Still waiting for --joda-init: true", this, "current value:", initValue, "on url", window.location.href);
         }
         yield (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_sleep)(50 + index);
       }
@@ -3871,12 +3872,6 @@ class KaCustomElement extends HTMLElement {
     this.wrapper = null;
   }
   init(scope) {
-    if ((0,_functions__WEBPACK_IMPORTED_MODULE_1__.isset)(this.constructor["html"])) {
-      this.html = this.constructor["html"];
-    }
-    if (this.tplPrototype === null) {
-      this.tplPrototype = (0,_tpl_templatify__WEBPACK_IMPORTED_MODULE_2__.ka_templatify)((0,_ce_html__WEBPACK_IMPORTED_MODULE_3__.ka_html)(this.html));
-    }
     this.scope.init(scope);
     return this.scope;
   }
@@ -3890,6 +3885,12 @@ class KaCustomElement extends HTMLElement {
     return __async(this, null, function* () {
       if (!this.scope.isInitialized())
         this.init({});
+      if ((0,_functions__WEBPACK_IMPORTED_MODULE_1__.isset)(this.constructor["html"])) {
+        this.html = this.constructor["html"];
+      }
+      if (this.tplPrototype === null) {
+        this.tplPrototype = (0,_tpl_templatify__WEBPACK_IMPORTED_MODULE_2__.ka_templatify)((0,_ce_html__WEBPACK_IMPORTED_MODULE_3__.ka_html)(this.html));
+      }
       this.tpl = this.tplPrototype.cloneNode(true);
       this.scope.$tpl = new _tpl_template__WEBPACK_IMPORTED_MODULE_4__.KaTemplate(this.tpl);
       if (this.wrapper !== null) {
