@@ -457,7 +457,7 @@ a.as__hamburger > .as__hamburger-bar:nth-child(3) {
   --layout-side-content: "This is some side-content from --layout-side-content" ;
 }
 
-.do-footer1 {
+.use-footer1 {
   --joda-use: footer1();
   --layout-minifooter: #minifooter;
 }

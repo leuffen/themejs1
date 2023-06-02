@@ -18,9 +18,10 @@ const tpl = `
 `;
 
 
-@template(tpl)
-@customElement("showcase-element")
+
+@customElement("showcase-element")@template(tpl)
 class ShowcaseElement extends KaCustomElement {
+
     constructor() {
         super();
 
@@ -36,6 +37,14 @@ class ShowcaseElement extends KaCustomElement {
         await ka_sleep(1);
 
         this.scope.desc = JodaDescriptionManager.data.filter(e => e.category === this.getAttribute("data-category"));
+        console.log("connectedCallback", this.scope.desc);
         super.connectedCallback();
+    }
+
+    async disconnectedCallback(): Promise<void> {
+        console.log("disconnect", this);
+        this.scope.desc = [];
+        super.disconnectedCallback();
+
     }
 }

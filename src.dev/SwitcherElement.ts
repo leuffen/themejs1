@@ -1,6 +1,6 @@
-import {customElement, KaCustomElement, KaCustomWrapper, template} from "@kasimirjs/embed";
+import {customElement, ka_create_element, KaCustomElement, KaCustomWrapper, template} from "@kasimirjs/embed";
 import {ka_session_storage} from "@kasimirjs/embed";
-import {JodaDescriptionManager} from "@leuffen/jodastyle";
+import {JodaDescriptionManager, Jodasplit, Logger} from "@leuffen/jodastyle";
 
 
 // language=HTML
@@ -142,7 +142,7 @@ class SubElement extends KaCustomElement {
         });
 
         let last = "";
-        setInterval(() => {
+        setInterval(async () => {
             if (last === window.location.href) {
                 return;
             }
@@ -152,7 +152,7 @@ class SubElement extends KaCustomElement {
             let className = url.searchParams.get("className");
             scope.className = className;
             let daba = document.getElementsByTagName("joda-content")[0];
-            let newElement = document.createElement("joda-content");
+
 
             var MarkdownIt = require('markdown-it');
             var markdownItAttrs = require('markdown-it-attrs');
@@ -172,11 +172,17 @@ class SubElement extends KaCustomElement {
 
             document.body.classList.add(...desc.config.bodyClasses);
 
+
+            let content = desc.example ?? "No example found"
             if (desc.config.parseMarkdown) {
-                newElement.innerHTML = md.render(desc.example ?? "No example found");
-            } else {
-                newElement.innerHTML = desc.example ?? "No example found";
+                content = md.render(content);
+                content = "<joda-split>" + content + "</joda-split>";
             }
+
+            let newElement = document.createElement("joda-content");
+            newElement.innerHTML = content;
+
+
 
             console.log(newElement.innerHTML);
             daba.replaceWith(newElement);
