@@ -40,6 +40,9 @@
         }
         --joda-class: container;
         .section-h3 {
+            h3 {
+                --joda-class: text-success;
+            }
             --joda-group: @row;
             --joda-class: col g-5;
         }
@@ -77,7 +80,11 @@
         --joda-class: use-navblox as__navblox;
         --as-navblox-secondary-color: transparent;
         --as-navblox-nav-text: #ccc;
-        --hamburger-bar-color: #ccc
+        .as__hamburger {
+            --hamburger-bar-color: #ccc;
+            --hamburger-size: 0.7rem;
+        }
+
     }
 
     footer {

@@ -1,7 +1,5 @@
 .use-hamburger {
     --joda-use: hamburger();
-    --hamburger-bar-color: var(--hamburger-bar-color, #8c9b92);
-    --hamburger-size: var(--hamburger-size, 0.9rem);
 }
 
 
@@ -33,6 +31,8 @@ body.nav-open a.as__hamburger {
 }
 
 a.as__hamburger {
+    --hamburger-size: var(--hamburger-size, 0.9rem);
+    --hamburger-bar-color: var(--hamburger-bar-color, #8c9b92);
 
     font-size: var(--hamburger-size, 1rem);
     display: block;
