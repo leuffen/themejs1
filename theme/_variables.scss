@@ -1,4 +1,5 @@
 
+
 $primary: #007bff !default;
 $secondary: #6c757d !default;
 $light: #f8f9fa !default;
@@ -10,16 +11,7 @@ $as-minibar-color: $primary !default;
 $content-height-adjustment: 0px !default;
 $min-page-height: 600px !default;
 
-.row {
-  & > div {
-    --joda-class: 'col';
-
-  }
-}
-
-
-
 
 joda-content {
-  --joda-init: true;
+    --joda-init: true;
 }

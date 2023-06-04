@@ -95,6 +95,7 @@
             width: 33vw;
             min-width: 300px;
             position: absolute;
+            z-index: 99999;
             overflow: hidden;
             transform: scale(0%);
             transition: all 0.2s ease-in-out;

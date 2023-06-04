@@ -74,7 +74,10 @@
     }
 
     nav {
-        --joda-use: navbar();
+        --joda-class: use-navblox as__navblox;
+        --as-navblox-secondary-color: transparent;
+        --as-navblox-nav-text: #ccc;
+        --hamburger-bar-color: #ccc
     }
 
     footer {

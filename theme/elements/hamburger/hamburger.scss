@@ -1,7 +1,7 @@
 .use-hamburger {
     --joda-use: hamburger();
-    --hamburger-bar-color: #8c9b92;
-    --hamburger-size: 0.9rem;
+    --hamburger-bar-color: var(--hamburger-bar-color, #8c9b92);
+    --hamburger-size: var(--hamburger-size, 0.9rem);
 }
 
 
@@ -42,6 +42,7 @@ a.as__hamburger {
     position: relative;
     cursor: pointer;
     text-decoration: none !important;
+
     span {
         padding-top: 3.8em;
         display: block;
@@ -52,6 +53,7 @@ a.as__hamburger {
         padding-top: 3.8em;
         text-align: center;
         width: 100%;
+        color: var(--hamburger-bar-color, #8c9b92);
     }
     &>.as__hamburger-bar {
         background-color: var(--hamburger-bar-color, #8c9b92);

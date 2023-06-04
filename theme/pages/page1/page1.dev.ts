@@ -3,6 +3,7 @@ import {JodaDescriptionManager} from "@leuffen/jodastyle";
 // language=Markdown
 const example = `
 
+    <nav></nav>
 
 
 # Wir entwickeln die <span class="text-primary">passende Website</span> für Ihre Arztpraxis!
