@@ -822,6 +822,9 @@ a.as__hamburger > .as__hamburger-bar:nth-child(3) {
   padding: 2rem;
   padding-bottom: 0rem;
 }
+.page1 .header1 .btn {
+  --joda-class: shadow;
+}
 .page1 .header1::before {
   position: absolute;
   z-index: -1;
@@ -830,7 +833,7 @@ a.as__hamburger > .as__hamburger-bar:nth-child(3) {
   top: -100%;
   bottom: 0;
   right: 30px;
-  background: var(--bs-light, #ccc);
+  background: linear-gradient(90deg, var(--bs-light) 0%, rgba(0, 0, 0, 0.2) 30%, var(--bs-light) 100%);
   transform: perspective(100vw) rotateY(10deg);
   box-shadow: calc(var(--mouse-x) * 0.005px) calc(var(--mouse-y) * 0.005px) 10px 0 rgba(0, 0, 0, 0.1);
   border-radius: 0 0 80px 0;

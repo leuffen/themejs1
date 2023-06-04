@@ -25,6 +25,10 @@
         padding-bottom: 0rem;
     }
 
+    .btn {
+        --joda-class: shadow;
+    }
+
 
     &::before {
         position: absolute;
@@ -34,8 +38,8 @@
         top: -100%;
         bottom: 0;
         right: 30px;
-        background: var(--bs-light, #ccc);
-
+        //background: var(--bs-light, #ccc);
+        background: linear-gradient(90deg, var(--bs-light) 0%, rgba(0,0,0,0.2) calc(30%),  var(--bs-light) 100%);
         transform: perspective(calc(100vw)) rotateY(10deg);
         //transform: perspective(calc(var(--mouse-x) * 1.5px)) rotateY(calc(var(--mouse-y) * 1.5deg));
         box-shadow: calc(var(--mouse-x) * 0.005px) calc(var(--mouse-y) * 0.005px) 10px 0 rgba(0, 0, 0, 0.1);
