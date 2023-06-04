@@ -265,7 +265,6 @@ let SwitcherElement = class extends _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0_
       },
       $on: {
         change: (e) => {
-          console.log("change", e);
         }
       }
     });
@@ -328,7 +327,6 @@ let SubElement = class extends _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.KaC
       }
       let newElement = document.createElement("joda-content");
       newElement.innerHTML = content;
-      console.log(newElement.innerHTML);
       daba.replaceWith(newElement);
     }), 100);
   }
@@ -337,6 +335,48 @@ SubElement = __decorateClass([
   (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.customElement)("switcher-element"),
   (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.template)(tpl2)
 ], SubElement);
+
+
+/***/ }),
+
+/***/ "./src/helper/mouse-to-css.ts":
+/*!************************************!*\
+  !*** ./src/helper/mouse-to-css.ts ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @kasimirjs/embed */ "./workspaces/kasi-embed/index.ts");
+var __async = (__this, __arguments, generator) => {
+  return new Promise((resolve, reject) => {
+    var fulfilled = (value) => {
+      try {
+        step(generator.next(value));
+      } catch (e) {
+        reject(e);
+      }
+    };
+    var rejected = (value) => {
+      try {
+        step(generator.throw(value));
+      } catch (e) {
+        reject(e);
+      }
+    };
+    var step = (x) => x.done ? resolve(x.value) : Promise.resolve(x.value).then(fulfilled, rejected);
+    step((generator = generator.apply(__this, __arguments)).next());
+  });
+};
+
+let d = new _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.Debouncer(10);
+window.addEventListener("mousemove", (e) => __async(undefined, null, function* () {
+  yield d.debounce();
+  document.body.style.setProperty("--mouse-x", e.clientX / window.screenX * 100 + "");
+  document.body.style.setProperty("--mouse-y", e.clientY / window.screenY * 100 + "");
+}));
+document.body.style.setProperty("--mouse-x", 1 + "");
+document.body.style.setProperty("--mouse-y", 1 + "");
 
 
 /***/ }),
@@ -350,15 +390,7 @@ SubElement = __decorateClass([
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
-/* harmony import */ var _theme_sections_autocontent_autocontent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../theme/sections/autocontent/autocontent */ "./theme/sections/autocontent/autocontent.ts");
-/* harmony import */ var _theme_elements_navbar_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../theme/elements/navbar/navbar */ "./theme/elements/navbar/navbar.ts");
-/* harmony import */ var _theme_footer_footer1_footer1__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../theme/footer/footer1/footer1 */ "./theme/footer/footer1/footer1.ts");
-/* harmony import */ var _theme_heros_header_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../theme/heros/header/header */ "./theme/heros/header/header.ts");
-/* harmony import */ var _theme_sections_col2_col2__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../theme/sections/col2/col2 */ "./theme/sections/col2/col2.ts");
-
-
-
-
+/* harmony import */ var _helper_mouse_to_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helper/mouse-to-css */ "./src/helper/mouse-to-css.ts");
 
 
 

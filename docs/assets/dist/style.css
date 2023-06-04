@@ -775,7 +775,7 @@ a.as__hamburger > .as__hamburger-bar:nth-child(3) {
   --joda-class: container;
 }
 .page1 .section-h1 .content h1 {
-  --joda-class: text-center display-1;
+  --joda-class: text-center :: display-5 :xl: display-3;
 }
 .page1 .sec2 {
   padding-top: var(--section-spaceing);
@@ -790,13 +790,19 @@ a.as__hamburger > .as__hamburger-bar:nth-child(3) {
   --joda-class: col g-5;
 }
 .page1 .showcase {
-  padding-top: var(--section-spaceing);
+  padding-top: 10rem;
 }
 .page1 .showcase .content {
   --joda-class: container position-relative;
 }
+.page1 .showcase .content .as__screen:nth-child(1) {
+  transform: perspective(60vw) rotateY(calc(-5deg + var(--mouse-x) * 0.02deg)) rotateX(calc(0deg + var(--mouse-y) * 0.002deg));
+}
+.page1 .showcase .content .as__screen:nth-child(2) {
+  transform: perspective(60vw) rotateY(calc(10deg + var(--mouse-x) * 0.03deg)) rotateX(calc(0deg + var(--mouse-y) * 0.004deg));
+}
 .page1 .header1 {
-  min-height: 80svh;
+  min-height: 75svh;
   position: relative;
   display: flex;
   justify-content: center;
@@ -814,21 +820,23 @@ a.as__hamburger > .as__hamburger-bar:nth-child(3) {
   font-weight: 300;
   font-style: normal;
   padding: 2rem;
+  padding-bottom: 0rem;
 }
 .page1 .header1::before {
   position: absolute;
   z-index: -1;
   content: "";
   left: 0;
-  top: 0;
+  top: -100%;
   bottom: 0;
   right: 30px;
   background: var(--bs-light, #ccc);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  transform: perspective(100vw) rotateY(10deg);
+  box-shadow: calc(var(--mouse-x) * 0.005px) calc(var(--mouse-y) * 0.005px) 10px 0 rgba(0, 0, 0, 0.1);
   border-radius: 0 0 80px 0;
 }
 .page1 .sec3 {
-  min-height: 70svh;
+  min-height: 60svh;
   position: relative;
   z-index: 2;
   margin-bottom: var(--section-spaceing);
@@ -861,6 +869,7 @@ a.as__hamburger > .as__hamburger-bar:nth-child(3) {
   background: var(--bs-light, #ccc);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   border-radius: 80px 0 0 80px;
+  transform: perspective(60vw) rotateY(calc(-5deg + var(--mouse-x) * 0.05deg)) rotateX(calc(0deg + var(--mouse-y) * 0.005deg));
 }
 .page1 .dark {
   background: var(--bs-primary, #000);

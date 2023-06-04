@@ -102,7 +102,7 @@ export class SwitcherElement extends KaCustomWrapper {
             },
             $on: {
                 change: (e) => {
-                    console.log("change", e);
+
                 }
             }
         });
@@ -182,9 +182,6 @@ class SubElement extends KaCustomElement {
             let newElement = document.createElement("joda-content");
             newElement.innerHTML = content;
 
-
-
-            console.log(newElement.innerHTML);
             daba.replaceWith(newElement);
         }, 100);
 

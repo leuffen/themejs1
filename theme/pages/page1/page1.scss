@@ -19,7 +19,7 @@
             padding-right: 60px;
             --joda-class: container;
             h1 {
-                --joda-class: text-center display-1;
+                --joda-class: text-center :: display-5 :xl: display-3;
             }
         }
     }
@@ -40,9 +40,16 @@
 
 
     .showcase {
-         padding-top: var(--section-spaceing);
+         padding-top: 10rem;
         .content {
             --joda-class: container position-relative;
+
+            .as__screen:nth-child(1) {
+                transform: perspective(60vw) rotateY(calc(-5deg + var(--mouse-x) * 0.02deg)) rotateX(calc(-0deg + var(--mouse-y) * 0.002deg));
+            }
+            .as__screen:nth-child(2) {
+                transform: perspective(60vw) rotateY(calc(10deg + var(--mouse-x) * 0.03deg)) rotateX(calc(-0deg + var(--mouse-y) * 0.004deg));
+            }
         }
     }
 
