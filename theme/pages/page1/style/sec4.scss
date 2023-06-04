@@ -1,0 +1,21 @@
+
+
+.sec4 {
+
+    --joda-class: container;
+
+    .section-h3 {
+        --joda-group: @row;
+        --joda-class:  my-auto :: col-12 :xl: col-4;
+
+        img {
+            width: 100%;
+            height: 100%;
+            --joda-wrap: @ratio @ratio-1x1 @w-100 @h-100;
+            object-fit: cover;
+            object-position: center left;
+            --joda-class: mask shape-blob1-anim;
+        }
+    }
+
+}

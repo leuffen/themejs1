@@ -21,7 +21,7 @@ Weil Sie Besseres zu tun haben, als sich um Ihre Website zu kümmern.
 ![](cdn:///leu-content/v/12/1200x2788_992x2305_768x1785_480x1116_256x256/Screenshot_2023-05-23_at_23-49-39_Zahnarztpraxis_Sebah_Ibrahim_in_Frankfurt_am_Main.avif_png){: .use-screen-mobile .position-absolute .bottom-0 style="height:70%"}
 
 
-## Was leistet die System-Homepage?{: .sec2}
+---{: .section-h2 .sec2}
 
 
 
@@ -30,43 +30,64 @@ Weil Sie Besseres zu tun haben, als sich um Ihre Website zu kümmern.
 
 Wir kümmern uns um die Aktualisierung Ihrer Website.
 
-### Einfach zu bedienen
+### Einfache Bedienenung
 
 Urlaubsschaltung, Notdienst, Sprechzeiten, ... steuern Sie mit einem Klick.
 
 ### Günstig & Schnell
 
-Von der Einzelpraxis bis zum MVZ - wir haben für jeden die passende Lösung.
+Von der Einzelpraxis bis zum MVZ - wir haben für jeden die passende Lösung. [Jetzt Preise freischalten.]()
 
 
 
-## Leistungen, die überzeugen!{: .sec3}
+## Praxismarketing mit System!{: .sec3}
 
-Erfinden Sie das Rad nicht neu. Bauen Sie auf unsere erprobten Marketinglösungen
-für viele Fachrichtungen.
+Erprobten Marketinglösungen für viele Fachrichtungen & Anforderungsprofile.<br>
+Für Einzelpraxen, Gemeinschaftspraxen und MVZ.
 
-### Webdesign
+### Patienten informieren
 
-### Logoerstellung
+Aus dem Stand eine Top-Platzierung: Mit unseren erprobten Marketinglösungen,
+die wir individuell an Ihre Bedürfnisse anpassen.
 
-### Praxismarketing
+### Termine vereinbaren
 
+Nutzen Sie die Vorteile der Online-Terminvereinbarung. Kompatibel mit allen
+Praxisverwaltungssystemen.
 
+### Bewerber überzeugen
 
-## Footer 1
-
-
-## Footer 2
-
-### Kontakt
-
-
-
-### Info
+Präsentieren Sie sich und Ihre Praxis potenziellen Bewerbern. Ihre Website ist die beste Stellenanzeige.
 
 
 
-### Links
+
+## &nbsp;{: .sec4}
+
+
+### Mit Ärzten konzipiert
+
+Keine Zeit für lange Briefings? Nutzen Sie unsere
+erprobten Website-Konzepte und sparen Sie Zeit, Geld und Nerven.
+
+Und: Günstiger als Sie denken.
+
+<button class="btn btn-primary btn-lg">Jetzt Preise freischalten</button>
+
+---{: .section-h3}
+
+![](cdn:///leu-stock/v/3/1920x1281_1200x800_992x662_768x512_480x320_256x256/AdobeStock_276575002.avif_jpeg)
+
+### Für Ärzte optimiert
+
+Optimierte Website-Konzepte für:
+- Hausärzte & Allgemeinmediziner
+- Fachärzte (z. B. Kardiologie, Orthopädie, ...)
+- Zahnärzte und Kieferorthopäden
+- Psychotherapeuten
+- und viele mehr
+
+
 
 
 <footer class="do-footer1">

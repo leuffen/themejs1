@@ -600,6 +600,22 @@ a.as__hamburger > .as__hamburger-bar:nth-child(3) {
 }
 
 :root {
+  --layout-accordion-auto-open: true;
+}
+
+.mask {
+  mask-size: contain;
+  mask-position: center center;
+  mask-repeat: no-repeat;
+}
+.mask.shape-blob1 {
+  mask-image: var(--shape-blob1);
+}
+.mask.shape-blob1-anim {
+  mask-image: var(--shape-blob1-anim);
+}
+
+:root {
   --layout-cols: 8;
   --layout-side-content: "This is some side-content from --layout-side-content" ;
 }
@@ -811,7 +827,6 @@ a.as__hamburger > .as__hamburger-bar:nth-child(3) {
   text-align: center;
 }
 .page1 .header1 h1 {
-  font-weight: 100;
   font-style: normal;
   padding: 2rem;
 }
@@ -851,6 +866,19 @@ a.as__hamburger > .as__hamburger-bar:nth-child(3) {
   text-align: center;
   padding-left: 30px;
 }
+.page1 .sec3 h2 {
+  --joda-class: display-4;
+  padding: 3rem;
+}
+.page1 .sec3 h2 {
+  padding-bottom: 3rem;
+}
+.page1 .sec3 .section-h3 {
+  --joda-group: @row;
+  --joda-class: col g-5;
+  text-align: left;
+  padding-bottom: 2rem;
+}
 .page1 .sec3 > .content {
   width: 100%;
   --joda-class: container;
@@ -871,7 +899,22 @@ a.as__hamburger > .as__hamburger-bar:nth-child(3) {
   right: 0;
   background: var(--bs-light, #ccc);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 80px 0 0 80px;
+  border-radius: 40px 0 0 40px;
+}
+.page1 .sec4 {
+  --joda-class: container;
+}
+.page1 .sec4 .section-h3 {
+  --joda-group: @row;
+  --joda-class: my-auto :: col-12 :xl: col-4;
+}
+.page1 .sec4 .section-h3 img {
+  width: 100%;
+  height: 100%;
+  --joda-wrap: @ratio @ratio-1x1 @w-100 @h-100;
+  object-fit: cover;
+  object-position: center left;
+  --joda-class: mask shape-blob1-anim;
 }
 .page1 .dark {
   background: var(--bs-primary, #000);

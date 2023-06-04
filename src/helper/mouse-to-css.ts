@@ -8,3 +8,4 @@ window.addEventListener("mousemove", async (e) => {
 });
 document.body.style.setProperty("--mouse-x", 1 + "");
 document.body.style.setProperty("--mouse-y", 1 + "");
+

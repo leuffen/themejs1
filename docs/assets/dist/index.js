@@ -397,6 +397,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./theme/_variables.ts":
+/*!*****************************!*\
+  !*** ./theme/_variables.ts ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   cdnBaseUrl: () => (/* binding */ cdnBaseUrl)
+/* harmony export */ });
+const cdnBaseUrl = "https://cdn.leuffen.de/hyperpage-components/v1.0";
+
+
+/***/ }),
+
 /***/ "./theme/elements/accordion/accordion.dev.ts":
 /*!***************************************************!*\
   !*** ./theme/elements/accordion/accordion.dev.ts ***!
@@ -1110,6 +1126,70 @@ Screen = __decorateClass([
 
 /***/ }),
 
+/***/ "./theme/elements/shapes/shapes.dev.ts":
+/*!*********************************************!*\
+  !*** ./theme/elements/shapes/shapes.dev.ts ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+
+const example = `
+
+# Shapes
+
+![](cdn:///leu-stock/v/44/1920x1273_1200x796_992x658_768x509_480x318_256x256/AdobeStock_281626595.avif_jpeg){: .mask .shape-blob1 style="width:200px;height:auto"}
+![](cdn:///leu-stock/v/44/1920x1273_1200x796_992x658_768x509_480x318_256x256/AdobeStock_281626595.avif_jpeg){: .mask .shape-blob1-anim style="width:200px;height:auto"}
+
+`;
+_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass("element", ".shapes", "This is a description", example, []);
+
+
+/***/ }),
+
+/***/ "./theme/elements/shapes/shapes.ts":
+/*!*****************************************!*\
+  !*** ./theme/elements/shapes/shapes.ts ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @kasimirjs/embed */ "./workspaces/kasi-embed/index.ts");
+/* harmony import */ var _variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../_variables */ "./theme/_variables.ts");
+var __async = (__this, __arguments, generator) => {
+  return new Promise((resolve, reject) => {
+    var fulfilled = (value) => {
+      try {
+        step(generator.next(value));
+      } catch (e) {
+        reject(e);
+      }
+    };
+    var rejected = (value) => {
+      try {
+        step(generator.throw(value));
+      } catch (e) {
+        reject(e);
+      }
+    };
+    var step = (x) => x.done ? resolve(x.value) : Promise.resolve(x.value).then(fulfilled, rejected);
+    step((generator = generator.apply(__this, __arguments)).next());
+  });
+};
+
+
+(() => __async(undefined, null, function* () {
+  yield (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_dom_ready)();
+  document.body.style.setProperty("--shape-blob1", "url(" + _variables__WEBPACK_IMPORTED_MODULE_1__.cdnBaseUrl + "/shapes/blob1.svg)");
+  document.body.style.setProperty("--shape-blob1-anim", "url(" + _variables__WEBPACK_IMPORTED_MODULE_1__.cdnBaseUrl + "/shapes/blob1-anim.svg)");
+}))();
+
+
+/***/ }),
+
 /***/ "./theme/elements/textstyle/textstyle.ts":
 /*!***********************************************!*\
   !*** ./theme/elements/textstyle/textstyle.ts ***!
@@ -1520,7 +1600,7 @@ Weil Sie Besseres zu tun haben, als sich um Ihre Website zu k\xFCmmern.
 ![](cdn:///leu-content/v/12/1200x2788_992x2305_768x1785_480x1116_256x256/Screenshot_2023-05-23_at_23-49-39_Zahnarztpraxis_Sebah_Ibrahim_in_Frankfurt_am_Main.avif_png){: .use-screen-mobile .position-absolute .bottom-0 style="height:70%"}
 
 
-## Was leistet die System-Homepage?{: .sec2}
+---{: .section-h2 .sec2}
 
 
 
@@ -1529,43 +1609,64 @@ Weil Sie Besseres zu tun haben, als sich um Ihre Website zu k\xFCmmern.
 
 Wir k\xFCmmern uns um die Aktualisierung Ihrer Website.
 
-### Einfach zu bedienen
+### Einfache Bedienenung
 
 Urlaubsschaltung, Notdienst, Sprechzeiten, ... steuern Sie mit einem Klick.
 
 ### G\xFCnstig & Schnell
 
-Von der Einzelpraxis bis zum MVZ - wir haben f\xFCr jeden die passende L\xF6sung.
+Von der Einzelpraxis bis zum MVZ - wir haben f\xFCr jeden die passende L\xF6sung. [Jetzt Preise freischalten.]()
 
 
 
-## Leistungen, die \xFCberzeugen!{: .sec3}
+## Praxismarketing mit System!{: .sec3}
 
-Erfinden Sie das Rad nicht neu. Bauen Sie auf unsere erprobten Marketingl\xF6sungen
-f\xFCr viele Fachrichtungen.
+Erprobten Marketingl\xF6sungen f\xFCr viele Fachrichtungen & Anforderungsprofile.<br>
+F\xFCr Einzelpraxen, Gemeinschaftspraxen und MVZ.
 
-### Webdesign
+### Patienten informieren
 
-### Logoerstellung
+Aus dem Stand eine Top-Platzierung: Mit unseren erprobten Marketingl\xF6sungen,
+die wir individuell an Ihre Bed\xFCrfnisse anpassen.
 
-### Praxismarketing
+### Termine vereinbaren
 
+Nutzen Sie die Vorteile der Online-Terminvereinbarung. Kompatibel mit allen
+Praxisverwaltungssystemen.
 
+### Bewerber \xFCberzeugen
 
-## Footer 1
-
-
-## Footer 2
-
-### Kontakt
-
-
-
-### Info
+Pr\xE4sentieren Sie sich und Ihre Praxis potenziellen Bewerbern. Ihre Website ist die beste Stellenanzeige.
 
 
 
-### Links
+
+## &nbsp;{: .sec4}
+
+
+### Mit \xC4rzten konzipiert
+
+Keine Zeit f\xFCr lange Briefings? Nutzen Sie unsere
+erprobten Website-Konzepte und sparen Sie Zeit, Geld und Nerven.
+
+Und: G\xFCnstiger als Sie denken.
+
+<button class="btn btn-primary btn-lg">Jetzt Preise freischalten</button>
+
+---{: .section-h3}
+
+![](cdn:///leu-stock/v/3/1920x1281_1200x800_992x662_768x512_480x320_256x256/AdobeStock_276575002.avif_jpeg)
+
+### F\xFCr \xC4rzte optimiert
+
+Optimierte Website-Konzepte f\xFCr:
+- Haus\xE4rzte & Allgemeinmediziner
+- Fach\xE4rzte (z. B. Kardiologie, Orthop\xE4die, ...)
+- Zahn\xE4rzte und Kieferorthop\xE4den
+- Psychotherapeuten
+- und viele mehr
+
+
 
 
 <footer class="do-footer1">
@@ -1867,12 +1968,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _elements_navblox_navblox_dev__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./elements/navblox/navblox.dev */ "./theme/elements/navblox/navblox.dev.ts");
 /* harmony import */ var _elements_hamburger_hamburger_dev__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./elements/hamburger/hamburger.dev */ "./theme/elements/hamburger/hamburger.dev.ts");
 /* harmony import */ var _elements_screen_screen_dev__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./elements/screen/screen.dev */ "./theme/elements/screen/screen.dev.ts");
-/* harmony import */ var _footer_footer1_footer1_dev__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./footer/footer1/footer1.dev */ "./theme/footer/footer1/footer1.dev.ts");
-/* harmony import */ var _sections_col2_col2_dev__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sections/col2/col2.dev */ "./theme/sections/col2/col2.dev.ts");
-/* harmony import */ var _sections_row_row_dev__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sections/row/row.dev */ "./theme/sections/row/row.dev.ts");
-/* harmony import */ var _heros_hero1_hero1_dev__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./heros/hero1/hero1.dev */ "./theme/heros/hero1/hero1.dev.ts");
-/* harmony import */ var _heros_header_header_dev__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./heros/header/header.dev */ "./theme/heros/header/header.dev.ts");
-/* harmony import */ var _pages_page1_page1_dev__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/page1/page1.dev */ "./theme/pages/page1/page1.dev.ts");
+/* harmony import */ var _elements_shapes_shapes_dev__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./elements/shapes/shapes.dev */ "./theme/elements/shapes/shapes.dev.ts");
+/* harmony import */ var _footer_footer1_footer1_dev__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./footer/footer1/footer1.dev */ "./theme/footer/footer1/footer1.dev.ts");
+/* harmony import */ var _sections_col2_col2_dev__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sections/col2/col2.dev */ "./theme/sections/col2/col2.dev.ts");
+/* harmony import */ var _sections_row_row_dev__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sections/row/row.dev */ "./theme/sections/row/row.dev.ts");
+/* harmony import */ var _heros_hero1_hero1_dev__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./heros/hero1/hero1.dev */ "./theme/heros/hero1/hero1.dev.ts");
+/* harmony import */ var _heros_header_header_dev__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./heros/header/header.dev */ "./theme/heros/header/header.dev.ts");
+/* harmony import */ var _pages_page1_page1_dev__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/page1/page1.dev */ "./theme/pages/page1/page1.dev.ts");
+
 
 
 
@@ -1905,12 +2008,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _elements_accordion_accordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./elements/accordion/accordion */ "./theme/elements/accordion/accordion.ts");
 /* harmony import */ var _elements_hamburger_hamburger__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./elements/hamburger/hamburger */ "./theme/elements/hamburger/hamburger.ts");
 /* harmony import */ var _elements_screen_screen__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./elements/screen/screen */ "./theme/elements/screen/screen.ts");
-/* harmony import */ var _footer_footer1_footer1__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./footer/footer1/footer1 */ "./theme/footer/footer1/footer1.ts");
-/* harmony import */ var _sections_autocontent_autocontent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sections/autocontent/autocontent */ "./theme/sections/autocontent/autocontent.ts");
-/* harmony import */ var _sections_col2_col2__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sections/col2/col2 */ "./theme/sections/col2/col2.ts");
-/* harmony import */ var _sections_row_row__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sections/row/row */ "./theme/sections/row/row.ts");
-/* harmony import */ var _heros_hero1_hero1__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./heros/hero1/hero1 */ "./theme/heros/hero1/hero1.ts");
-/* harmony import */ var _heros_header_header__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./heros/header/header */ "./theme/heros/header/header.ts");
+/* harmony import */ var _elements_shapes_shapes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./elements/shapes/shapes */ "./theme/elements/shapes/shapes.ts");
+/* harmony import */ var _footer_footer1_footer1__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./footer/footer1/footer1 */ "./theme/footer/footer1/footer1.ts");
+/* harmony import */ var _sections_autocontent_autocontent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sections/autocontent/autocontent */ "./theme/sections/autocontent/autocontent.ts");
+/* harmony import */ var _sections_col2_col2__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sections/col2/col2 */ "./theme/sections/col2/col2.ts");
+/* harmony import */ var _sections_row_row__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./sections/row/row */ "./theme/sections/row/row.ts");
+/* harmony import */ var _heros_hero1_hero1__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./heros/hero1/hero1 */ "./theme/heros/hero1/hero1.ts");
+/* harmony import */ var _heros_header_header__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./heros/header/header */ "./theme/heros/header/header.ts");
+
 
 
 
@@ -3126,19 +3231,26 @@ class Jodasplit {
         __privateGet(this, _target).appendChild(child);
         return;
       }
-      if (child instanceof HTMLElement && child.matches("h1, h2, h3, h4, h5, h6, h7, h8, h9, hr")) {
+      if (child instanceof HTMLElement && child.matches("h1, h2, h3, h4, h5, h6, h7, h8, h9, .section-h2, .section-h3, .section-h4")) {
         let layer = 1;
         let tag = "div";
         if (child.matches("h1,h2,.section-h2")) {
           layer = lastLayer = 1;
           tag = "section";
-        } else if (child.matches("h3, h4, h5, h6, h7, h8, h9")) {
-          layer = lastLayer = parseInt(child.tagName.substr(1)) * 2;
+        } else if (child.matches("h3, h4, h5, h6, h7, h8, h9, .section-h3, .section-h4")) {
+          if (child.matches(".section-h3")) {
+            layer = lastLayer = 6;
+          } else if (child.matches(".section-h4")) {
+            layer = lastLayer = 8;
+          } else {
+            layer = lastLayer = parseInt(child.tagName.substr(1)) * 2;
+          }
           tag = "div";
         } else if (child.matches("hr")) {
           layer = lastLayer + 1;
           tag = "div";
         }
+        console.log("layer is", layer, lastLayer, child.tagName, child);
         let e = this.createNewElement(child.tagName.toLowerCase(), layer, tag);
         e.setAttribute("style", child.getAttribute("style") || "");
         e.classList.add(...child.classList);
