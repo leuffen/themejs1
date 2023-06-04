@@ -18,7 +18,7 @@
         --joda-group: @row;
         //--joda-class:  my-auto :: col-12 :xl: col-4;
 
-        padding-bottom: 2rem;
+        padding-bottom: var(--section-spaceing);
         img {
 
             --joda-wrap: @d-flex @justify-content-center > @class=ratio ratio-1x1 :md: w-50 :xl: w-100;
