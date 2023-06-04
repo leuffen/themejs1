@@ -835,7 +835,7 @@ a.as__hamburger > .as__hamburger-bar:nth-child(3) {
   right: 30px;
   background: linear-gradient(90deg, var(--bs-light) 0%, rgba(0, 0, 0, 0.2) 30%, var(--bs-light) 100%);
   transform: perspective(100vw) rotateY(10deg);
-  box-shadow: calc(var(--mouse-x) * 0.005px) calc(var(--mouse-y) * 0.005px) 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: calc(0px - (var(--mouse-x) - 50) * 0.018px) calc(3px - (var(--mouse-y) - 50) * 0.11px) 10px 0 rgba(0, 0, 0, 0.1);
   border-radius: 0 0 80px 0;
 }
 .page1 .sec3 {
@@ -872,7 +872,6 @@ a.as__hamburger > .as__hamburger-bar:nth-child(3) {
   background: var(--bs-light, #ccc);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   border-radius: 80px 0 0 80px;
-  transform: perspective(60vw) rotateY(calc(-5deg + var(--mouse-x) * 0.05deg)) rotateX(calc(0deg + var(--mouse-y) * 0.005deg));
 }
 .page1 .dark {
   background: var(--bs-primary, #000);

@@ -372,8 +372,8 @@ var __async = (__this, __arguments, generator) => {
 let d = new _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.Debouncer(10);
 window.addEventListener("mousemove", (e) => __async(undefined, null, function* () {
   yield d.debounce();
-  document.body.style.setProperty("--mouse-x", e.clientX / window.screenX * 100 + "");
-  document.body.style.setProperty("--mouse-y", e.clientY / window.screenY * 100 + "");
+  document.body.style.setProperty("--mouse-x", e.clientX / window.innerWidth * 100 + "");
+  document.body.style.setProperty("--mouse-y", e.clientY / window.innerHeight * 100 + "");
 }));
 document.body.style.setProperty("--mouse-x", 1 + "");
 document.body.style.setProperty("--mouse-y", 1 + "");
