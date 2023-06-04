@@ -5,6 +5,7 @@ import "./elements/navbar/navbar";
 import "./elements/textstyle/textstyle";
 import "./elements/accordion/accordion";
 import "./elements/hamburger/hamburger";
+import "./elements/screen/screen";
 
 import "./footer/footer1/footer1";
 

@@ -5,6 +5,7 @@ import "./elements/navbar/navbar.dev";
 import "./elements/accordion/accordion.dev";
 import "./elements/navblox/navblox.dev";
 import "./elements/hamburger/hamburger.dev";
+import "./elements/screen/screen.dev";
 
 import "./footer/footer1/footer1.dev";
 

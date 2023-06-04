@@ -987,6 +987,97 @@ _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass(
 
 /***/ }),
 
+/***/ "./theme/elements/screen/screen.dev.ts":
+/*!*********************************************!*\
+  !*** ./theme/elements/screen/screen.dev.ts ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+
+const example = `
+
+# Screens
+
+![](cdn:///leu-content/v/12/1200x2788_992x2305_768x1785_480x1116_256x256/Screenshot_2023-05-23_at_23-49-39_Zahnarztpraxis_Sebah_Ibrahim_in_Frankfurt_am_Main.avif_png){: .use-screen-laptop style="width:400px"}
+
+![](cdn:///leu-content/v/12/1200x2788_992x2305_768x1785_480x1116_256x256/Screenshot_2023-05-23_at_23-49-39_Zahnarztpraxis_Sebah_Ibrahim_in_Frankfurt_am_Main.avif_png){: .use-screen-mobile style="width:400px"}
+
+![](cdn:///leu-content/v/12/1200x2788_992x2305_768x1785_480x1116_256x256/Screenshot_2023-05-23_at_23-49-39_Zahnarztpraxis_Sebah_Ibrahim_in_Frankfurt_am_Main.avif_png){: .use-screen-tablet style="width:400px"}
+
+![](cdn:///leu-content/v/12/1200x2788_992x2305_768x1785_480x1116_256x256/Screenshot_2023-05-23_at_23-49-39_Zahnarztpraxis_Sebah_Ibrahim_in_Frankfurt_am_Main.avif_png){: .use-screen-desktop style="width:400px"}
+
+
+
+Jetzt reiche tes aber
+
+`;
+_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass("element", ".use-screen", "This is a description", example, []);
+
+
+/***/ }),
+
+/***/ "./theme/elements/screen/screen.ts":
+/*!*****************************************!*\
+  !*** ./theme/elements/screen/screen.ts ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ScreenLayout: () => (/* binding */ ScreenLayout)
+/* harmony export */ });
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+/* harmony import */ var _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @leuffen/jodastyle/src/helper/QTemplate */ "./workspaces/jodastyle/src/helper/QTemplate.ts");
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __decorateClass = (decorators, target, key, kind) => {
+  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
+  for (var i = decorators.length - 1, decorator; i >= 0; i--)
+    if (decorator = decorators[i])
+      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
+  if (kind && result)
+    __defProp(target, key, result);
+  return result;
+};
+
+
+const tpl = `
+    <div class="as__screen [[layout.type]]">
+        <div class="as__screen-shadow" style="background-image: url([[layout.cdnBaseUrl]]/screens/[[layout.type]]-shadow.svg);"></div>
+        <div class="as__screen-image" data-ref="image"></div>
+        <div class="as__screen-overlay" style="background-image: url([[layout.cdnBaseUrl]]/screens/[[layout.type]].svg)"></div>
+    </div>
+`;
+class ScreenLayout extends _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.DefaultLayout {
+  constructor() {
+    super(...arguments);
+    this.cdnBaseUrl = "https://cdn.leuffen.de/hyperpage-components/v1.0";
+    this.type = "mobile";
+  }
+}
+let Screen = class {
+  render(element, layout) {
+    let q = new _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_1__.QTemplate(tpl);
+    q.parse({ layout });
+    q.content.classList.add(...element.classList);
+    q.content.setAttribute("style", element.getAttribute("style"));
+    element.setAttribute("style", "");
+    element.parentElement.replaceChild(q.content, element);
+    q.select("image").append(element);
+    return q.content;
+  }
+};
+Screen = __decorateClass([
+  (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.jodaRenderer)("screen", ScreenLayout)
+], Screen);
+
+
+/***/ }),
+
 /***/ "./theme/elements/textstyle/textstyle.ts":
 /*!***********************************************!*\
   !*** ./theme/elements/textstyle/textstyle.ts ***!
@@ -1381,20 +1472,51 @@ const example = `
 
 
 
-# Praxis 1
+# Wir entwickeln die <span class="text-primary">passende Website</span> f\xFCr Ihre Arztpraxis!
 
-Hello world some text
+Weil Sie Besseres zu tun haben, als sich um Ihre Website zu k\xFCmmern.
 
 
-## Section 2
+<a href="#" class="btn btn-primary btn-lg">Jetzt Konditionen freischalten</a>
 
-Some Content Here
 
-### Subsection 1
 
-### Subsection 2
 
-### Subsection 3
+---{: .section-h2 .showcase}
+
+![](cdn:///leu-content/v/12/1200x2788_992x2305_768x1785_480x1116_256x256/Screenshot_2023-05-23_at_23-49-39_Zahnarztpraxis_Sebah_Ibrahim_in_Frankfurt_am_Main.avif_png){: .use-screen-laptop style="width:100%"}
+![](cdn:///leu-content/v/12/1200x2788_992x2305_768x1785_480x1116_256x256/Screenshot_2023-05-23_at_23-49-39_Zahnarztpraxis_Sebah_Ibrahim_in_Frankfurt_am_Main.avif_png){: .use-screen-mobile .position-absolute .bottom-0 style="height:70%"}
+
+
+## Was leistet die System-Homepage?{: .sec2}
+
+
+
+
+### Immer up-to-date
+
+Wir k\xFCmmern uns um die Aktualisierung Ihrer Website.
+
+### Einfach zu bedienen
+
+Urlaubsschaltung, Notdienst, Sprechzeiten, ... steuern Sie mit einem Klick.
+
+### G\xFCnstig & Schnell
+
+Von der Einzelpraxis bis zum MVZ - wir haben f\xFCr jeden die passende L\xF6sung.
+
+
+
+## Leistungen, die \xFCberzeugen!{: .sec3}
+
+Erfinden Sie das Rad nicht neu. Bauen Sie auf unsere erprobten Marketingl\xF6sungen
+f\xFCr viele Fachrichtungen.
+
+### Webdesign
+
+### Logoerstellung
+
+### Praxismarketing
 
 
 
@@ -1417,9 +1539,10 @@ Some Content Here
 <footer class="do-footer1">
     <div id="minifooter">
         Minifoooter
-    </div> 
+    </div>
     <h3>Footer 1</h3>
-    <p>Blaasdf</p>
+    <p>Systemhomepage ist ein Angebot von</p>
+    <p>leuffen.de<br>Matthias Leuffen<br>Mathildenstr. 9-11<br></p>
     <h3>Footer 2</h3>
     <p>Blum</p>
     <h3>Footer 3</h3>
@@ -1711,12 +1834,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _elements_accordion_accordion_dev__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./elements/accordion/accordion.dev */ "./theme/elements/accordion/accordion.dev.ts");
 /* harmony import */ var _elements_navblox_navblox_dev__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./elements/navblox/navblox.dev */ "./theme/elements/navblox/navblox.dev.ts");
 /* harmony import */ var _elements_hamburger_hamburger_dev__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./elements/hamburger/hamburger.dev */ "./theme/elements/hamburger/hamburger.dev.ts");
-/* harmony import */ var _footer_footer1_footer1_dev__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./footer/footer1/footer1.dev */ "./theme/footer/footer1/footer1.dev.ts");
-/* harmony import */ var _sections_col2_col2_dev__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sections/col2/col2.dev */ "./theme/sections/col2/col2.dev.ts");
-/* harmony import */ var _sections_row_row_dev__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sections/row/row.dev */ "./theme/sections/row/row.dev.ts");
-/* harmony import */ var _heros_hero1_hero1_dev__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./heros/hero1/hero1.dev */ "./theme/heros/hero1/hero1.dev.ts");
-/* harmony import */ var _heros_header_header_dev__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./heros/header/header.dev */ "./theme/heros/header/header.dev.ts");
-/* harmony import */ var _pages_page1_page1_dev__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./pages/page1/page1.dev */ "./theme/pages/page1/page1.dev.ts");
+/* harmony import */ var _elements_screen_screen_dev__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./elements/screen/screen.dev */ "./theme/elements/screen/screen.dev.ts");
+/* harmony import */ var _footer_footer1_footer1_dev__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./footer/footer1/footer1.dev */ "./theme/footer/footer1/footer1.dev.ts");
+/* harmony import */ var _sections_col2_col2_dev__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sections/col2/col2.dev */ "./theme/sections/col2/col2.dev.ts");
+/* harmony import */ var _sections_row_row_dev__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sections/row/row.dev */ "./theme/sections/row/row.dev.ts");
+/* harmony import */ var _heros_hero1_hero1_dev__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./heros/hero1/hero1.dev */ "./theme/heros/hero1/hero1.dev.ts");
+/* harmony import */ var _heros_header_header_dev__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./heros/header/header.dev */ "./theme/heros/header/header.dev.ts");
+/* harmony import */ var _pages_page1_page1_dev__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/page1/page1.dev */ "./theme/pages/page1/page1.dev.ts");
+
 
 
 
@@ -1747,12 +1872,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _elements_textstyle_textstyle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./elements/textstyle/textstyle */ "./theme/elements/textstyle/textstyle.ts");
 /* harmony import */ var _elements_accordion_accordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./elements/accordion/accordion */ "./theme/elements/accordion/accordion.ts");
 /* harmony import */ var _elements_hamburger_hamburger__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./elements/hamburger/hamburger */ "./theme/elements/hamburger/hamburger.ts");
-/* harmony import */ var _footer_footer1_footer1__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./footer/footer1/footer1 */ "./theme/footer/footer1/footer1.ts");
-/* harmony import */ var _sections_autocontent_autocontent__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sections/autocontent/autocontent */ "./theme/sections/autocontent/autocontent.ts");
-/* harmony import */ var _sections_col2_col2__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sections/col2/col2 */ "./theme/sections/col2/col2.ts");
-/* harmony import */ var _sections_row_row__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sections/row/row */ "./theme/sections/row/row.ts");
-/* harmony import */ var _heros_hero1_hero1__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./heros/hero1/hero1 */ "./theme/heros/hero1/hero1.ts");
-/* harmony import */ var _heros_header_header__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./heros/header/header */ "./theme/heros/header/header.ts");
+/* harmony import */ var _elements_screen_screen__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./elements/screen/screen */ "./theme/elements/screen/screen.ts");
+/* harmony import */ var _footer_footer1_footer1__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./footer/footer1/footer1 */ "./theme/footer/footer1/footer1.ts");
+/* harmony import */ var _sections_autocontent_autocontent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sections/autocontent/autocontent */ "./theme/sections/autocontent/autocontent.ts");
+/* harmony import */ var _sections_col2_col2__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sections/col2/col2 */ "./theme/sections/col2/col2.ts");
+/* harmony import */ var _sections_row_row__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sections/row/row */ "./theme/sections/row/row.ts");
+/* harmony import */ var _heros_hero1_hero1__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./heros/hero1/hero1 */ "./theme/heros/hero1/hero1.ts");
+/* harmony import */ var _heros_header_header__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./heros/header/header */ "./theme/heros/header/header.ts");
+
 
 
 
@@ -1897,9 +2024,9 @@ let JodaContentElement = class extends HTMLElement {
   }
   setLoaded() {
     return __async(this, null, function* () {
-      yield (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_sleep)(1);
+      yield (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_sleep)(10);
       this.classList.add("loaded");
-      yield (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_sleep)(1);
+      yield (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_sleep)(100);
       document.body.classList.add("loaded");
       document.querySelector("html").classList.remove("loader");
     });
@@ -2970,7 +3097,7 @@ class Jodasplit {
       if (child instanceof HTMLElement && child.matches("h1, h2, h3, h4, h5, h6, h7, h8, h9, hr")) {
         let layer = 1;
         let tag = "div";
-        if (child.matches("h1,h2")) {
+        if (child.matches("h1,h2,.section-h2")) {
           layer = lastLayer = 1;
           tag = "section";
         } else if (child.matches("h3, h4, h5, h6, h7, h8, h9")) {
@@ -2983,8 +3110,11 @@ class Jodasplit {
         let e = this.createNewElement(child.tagName.toLowerCase(), layer, tag);
         e.setAttribute("style", child.getAttribute("style") || "");
         e.classList.add(...child.classList);
+        child.setAttribute("orig-class", child.getAttribute("class") || "");
+        child.setAttribute("class", "");
       }
-      __privateGet(this, _currentContent).appendChild(child);
+      if (child.tagName !== "HR")
+        __privateGet(this, _currentContent).appendChild(child);
     });
     Array.from(__privateGet(this, _target).querySelectorAll(".children")).forEach((child) => {
       if (child.children.length === 0) {

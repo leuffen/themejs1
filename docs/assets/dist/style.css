@@ -1,6 +1,7 @@
 /*!***************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./demo_styles.scss ***!
   \***************************************************************************************************************************************/
+@charset "UTF-8";
 .row > div {
   --joda-class: "col";
 }
@@ -439,6 +440,166 @@ a.as__hamburger > .as__hamburger-bar:nth-child(3) {
 }
 
 :root {
+  --layout-accordion-auto-open: true;
+}
+
+.use-screen-mobile {
+  --joda-use: screen();
+  --layout-type: mobile;
+}
+
+.use-screen-desktop {
+  --joda-use: screen();
+  --layout-type: desktop;
+}
+
+.use-screen-laptop {
+  --joda-use: screen();
+  --layout-type: laptop;
+}
+
+.use-screen-tablet {
+  --joda-use: screen();
+  --layout-type: tablet;
+}
+
+.as__screen {
+  display: block;
+  isolation: isolate;
+  position: relative;
+  width: auto;
+}
+.as__screen > .as__screen-shadow {
+  position: absolute;
+  z-index: 0;
+}
+.as__screen > .as__screen-image {
+  position: absolute;
+  z-index: 1;
+  border-radius: 0.3%;
+}
+.as__screen > .as__screen-overlay {
+  position: absolute;
+  z-index: 2;
+}
+.as__screen .as__screen-image img {
+  width: 100%;
+  height: 100%;
+  object-position: top center;
+  object-fit: cover;
+}
+.as__screen.mobile {
+  aspect-ratio: 0.5208333333;
+}
+.as__screen.mobile > .as__screen-shadow {
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: -5%;
+  left: -4%;
+  width: 112%;
+  height: 115%;
+  opacity: 0.5;
+}
+.as__screen.mobile > .as__screen-image {
+  background-color: white;
+  top: 3%;
+  left: 8%;
+  width: 84%;
+  height: 94%;
+  overflow: hidden;
+}
+.as__screen.mobile > .as__screen-overlay {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.as__screen.laptop {
+  aspect-ratio: 1.724137931;
+}
+.as__screen.laptop > .as__screen-shadow {
+  background-size: 95%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: -4%;
+  left: -6%;
+  width: 112%;
+  height: 109%;
+  opacity: 0.5;
+}
+.as__screen.laptop > .as__screen-image {
+  background-color: white;
+  top: 6%;
+  left: 11%;
+  width: 78%;
+  height: 81%;
+  overflow: hidden;
+  z-index: 3;
+}
+.as__screen.laptop > .as__screen-overlay {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.as__screen.tablet {
+  aspect-ratio: 1.2987012987;
+}
+.as__screen.tablet > .as__screen-shadow {
+  background-size: 95%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: -5%;
+  left: -6%;
+  width: 112%;
+  height: 110%;
+  opacity: 0.5;
+}
+.as__screen.tablet > .as__screen-image {
+  background-color: white;
+  top: 3%;
+  left: 3%;
+  width: 94%;
+  height: 95%;
+  overflow: hidden;
+}
+.as__screen.tablet > .as__screen-overlay {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.as__screen.desktop {
+  aspect-ratio: 1.2195121951;
+}
+.as__screen.desktop > .as__screen-shadow {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: -6%;
+  left: -2%;
+  width: 104%;
+  height: 112%;
+  opacity: 0.5;
+}
+.as__screen.desktop > .as__screen-image {
+  background-color: white;
+  top: 6%;
+  left: 2%;
+  width: 95.5%;
+  height: 63%;
+  overflow: hidden;
+  z-index: 3;
+}
+.as__screen.desktop > .as__screen-overlay {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+:root {
   --layout-cols: 8;
   --layout-side-content: "This is some side-content from --layout-side-content" ;
 }
@@ -594,11 +755,119 @@ a.as__hamburger > .as__hamburger-bar:nth-child(3) {
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgb(255, 255, 255));
 }
 
-.page1 :root {
+.page1 {
+  --section-spaceing: 7.5rem;
+  --bs-primary: #E0B731;
+  --bs-secondary: #9BB1B7;
+  --bs-success: #2E4870;
+  --bs-danger: #A87E90 ;
+  --bs-light: #FBFAFA;
   --layout-break1: xl;
   --section-spacing: 4.5rem;
   --background-light: #ffffff;
   --as-section-spacing: 4.5rem;
+}
+.page1 .section-h1 {
+  --joda-class: header1;
+}
+.page1 .section-h1 .content {
+  padding-right: 60px;
+  --joda-class: container;
+}
+.page1 .section-h1 .content h1 {
+  --joda-class: text-center display-1;
+}
+.page1 .sec2 {
+  padding-top: var(--section-spaceing);
+  padding-bottom: var(--section-spaceing);
+  --joda-class: container;
+}
+.page1 .sec2 h2 {
+  --joda-class: text-center display-4;
+}
+.page1 .sec2 .section-h3 {
+  --joda-group: @row;
+  --joda-class: col g-5;
+}
+.page1 .showcase {
+  padding-top: var(--section-spaceing);
+}
+.page1 .showcase .content {
+  --joda-class: container position-relative;
+}
+.page1 .header1 {
+  min-height: 80svh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+.page1 .header1 h1 {
+  font-weight: 100;
+  font-style: normal;
+  padding: 2rem;
+}
+.page1 .header1 p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: normal;
+  padding: 2rem;
+}
+.page1 .header1::before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 30px;
+  background: var(--bs-light, #ccc);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 80px 0;
+}
+.page1 .sec3 {
+  min-height: 70svh;
+  position: relative;
+  z-index: 2;
+  margin-bottom: var(--section-spaceing);
+  padding-top: var(--section-spaceing);
+  padding-bottom: var(--section-spaceing);
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 30px;
+}
+.page1 .sec3 > .content {
+  width: 100%;
+  --joda-class: container;
+  z-index: 2;
+}
+.page1 .sec3 > .children {
+  width: 100%;
+  --joda-class: container;
+  z-index: 1;
+}
+.page1 .sec3::before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--bs-light, #ccc);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 80px 0 0 80px;
+}
+.page1 .dark {
+  background: var(--bs-primary, #000);
+  color: var(--bs-light, #fff);
+}
+.page1 .dark a {
+  color: inherit;
 }
 .page1 nav {
   --joda-use: navbar();
@@ -607,78 +876,6 @@ a.as__hamburger > .as__hamburger-bar:nth-child(3) {
   --joda-use: footer1();
   --joda-class: dark;
   --layout-minifooter: #minifooter;
-}
-.page1 map {
-  --joda-use: map();
-}
-.page1 h1 {
-  font-weight: 100;
-  font-style: normal;
-}
-.page1 h2, .page1 h3 {
-  color: var(--as-primary-text-color, #007bff);
-}
-.page1 section.section-h2 {
-  padding-top: var(--as-section-padding, 3rem);
-  padding-bottom: var(--as-section-padding, 3rem);
-}
-.page1 .website section.section-h1 {
-  --joda-use: hero1();
-  --layout-cols: 6;
-  --layout-image-cols: 6;
-  background: white;
-}
-.page1 .website :nth-child(1 of section.section-h2) {
-  --joda-use: col2();
-}
-.page1 .website :nth-child(1 of section.section-h2) .section-h3 {
-  --joda-class: col;
-  --joda-group: @row;
-  --joda-use: textstyle(template:"icontext");
-}
-.page1 .website :nth-child(1 of section.section-h2) .section-h3.col {
-  min-width: 300px;
-}
-.page1 .website section.section-h2 {
-  --joda-use: autocontent();
-}
-.page1 .website section.section-h2 .section-h3 {
-  --joda-class: col;
-  --joda-group: @row;
-}
-.page1 .website section.section-h2 .section-h3.col {
-  min-width: 300px;
-}
-.page1 .article section.section-h1 {
-  --joda-use: header();
-}
-.page1 .article section.section-h2 {
-  --joda-use: autocontent();
-}
-.page1 .article section.section-h2 .section-h3 {
-  --joda-group: @row;
-  --joda-class: col g-5;
-  min-width: 500px;
-}
-.page1 section.section-h2:nth-child(even) {
-  background: var(--background-light);
-}
-.page1 .dark h1, .page1 .dark h2, .page1 .dark h3, .page1 .dark h4, .page1 .dark h5, .page1 .dark h6, .page1 .dark p, .page1 .dark span, .page1 .dark li, .page1 .dark td, .page1 .dark th, .page1 .dark a {
-  color: var(--as-dark-text-color, rgba(255, 255, 255, 0.85));
-}
-.page1 .dark a:hover {
-  color: var(--as-dark-text-color-hover, rgb(255, 255, 255));
-  opacity: 1;
-}
-.page1 .sprechzeiten {
-  --joda-wrap: "@card @mb-5 > @card-body";
-  --joda-class: text-center;
-}
-.page1 .sprechzeiten h3 {
-  --joda-class: text-center mb-3;
-}
-.page1 .sprechzeiten table {
-  --joda-class: table table-hover;
 }
 
 showcase-element {
@@ -734,6 +931,64 @@ joda-content {
 
 joda-content.loaded {
   display: block;
+}
+
+joda-content {
+  display: none;
+}
+
+joda-content.loaded {
+  display: block;
+}
+
+html.loader::before {
+  content: "Seite lädt...";
+  font-family: sans-serif;
+  font-size: 12px;
+  line-height: 10px;
+  position: fixed;
+  text-align: center;
+  color: white;
+  margin-top: 1px;
+  -webkit-animation: leu--site-loader 60s ease-out;
+  animation: leu--site-loader 60s ease-out;
+  display: block;
+  background-color: gray;
+  height: 12px;
+  width: 2%;
+}
+
+@keyframes leu--site-loader {
+  3% {
+    width: 2%;
+  }
+  5% {
+    width: 50%;
+  }
+  10% {
+    width: 80%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+body > * {
+  display: none;
+}
+
+body.loaded > * {
+  display: block;
+}
+
+body {
+  min-height: 3000vh;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+body.loaded {
+  min-height: unset;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map*/

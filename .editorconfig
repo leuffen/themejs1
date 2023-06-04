@@ -11,10 +11,11 @@ insert_final_newline = true
 
 # Matches multiple files with brace expansion notation
 # Set default charset
-[*.{js,php}]
+[*.{ts,js,php,scss,css,html}]
 charset = utf-8
 trim_trailing_whitespace = true
-
+indent_style = space
+indent_size = 4
 
 # 4 space indentation
 [*.php]
