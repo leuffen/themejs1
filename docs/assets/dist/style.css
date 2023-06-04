@@ -640,6 +640,9 @@ a.as__hamburger > .as__hamburger-bar:nth-child(3) {
 }
 
 .as__footer {
+  --as-footer-background: var(--bs-primary, #000);
+  --as-footer-text-color: var(--bs-light, #fff);
+  --as-footer-link-color: var(--bs-light, #fff);
   background: var(--as-footer-background, #f0f0f0);
   color: var(--as-footer-text-color, #333333);
   padding-top: 4.5rem;
@@ -782,6 +785,11 @@ a.as__hamburger > .as__hamburger-bar:nth-child(3) {
   --section-spacing: 4.5rem;
   --background-light: #ffffff;
   --as-section-spacing: 4.5rem;
+}
+.page1 h3 i.bi::before {
+  line-height: inherit;
+  vertical-align: sub;
+  color: var(--bs-primary, #000);
 }
 .page1 .section-h1 {
   --joda-class: header1;
@@ -927,9 +935,24 @@ a.as__hamburger > .as__hamburger-bar:nth-child(3) {
   --joda-use: navbar();
 }
 .page1 footer {
+  background: #2d374b;
   --joda-use: footer1();
-  --joda-class: dark;
+  --layout-container: container;
   --layout-minifooter: #minifooter;
+}
+.page1 footer .as__footer {
+  --as-footer-background: #2d374b;
+}
+.page1 footer p, .page1 footer a {
+  color: rgba(255, 255, 255, 0.8);
+}
+.page1 footer a:hover {
+  color: rgb(255, 255, 255);
+}
+.page1 footer h3 {
+  margin-top: 4rem;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 showcase-element {

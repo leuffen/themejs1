@@ -1,44 +1,53 @@
 :root {
-  --layout-cols: 8;
-  --layout-side-content: "This is some side-content from --layout-side-content"
+    --layout-cols: 8;
+    --layout-side-content: "This is some side-content from --layout-side-content"
 }
 
 
 .use-footer1 {
-  --joda-use: footer1();
-  --layout-minifooter: #minifooter;
+    --joda-use: footer1();
+    --layout-minifooter: #minifooter;
 }
 
 .as__footer {
+    --as-footer-background: var(--bs-primary, #000);
+    --as-footer-text-color: var(--bs-light, #fff);
+    --as-footer-link-color: var(--bs-light, #fff);
 
-  background: var(--as-footer-background, #f0f0f0);
-  color: var(--as-footer-text-color, #333333);
-  a {
+    background: var(--as-footer-background, #f0f0f0);
     color: var(--as-footer-text-color, #333333);
-  }
-  padding-top: 4.5rem;
-  .as__footer-column {
 
-    margin-bottom: 3.5rem;
-    p {
-      margin-bottom: 0.5rem;
+    a {
+        color: var(--as-footer-text-color, #333333);
     }
 
-    ul {
-        padding-left: 0;
-      li {
-        text-decoration: none;
-        list-style: none;
-      }
+    padding-top: 4.5rem;
+
+    .as__footer-column {
+
+        margin-bottom: 3.5rem;
+
+        p {
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            padding-left: 0;
+
+            li {
+                text-decoration: none;
+                list-style: none;
+            }
+        }
+
     }
 
-  }
+    .as__footer-minifooter {
+        text-align: left;
+        margin-top: 2rem;
 
-  .as__footer-minifooter {
-    text-align: left;
-    margin-top: 2rem;
-    &>* {
-      margin-bottom: 0;
+        & > * {
+            margin-bottom: 0;
+        }
     }
-  }
 }

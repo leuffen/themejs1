@@ -1,6 +1,6 @@
 import {JodaDescriptionManager} from "@leuffen/jodastyle";
 
-
+// language=Markdown
 const example = `
 
 
@@ -45,17 +45,17 @@ Von der Einzelpraxis bis zum MVZ - wir haben für jeden die passende Lösung. [J
 Erprobten Marketinglösungen für viele Fachrichtungen & Anforderungsprofile.<br>
 Für Einzelpraxen, Gemeinschaftspraxen und MVZ.
 
-### Patienten informieren
+### [i bi bi-bar-chart-fill] Patienten informieren
 
 Aus dem Stand eine Top-Platzierung: Mit unseren erprobten Marketinglösungen,
 die wir individuell an Ihre Bedürfnisse anpassen.
 
-### Termine vereinbaren
+### [i bi bi-clock] Termine vereinbaren
 
 Nutzen Sie die Vorteile der Online-Terminvereinbarung. Kompatibel mit allen
 Praxisverwaltungssystemen.
 
-### Bewerber überzeugen
+### [i bi bi-hand-thumbs-up-fill] Bewerber überzeugen
 
 Präsentieren Sie sich und Ihre Praxis potenziellen Bewerbern. Ihre Website ist die beste Stellenanzeige.
 
@@ -90,16 +90,25 @@ Optimierte Website-Konzepte für:
 
 
 
-<footer class="do-footer1">
+<footer>
     <div id="minifooter">
-        Minifoooter
+           Copyright (c) 2023 - Alle Rechte vorbehalten - Design aus dem Ruhrpott
     </div>
-    <h3>Footer 1</h3>
-    <p>Systemhomepage ist ein Angebot von</p>
-    <p>leuffen.de<br>Matthias Leuffen<br>Mathildenstr. 9-11<br></p>
-    <h3>Footer 2</h3>
-    <p>Blum</p>
-    <h3>Footer 3</h3>
+    <h3 class="d-none">Footer 1</h3>
+    <img src="https://med.leuffen.de/assets/leuffen-logo-white.svg" style="width: 200px;margin-left:-14px">
+    <p>Praxismarketing</p>
+    <p>Mathildenstr. 9-11 • 45130 Essen</p>
+    <p>
+        Tel: <a href="tel:+4920175859936">(0201) 7 58 59 936</a><br>
+        <i>Mo-Fr: 9:00 - 17:00 Uhr</i><br>
+        E-Mail: <a href="kontakt@leuffen.de">kontakt@leuffen.de</a>
+    </p>
+    <h3>Informationen</h3>
+    <ul>
+        <li><a href="#">Impressum</a></li>
+        <li><a href="#">Datenschutz</a></li>
+    </ul>
+    <h3>Links</h3>
 </footer>
 
 `;

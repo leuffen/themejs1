@@ -13,6 +13,13 @@
         --as-section-spacing: 4.5rem;
 
 
+    h3 i.bi::before {
+        line-height: inherit;
+        vertical-align: sub;
+        color: var(--bs-primary, #000);
+    }
+
+
     .section-h1 {
         --joda-class: header1;
         .content {
@@ -71,9 +78,29 @@
     }
 
     footer {
+        background: #2d374b;
+
+        .as__footer {
+            --as-footer-background: #2d374b;
+        }
+
         --joda-use: footer1();
-        --joda-class: dark;
+        --layout-container: container;
         --layout-minifooter: #minifooter;
+
+        p, a {
+            color: rgba(255, 255, 255, 0.8)
+        }
+        a:hover {
+            color: rgba(255, 255, 255, 1)
+        }
+
+        h3 {
+            margin-top: 4rem;
+            font-size: 1.0rem;
+            // make uppercase
+            text-transform: uppercase;
+        }
     }
 
 

@@ -1624,17 +1624,17 @@ Von der Einzelpraxis bis zum MVZ - wir haben f\xFCr jeden die passende L\xF6sung
 Erprobten Marketingl\xF6sungen f\xFCr viele Fachrichtungen & Anforderungsprofile.<br>
 F\xFCr Einzelpraxen, Gemeinschaftspraxen und MVZ.
 
-### Patienten informieren
+### [i bi bi-bar-chart-fill] Patienten informieren
 
 Aus dem Stand eine Top-Platzierung: Mit unseren erprobten Marketingl\xF6sungen,
 die wir individuell an Ihre Bed\xFCrfnisse anpassen.
 
-### Termine vereinbaren
+### [i bi bi-clock] Termine vereinbaren
 
 Nutzen Sie die Vorteile der Online-Terminvereinbarung. Kompatibel mit allen
 Praxisverwaltungssystemen.
 
-### Bewerber \xFCberzeugen
+### [i bi bi-hand-thumbs-up-fill] Bewerber \xFCberzeugen
 
 Pr\xE4sentieren Sie sich und Ihre Praxis potenziellen Bewerbern. Ihre Website ist die beste Stellenanzeige.
 
@@ -1669,16 +1669,25 @@ Optimierte Website-Konzepte f\xFCr:
 
 
 
-<footer class="do-footer1">
+<footer>
     <div id="minifooter">
-        Minifoooter
+           Copyright (c) 2023 - Alle Rechte vorbehalten - Design aus dem Ruhrpott
     </div>
-    <h3>Footer 1</h3>
-    <p>Systemhomepage ist ein Angebot von</p>
-    <p>leuffen.de<br>Matthias Leuffen<br>Mathildenstr. 9-11<br></p>
-    <h3>Footer 2</h3>
-    <p>Blum</p>
-    <h3>Footer 3</h3>
+    <h3 class="d-none">Footer 1</h3>
+    <img src="https://med.leuffen.de/assets/leuffen-logo-white.svg" style="width: 200px;margin-left:-14px">
+    <p>Praxismarketing</p>
+    <p>Mathildenstr. 9-11 \u2022 45130 Essen</p>
+    <p>
+        Tel: <a href="tel:+4920175859936">(0201) 7 58 59 936</a><br>
+        <i>Mo-Fr: 9:00 - 17:00 Uhr</i><br>
+        E-Mail: <a href="kontakt@leuffen.de">kontakt@leuffen.de</a>
+    </p>
+    <h3>Informationen</h3>
+    <ul>
+        <li><a href="#">Impressum</a></li>
+        <li><a href="#">Datenschutz</a></li>
+    </ul>
+    <h3>Links</h3>
 </footer>
 
 `;
@@ -2289,6 +2298,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @kasimirjs/embed */ "./workspaces/kasi-embed/index.ts");
 /* harmony import */ var _processor_jodasplit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../processor/jodasplit */ "./workspaces/jodastyle/src/processor/jodasplit.ts");
 /* harmony import */ var _helper_logger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../helper/logger */ "./workspaces/jodastyle/src/helper/logger.ts");
+/* harmony import */ var _processor_jodashorts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../processor/jodashorts */ "./workspaces/jodastyle/src/processor/jodashorts.ts");
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __decorateClass = (decorators, target, key, kind) => {
@@ -2342,6 +2352,7 @@ var _ready;
 
 
 
+
 let JodaSplit = class extends HTMLElement {
   constructor() {
     super(...arguments);
@@ -2354,6 +2365,8 @@ let JodaSplit = class extends HTMLElement {
     return __async(this, null, function* () {
       let logger = new _helper_logger__WEBPACK_IMPORTED_MODULE_2__.Logger("joda-split");
       yield (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_sleep)(1);
+      let jodaShorts = new _processor_jodashorts__WEBPACK_IMPORTED_MODULE_3__.Jodashorts(logger);
+      this.innerHTML = yield jodaShorts.process(this.innerHTML);
       let jodaSplit = new _processor_jodasplit__WEBPACK_IMPORTED_MODULE_1__.Jodasplit(logger);
       let fragment = document.createDocumentFragment();
       fragment.append(yield jodaSplit.process(this));
@@ -3149,6 +3162,56 @@ class Jodaresponsive {
     Array.from([node, ...Array.from(node.querySelectorAll("*"))]).forEach((child) => {
       this.processNode(child);
     });
+  }
+}
+
+
+/***/ }),
+
+/***/ "./workspaces/jodastyle/src/processor/jodashorts.ts":
+/*!**********************************************************!*\
+  !*** ./workspaces/jodastyle/src/processor/jodashorts.ts ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Jodashorts: () => (/* binding */ Jodashorts)
+/* harmony export */ });
+class Jodashorts {
+  constructor(logger) {
+    this.logger = logger;
+  }
+  process(source) {
+    source = source.replace(/\[([a-z0-9\-)]+)(.*?)]/g, (match, name, attributes) => {
+      let attrs = {
+        "class": []
+      };
+      attributes = attributes.replace(/([a-z0-9\-]+)=(['"])(.*?)\2/g, (match2, name2, quote, value) => {
+        attrs[name2] = value;
+      });
+      attributes.split(" ").forEach((attr) => {
+        attr = attr.trim();
+        if (attr === "")
+          return;
+        if (attr.startsWith(".")) {
+          attrs["class"].push(attr.substr(1));
+        }
+        attrs["class"].push(attr);
+      });
+      let attrstr = "";
+      for (let attr in attrs) {
+        if (attr === "class") {
+          attrstr += ` class="${attrs[attr].join(" ")}"`;
+        } else {
+          attrstr += ` ${attr}="${attrs[attr]}"`;
+        }
+      }
+      let ret = `<${name}${attrstr}></${name}>`;
+      return ret;
+    });
+    return source;
   }
 }
 
