@@ -8,11 +8,12 @@
     mask-position: center center;
     mask-repeat: no-repeat;
     &.shape-blob1 {
-        mask-image: var(--shape-blob1)
+        mask-image: var(--shape-blob1);
+        -webkit-mask-image: var(--shape-blob1);
     }
     &.shape-blob1-anim {
-        mask-image: var(--shape-blob1-anim)
-
+        mask-image: var(--shape-blob1-anim);
+        -webkit-mask-image: var(--shape-blob1-anim)
     }
 }
 

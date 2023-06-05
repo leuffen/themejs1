@@ -41,7 +41,7 @@
         //background: var(--bs-light, #ccc);
         //transition: box-shadow 0.02s linear;
         background: linear-gradient(90deg, var(--bs-light) 0%, rgba(0,0,0,0.2) calc(30%),  var(--bs-light) 100%);
-        transform: perspective(calc(100vw)) rotateY(10deg);
+        transform:  rotateZ(5deg);
         //transform: perspective(calc(var(--mouse-x) * 1.5px)) rotateY(calc(var(--mouse-y) * 1.5deg));
         box-shadow: calc(0px - calc(var(--mouse-x) - 50) * 0.018px) calc(3px - calc(var(--mouse-y) - 50) * 0.11px) 10px 0 rgba(0, 0, 0, 0.1);
         border-radius: 0 0 80px 0;
