@@ -7,6 +7,7 @@ import "./elements/accordion/accordion";
 import "./elements/hamburger/hamburger";
 import "./elements/screen/screen";
 import "./elements/shapes/shapes";
+import "./elements/input/input";
 
 import "./footer/footer1/footer1";
 

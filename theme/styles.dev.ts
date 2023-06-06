@@ -7,6 +7,7 @@ import "./elements/navblox/navblox.dev";
 import "./elements/hamburger/hamburger.dev";
 import "./elements/screen/screen.dev";
 import "./elements/shapes/shapes.dev";
+import "./elements/input/input.dev";
 
 import "./footer/footer1/footer1.dev";
 

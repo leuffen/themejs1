@@ -3,26 +3,25 @@ import {JodaDescriptionManager} from "@leuffen/jodastyle";
 // language=Markdown
 const example = `
 
-    <nav></nav>
+<nav></nav>
 
 
 # Wir entwickeln die <span class="text-primary">passende Website</span> für Ihre Arztpraxis!
 
 Weil Sie Besseres zu tun haben, als sich um Ihre Website zu kümmern.
 
-
 <a href="#" class="btn btn-primary btn-lg">Jetzt Konditionen freischalten</a>
 
 
-
-
----{: .section-h2 .showcase}
+---
+{: .section-h2 .showcase}
 
 ![](cdn:///leu-content/v/12/1200x2788_992x2305_768x1785_480x1116_256x256/Screenshot_2023-05-23_at_23-49-39_Zahnarztpraxis_Sebah_Ibrahim_in_Frankfurt_am_Main.avif_png){: .use-screen-laptop style="width:100%"}
 ![](cdn:///leu-content/v/12/1200x2788_992x2305_768x1785_480x1116_256x256/Screenshot_2023-05-23_at_23-49-39_Zahnarztpraxis_Sebah_Ibrahim_in_Frankfurt_am_Main.avif_png){: .use-screen-mobile .position-absolute .bottom-0 style="height:70%"}
 
 
----{: .section-h2 .sec2}
+---
+{: .section-h2 .sec2}
 
 
 
@@ -63,7 +62,8 @@ Präsentieren Sie sich und Ihre Praxis potenziellen Bewerbern. Ihre Website ist 
 
 
 
-## &nbsp;{: .sec4}
+## &nbsp;
+{: .sec4}
 
 
 ### Mit Ärzten konzipiert
@@ -75,7 +75,8 @@ Und: Günstiger als Sie denken.
 
 <button class="btn btn-primary btn-lg">Jetzt Preise freischalten</button>
 
----{: .section-h3}
+---
+{: .section-h3}
 
 ![](cdn:///leu-stock/v/3/1920x1281_1200x800_992x662_768x512_480x320_256x256/AdobeStock_276575002.avif_jpeg)
 

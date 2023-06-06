@@ -175,6 +175,7 @@ class SubElement extends KaCustomElement {
 
             let content = desc.example ?? "No example found"
             if (desc.config.parseMarkdown) {
+                content = content.replace(/\n{:/gm, "{:");
                 content = md.render(content);
                 content = "<joda-split>" + content + "</joda-split>";
             }

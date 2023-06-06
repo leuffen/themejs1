@@ -322,6 +322,7 @@ let SubElement = class extends _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.KaC
       document.body.classList.add(...desc.config.bodyClasses);
       let content = (_a = desc.example) != null ? _a : "No example found";
       if (desc.config.parseMarkdown) {
+        content = content.replace(/\n{:/gm, "{:");
         content = md.render(content);
         content = "<joda-split>" + content + "</joda-split>";
       }
@@ -702,6 +703,107 @@ let Image = class {
 Image = __decorateClass([
   (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.jodaRenderer)("image", ImageLayout)
 ], Image);
+
+
+/***/ }),
+
+/***/ "./theme/elements/input/input.dev.ts":
+/*!*******************************************!*\
+  !*** ./theme/elements/input/input.dev.ts ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+
+const example = `
+
+## Inputs
+
+[input type="email" label="E-Mail" placeholder="Enter your E-Mail" required="true" class="use-input" data-class="m-5"]
+[select type="email" label="Ausw\xE4hlen" data-options="Wurst, Baz, Jess" required="true" class="use-input" data-class="m-5"]
+
+
+`;
+_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.addClass("element", "Inputs (<input>)", "This is a description", example, []);
+
+
+/***/ }),
+
+/***/ "./theme/elements/input/input.ts":
+/*!***************************************!*\
+  !*** ./theme/elements/input/input.ts ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   InputLayout: () => (/* binding */ InputLayout)
+/* harmony export */ });
+/* harmony import */ var _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @kasimirjs/embed */ "./workspaces/kasi-embed/index.ts");
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+/* harmony import */ var _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @leuffen/jodastyle/src/helper/QTemplate */ "./workspaces/jodastyle/src/helper/QTemplate.ts");
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __decorateClass = (decorators, target, key, kind) => {
+  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
+  for (var i = decorators.length - 1, decorator; i >= 0; i--)
+    if (decorator = decorators[i])
+      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
+  if (kind && result)
+    __defProp(target, key, result);
+  return result;
+};
+
+
+
+const tplDefault = `
+<div class="as__input [[layout.style]] [[classes]]">
+  <div data-ref="main"></div>
+  <label for="[[ id ]]">[[ label ]]</label>
+</div>
+`;
+class InputLayout extends _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.DefaultLayout {
+  constructor() {
+    super(...arguments);
+    this.style = "form-floating";
+    this.classes = "";
+  }
+}
+let idCounter = 0;
+let Input = class {
+  render(element, layout) {
+    var _a;
+    let main = new _leuffen_jodastyle_src_helper_QTemplate__WEBPACK_IMPORTED_MODULE_2__.QTemplate(tplDefault);
+    element.id = element.id === "" ? "as__input_" + idCounter++ : element.id;
+    if (element instanceof HTMLSelectElement) {
+      if (element.hasAttribute("data-options")) {
+        let options = element.dataset.options.split(",").map((o) => {
+          return { value: o, label: o };
+        });
+        for (let option of options) {
+          let opt = (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_create_element)("option", { value: option.value }, option.label);
+          element.append(opt);
+        }
+      }
+    }
+    main.parse({
+      layout,
+      classes: layout.classes + " " + element.getAttribute("data-class"),
+      id: element.id,
+      label: (_a = element.getAttribute("label")) != null ? _a : element.getAttribute("name")
+    });
+    element.classList.add("form-control");
+    element.parentNode.replaceChild(main.content, element);
+    main.select("main").selected.replaceWith(element);
+    return main.content;
+  }
+};
+Input = __decorateClass([
+  (0,_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.jodaRenderer)("input", InputLayout)
+], Input);
 
 
 /***/ }),
@@ -1582,25 +1684,25 @@ __webpack_require__.r(__webpack_exports__);
 
 const example = `
 
+<nav></nav>
 
 
 # Wir entwickeln die <span class="text-primary">passende Website</span> f\xFCr Ihre Arztpraxis!
 
 Weil Sie Besseres zu tun haben, als sich um Ihre Website zu k\xFCmmern.
 
-
 <a href="#" class="btn btn-primary btn-lg">Jetzt Konditionen freischalten</a>
 
 
-
-
----{: .section-h2 .showcase}
+---
+{: .section-h2 .showcase}
 
 ![](cdn:///leu-content/v/12/1200x2788_992x2305_768x1785_480x1116_256x256/Screenshot_2023-05-23_at_23-49-39_Zahnarztpraxis_Sebah_Ibrahim_in_Frankfurt_am_Main.avif_png){: .use-screen-laptop style="width:100%"}
 ![](cdn:///leu-content/v/12/1200x2788_992x2305_768x1785_480x1116_256x256/Screenshot_2023-05-23_at_23-49-39_Zahnarztpraxis_Sebah_Ibrahim_in_Frankfurt_am_Main.avif_png){: .use-screen-mobile .position-absolute .bottom-0 style="height:70%"}
 
 
----{: .section-h2 .sec2}
+---
+{: .section-h2 .sec2}
 
 
 
@@ -1641,7 +1743,8 @@ Pr\xE4sentieren Sie sich und Ihre Praxis potenziellen Bewerbern. Ihre Website is
 
 
 
-## &nbsp;{: .sec4}
+## &nbsp;
+{: .sec4}
 
 
 ### Mit \xC4rzten konzipiert
@@ -1653,7 +1756,8 @@ Und: G\xFCnstiger als Sie denken.
 
 <button class="btn btn-primary btn-lg">Jetzt Preise freischalten</button>
 
----{: .section-h3}
+---
+{: .section-h3}
 
 ![](cdn:///leu-stock/v/3/1920x1281_1200x800_992x662_768x512_480x320_256x256/AdobeStock_276575002.avif_jpeg)
 
@@ -1978,12 +2082,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _elements_hamburger_hamburger_dev__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./elements/hamburger/hamburger.dev */ "./theme/elements/hamburger/hamburger.dev.ts");
 /* harmony import */ var _elements_screen_screen_dev__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./elements/screen/screen.dev */ "./theme/elements/screen/screen.dev.ts");
 /* harmony import */ var _elements_shapes_shapes_dev__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./elements/shapes/shapes.dev */ "./theme/elements/shapes/shapes.dev.ts");
-/* harmony import */ var _footer_footer1_footer1_dev__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./footer/footer1/footer1.dev */ "./theme/footer/footer1/footer1.dev.ts");
-/* harmony import */ var _sections_col2_col2_dev__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sections/col2/col2.dev */ "./theme/sections/col2/col2.dev.ts");
-/* harmony import */ var _sections_row_row_dev__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sections/row/row.dev */ "./theme/sections/row/row.dev.ts");
-/* harmony import */ var _heros_hero1_hero1_dev__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./heros/hero1/hero1.dev */ "./theme/heros/hero1/hero1.dev.ts");
-/* harmony import */ var _heros_header_header_dev__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./heros/header/header.dev */ "./theme/heros/header/header.dev.ts");
-/* harmony import */ var _pages_page1_page1_dev__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/page1/page1.dev */ "./theme/pages/page1/page1.dev.ts");
+/* harmony import */ var _elements_input_input_dev__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./elements/input/input.dev */ "./theme/elements/input/input.dev.ts");
+/* harmony import */ var _footer_footer1_footer1_dev__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./footer/footer1/footer1.dev */ "./theme/footer/footer1/footer1.dev.ts");
+/* harmony import */ var _sections_col2_col2_dev__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sections/col2/col2.dev */ "./theme/sections/col2/col2.dev.ts");
+/* harmony import */ var _sections_row_row_dev__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./sections/row/row.dev */ "./theme/sections/row/row.dev.ts");
+/* harmony import */ var _heros_hero1_hero1_dev__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./heros/hero1/hero1.dev */ "./theme/heros/hero1/hero1.dev.ts");
+/* harmony import */ var _heros_header_header_dev__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./heros/header/header.dev */ "./theme/heros/header/header.dev.ts");
+/* harmony import */ var _pages_page1_page1_dev__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/page1/page1.dev */ "./theme/pages/page1/page1.dev.ts");
+
 
 
 
@@ -2018,12 +2124,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _elements_hamburger_hamburger__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./elements/hamburger/hamburger */ "./theme/elements/hamburger/hamburger.ts");
 /* harmony import */ var _elements_screen_screen__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./elements/screen/screen */ "./theme/elements/screen/screen.ts");
 /* harmony import */ var _elements_shapes_shapes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./elements/shapes/shapes */ "./theme/elements/shapes/shapes.ts");
-/* harmony import */ var _footer_footer1_footer1__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./footer/footer1/footer1 */ "./theme/footer/footer1/footer1.ts");
-/* harmony import */ var _sections_autocontent_autocontent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sections/autocontent/autocontent */ "./theme/sections/autocontent/autocontent.ts");
-/* harmony import */ var _sections_col2_col2__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sections/col2/col2 */ "./theme/sections/col2/col2.ts");
-/* harmony import */ var _sections_row_row__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./sections/row/row */ "./theme/sections/row/row.ts");
-/* harmony import */ var _heros_hero1_hero1__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./heros/hero1/hero1 */ "./theme/heros/hero1/hero1.ts");
-/* harmony import */ var _heros_header_header__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./heros/header/header */ "./theme/heros/header/header.ts");
+/* harmony import */ var _elements_input_input__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./elements/input/input */ "./theme/elements/input/input.ts");
+/* harmony import */ var _footer_footer1_footer1__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./footer/footer1/footer1 */ "./theme/footer/footer1/footer1.ts");
+/* harmony import */ var _sections_autocontent_autocontent__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sections/autocontent/autocontent */ "./theme/sections/autocontent/autocontent.ts");
+/* harmony import */ var _sections_col2_col2__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./sections/col2/col2 */ "./theme/sections/col2/col2.ts");
+/* harmony import */ var _sections_row_row__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./sections/row/row */ "./theme/sections/row/row.ts");
+/* harmony import */ var _heros_hero1_hero1__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./heros/hero1/hero1 */ "./theme/heros/hero1/hero1.ts");
+/* harmony import */ var _heros_header_header__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./heros/header/header */ "./theme/heros/header/header.ts");
+
 
 
 
@@ -2500,6 +2608,7 @@ class MediaSupport {
     this.jpg = true;
     this.jpeg = true;
     this.gif = true;
+    this.png = true;
     this.valid = false;
   }
   detect() {
@@ -3107,14 +3216,14 @@ class ResponsiveClass {
     let isDefault = true;
     for (let bp of this.breakpoints) {
       if (this[bp] !== null) {
-        ret.push(...this[bp]);
+        ret = this[bp];
         isDefault = false;
       }
       if (bp === breakpoint) {
         break;
       }
     }
-    if (isDefault) {
+    if (isDefault && this.default !== null) {
       ret.push(...this.default);
     }
     ret = ret.filter((item) => item !== "");
@@ -3156,6 +3265,7 @@ class Jodaresponsive {
     let classes = node.getAttribute(origAttr);
     let responsiveClasses = parseClassStr(classes);
     node.setAttribute("class", "");
+    node.classList.add(...responsiveClasses.always.filter((item) => item !== ""));
     node.classList.add(...responsiveClasses.getClassesForBreakpoint());
   }
   process(node) {
@@ -3189,7 +3299,12 @@ class Jodashorts {
         "class": []
       };
       attributes = attributes.replace(/([a-z0-9\-]+)=(['"])(.*?)\2/g, (match2, name2, quote, value) => {
+        if (name2 === "class") {
+          attrs[name2].push(value);
+          return "";
+        }
         attrs[name2] = value;
+        return "";
       });
       attributes.split(" ").forEach((attr) => {
         attr = attr.trim();
@@ -3313,7 +3428,6 @@ class Jodasplit {
           layer = lastLayer + 1;
           tag = "div";
         }
-        console.log("layer is", layer, lastLayer, child.tagName, child);
         let e = this.createNewElement(child.tagName.toLowerCase(), layer, tag);
         e.setAttribute("style", child.getAttribute("style") || "");
         e.classList.add(...child.classList);
