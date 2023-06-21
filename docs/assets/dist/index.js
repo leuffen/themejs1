@@ -33,20 +33,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src.dev/ShowcaseElement.ts":
-/*!************************************!*\
-  !*** ./src.dev/ShowcaseElement.ts ***!
-  \************************************/
+/***/ "./src.dev/PreviewElement.ts":
+/*!***********************************!*\
+  !*** ./src.dev/PreviewElement.ts ***!
+  \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
-/* harmony import */ var _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @kasimirjs/embed */ "./workspaces/kasi-embed/index.ts");
+/* harmony import */ var _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @kasimirjs/embed */ "./workspaces/kasi-embed/index.ts");
+/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
+/* harmony import */ var _SwitcherElement__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SwitcherElement */ "./src.dev/SwitcherElement.ts");
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __getProtoOf = Object.getPrototypeOf;
-var __reflectGet = Reflect.get;
 var __decorateClass = (decorators, target, key, kind) => {
   var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
   for (var i = decorators.length - 1, decorator; i >= 0; i--)
@@ -56,7 +55,6 @@ var __decorateClass = (decorators, target, key, kind) => {
     __defProp(target, key, result);
   return result;
 };
-var __superGet = (cls, obj, key) => __reflectGet(__getProtoOf(cls), key, obj);
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve, reject) => {
     var fulfilled = (value) => {
@@ -79,48 +77,47 @@ var __async = (__this, __arguments, generator) => {
 };
 
 
-const tpl = `
-<div class="row">
-    <div class="col col-auto" ka.for="let i of desc ">
-        <div class="card">
-            <div class="card-body p-1 m-1">
-                <div class="preview">
-                    <iframe ka.prop.src="'/html?className=' + i.className"></iframe>
-                    <div class="overlay"><a ka.prop.href="'/html?className=' + i.className">Show</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+const config = {
+  icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-display-fill" viewBox="0 0 16 16">
+      <path d="M6 12c0 .667-.083 1.167-.25 1.5H5a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-.75c-.167-.333-.25-.833-.25-1.5h4c2 0 2-2 2-2V4c0-2-2-2-2-2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h4z"/>
+    </svg>`,
+  iconTop: 1,
+  width: "calc(100vw - 80px)"
+};
+const tpl2 = `
+<div>
+    <select ka.options="$scope.desc" ka.bind="$scope.className" style="width:100%"></select>
+    <input ka.bind="$scope.text">
 </div>
 `;
-let ShowcaseElement = class extends _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_1__.KaCustomElement {
+let PreviewElement = class extends _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.KaCustomElement {
   constructor() {
     super();
+    this.wrap(new _SwitcherElement__WEBPACK_IMPORTED_MODULE_2__.SwitcherElement(config));
+    console.log(_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.JodaDescriptionManager.classes);
     let scope = this.init({
-      desc: _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.data,
-      $on: {}
+      desc: _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.JodaDescriptionManager.classes,
+      text: "test",
+      className: "test",
+      $on: {
+        change: (e) => {
+          window.history.pushState({}, "", "?className=" + scope.className);
+        }
+      }
     });
-  }
-  connectedCallback() {
-    return __async(this, null, function* () {
-      yield (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_1__.ka_sleep)(1);
-      this.scope.desc = _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_0__.JodaDescriptionManager.data.filter((e) => e.category === this.getAttribute("data-category"));
-      console.log("connectedCallback", this.scope.desc);
-      __superGet(ShowcaseElement.prototype, this, "connectedCallback").call(this);
-    });
-  }
-  disconnectedCallback() {
-    return __async(this, null, function* () {
-      console.log("disconnect", this);
-      this.scope.desc = [];
-      __superGet(ShowcaseElement.prototype, this, "disconnectedCallback").call(this);
-    });
+    let last = "";
   }
 };
-ShowcaseElement = __decorateClass([
-  (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_1__.template)(tpl),
-  (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_1__.customElement)("showcase-element")
-], ShowcaseElement);
+PreviewElement = __decorateClass([
+  (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.customElement)("preview-element"),
+  (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.template)(tpl2)
+], PreviewElement);
+(() => __async(undefined, null, function* () {
+  yield (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_dom_ready)();
+  console.log("Wurst");
+  document.body.append(new PreviewElement());
+}))();
 
 
 /***/ }),
@@ -182,7 +179,7 @@ const tpl = `
             right: 0;
             border: 0;
             width: 250px;
-            z-index: 99999;
+            z-index: 99995;
             transform: translateX(100%);
             transition: all 0.3s ease-in-out;
 
@@ -190,10 +187,13 @@ const tpl = `
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             padding: 5px
         }
+        .sidepanel.active {
+            z-index: 99999;
+        }
 
         .sidepanel .activator {
             position: absolute;
-            top: 38vh;
+            top: calc(38vh + 80px * var(--icon-top, 0));
             height: 50px;
             width: 50px;
             left: -50px;
@@ -215,6 +215,7 @@ const tpl = `
 
         .sidepanel.active .activator {
             opacity: 0.8;
+
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
         }
 
@@ -233,9 +234,9 @@ const tpl = `
 
     </style>
 
-    <nav class="sidepanel" ka.classlist.active="state.active">
-        <div class="activator" ka.on.click="$fn.toggle()" ka.content="$scope.config.icon">B</div>
-        <div class="content">
+    <nav class="sidepanel" ka.classlist.active="state.active" ka.style.width="$scope.config.width">
+        <div class="activator" ka.on.click="$fn.toggle()" ka.style.--icon-top="$scope.config.iconTop" ka.content="$scope.config.icon">B</div>
+        <div class="content" >
             <div ka.content="$content"></div>
         </div>
     </nav>
@@ -246,6 +247,8 @@ class SidebarConfig {
   <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
   <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
 </svg>`;
+    this.iconTop = 0;
+    this.width = "25\xDFpx";
   }
 }
 let SwitcherElement = class extends _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.KaCustomWrapper {
@@ -2550,6 +2553,114 @@ const JodaDescriptionManager = new __JodaDescriptionManager();
 
 /***/ }),
 
+/***/ "./workspaces/jodastyle/src/helper/JodaElementException.ts":
+/*!*****************************************************************!*\
+  !*** ./workspaces/jodastyle/src/helper/JodaElementException.ts ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   JodaElementException: () => (/* binding */ JodaElementException)
+/* harmony export */ });
+class JodaElementException {
+  constructor(message, element = null, triggerCommand = null) {
+    this.message = message;
+    this.element = element;
+    this.triggerCommand = triggerCommand;
+  }
+}
+
+
+/***/ }),
+
+/***/ "./workspaces/jodastyle/src/helper/JodaErrorElement.ts":
+/*!*************************************************************!*\
+  !*** ./workspaces/jodastyle/src/helper/JodaErrorElement.ts ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   JodaErrorElement: () => (/* binding */ JodaErrorElement)
+/* harmony export */ });
+/* harmony import */ var _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @kasimirjs/embed */ "./workspaces/kasi-embed/index.ts");
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getProtoOf = Object.getPrototypeOf;
+var __reflectGet = Reflect.get;
+var __decorateClass = (decorators, target, key, kind) => {
+  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
+  for (var i = decorators.length - 1, decorator; i >= 0; i--)
+    if (decorator = decorators[i])
+      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
+  if (kind && result)
+    __defProp(target, key, result);
+  return result;
+};
+var __superGet = (cls, obj, key) => __reflectGet(__getProtoOf(cls), key, obj);
+var __async = (__this, __arguments, generator) => {
+  return new Promise((resolve, reject) => {
+    var fulfilled = (value) => {
+      try {
+        step(generator.next(value));
+      } catch (e) {
+        reject(e);
+      }
+    };
+    var rejected = (value) => {
+      try {
+        step(generator.throw(value));
+      } catch (e) {
+        reject(e);
+      }
+    };
+    var step = (x) => x.done ? resolve(x.value) : Promise.resolve(x.value).then(fulfilled, rejected);
+    step((generator = generator.apply(__this, __arguments)).next());
+  });
+};
+
+let tpl = `
+<style>
+.joda-error {
+    display: block;
+    background-color: rgba(241,179,179,0.17);
+    margin: 1em;
+    padding: 1em;
+    color: red;
+    font-weight: bold;
+    border: 3px solid red;
+}
+</style>
+<div class="joda-error">
+    [[ message ]]
+</div>
+`;
+let JodaErrorElement = class extends _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.KaCustomElement {
+  constructor(message) {
+    super();
+    this.message = message;
+    let scope = this.init({
+      message
+    });
+  }
+  connectedCallback() {
+    return __async(this, null, function* () {
+      yield __superGet(JodaErrorElement.prototype, this, "connectedCallback").call(this);
+      this.scope.message = this.message;
+    });
+  }
+};
+JodaErrorElement = __decorateClass([
+  (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.customElement)("joda-error"),
+  (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.template)(tpl)
+], JodaErrorElement);
+
+
+/***/ }),
+
 /***/ "./workspaces/jodastyle/src/helper/JodaRenderer.ts":
 /*!*********************************************************!*\
   !*** ./workspaces/jodastyle/src/helper/JodaRenderer.ts ***!
@@ -3409,7 +3520,7 @@ class Jodasplit {
         __privateGet(this, _target).appendChild(child);
         return;
       }
-      if (child instanceof HTMLElement && child.matches("h1, h2, h3, h4, h5, h6, h7, h8, h9, .section-h2, .section-h3, .section-h4")) {
+      if (child instanceof HTMLElement && child.matches("h1, h2, h3, h4, h5, h6, h7, h8, h9, hr, .section-h2, .section-h3, .section-h4")) {
         let layer = 1;
         let tag = "div";
         if (child.matches("h1,h2,.section-h2")) {
@@ -3434,8 +3545,11 @@ class Jodasplit {
         child.setAttribute("orig-class", child.getAttribute("class") || "");
         child.setAttribute("class", "");
       }
-      if (child.tagName !== "HR")
-        __privateGet(this, _currentContent).appendChild(child);
+      if (child.tagName === "HR") {
+        child.setAttribute("orig-pre-split-class", child.getAttribute("class"));
+        child.setAttribute("class", "d-none");
+      }
+      __privateGet(this, _currentContent).appendChild(child);
     });
     Array.from(__privateGet(this, _target).querySelectorAll(".children")).forEach((child) => {
       if (child.children.length === 0) {
@@ -3473,6 +3587,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _helper_ka_quick_template__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helper/ka-quick-template */ "./workspaces/jodastyle/src/helper/ka-quick-template.ts");
 /* harmony import */ var _helper_functions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../helper/functions */ "./workspaces/jodastyle/src/helper/functions.ts");
 /* harmony import */ var _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @kasimirjs/embed */ "./workspaces/kasi-embed/index.ts");
+/* harmony import */ var _helper_JodaElementException__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helper/JodaElementException */ "./workspaces/jodastyle/src/helper/JodaElementException.ts");
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve, reject) => {
     var fulfilled = (value) => {
@@ -3496,6 +3611,7 @@ var __async = (__this, __arguments, generator) => {
 
 
 
+
 let jodaStyleCommands = {};
 jodaStyleCommands["--joda-replace-by"] = (value, target, element, logger) => {
   let parent = element.parentElement;
@@ -3509,9 +3625,47 @@ jodaStyleCommands["--joda-replace-by"] = (value, target, element, logger) => {
 };
 jodaStyleCommands["--joda-wrap"] = (value, target, element, logger) => {
   let parent = element.parentElement;
+  if (value.startsWith("#")) {
+    let tpl = document.querySelector(value);
+    if (!tpl) {
+      throw new _helper_JodaElementException__WEBPACK_IMPORTED_MODULE_3__.JodaElementException(`Template ${value} not found`, element);
+    }
+    let newElement = tpl.content.cloneNode(true);
+    newElement.querySelectorAll("slot[data-select]").forEach((slot2) => {
+      let select = slot2.getAttribute("data-select");
+      let selected = element.querySelector(select);
+      if (selected) {
+        slot2.append(selected);
+      }
+    });
+    let slot = newElement.querySelector("slot");
+    parent.replaceChild(newElement, element);
+    if (slot !== null) {
+      slot.append(element);
+    }
+    return element;
+  } else {
+    let ret = (0,_helper_ka_quick_template__WEBPACK_IMPORTED_MODULE_0__.createElementTree)(value);
+    parent.replaceChild(ret.start, element);
+    ret.leaf.append(element);
+    return element;
+  }
+};
+jodaStyleCommands["--joda-container"] = (value, target, element, logger) => {
   let ret = (0,_helper_ka_quick_template__WEBPACK_IMPORTED_MODULE_0__.createElementTree)(value);
-  parent.replaceChild(ret.start, element);
-  ret.leaf.append(element);
+  Array.from(element.children).forEach((child) => {
+    ret.leaf.append(child);
+  });
+  element.append(ret.start);
+  return element;
+};
+jodaStyleCommands["--joda-unwrap"] = (value, target, element, logger) => {
+  let parent = element.parentElement;
+  let grandParent = parent.parentElement;
+  grandParent.insertBefore(element, parent);
+  if (parent.children.length === 0) {
+    parent.remove();
+  }
   return element;
 };
 jodaStyleCommands["--joda-group"] = (value, target, element, logger) => {
@@ -3579,6 +3733,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _jodastyle_commands__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./jodastyle-commands */ "./workspaces/jodastyle/src/processor/jodastyle-commands.ts");
 /* harmony import */ var _helper_functions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../helper/functions */ "./workspaces/jodastyle/src/helper/functions.ts");
 /* harmony import */ var _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @kasimirjs/embed */ "./workspaces/kasi-embed/index.ts");
+/* harmony import */ var _helper_JodaElementException__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helper/JodaElementException */ "./workspaces/jodastyle/src/helper/JodaElementException.ts");
+/* harmony import */ var _helper_JodaErrorElement__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../helper/JodaErrorElement */ "./workspaces/jodastyle/src/helper/JodaErrorElement.ts");
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve, reject) => {
     var fulfilled = (value) => {
@@ -3602,6 +3758,8 @@ var __async = (__this, __arguments, generator) => {
 
 
 
+
+
 class Jodastyle {
   constructor(logger) {
     this.logger = logger;
@@ -3609,7 +3767,7 @@ class Jodastyle {
   process(node) {
     return __async(this, null, function* () {
       for (let child of Array.from(node.getElementsByTagName("joda-split"))) {
-        while (child.ready !== true) {
+        while (child["ready"] !== true) {
           yield (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_2__.ka_sleep)(5);
         }
       }
@@ -3626,7 +3784,18 @@ class Jodastyle {
           }
           styleValue = (0,_helper_functions__WEBPACK_IMPORTED_MODULE_1__.getCleanVariableValue)(styleValue);
           let command = _jodastyle_commands__WEBPACK_IMPORTED_MODULE_0__.jodaStyleCommands[key];
-          child = yield command(styleValue, node, child, this.logger);
+          try {
+            child = yield command(styleValue, node, child, this.logger);
+          } catch (e) {
+            if (e instanceof _helper_JodaElementException__WEBPACK_IMPORTED_MODULE_3__.JodaElementException) {
+              e.triggerCommand = key + ": " + styleValue;
+              this.logger.warn(e.message, e.element);
+              child.replaceWith(new _helper_JodaErrorElement__WEBPACK_IMPORTED_MODULE_4__.JodaErrorElement(e.message + " (trigger by: " + e.triggerCommand + ")"));
+            } else {
+              this.logger.warn("Unhandled exception", e, "on element", child, "triggered by", key + ": " + styleValue);
+              throw e;
+            }
+          }
         }
       }
     });
@@ -3757,7 +3926,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   KaHtmlElement: () => (/* reexport safe */ _src_index__WEBPACK_IMPORTED_MODULE_0__.KaHtmlElement),
 /* harmony export */   KaModal: () => (/* reexport safe */ _src_index__WEBPACK_IMPORTED_MODULE_0__.KaModal),
 /* harmony export */   KaTemplate: () => (/* reexport safe */ _src_index__WEBPACK_IMPORTED_MODULE_0__.KaTemplate),
-/* harmony export */   KaUse: () => (/* reexport safe */ _src_index__WEBPACK_IMPORTED_MODULE_0__.KaUse),
 /* harmony export */   createScopeObject: () => (/* reexport safe */ _src_index__WEBPACK_IMPORTED_MODULE_0__.createScopeObject),
 /* harmony export */   customElement: () => (/* reexport safe */ _src_index__WEBPACK_IMPORTED_MODULE_0__.customElement),
 /* harmony export */   isUndefined: () => (/* reexport safe */ _src_index__WEBPACK_IMPORTED_MODULE_0__.isUndefined),
@@ -4897,86 +5065,6 @@ _promise = new WeakMap();
 
 /***/ }),
 
-/***/ "./workspaces/kasi-embed/src/element/ka-use.ts":
-/*!*****************************************************!*\
-  !*** ./workspaces/kasi-embed/src/element/ka-use.ts ***!
-  \*****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   KaUse: () => (/* binding */ KaUse)
-/* harmony export */ });
-/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions */ "./workspaces/kasi-embed/src/functions.ts");
-/* harmony import */ var _KaCustomFragment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./KaCustomFragment */ "./workspaces/kasi-embed/src/element/KaCustomFragment.ts");
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __decorateClass = (decorators, target, key, kind) => {
-  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
-  for (var i = decorators.length - 1, decorator; i >= 0; i--)
-    if (decorator = decorators[i])
-      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
-  if (kind && result)
-    __defProp(target, key, result);
-  return result;
-};
-
-
-let KaUse = class extends HTMLElement {
-  get component() {
-    return this.myComponent;
-  }
-  set component(val) {
-    this.myComponent = val;
-    this.innerHTML = "";
-    this.append(val);
-  }
-  /**
-   * called from ka.use="" by apply()
-   *
-   * @param val
-   */
-  use(val, parentScope) {
-    if ((0,_functions__WEBPACK_IMPORTED_MODULE_0__.isset)(val["setParentScope"]))
-      val["setParentScope"](parentScope);
-    this.myComponent = val;
-    this.innerHTML = "";
-    if (!this.hasAttribute("ka.scope"))
-      val["setScope"](parentScope);
-    if (val instanceof _KaCustomFragment__WEBPACK_IMPORTED_MODULE_1__.KaCustomFragment) {
-      val.fragmentConnectedCallback(this);
-      return;
-    }
-    this.append(val);
-  }
-  /**
-   * set dedicated scope using ka.scope
-   *
-   * @param scope
-   */
-  setScope(scope) {
-    if (this.myComponent instanceof _KaCustomFragment__WEBPACK_IMPORTED_MODULE_1__.KaCustomFragment) {
-      this.myComponent.setScope(scope);
-    }
-  }
-  disconnectedCallback() {
-  }
-  connectedCallback() {
-    this.style.display = "contents";
-    this.setAttribute("ka.stop", "true");
-    if (this.myComponent instanceof _KaCustomFragment__WEBPACK_IMPORTED_MODULE_1__.KaCustomFragment) {
-      this.myComponent.fragmentConnectedCallback(this);
-    }
-  }
-};
-KaUse = __decorateClass([
-  (0,_functions__WEBPACK_IMPORTED_MODULE_0__.customElement)("ka-use")
-], KaUse);
-
-
-/***/ }),
-
 /***/ "./workspaces/kasi-embed/src/functions.ts":
 /*!************************************************!*\
   !*** ./workspaces/kasi-embed/src/functions.ts ***!
@@ -5062,7 +5150,7 @@ function template(template2) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Debouncer: () => (/* reexport safe */ _core_debouncer__WEBPACK_IMPORTED_MODULE_19__.Debouncer),
+/* harmony export */   Debouncer: () => (/* reexport safe */ _core_debouncer__WEBPACK_IMPORTED_MODULE_18__.Debouncer),
 /* harmony export */   KaCustomElement: () => (/* reexport safe */ _element_KaCustomElement__WEBPACK_IMPORTED_MODULE_8__.KaCustomElement),
 /* harmony export */   KaCustomFragment: () => (/* reexport safe */ _element_KaCustomFragment__WEBPACK_IMPORTED_MODULE_9__.KaCustomFragment),
 /* harmony export */   KaCustomModal: () => (/* reexport safe */ _element_KaCustomModal__WEBPACK_IMPORTED_MODULE_11__.KaCustomModal),
@@ -5070,7 +5158,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   KaHtmlElement: () => (/* reexport safe */ _element_KaHtmlElement__WEBPACK_IMPORTED_MODULE_7__.KaHtmlElement),
 /* harmony export */   KaModal: () => (/* reexport safe */ _element_KaModal__WEBPACK_IMPORTED_MODULE_13__.KaModal),
 /* harmony export */   KaTemplate: () => (/* reexport safe */ _tpl_template__WEBPACK_IMPORTED_MODULE_12__.KaTemplate),
-/* harmony export */   KaUse: () => (/* reexport safe */ _element_ka_use__WEBPACK_IMPORTED_MODULE_14__.KaUse),
 /* harmony export */   createScopeObject: () => (/* reexport safe */ _types__WEBPACK_IMPORTED_MODULE_1__.createScopeObject),
 /* harmony export */   customElement: () => (/* reexport safe */ _functions__WEBPACK_IMPORTED_MODULE_0__.customElement),
 /* harmony export */   isUndefined: () => (/* reexport safe */ _functions__WEBPACK_IMPORTED_MODULE_0__.isUndefined),
@@ -5079,13 +5166,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   ka_create_element: () => (/* reexport safe */ _core_create_element__WEBPACK_IMPORTED_MODULE_4__.ka_create_element),
 /* harmony export */   ka_debounce: () => (/* reexport safe */ _core_debounce__WEBPACK_IMPORTED_MODULE_3__.ka_debounce),
 /* harmony export */   ka_dom_ready: () => (/* reexport safe */ _core_dom_ready__WEBPACK_IMPORTED_MODULE_6__.ka_dom_ready),
-/* harmony export */   ka_eval: () => (/* reexport safe */ _core_eval__WEBPACK_IMPORTED_MODULE_16__.ka_eval),
-/* harmony export */   ka_html: () => (/* reexport safe */ _ce_html__WEBPACK_IMPORTED_MODULE_17__.ka_html),
-/* harmony export */   ka_query_selector: () => (/* reexport safe */ _core_query_select__WEBPACK_IMPORTED_MODULE_15__.ka_query_selector),
-/* harmony export */   ka_session_storage: () => (/* reexport safe */ _core_storage__WEBPACK_IMPORTED_MODULE_20__.ka_session_storage),
+/* harmony export */   ka_eval: () => (/* reexport safe */ _core_eval__WEBPACK_IMPORTED_MODULE_15__.ka_eval),
+/* harmony export */   ka_html: () => (/* reexport safe */ _ce_html__WEBPACK_IMPORTED_MODULE_16__.ka_html),
+/* harmony export */   ka_query_selector: () => (/* reexport safe */ _core_query_select__WEBPACK_IMPORTED_MODULE_14__.ka_query_selector),
+/* harmony export */   ka_session_storage: () => (/* reexport safe */ _core_storage__WEBPACK_IMPORTED_MODULE_19__.ka_session_storage),
 /* harmony export */   ka_set_options: () => (/* reexport safe */ _core_ka_set_options__WEBPACK_IMPORTED_MODULE_5__.ka_set_options),
 /* harmony export */   ka_sleep: () => (/* reexport safe */ _core_sleep__WEBPACK_IMPORTED_MODULE_2__.ka_sleep),
-/* harmony export */   ka_templatify: () => (/* reexport safe */ _tpl_templatify__WEBPACK_IMPORTED_MODULE_18__.ka_templatify),
+/* harmony export */   ka_templatify: () => (/* reexport safe */ _tpl_templatify__WEBPACK_IMPORTED_MODULE_17__.ka_templatify),
 /* harmony export */   template: () => (/* reexport safe */ _functions__WEBPACK_IMPORTED_MODULE_0__.template)
 /* harmony export */ });
 /* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions */ "./workspaces/kasi-embed/src/functions.ts");
@@ -5102,14 +5189,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _element_KaCustomModal__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./element/KaCustomModal */ "./workspaces/kasi-embed/src/element/KaCustomModal.ts");
 /* harmony import */ var _tpl_template__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./tpl/template */ "./workspaces/kasi-embed/src/tpl/template.js");
 /* harmony import */ var _element_KaModal__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./element/KaModal */ "./workspaces/kasi-embed/src/element/KaModal.ts");
-/* harmony import */ var _element_ka_use__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./element/ka-use */ "./workspaces/kasi-embed/src/element/ka-use.ts");
-/* harmony import */ var _core_query_select__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./core/query-select */ "./workspaces/kasi-embed/src/core/query-select.ts");
-/* harmony import */ var _core_eval__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./core/eval */ "./workspaces/kasi-embed/src/core/eval.js");
-/* harmony import */ var _ce_html__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./ce/html */ "./workspaces/kasi-embed/src/ce/html.ts");
-/* harmony import */ var _tpl_templatify__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./tpl/templatify */ "./workspaces/kasi-embed/src/tpl/templatify.js");
-/* harmony import */ var _core_debouncer__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./core/debouncer */ "./workspaces/kasi-embed/src/core/debouncer.ts");
-/* harmony import */ var _core_storage__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./core/storage */ "./workspaces/kasi-embed/src/core/storage.ts");
-
+/* harmony import */ var _core_query_select__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./core/query-select */ "./workspaces/kasi-embed/src/core/query-select.ts");
+/* harmony import */ var _core_eval__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./core/eval */ "./workspaces/kasi-embed/src/core/eval.js");
+/* harmony import */ var _ce_html__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./ce/html */ "./workspaces/kasi-embed/src/ce/html.ts");
+/* harmony import */ var _tpl_templatify__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./tpl/templatify */ "./workspaces/kasi-embed/src/tpl/templatify.js");
+/* harmony import */ var _core_debouncer__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./core/debouncer */ "./workspaces/kasi-embed/src/core/debouncer.ts");
+/* harmony import */ var _core_storage__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./core/storage */ "./workspaces/kasi-embed/src/core/storage.ts");
 
 
 
@@ -5146,7 +5231,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   createScopeObject: () => (/* binding */ createScopeObject)
 /* harmony export */ });
 /* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions */ "./workspaces/kasi-embed/src/functions.ts");
-/* harmony import */ var _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @kasimirjs/embed */ "./workspaces/kasi-embed/index.ts");
+/* harmony import */ var _core_debouncer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./core/debouncer */ "./workspaces/kasi-embed/src/core/debouncer.ts");
 var __defProp = Object.defineProperty;
 var __getOwnPropSymbols = Object.getOwnPropertySymbols;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
@@ -5232,7 +5317,7 @@ function createScopeObject(init = null) {
       if (target[p] === value)
         return true;
       target[p] = value;
-      let debouncer = new _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_1__.Debouncer(50, 50);
+      let debouncer = new _core_debouncer__WEBPACK_IMPORTED_MODULE_1__.Debouncer(50, 50);
       if (p.startsWith("$") || p.startsWith("__"))
         return true;
       if ((0,_functions__WEBPACK_IMPORTED_MODULE_0__.isset)(scopeDef.$tpl))
@@ -15151,10 +15236,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _eval_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./eval.js */ "./workspaces/kasi-embed/src/core/eval.js");
 /* harmony import */ var _str_to_camelcase_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./str-to-camelcase.js */ "./workspaces/kasi-embed/src/core/str-to-camelcase.js");
-/* harmony import */ var _element_ka_use__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../element/ka-use */ "./workspaces/kasi-embed/src/element/ka-use.ts");
-/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../functions */ "./workspaces/kasi-embed/src/functions.ts");
-/* harmony import */ var _element_KaCustomFragment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../element/KaCustomFragment */ "./workspaces/kasi-embed/src/element/KaCustomFragment.ts");
-
+/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions */ "./workspaces/kasi-embed/src/functions.ts");
+/* harmony import */ var _element_KaCustomFragment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../element/KaCustomFragment */ "./workspaces/kasi-embed/src/element/KaCustomFragment.ts");
 
 
 
@@ -15222,7 +15305,7 @@ function ka_apply (selector, scope, recursive=false) {
 
         switch (attType) {
             case "use":
-                if ( ! (selector instanceof _element_ka_use__WEBPACK_IMPORTED_MODULE_2__.KaUse)) {
+                if ( ! (selector instanceof KaUse)) {
                     console.error("ka.use is only available on <ka-use/> Elements: Used on ", r, "found in ", selector);
                     throw "ka.use called on non <ka-use/> Element."
                 }
@@ -15271,7 +15354,7 @@ function ka_apply (selector, scope, recursive=false) {
                 continue;
 
             case "ref":
-                if ((0,_functions__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(scope.$ref))
+                if ((0,_functions__WEBPACK_IMPORTED_MODULE_2__.isUndefined)(scope.$ref))
                     scope.$ref = {};
                 // Allow ref without parameter to use $ref.$last
                 if (r !== null)
@@ -15298,6 +15381,11 @@ function ka_apply (selector, scope, recursive=false) {
                 break;
 
             case "style":
+
+                if (attSelector !== null && attSelector.startsWith("--")) {
+                    selector.style.setProperty(attSelector, r);
+                    break;
+                }
                 if (attSelector  !== null) {
                     let val = r;
                     if (typeof val === "number" && ["left", "top", "height", "width", "bottom", "right", "line-height", "font-size"].indexOf(attSelector) !== -1)
@@ -15316,7 +15404,7 @@ function ka_apply (selector, scope, recursive=false) {
             case "bindarray":
                 if (attSelector === "default")
                     continue;
-                if ((0,_functions__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(r)) {
+                if ((0,_functions__WEBPACK_IMPORTED_MODULE_2__.isUndefined)(r)) {
                     // Bind default values
                     if (selector.hasAttribute("ka.bind.default")) {
                         scope = {$scope: scope, ...scope};
@@ -15355,9 +15443,9 @@ function ka_apply (selector, scope, recursive=false) {
             case "bind":
                 if (attSelector === "default")
                     continue;
-                if ((0,_functions__WEBPACK_IMPORTED_MODULE_3__.isUndefined)(r)) {
+                if ((0,_functions__WEBPACK_IMPORTED_MODULE_2__.isUndefined)(r)) {
                     // Bind default values
-                    if ((0,_functions__WEBPACK_IMPORTED_MODULE_3__.isset) (selector.value)) {
+                    if ((0,_functions__WEBPACK_IMPORTED_MODULE_2__.isset) (selector.value)) {
                         scope = {$scope: scope,...scope, __curVal: selector.value}
                         ;(0,_eval_js__WEBPACK_IMPORTED_MODULE_0__.ka_eval)(`${attVal} = __curVal`, scope, selector);
                         r = scope.__curVal;
@@ -15990,7 +16078,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../index */ "./index.ts");
 /* harmony import */ var _index_dev__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../index.dev */ "./index.dev.ts");
 /* harmony import */ var _SwitcherElement__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SwitcherElement */ "./src.dev/SwitcherElement.ts");
-/* harmony import */ var _ShowcaseElement__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ShowcaseElement */ "./src.dev/ShowcaseElement.ts");
+/* harmony import */ var _PreviewElement__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PreviewElement */ "./src.dev/PreviewElement.ts");
 
 
 
