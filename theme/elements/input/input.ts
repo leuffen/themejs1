@@ -10,6 +10,14 @@ const tplDefault = `
 </div>
 `;
 
+const tplCheckbox = `
+<div class="as__input [[classes]] form-check">
+ <div data-ref="main"></div>
+  <label class="form-check-label" for="[[ id ]]">
+    [[ label ]]
+  </label>
+</div>
+`;
 
 export class InputLayout extends DefaultLayout {
     style : "form-floating" | "form-control" = "form-floating";
@@ -23,6 +31,13 @@ let idCounter = 0;
 class Input implements JodaRendererInterface {
     render(element: HTMLElement, layout: InputLayout): HTMLElement {
         let main = new QTemplate(tplDefault);
+        if (element instanceof HTMLInputElement ) {
+            if (element.type === "checkbox" || element.type === "radio") {
+                main = new QTemplate(tplCheckbox);
+            } else if (element.type === "submit") {
+                main = new QTemplate(`<div class="as__input [[classes]]"><div data-ref="main"></div></div>`);
+            }
+        }
 
         element.id = element.id === "" ? "as__input_" + idCounter++ : element.id;
 
@@ -44,10 +59,17 @@ class Input implements JodaRendererInterface {
             layout,
             classes: layout.classes + " " + element.getAttribute("data-class") ?? "",
             id: element.id,
-            label: element.getAttribute("label") ?? element.getAttribute("name")
+            label: element.getAttribute("label") ?? element.getAttribute("name") ?? element.id
         });
 
-        element.classList.add("form-control");
+        if (element instanceof HTMLInputElement && (element.type === "checkbox" || element.type === "radio")) {
+             element.classList.add("form-check-input");
+        } else if (element instanceof HTMLInputElement && element.type === "submit") {
+            element.classList.add("btn", "bn-primary");
+        } else {
+            element.classList.add("form-control");
+        }
+
         element.parentNode.replaceChild(main.content, element);
         main.select("main").selected.replaceWith(element);
 
