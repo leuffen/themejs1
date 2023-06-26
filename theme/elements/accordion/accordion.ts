@@ -22,6 +22,7 @@ export class AccordionLayout extends DefaultLayout {
 @jodaRenderer("accordion", AccordionLayout)
 class Accordion implements JodaRendererInterface {
     render(element: HTMLElement, layout: AccordionLayout): HTMLElement {
+        element.classList.add("as__accordion");
         Array.from(element.querySelectorAll(":scope > .children > .section-h3 > .content h3")).forEach( async (e, i) => {
             let newElem = ka_create_element("a", {class: "as__accordion-header"});
             e.parentNode.parentNode.insertBefore(newElem, e.parentNode);

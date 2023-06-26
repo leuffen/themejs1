@@ -17,7 +17,6 @@ const tpl = ka_html(`
 
 export class HamburgerLayout extends DefaultLayout {
 
-
 }
 
 
@@ -31,6 +30,7 @@ class Hamburger implements JodaRendererInterface {
         main.content.addEventListener("click", () => {
             document.body.classList.toggle("nav-open");
         });
+
 
         return element;
     }

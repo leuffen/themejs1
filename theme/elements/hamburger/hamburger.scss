@@ -1,5 +1,13 @@
+:root {
+    // Always use root to allow override in every level
+    --hamburger-size:  0.8rem;
+    --hamburger-bar-color: #8c9b92;
+    --hamburger-bar-height: 3px;
+}
+
 .use-hamburger {
     --joda-use: hamburger();
+
 }
 
 
@@ -25,14 +33,12 @@ body.nav-open a.as__hamburger {
              top: 2.2em;
              transform: rotate(-45deg);
              transform-origin: bottom left;
-             //transform: translateY(-50%);
          }
      }
 }
 
 a.as__hamburger {
-    --hamburger-size: var(--hamburger-size, 0.9rem);
-    --hamburger-bar-color: var(--hamburger-bar-color, #8c9b92);
+
 
     font-size: var(--hamburger-size, 1rem);
     display: block;
@@ -54,11 +60,12 @@ a.as__hamburger {
         text-align: center;
         width: 100%;
         color: var(--hamburger-bar-color, #8c9b92);
+        display: var(--hamburger-menu-display, block);
     }
     &>.as__hamburger-bar {
         background-color: var(--hamburger-bar-color, #8c9b92);
         display: block;
-        height: .3em;
+        height: var(--hamburger-bar-height, 0.3em);
         position: absolute;
         right: 0;
         top: 0;
