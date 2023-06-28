@@ -1,0 +1,51 @@
+
+
+.tjs__root-format {
+
+    color: var(--t-text-color);
+    background: var(--t-background);
+
+    // General Section padding
+
+    blockquote > p {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: var(--t-text-color-primary) !important;
+        margin: var(--t-paragraf-margin);
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        font-weight: 400;
+        color: var(--t-text-color);
+        margin: var(--t-header-margin, 0 0 20px 0);
+    }
+
+    h1,h2 {
+        font-size: 2em;
+        line-height: 1.5em;
+    }
+    h3 {
+        font-size: 1.5em;
+        line-height: 1.1em;
+    }
+
+    // Paragraph styling
+    p:empty {
+        margin: 0;
+    }
+
+    p {
+        margin: var(--t-paragraf-margin);
+        font-size: 1.2em;
+    }
+
+    p:first-child {
+        color: var(--t-text-color-accent)
+    }
+
+    // Important: Remove margin from last paragraph in section
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+}

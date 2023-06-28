@@ -17,6 +17,7 @@ const tpl = `
             transform: translateX(100%);
             transition: all 0.3s ease-in-out;
 
+
             background: linear-gradient(0deg, rgb(37, 32, 32) 0%, rgba(0, 0, 0, 1) 100%);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             padding: 5px
@@ -60,6 +61,8 @@ const tpl = `
 
         .sidepanel .content {
             color: #fff;
+            height: 100%;
+            overflow: scroll;
         }
 
     </style>
@@ -83,7 +86,7 @@ export class SidebarConfig {
 
 
 @template(tpl)
-export class SwitcherElement extends KaCustomWrapper {
+export class SidebarElement extends KaCustomWrapper {
 
     constructor(config : SidebarConfig = null) {
         super();
@@ -127,7 +130,7 @@ class SubElement extends KaCustomElement {
     static html;
     constructor() {
         super();
-        this.wrap(new SwitcherElement());
+        this.wrap(new SidebarElement());
 
         console.log(JodaDescriptionManager.classes);
         let scope = this.init({
