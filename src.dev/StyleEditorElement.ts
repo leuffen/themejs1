@@ -9,7 +9,6 @@ function getCSSVariables(element) {
     // Loop through computed styles and extract variables
     Array.from(computedStyles).forEach((property) => {
         if (property.startsWith("--")) {
-            console.log("detected", property);
             cssVariables[property] = computedStyles.getPropertyValue(property);
         }
     });
@@ -25,11 +24,12 @@ class StyleManager {
         console.log("computed style", style);
         let rootStyle = getComputedStyle(document.body.parentElement);
         let customStyles = getCSSVariables(document.body);
-        console.log("customStyles", customStyles);
+
         return customStyles;
 
     }
 }
+
 
 // language=HTML
 const tpl = `
