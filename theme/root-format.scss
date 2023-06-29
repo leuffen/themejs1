@@ -6,6 +6,9 @@
     background: var(--t-background);
 
     // General Section padding
+    section:last-of-type > * {
+        padding-bottom: 0;
+    }
 
     blockquote > p {
         text-transform: uppercase;
@@ -36,7 +39,6 @@
 
     p {
         margin: var(--t-paragraf-margin);
-        font-size: 1.2em;
     }
 
     p:first-child {
