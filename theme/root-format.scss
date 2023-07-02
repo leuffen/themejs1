@@ -10,11 +10,28 @@
         padding-bottom: 0;
     }
 
-    blockquote > p {
+    section h2 {
         text-transform: uppercase;
         font-weight: bold;
+        font-size: 16px;
         color: var(--t-text-color-primary) !important;
         margin: var(--t-paragraf-margin);
+    }
+
+    blockquote > p {
+        font-style: italic;
+        font-size: 1.8em;
+        line-height: 1.2em;
+        color: var(--t-text-color) !important;
+        margin: var(--t-header-margin, 0 0 20px 0);
+    }
+
+    ul > li  {
+        color: var(--t-text-color);
+        margin: var(--t-paragraf-margin);
+        * {
+            color: var(--t-text-color);
+        }
     }
 
     h1,h2,h3,h4,h5,h6 {
