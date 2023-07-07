@@ -12,19 +12,28 @@
 
     section h2 {
         text-transform: uppercase;
-        font-weight: bold;
-        font-size: 16px;
-        color: var(--t-text-color-primary) !important;
+       // font-weight: bold;
+
         margin: var(--t-paragraf-margin);
     }
 
-    blockquote > p {
-        font-style: italic;
-        font-size: 1.8em;
-        line-height: 1.2em;
-        color: var(--t-text-color) !important;
-        margin: var(--t-header-margin, 0 0 20px 0);
+    .tjs__section-text {
+        h2 {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 16px;
+            color: var(--t-text-color-primary) !important;
+            margin: var(--t-paragraf-margin);
+        }
+        blockquote > p {
+            font-size: 2.4em;
+            line-height: 1.2em;
+            color: var(--t-text-color) !important;
+            margin: var(--t-header-margin, 0 0 20px 0);
+        }
     }
+
+
 
     ul > li  {
         color: var(--t-text-color);
@@ -56,15 +65,18 @@
 
     p {
         margin: var(--t-paragraf-margin);
+        line-height: 1.1em;
     }
 
     p:first-child {
-        color: var(--t-text-color-accent)
+        //color: var(--t-text-color-accent)
     }
 
     // Important: Remove margin from last paragraph in section
     p:last-child {
         margin-bottom: 0;
     }
+
+
 
 }
