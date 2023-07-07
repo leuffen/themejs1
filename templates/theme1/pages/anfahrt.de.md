@@ -55,5 +55,11 @@ Fahrradstellplätze befinden sich direkt am Haus.
 Bitte planen Sie bei Anreise mit dem Auto ggf. für die Parkplatzsuche etwas Zeit ein, da die Praxis keine eigenen Parkplätze hat und Parkraum in der Südstadt in Hannover in der Regel  knapp bemessen ist. 
 
 
+## Hier erfahren Sie mehr über uns
+{: layout="use: #cfa_section"}
+
+[Unsere Zahnärztinnen](/über-uns)
+[Kontakt](/kontakt)
+
 
 

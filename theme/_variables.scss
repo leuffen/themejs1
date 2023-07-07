@@ -2,7 +2,7 @@
 
 $primary: #007bff !default;
 $secondary: #6c757d !default;
-$light: #f8f9fa !default;
+$bg-accent: lighten($primary, 50%) !default;
 
 
 $as-mainbar-color: white !default;
