@@ -14,6 +14,15 @@ short_title: Leistungen
 skipHead: false
 title: Unsere Leistungen
 type: article
+_ai_content:
+  subject: |
+    Leistungsübersicht Seite mit FAQ und Praxisvorstellung. 
+    Generiere:
+    - 2-3 Hauptleistungen Header 2 mit Bild und Text (min 2 Paragraphen)
+    - 1 Testemonial Section mit Bild und Text - Aus Sicht des Arztes mit direkter Ansprache des Lesers
+    - 1 Hauptleistung Header 2 mit Bild und Text (min 2 Paragraphen) und 3 FAQ Sections (Header 3)
+    - Weitere Leistungen als Header 2 mit Kurzbeschreibung 
+  prompt: Fit content into structure. Keep includes and style. Replace markdown-images (![Description](url) with fitting images from context but keep position. Do not skip any section. Keep FAQs close to H2-Section content.
 ---
 
 
@@ -22,7 +31,7 @@ type: article
 
 > Feature-Text zur Hauptleistung 1 (max 60 Zeichen)
 
-![Bild1](cdn:///leu-stock/v/44/1920x1273_1200x796_992x658_768x509_480x318_256x256/AdobeStock_281626595.avif_jpeg)
+![Bild1]()
 
 2-3 Paragraphen Text zur Hauptleistung
 
@@ -33,18 +42,18 @@ type: article
 
 > Feature-Text zur Hauptleistung 2 (max 60 Zeichen)
 
-![Bild 2](cdn:///leu-stock/v/12/1920x1280_1200x800_992x661_768x512_480x320_256x256/AdobeStock_264395936.avif_jpeg)
+![Bild 2]()
 
 2-3 Paragraphen zur hauptleistung 2
 
-## Testemonial
+## Testemonial-Section
 {: layout="use: #testemonial_ribbon"}
 
-![](cdn:///mueller-k25/v/14/1920x1280_1200x800_992x661_768x512_480x320_256x256/happy-woman-showing-hand-heart-gesture.avif_jpeg)
+![Image of doctor]()
 
-„Erfundenes Testemonial hier einfügen“
+„<hier text über die Praxis aus sicht des Arztes einfügen>“
 
-— Name des Testemonials
+— <doctors name>
 
 ## Leistung mit mehr Context
 {: layout="use: #card_section_faq"}
@@ -53,7 +62,7 @@ type: article
 
 2-3 Paragraphen zur Hauptleistung 3
 
-![](cdn:///leu-stock/v/61/1920x1280_1200x800_992x661_768x512_480x320_256x256/smiling-dentist-explaining-tooth-implantation-2021-09-24-03-53-51-utc.avif_jpeg)
+![]()
 
 
 ---
