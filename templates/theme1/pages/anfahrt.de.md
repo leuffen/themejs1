@@ -17,7 +17,6 @@ title: Anfahrt
 type: article
 _ai_content: 
   subject: Anfahrt Seite mit Karte und Anfahrtsbeschreibung (Bus, Bahn, Auto, Fahrrad)
-  prompt: Keep includes and style. Do not include additional address.
     
 ---
 
@@ -27,7 +26,7 @@ _ai_content:
 ## Hier finden Sie uns
 {: layout="use: #card_section_faq"}
 
-> Callout mit Stadt / Stadtteil
+> Ihre Praxis in Hannover-Südstadt
 
 <map data-map-url="{{site.data.general.map_url}}" style="--joda-use: map()"></map>
 
@@ -37,17 +36,17 @@ _ai_content:
 ---
 {: layout="use: accordion()"}
 
-### Anfahrt mit Bus und Bahn
+### [i class="bi bi-bus-front-fill text-primary"] Anfahrt mit Bus und Bahn
 
-text...
+Anfahrtsbeschreibung mit Bus und Bahn
 
-### Anfahrt mit dem Fahrrad
+### [i class="bi bi-bicycle text-primary"] Anfahrt mit dem Fahrrad
 
-text
+Anfahrtsbeschreibung mit dem Fahrrad
 
-### Anfahrt mit dem Auto
+### [i class="bi bi-car-front-fill text-primary"] Anfahrt mit dem Auto
 
-text
+Anfahren mit dem Auto
 
 ## Hier erfahren Sie mehr über uns
 {: layout="use: #cfa_section"}

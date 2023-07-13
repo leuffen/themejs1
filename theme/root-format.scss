@@ -31,13 +31,20 @@
             color: var(--t-text-color) !important;
             margin: var(--t-header-margin, 0 0 20px 0);
         }
+
+        .table {
+            --bs-table-color: var(--t-text-color);
+        }
+
+        *:last-child {
+            margin-bottom: 0;
+        }
     }
 
 
 
     ul > li  {
         color: var(--t-text-color);
-        margin: var(--t-paragraf-margin);
         * {
             color: var(--t-text-color);
         }
@@ -58,6 +65,19 @@
         line-height: 1.1em;
     }
 
+
+    table {
+        color: inherit;
+        &> tr {
+            color: inherit;
+            &>td {
+                color: inherit;
+            }
+        }
+    }
+
+
+
     // Paragraph styling
     p:empty {
         margin: 0;
@@ -73,9 +93,10 @@
     }
 
     // Important: Remove margin from last paragraph in section
-    p:last-child {
+    p:last-child,table:last-child {
         margin-bottom: 0;
     }
+
 
 
 
