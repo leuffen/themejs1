@@ -19,35 +19,34 @@ Die Berufsbezeichnung wurde in Deutschland verliehen.
 
 ### Zuständige Kammer 
 
-    Zuständige Kammer
-    Zahnärztekammer Niedersachsen
-    Zeißstraße 11a
-    30519 Hannover 
-    https://zkn.de
+Zahnärztekammer Niedersachsen
+Zeißstraße 11a
+30519 Hannover 
+https://zkn.de
+{: .address}
 
 
 ### Zuständig Kassenzahnärztliche Vereinigung
 
-    Zuständige kassenzahnärztliche Vereinigung
-    Kassenzahnärztliche Vereinigung Niedersachsen
-    Zeißstraße 11
-    30519 Hannover 
-
+Kassenzahnärztliche Vereinigung Niedersachsen
+Zeißstraße 11
+30519 Hannover 
+{: .address}
 
 ### Berufsrechtliche Regelungen
 
 - Zahnheilkundegesetz
 - Heilberufe-Kammergesetz
 - Gebührenordnung für Zahnärzte (GOZ)
-- Berufsordnung für Zahnärzte der Landeszahnärztekammer Baden-Württemberg
+- Berufsordnung für Zahnärzte der Landeszahnärztekammer Niedersachsen
 
 ### Angaben zur Berufshaftpflichtversicherung:
     
-    SIGNAL IDUNA Gruppe
-    Hauptverwaltung Hamburg
-    Neue Rabenstr. 15-19
-    20354 Hamburg
-
+Alte Leipziger-Gesellschaften
+Alte Leipziger Platz 1
+61440 Oberursel 
+{: .address}
 
 Patienten können die Regelungen auf folgender Internetseite einsehen:
-https://lzk-bw.de/patienten/gesetzliche-regelungen-zur-zahnaerztlichen-berufsausuebung
+https://zkn.de
+
