@@ -24,7 +24,7 @@ _ai_content:
 
 
 ## Hier finden Sie uns
-{: layout="use: #card_section_faq"}
+{: layout="use: #card_section_faq; class: map"}
 
 > Ihre Praxis in Hannover-Südstadt
 

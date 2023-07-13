@@ -10,8 +10,8 @@ const tpl = `
             <img src="[[ layout.mapPreviewUrl ]]" loading="lazy" width="1461" height="729" alt="map preview" />
             <div>
                 <div>
-                    <button class="btn btn-secondary mx-auto my-auto btn-lg" data-ref="button">Mit Google Maps anzeigen</button>
                     <p class="mx-auto">Indem Sie auf den Button "Mit Google Maps anzeigen" klicken, stimmen Sie zu, dass Inhalte von Google Maps geladen werden. </p>
+                    <button class="btn btn-secondary mx-auto my-auto btn-lg" data-ref="button">Mit Google Maps anzeigen</button>
                     <p class="mx-auto">Bitte beachten Sie, dass hierbei Ihre Daten gemäß der Datenschutzrichtlinien von maps.google.com verarbeitet werden.</p>
                 </div>
 
