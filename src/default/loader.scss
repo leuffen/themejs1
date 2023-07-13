@@ -13,7 +13,7 @@ html.loader::before {
   display: block;
   background-color: indianred;
   height: 3px;
-  width: 10%;
+  width: 35%;
     top: 0;
 }
 
@@ -38,14 +38,14 @@ html.loader::after {
 
 @keyframes leu--site-loader {
   3% {
-    width: 60%;
+    width: 75%;
 
   }
   5% {
-    width: 70%;
+    width: 90%;
   }
   10% {
-    width: 80%;
+    width: 95%;
   }
   100% {
     width: 100%;
