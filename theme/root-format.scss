@@ -2,6 +2,8 @@
 
 .tjs__root-format {
 
+
+
     color: var(--t-text-color);
     background: var(--t-background);
 
@@ -98,6 +100,10 @@
     }
 
 
-
+    address {
+        p {
+            margin: 0;
+        }
+    }
 
 }
