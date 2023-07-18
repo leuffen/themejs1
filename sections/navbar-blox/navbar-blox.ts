@@ -8,30 +8,18 @@ Joda.registerTemplate("navbar-blox",
         <div class="tjs__navbar-blox">
             <div class="wrapper">
                 <div class="firstline">
-                    <div class=":: container ">
-                        <div class="row">
-                            <div class="col d-md-none p-0 text-center" style="">
-                                <a href="/" class="w-100">
-                                    <slot data-select=".brand" data-copy>
-                                </a>
-                            </div>
-                            <!--div class="col title" style="color: darkgray">
-
-                            </div-->
-                        </div>
-
+                    <div class="tjs__content [[ layout.container ]]">
+                        <slot data-select=".brand" data-copy data-replace></slot>
                     </div>
                 </div>
 
                 <div class="secondline" style="box-shadow: 0px 1px 2px #00000029;background: white">
-                    <div class="container">
+                    <div class="[[ layout.container ]]">
                         <div class="tjs__row1">
 
 
                             <div class="tjs__logo :: mobile :md: " href="/" aria-label="Home">
-                                <a href="/">
-                                    <slot data-select=".brand" data-replace>
-                                </a>
+                                <slot data-select=".brand" data-replace></slot>
                             </div>
 
 
