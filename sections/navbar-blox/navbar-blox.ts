@@ -24,42 +24,41 @@ Joda.registerTemplate("navbar-blox",
                 </div>
 
                 <div class="secondline" style="box-shadow: 0px 1px 2px #00000029;background: white">
-                <div class="container">
-                    <div class="row">
-
-                    </div>
-                    <div class="row">
+                    <div class="container">
+                        <div class="tjs__row1">
 
 
-                        <div class="col-4 col-lg-4 line :: d-none :md: d-block">
-                            <div class="brand-logo :: mobile :md: " href="/" aria-label="Home">
+                            <div class="tjs__logo :: mobile :md: " href="/" aria-label="Home">
                                 <a href="/">
-                                    <slot data-select=".brand">
+                                    <slot data-select=".brand" data-replace>
                                 </a>
                             </div>
+
+
+
+                            <div class="tjs__row2">
+                                <div class="tjs__nav-main" >
+
+                                    <slot data-select=".nav-bar-main" data-replace></slot>
+
+                                </div>
+
+
+                                <div class="tjs__hamburger">
+                                    <div class="use-hamburger :: justify-content-center :lg: text-start"
+                                         style="display: flex; padding-right:20px; align-items: center; justify-content: right; height:100%;width:100%"></div>
+                                </div>
+                            </div>
+
+
                         </div>
-
-
-                        <div class="col-9 col-md-11 line :: d-none :md: d-flex">
-
-                            <slot data-select=".nav-bar-main"></slot>
-
-                        </div>
-
-
-                        <div class="col-3 col-md-1 line  ">
-                            <div class="use-hamburger :: justify-content-center :lg: text-start"
-                                 style="display: flex; padding-right:20px; align-items: center; justify-content: right; height:100%;width:100%"></div>
-                        </div>
-                        <div class="col-12 sidenav-positioner">
+                        <div class="sidenav-positioner">
                             <div class="sidenav">
                                 <slot data-select=".nav-menu"></slot>
                             </div>
                         </div>
-
                     </div>
                 </div>
-            </div>
 
             </div>
 
