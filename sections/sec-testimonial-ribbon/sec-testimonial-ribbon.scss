@@ -1,0 +1,52 @@
+.tjs__sec-testimonial-ribbon {
+    padding: var(--t-section-padding);
+
+    background-color: var(--t-section-background);
+
+    &.mobile {
+        padding-top: 40px;
+    }
+
+    &.mobile > .wrapper {
+        margin-top: 75px;
+
+        .image-round {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            top: -150px;
+            margin-bottom: -150px;
+        }
+    }
+
+    h2 {
+        display: none;
+    }
+
+    & > .tjs__sec-testimonial-ribbon--wrapper {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: var(--t-section-background-primary);
+        font-size: 1.2em;
+        font-style: italic;
+        letter-spacing: 1px;
+
+        & > .tjs__sec-testimonial-ribbon--container {
+            margin-top: 40px;
+        }
+    }
+
+
+    .text-format {
+
+    }
+
+    .image-round img {
+        border-radius: 100%;
+        border: 2px solid white;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+

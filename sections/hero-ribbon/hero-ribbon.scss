@@ -1,0 +1,37 @@
+.tjs__hero-ribbon {
+    padding: var(--t-section-padding);
+    padding-top: 0;
+    position: relative;
+
+    &> .tjs__hero-ribbon--wrapper {
+        padding-top: 0;
+        width: 100%;
+        min-height: 100px;
+        background: var(--t-text-background);
+        border-bottom: 4px solid var(--t-section-background-accent);
+
+
+        .content {
+            position: relative;
+            --joda-class: "col p-4 :: col-12 border-top :lg: col-4 border-start";
+            margin-bottom: -4px;
+
+            &:first-child {
+                border-left: none !important;
+            }
+
+            &:last-child {
+                border-bottom: 4px solid var(--bs-primary);
+            }
+
+            h3 {
+                font-size: 1em;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+
+        }
+
+    }
+}

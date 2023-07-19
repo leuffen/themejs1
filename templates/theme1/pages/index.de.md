@@ -21,7 +21,7 @@ type: website
 
 
 # Willkommen bei Ihrer <br>Zahnarztpraxis mit Herz
-{: layout="use: #title_image"}
+{: layout="use: #hero-max"}
 
 ![](cdn:///mueller-k25/v/14/1920x1280_1200x800_992x661_768x512_480x320_256x256/happy-woman-showing-hand-heart-gesture.avif_jpeg)
 
@@ -29,7 +29,7 @@ type: website
 
 
 ## Headerbar
-{: layout="use: #head_ribbon"}
+{: layout="use: #hero-ribbon"}
 
 ### Akuelles
 
@@ -47,7 +47,7 @@ Wir sind persönlich von **Montag - Freitag** in der Zeit von **7:00 - 18:00 Uhr
 
 
 ## Zahnarztpraxis Dr. M.C. Müller in Hannover
-{: layout="use: #card_section" .no-object-fit}
+{: layout="use: #sec-card-2col" .no-object-fit}
 
 > Ein Herz für Sie und Ihre Zähne
 
@@ -62,7 +62,7 @@ Unser Motto “Ein Herz für Sie und Ihre Zähne” zeigt unser Engagement für 
 ![](cdn:///mueller-k25/v/13/480x461_256x256/image.avif_png){: style="padding: 40px"}
 
 
-## Unsere Behandlungen
+## Unsere Leistungen
 {: layout="use: #multi_card_section; cols:3"}
 
 ### Zahnerhaltung
@@ -91,10 +91,10 @@ Wir sind spezialisiert auf die Versorgung mit sahnsubstand-schonenden, langlebig
 {: .text-center}
 
 
-## Testemonial
-{: layout="use: #testemonial_ribbon"}
+## Vorstellung des Arztes
+{: layout="use: #sec-testimonial-ribbon"}
 
-![](cdn:///mueller-k25/v/14/1920x1280_1200x800_992x661_768x512_480x320_256x256/happy-woman-showing-hand-heart-gesture.avif_jpeg)
+![Bild Arzt](cdn:///mueller-k25/v/14/1920x1280_1200x800_992x661_768x512_480x320_256x256/happy-woman-showing-hand-heart-gesture.avif_jpeg)
 
 „Zuwendung, Vertrauen und Einfühlung bilden die Grundpfeiler meiner Praxis. Ich kümmere mich nicht nur um Ihre Zahngesundheit, sondern begleite Sie auch mit Verständnis und Fürsorge. Mit modernen Innovationen und umfassender Vorsorge sorge ich für Ihr strahlendes Lächeln. In meiner Praxis finden Sie eine Atmosphäre der Geborgenheit, in der Sie sich rundum wohlfühlen können. Ihre Gesundheit steht bei mir im Mittelpunkt. Vertrauen Sie auf meine Expertise und lassen Sie sich einfühlsam behandeln.“ 
 
@@ -102,7 +102,7 @@ Wir sind spezialisiert auf die Versorgung mit sahnsubstand-schonenden, langlebig
 
 
 ## Ein kompetentes Team für moderne Zahnmedizin
-{: layout="use: #card_section"}
+{: layout="use: #sec-card-2col"}
 
 ![](cdn:///leu-stock/v/64/1920x1280_1200x800_992x661_768x512_480x320_256x256/AdobeStock_495434983.avif_jpeg)
 
