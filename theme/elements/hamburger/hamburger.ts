@@ -6,7 +6,7 @@ import {QTemplate} from "@leuffen/jodastyle/src/helper/QTemplate";
 
 // language=HTML
 const tpl = ka_html(`
-<a class="as__hamburger">
+<a class="as__hamburger" href="javascript:void(0);">
     <div class="as__hamburger-bar" ></div>
     <div class="as__hamburger-bar" ></div>
     <div class="as__hamburger-bar" ></div>

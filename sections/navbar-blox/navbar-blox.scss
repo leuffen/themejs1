@@ -109,6 +109,8 @@
         padding: 0;
         background-color: white;
         transform: scale(0%);
+        -webkit-transform: scale(0, 0);
+
         transition: transform 0.3s ease-in-out;
         box-shadow: 0px 1px 2px #00000029;
 
@@ -170,4 +172,6 @@
 
 .menu-open .tjs__navbar-blox .sidenav {
      transform: scale(100%);
+    -webkit-transform: scale(1, 1);
+
 }
