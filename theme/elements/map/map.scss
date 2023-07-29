@@ -9,10 +9,11 @@
 
 .as__map {
     width: 100%;
-    aspect-ratio: 21/9;
+    height: 100%;
 
     position: relative;
 
+    font-size: 0.7em;
     .as__map-overlay {
         & > img {
             position: absolute;
@@ -30,6 +31,9 @@
             width: 100%;
             z-index: 99;
             text-align: center;
+            button {
+                margin-bottom: 40px !important;
+            }
         }
         position: absolute;
         width: 100%;

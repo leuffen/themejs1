@@ -1,0 +1,46 @@
+
+
+.tjs__sec-legal-content {
+    background: var(--t-section-background);
+    padding: var(--t-section-padding);
+
+    .inner-wrapper {
+
+        border: 1px solid var(--bs-gray-500);
+        background-color: white;
+        padding: var(--t-section-inner-padding);
+
+
+        .tjs__section-text {
+
+            // Between 12px and 16px depending on the screen size
+            font-size: 1.0rem;
+
+            h1 {
+                margin: 0 0 40px 0;
+                // make uppercase
+                font-size: 2.5em;
+                text-transform: uppercase;
+            }
+            h2 {
+                color: var(--t-text-color) !important;
+                margin: 100px 0 40px 0;
+                font-size: 1.6em;
+                border-bottom: 1px solid var(--bs-gray-200);
+                 text-transform: uppercase;
+            }
+            h3 {
+                color: var(--t-text-color) !important;
+                margin: 60px 0 30px 0;
+                font-size: 1.4em;
+                font-weight: bold;
+                 text-transform: uppercase;
+            }
+            p.address {
+                white-space: pre-wrap;
+            }
+        }
+    }
+
+
+}

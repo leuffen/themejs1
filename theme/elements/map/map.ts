@@ -10,10 +10,11 @@ const tpl = `
             <img src="[[ layout.mapPreviewUrl ]]" loading="lazy" width="1461" height="729" alt="map preview" />
             <div>
                 <div>
-                    <button class="btn btn-secondary mx-auto my-auto btn-lg" data-ref="button">Google Maps anzeigen</button>
-                    <p class="mx-auto">Mit Klick auf "Anzeigen" erklären Sie sich mit den Datenschutzbestimmungen einverstanden.</p>
+                    <p class="mx-auto">Indem Sie auf den Button "Mit Google Maps anzeigen" klicken, stimmen Sie zu, dass Inhalte von Google Maps geladen werden. </p>
+                    <button class="btn btn-secondary mx-auto my-auto btn-lg" data-ref="button">Mit Google Maps anzeigen</button>
+                    <p class="mx-auto">Bitte beachten Sie, dass hierbei Ihre Daten gemäß der Datenschutzrichtlinien von maps.google.com verarbeitet werden.</p>
                 </div>
-               
+
             </div>
         </div>
         <iframe width="100%" hidden title="Google Maps" height="100%" data-ref="iframe"></iframe>
@@ -34,6 +35,7 @@ class Map implements JodaRendererInterface {
         let main = new QTemplate(tpl);
         main.parse({layout});
 
+        console.log("MAP");
         if ( ! element.hasAttribute("data-map-url")) {
             console.warn("Missing data-map-url attribute on element", element);
         }
