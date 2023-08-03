@@ -1,3 +1,3 @@
 
-import "./theme/styles.dev"
+import "./themes/styles.dev"
 
