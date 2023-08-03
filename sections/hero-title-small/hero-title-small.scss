@@ -1,0 +1,28 @@
+.tjs__hero-title-small {
+    width: 100%;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+
+
+    .imagewrapper {
+        aspect-ratio: 16 / 9;
+        max-height: 60vh;
+        min-height: 250px;
+        width: 100%;
+        padding-bottom: 40px
+    }
+
+    .imagewrapper > img {
+        object-fit: cover;
+        object-position: center center;
+        width: 100%;
+        height: 100%;
+    }
+
+    h1 {
+        padding: 20px;
+    }
+}

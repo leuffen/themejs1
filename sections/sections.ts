@@ -9,3 +9,4 @@ import "./footer-base/footer-base";
 import "./cta-base/cta-base";
 import "./sec-multi-card/sec-multi-card";
 import "./sec-card-feature/sec-card-feature";
+import "./hero-title-small/hero-title-small";
