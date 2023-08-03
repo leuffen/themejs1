@@ -1,0 +1,22 @@
+
+.tjs__sec-multi-card {
+
+    padding: var(--t-section-padding);
+
+    background: var(--t-section-background);
+
+
+    .header {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+     .card {
+
+    }
+
+
+    .row .section-h3 {
+        --joda-class: col;
+        --joda-use: #e-card-default;
+    }
+}

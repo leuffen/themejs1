@@ -6,3 +6,6 @@ import "./sec-card-2col/sec-card-2col";
 import "./hero-max/hero-max";
 import "./hero-ribbon/hero-ribbon";
 import "./footer-base/footer-base";
+import "./cta-base/cta-base";
+import "./sec-multi-card/sec-multi-card";
+import "./sec-card-feature/sec-card-feature";

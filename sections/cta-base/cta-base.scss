@@ -1,0 +1,15 @@
+
+
+.tjs__cta-base {
+
+    padding: var(--t-section-padding) !important;
+
+    background: var(--t-section-background-accent);
+
+     h2, p {
+        text-align: center;
+    }
+    a {
+        --joda-class: btn btn-primary btn-lg;
+    }
+}

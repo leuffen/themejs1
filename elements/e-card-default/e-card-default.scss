@@ -1,0 +1,10 @@
+.tjs__e-card-default {
+    height: 100%;
+    min-width: 300px;
+
+    img {
+        --joda-class: card-img-top;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+}
