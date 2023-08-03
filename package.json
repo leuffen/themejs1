@@ -1,6 +1,6 @@
 {
   "name": "@leuffen/themejs1",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.module.js",
@@ -21,10 +21,11 @@
   "dependencies": {
     "@leuffen/jodastyle": "^1.0",
     "@kasimirjs/embed": "^1.0.8",
-    "@leuffen/isl-base": "^1.0.2"
+    "@leuffen/isl-base": "^1.0.2",
+    "bootstrap": "^5.3.0"
   },
   "devDependencies": {
-    "bootstrap": "^5.3.0",
+
     "markdown-it": "^13.0.1",
     "markdown-it-attrs": "^4.1.6",
     "css-loader": "^6.7.1",
