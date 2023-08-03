@@ -1,0 +1,59 @@
+.tjs__footer-base {
+    background-color: var(--t-background-footer);
+    width: 100%;
+    min-height: 100px;
+    overflow: hidden;
+
+    padding: 40px 0 0 0 ;
+
+    border-top: 4px solid var(--t-section-background-accent);
+    border-bottom: 4px solid var(--t-section-background-accent);
+
+    .row {
+        margin: 0;
+
+        &> * {
+            padding: 40px;
+        }
+    }
+
+    .subfooter {
+        background: var(--t-background);
+        width: 100%;
+        padding: 20px;
+        overflow: hidden;
+        border-top: 1px solid var(--t-section-background);
+        text-align: center;
+    }
+    h3 {
+        margin-top: 20px;
+        margin-bottom: 5px;
+        font-size: 1em;
+        text-transform: uppercase;
+        color: var(--bs-gray);
+        font-weight: bold;
+    }
+    .container-fluid .content {
+         padding: 30px;
+    }
+    .container .content {
+        padding: 20px;
+    }
+    ul {
+        padding-left: 0;
+        &>li {
+            list-style: none;
+            margin-bottom: 10px;
+            &>a {
+                text-decoration: none;
+            }
+        }
+     }
+    .content {
+          --joda-class: ":: border-bottom :xl: border-end";
+      }
+    .content:last-of-type {
+           --joda-class: unset;
+       }
+}
+
