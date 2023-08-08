@@ -1,0 +1,21 @@
+.tjs__cta-form {
+    padding: var(--t-section-padding);
+    .invalid-feedback {
+        padding-bottom: 30px   ;
+    }
+    .wrapper {
+        padding: var(--t-section-padding);
+        background: var(--t-section-background-accent);
+        .row > div {
+            --joda-class: "col-12 col-md-6";
+        }
+    }
+    h2 {
+         text-align: center;
+         margin-bottom: 40px;
+
+    }
+    input, textarea {
+        --joda-use: "input()";
+    }
+}

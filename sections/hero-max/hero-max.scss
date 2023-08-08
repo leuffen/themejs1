@@ -29,6 +29,15 @@
         }
     }
     &.desktop {
+
+        &.box {
+            .content {
+                background: rgba(255, 255, 255, 0.8);
+                padding: var(--content-padding, 1rem);
+            }
+
+        }
+
         position: relative;
         &.tjs__hero-max--autoheight {
             height: calc(100vh - 200px);
