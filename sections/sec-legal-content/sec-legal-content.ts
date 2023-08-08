@@ -1,4 +1,4 @@
-import {Joda} from "@leuffen/jodastyle/src/joda";
+import {Joda} from "@leuffen/jodastyle";
 
 
 Joda.registerTemplate("sec-legal-content",
