@@ -3,6 +3,7 @@
 .tjs__root-format {
 
 
+
     color: var(--t-text-color);
     background: var(--t-background);
 
@@ -31,6 +32,7 @@
             line-height: 1.2em;
             color: var(--t-text-color) !important;
             margin: var(--t-header-margin, 0 0 20px 0);
+            hyphens: manual;
         }
 
         .table {
@@ -86,7 +88,7 @@
 
     p {
         margin: var(--t-paragraf-margin);
-
+        hyphens: auto; // Wortumbruch
     }
 
     p:first-child {
