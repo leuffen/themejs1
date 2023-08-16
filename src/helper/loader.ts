@@ -1,5 +1,6 @@
+import {hitIndex} from "../hit-index";
 
-
+console.time("loader");
 export function initLoader() {
     let interval = setInterval(() => {
         // Detect if body is loaded
@@ -20,7 +21,7 @@ export function initLoader() {
 
             document.querySelector("body").appendChild(loader);
         }
-    }, 200); // Wait 200ms before checking again (to prevent flickering)
+    }, hitIndex === 1 ? 10 : 350); // Wait 350 on subsequent requests to prevent flickering
 }
 
 

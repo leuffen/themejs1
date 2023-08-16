@@ -54,10 +54,18 @@ body.loaded {
     min-height: unset;
 }
 
+body > joda-content {
+    opacity: 0;
+    transition: opacity 0.10s;
+}
+body.loaded > joda-content {
+    opacity: 1;
+}
+
 
 body > .loader {
     position: fixed;
-    z-index: 99;
+    z-index: -99;
     top: 0;
     left: 0;
     width: 100%;
@@ -85,6 +93,6 @@ body > .loader {
 
 body.loaded > .loader {
     opacity: 0;
-    display: none !important;
+    //display: none !important;
     z-index: -99;
 }
