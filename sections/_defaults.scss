@@ -10,6 +10,10 @@
     --t-text-color-accent: var(--bs-gray-900);
     --t-text-color-primary: var(--bs-primary);
 
+    --t-navbar-height: 88px;
+
+    /* What to substract from 100vh to start the next elemment after fullsize header */
+    --t-fullsize-modifier: 150px;
 
     --t-header-margin: 0 0 20px 0;
     --t-paragraf-margin: 0 0 20px 0;

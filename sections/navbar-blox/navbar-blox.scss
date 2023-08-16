@@ -1,7 +1,7 @@
 
 
 .tjs__navbar-blox {
-    --height: 65px;
+    --height: var(--t-navbar-height, 64px);
     position: relative;
     top: 0;
     width: 100%;

@@ -1,19 +1,2 @@
 @import "src/default/loader";
 
-body {
-    min-height: 5000vh; // 3000vh is enough to make sure the page scrolls to correct position on reload
-    opacity: 0;
-    transition: opacity 0.25s;
-}
-
-body.loaded {
-    min-height: unset;
-    opacity: 1;
-}
-
-body > * {
-  display: none;
-}
-body.loaded > * {
-  display: block;
-}

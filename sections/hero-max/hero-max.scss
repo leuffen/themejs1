@@ -40,7 +40,7 @@
 
         position: relative;
         &.tjs__hero-max--autoheight {
-            height: calc(100vh - 200px);
+            height: calc(100vh - var(--t-fullsize-modifier, 200px));
             min-height: var(--layout-min-height, 400px);
             max-height: var(--layout-max-height, 1000px);
         }
