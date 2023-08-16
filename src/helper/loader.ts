@@ -7,10 +7,12 @@ export function initLoader() {
             // Cancel interval
             clearInterval(interval);
 
-            let img = document.querySelector("img");
+            let img = document.querySelector("img").cloneNode(true) as HTMLImageElement;
             let loader = document.createElement("div");
             loader.classList.add("loader");
-            loader.appendChild(img.cloneNode(true));
+            loader.appendChild(img);
+            img.setAttribute("class", "");
+            img.setAttribute("loading", "eager");
 
             let loaderBar = document.createElement("div");
             loaderBar.classList.add("loader-bar");
@@ -18,7 +20,7 @@ export function initLoader() {
 
             document.querySelector("body").appendChild(loader);
         }
-    }, 50);
+    }, 200); // Wait 200ms before checking again (to prevent flickering)
 }
 
 
