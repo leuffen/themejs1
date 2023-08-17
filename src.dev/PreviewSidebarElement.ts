@@ -29,9 +29,9 @@ const tpl2 = `
 `;
 
 
-@customElement("preview-element")
+@customElement("preview-sidebar-element")
 @template(tpl2)
-class PreviewElement extends KaCustomElement {
+class PreviewSidebarElement extends KaCustomElement {
     static html;
     constructor() {
         super();

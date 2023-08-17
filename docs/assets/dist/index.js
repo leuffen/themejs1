@@ -77,6 +77,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _theme1_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./theme1.scss */ "./theme1.scss");
 /* harmony import */ var _src_dev_dev_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./src.dev/dev.scss */ "./src.dev/dev.scss");
 /* harmony import */ var _themes_theme1_theme1_dev__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./themes/theme1/theme1.dev */ "./themes/theme1/theme1.dev.ts");
+/* harmony import */ var _micx_lib_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @micx/lib-js */ "./node_modules/@micx/lib-js/dist/index.js");
+
 
 
 
@@ -2673,89 +2675,784 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src.dev/PreviewElement.ts":
-/*!***********************************!*\
-  !*** ./src.dev/PreviewElement.ts ***!
-  \***********************************/
+/***/ "./node_modules/@micx/lib-js/dist/Micx.js":
+/*!************************************************!*\
+  !*** ./node_modules/@micx/lib-js/dist/Micx.js ***!
+  \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @kasimirjs/embed */ "./node_modules/@kasimirjs/embed/dist/index.js");
-/* harmony import */ var _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @leuffen/jodastyle */ "./workspaces/jodastyle/index.ts");
-/* harmony import */ var _kasimirjs_kit_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @kasimirjs/kit-bootstrap */ "./workspaces/kasimirjs-kit-bootstrap/index.ts");
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __decorateClass = (decorators, target, key, kind) => {
-  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
-  for (var i = decorators.length - 1, decorator; i >= 0; i--)
-    if (decorator = decorators[i])
-      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
-  if (kind && result)
-    __defProp(target, key, result);
-  return result;
-};
-var __async = (__this, __arguments, generator) => {
-  return new Promise((resolve, reject) => {
-    var fulfilled = (value) => {
-      try {
-        step(generator.next(value));
-      } catch (e) {
-        reject(e);
-      }
-    };
-    var rejected = (value) => {
-      try {
-        step(generator.throw(value));
-      } catch (e) {
-        reject(e);
-      }
-    };
-    var step = (x) => x.done ? resolve(x.value) : Promise.resolve(x.value).then(fulfilled, rejected);
-    step((generator = generator.apply(__this, __arguments)).next());
-  });
-};
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Micx: () => (/* binding */ Micx)
+/* harmony export */ });
+/* harmony import */ var _formmail_MicxFormmailerApi__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./formmail/MicxFormmailerApi */ "./node_modules/@micx/lib-js/dist/formmail/MicxFormmailerApi.js");
+var _a;
+
+class Micx {
+    static get formMailerApi() {
+        return new _formmail_MicxFormmailerApi__WEBPACK_IMPORTED_MODULE_0__.MicxFormmailerApi(Micx.subscription_id, Micx.endpoint_root_url + "/v1/formmailer/send");
+    }
+}
+Micx.endpoint_root_url = "https://ws.micx.io";
+Micx.subscription_id = (_a = window["micx_subscription_id"]) !== null && _a !== void 0 ? _a : null;
 
 
+/***/ }),
 
-const config = {
-  icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-display-fill" viewBox="0 0 16 16">
-      <path d="M6 12c0 .667-.083 1.167-.25 1.5H5a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-.75c-.167-.333-.25-.833-.25-1.5h4c2 0 2-2 2-2V4c0-2-2-2-2-2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h4z"/>
-    </svg>`
-};
-const tpl2 = `
-<div>
-    <select ka.options="$scope.desc" ka.bind="$scope.className" style="width:100%"></select>
-    <input ka.bind="$scope.text">
-</div>
-`;
-let PreviewElement = class extends _kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.KaCustomElement {
-  constructor() {
-    super();
-    this.wrap(new _kasimirjs_kit_bootstrap__WEBPACK_IMPORTED_MODULE_2__.SidebarWrapper(config));
-    console.log(_leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.JodaDescriptionManager.classes);
-    let scope = this.init({
-      desc: _leuffen_jodastyle__WEBPACK_IMPORTED_MODULE_1__.JodaDescriptionManager.classes,
-      text: "test",
-      className: "test",
-      $on: {
-        change: (e) => {
-          window.history.pushState({}, "", "?className=" + scope.className);
+/***/ "./node_modules/@micx/lib-js/dist/formmail/MicxFormmailDefaultBootstrapStyle.js":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/@micx/lib-js/dist/formmail/MicxFormmailDefaultBootstrapStyle.js ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   MicxFormmailDefaultBootstrapStyle: () => (/* binding */ MicxFormmailDefaultBootstrapStyle)
+/* harmony export */ });
+const invalidFeedbackAttr = "__micxformmail_invalid_feedback";
+class MicxFormmailDefaultBootstrapStyle {
+    constructor() {
+        this.bntOrigText = "";
+    }
+    markInvalid(el) {
+        el.classList.add("is-invalid");
+        if (el.dataset.invalidMsg) {
+            let node = document.createElement("div");
+            node.classList.add("invalid-feedback");
+            node.innerHTML = el.dataset.invalidMsg;
+            el.insertAdjacentElement("afterend", node);
+            el[invalidFeedbackAttr] = node;
         }
-      }
+    }
+    markValid(el) {
+        el.classList.add("is-valid");
+    }
+    setFormInvalid(form) {
+    }
+    setFormSending(form) {
+        let btn = form.querySelector("input[type='submit'],button[type='submit']");
+        let orig = "";
+        if (btn instanceof HTMLInputElement) {
+            this.bntOrigText = btn.value;
+            btn.value = "Sending...";
+        }
+        else {
+            this.bntOrigText = btn.innerHTML;
+            btn.innerHTML = "Sending...";
+        }
+    }
+    setFormSentError(form) {
+        if (this.bntOrigText !== "") {
+            let btn = form.querySelector("input[type='submit'],button[type='submit']");
+            if (btn instanceof HTMLInputElement) {
+                btn.value = this.bntOrigText;
+            }
+            else {
+                btn.innerHTML = this.bntOrigText;
+            }
+        }
+        alert("[Error] Sending email failed! See browser console for details.");
+    }
+    setFormSentOk(form) {
+        var _a;
+        form.querySelectorAll("input,textarea").forEach(e => e.setAttribute("readonly", "readonly"));
+        let node = document.createElement("div");
+        let message = (_a = form.getAttribute("data-micx-formmail-sent-message")) !== null && _a !== void 0 ? _a : "E-Mail sent successfully!";
+        node.innerHTML = `<div class='alert alert-success'>${message}</div>`;
+        form.querySelector("input[type='submit'],button[type='submit']").replaceWith(node);
+    }
+    setFormValid(form) {
+    }
+    unmarkInvalid(el) {
+        el.classList.remove("is-invalid");
+    }
+    unmarkValid(el) {
+        el.classList.remove("is-valid");
+    }
+    resetValidation(form) {
+        form.querySelectorAll(".is-invalid").forEach((e) => {
+            if (e[invalidFeedbackAttr] !== undefined) {
+                e[invalidFeedbackAttr].remove();
+                delete e[invalidFeedbackAttr];
+            }
+            e.classList.remove("is-invalid");
+        });
+        form.querySelectorAll(".is-valid").forEach(e => e.classList.remove("is-valid"));
+    }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@micx/lib-js/dist/formmail/MicxFormmailFacade.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@micx/lib-js/dist/formmail/MicxFormmailFacade.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   MicxFormmailConfig: () => (/* binding */ MicxFormmailConfig),
+/* harmony export */   MicxFormmailFacade: () => (/* binding */ MicxFormmailFacade)
+/* harmony export */ });
+/* harmony import */ var _MicxFormmailHelper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MicxFormmailHelper */ "./node_modules/@micx/lib-js/dist/formmail/MicxFormmailHelper.js");
+/* harmony import */ var _MicxFormmailDefaultBootstrapStyle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MicxFormmailDefaultBootstrapStyle */ "./node_modules/@micx/lib-js/dist/formmail/MicxFormmailDefaultBootstrapStyle.js");
+/* harmony import */ var _Micx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Micx */ "./node_modules/@micx/lib-js/dist/Micx.js");
+/* harmony import */ var _helper_functions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../helper/functions */ "./node_modules/@micx/lib-js/dist/helper/functions.js");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
-    let last = "";
-  }
 };
-PreviewElement = __decorateClass([
-  (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.customElement)("preview-element"),
-  (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.template)(tpl2)
-], PreviewElement);
-(() => __async(undefined, null, function* () {
-  yield (0,_kasimirjs_embed__WEBPACK_IMPORTED_MODULE_0__.ka_dom_ready)();
-  console.log("Wurst");
-  document.body.append(new PreviewElement());
-}))();
+
+
+
+
+class MicxFormmailConfig {
+    constructor() {
+        /**
+         * Prevent observed Forms from submitting by pressing Enter
+         */
+        this.preventEnterSubmitForm = true;
+    }
+}
+class MicxFormmailFacade {
+    constructor(formMailer = _Micx__WEBPACK_IMPORTED_MODULE_2__.Micx.formMailerApi, config = new MicxFormmailConfig(), formatter = new _MicxFormmailDefaultBootstrapStyle__WEBPACK_IMPORTED_MODULE_1__.MicxFormmailDefaultBootstrapStyle()) {
+        this.formMailer = formMailer;
+        this.config = config;
+        this.formatter = formatter;
+    }
+    isMicxFormElement(element) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (element.tagName !== "FORM")
+                element = element.closest("form");
+            if (element === null)
+                return false;
+            if (!element.hasAttribute("data-micx-formmail-preset"))
+                return false;
+            return true;
+        });
+    }
+    /**
+     * Observe for submit events from <form data-micx-formmail-preset="default"> forms
+     *
+     * @param htmlElement
+     */
+    observe(htmlElement = null) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield (0,_helper_functions__WEBPACK_IMPORTED_MODULE_3__.dom_ready)();
+            htmlElement = htmlElement || document.body;
+            if (this.config.preventEnterSubmitForm) {
+                htmlElement.addEventListener("submit", (e) => __awaiter(this, void 0, void 0, function* () {
+                    console.log("submit", e);
+                    if (!this.isMicxFormElement(e.target))
+                        return;
+                    e.preventDefault();
+                    e.stopPropagation();
+                }));
+                htmlElement.addEventListener('keydown', (event) => __awaiter(this, void 0, void 0, function* () {
+                    if (!this.isMicxFormElement(event.target))
+                        return;
+                    if (event.key === "Enter" && event.target["type"] !== "submit" && event.target["type"] !== "textarea") {
+                        event.preventDefault();
+                    }
+                }));
+            }
+            htmlElement.addEventListener("click", (e) => {
+                let target = e.target;
+                if (!this.isMicxFormElement(target))
+                    return;
+                let button = target.closest("button[type='submit'],input[type='submit']");
+                if (button === null)
+                    return;
+                let form = target.closest("form");
+                e.preventDefault();
+                e.stopPropagation();
+                this.processForm(form);
+            });
+        });
+    }
+    processForm(form) {
+        var _a;
+        return __awaiter(this, void 0, void 0, function* () {
+            let formCollectedData = _MicxFormmailHelper__WEBPACK_IMPORTED_MODULE_0__.MicxFormmailHelper.collectFormData(form);
+            this.formatter.resetValidation(form);
+            if (formCollectedData.invalidForms.length > 0) {
+                for (let el of formCollectedData.invalidForms) {
+                    this.formatter.markInvalid(el);
+                }
+                this.formatter.setFormInvalid(form);
+                form.dispatchEvent(new Event("invalid", {}));
+                return;
+            }
+            let submitButton = form.querySelector("[type='submit']");
+            submitButton.setAttribute("disabled", "disabled");
+            this.formatter.setFormSending(form);
+            try {
+                let response = yield this.formMailer.sendData(formCollectedData.formdata, (_a = form.getAttribute("data-micx-formmail-preset")) !== null && _a !== void 0 ? _a : "default");
+                submitButton.removeAttribute("disabled");
+                this.formatter.setFormSentOk(form);
+            }
+            catch (e) {
+                submitButton.removeAttribute("disabled");
+                this.formatter.setFormSentError(form);
+            }
+        });
+    }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@micx/lib-js/dist/formmail/MicxFormmailHelper.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@micx/lib-js/dist/formmail/MicxFormmailHelper.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   MicxFormmailHelper: () => (/* binding */ MicxFormmailHelper)
+/* harmony export */ });
+class MicxFormmailHelper {
+    static collectFormData(form) {
+        var _a;
+        let invalidForms = [];
+        let formdata = {};
+        let unnamedFieldIndex = 0;
+        for (let el of form.querySelectorAll("input,select,textarea")) {
+            let valid = el.validity.valid;
+            if (el.type.toLowerCase() === "email" && el.value.trim() !== "") {
+                el.value = el.value.trim(); // Trim EMail
+                valid = el.validity.valid;
+                if (el.value.match(/^[\p{L}\d._%+-]+@[\p{L}\d.-]+.[\p{L}]{2,}$/u) === null)
+                    valid = false;
+            }
+            if (valid === false)
+                invalidForms.push(el);
+            if (el.name === "" && el.id === "") {
+                if (el.type !== "submit")
+                    console.warn("[Warning] Skipping Form-Element without id or name attribute", el);
+                continue;
+            }
+            let name = el.name;
+            if (name === "")
+                name = el.id;
+            if (name === "")
+                name = (_a = el.getAttribute("label")) !== null && _a !== void 0 ? _a : "unnamed_" + unnamedFieldIndex++;
+            name = name.trim();
+            if (el.type === "checkbox" && el["checked"] === false)
+                continue;
+            if (name.endsWith("[]")) {
+                name = name.slice(0, -2);
+                if (!Array.isArray(formdata[name]))
+                    formdata[name] = [];
+                formdata[name].push(el.value);
+            }
+            else {
+                formdata[name] = el.value;
+            }
+        }
+        return { formdata, invalidForms };
+    }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@micx/lib-js/dist/formmail/MicxFormmailStyleInterface.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@micx/lib-js/dist/formmail/MicxFormmailStyleInterface.js ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@micx/lib-js/dist/formmail/MicxFormmailerApi.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@micx/lib-js/dist/formmail/MicxFormmailerApi.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   MicxFormmailerApi: () => (/* binding */ MicxFormmailerApi)
+/* harmony export */ });
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../index */ "./node_modules/@micx/lib-js/dist/index.js");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+class MicxFormmailerApi {
+    constructor(subscription_id, endpoint_url) {
+        this.subscription_id = subscription_id;
+        this.endpoint_url = endpoint_url;
+        console.log('MicxFormmailer constructor');
+    }
+    sendData(data, preset = "default") {
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log('MicxFormmailer send data', data);
+            data["__sending_hostname"] = window.location.href;
+            data["__micxlib_rev"] = _index__WEBPACK_IMPORTED_MODULE_0__.MicxlibRev;
+            // make all keys of data lowercase and replace - and space by _
+            let data2 = {};
+            for (let key in data) {
+                let key2 = key.toLowerCase().replace(/[\s]/g, "_").replace(/-/g, "");
+                data2[key2] = data[key];
+            }
+            data = data2;
+            let result = yield fetch(this.endpoint_url + `?&subscription_id=${this.subscription_id}&preset=${preset}`, {
+                method: "POST",
+                headers: { "content-type": "application/json" },
+                body: JSON.stringify(data),
+                cache: "no-cache"
+            });
+            if (!result.ok) {
+                let errorMsg = yield result.text();
+                console.error(`Formmail Server Error`, errorMsg);
+                throw "Cannot send mail: " + errorMsg;
+            }
+            let successMsg = yield result.json();
+        });
+    }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@micx/lib-js/dist/helper/functions.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@micx/lib-js/dist/helper/functions.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   dom_ready: () => (/* binding */ dom_ready),
+/* harmony export */   sleep: () => (/* binding */ sleep)
+/* harmony export */ });
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+function dom_ready() {
+    return __awaiter(this, void 0, void 0, function* () {
+        return new Promise((resolve) => {
+            if (document.readyState === "complete" || document.readyState === "interactive")
+                return resolve("loaded");
+            document.addEventListener("DOMContentLoaded", () => resolve('DOMContentLoaded'));
+        });
+    });
+}
+function sleep(sleepms) {
+    return __awaiter(this, void 0, void 0, function* () {
+        return new Promise((resolve) => {
+            window.setTimeout(() => {
+                return resolve();
+            }, sleepms);
+        });
+    });
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@micx/lib-js/dist/hit-index.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/@micx/lib-js/dist/hit-index.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   hitIndex: () => (/* binding */ hitIndex)
+/* harmony export */ });
+var _a, _b;
+let state = sessionStorage.getItem("micx_hit_index");
+if (state === null) {
+    sessionStorage.setItem("micx_hit_index", "0");
+}
+sessionStorage.setItem("micx_hit_index", "" + (parseInt((_a = sessionStorage.getItem("micx_hit_index")) !== null && _a !== void 0 ? _a : "0") + 1));
+const hitIndex = parseInt((_b = sessionStorage.getItem("micx_hit_index")) !== null && _b !== void 0 ? _b : "0");
+
+
+/***/ }),
+
+/***/ "./node_modules/@micx/lib-js/dist/index.js":
+/*!*************************************************!*\
+  !*** ./node_modules/@micx/lib-js/dist/index.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Micx: () => (/* reexport safe */ _Micx__WEBPACK_IMPORTED_MODULE_1__.Micx),
+/* harmony export */   MicxCdnImageObserver: () => (/* reexport safe */ _mediastore_MicxCdnImageObserver__WEBPACK_IMPORTED_MODULE_0__.MicxCdnImageObserver),
+/* harmony export */   MicxFormmailConfig: () => (/* reexport safe */ _formmail_MicxFormmailFacade__WEBPACK_IMPORTED_MODULE_4__.MicxFormmailConfig),
+/* harmony export */   MicxFormmailDefaultBootstrapStyle: () => (/* reexport safe */ _formmail_MicxFormmailDefaultBootstrapStyle__WEBPACK_IMPORTED_MODULE_5__.MicxFormmailDefaultBootstrapStyle),
+/* harmony export */   MicxFormmailFacade: () => (/* reexport safe */ _formmail_MicxFormmailFacade__WEBPACK_IMPORTED_MODULE_4__.MicxFormmailFacade),
+/* harmony export */   MicxFormmailerApi: () => (/* reexport safe */ _formmail_MicxFormmailerApi__WEBPACK_IMPORTED_MODULE_2__.MicxFormmailerApi),
+/* harmony export */   MicxlibRev: () => (/* binding */ MicxlibRev)
+/* harmony export */ });
+/* harmony import */ var _mediastore_MicxCdnImageObserver__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mediastore/MicxCdnImageObserver */ "./node_modules/@micx/lib-js/dist/mediastore/MicxCdnImageObserver.js");
+/* harmony import */ var _Micx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Micx */ "./node_modules/@micx/lib-js/dist/Micx.js");
+/* harmony import */ var _formmail_MicxFormmailerApi__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./formmail/MicxFormmailerApi */ "./node_modules/@micx/lib-js/dist/formmail/MicxFormmailerApi.js");
+/* harmony import */ var _formmail_MicxFormmailStyleInterface__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./formmail/MicxFormmailStyleInterface */ "./node_modules/@micx/lib-js/dist/formmail/MicxFormmailStyleInterface.js");
+/* harmony import */ var _formmail_MicxFormmailFacade__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./formmail/MicxFormmailFacade */ "./node_modules/@micx/lib-js/dist/formmail/MicxFormmailFacade.js");
+/* harmony import */ var _formmail_MicxFormmailDefaultBootstrapStyle__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./formmail/MicxFormmailDefaultBootstrapStyle */ "./node_modules/@micx/lib-js/dist/formmail/MicxFormmailDefaultBootstrapStyle.js");
+
+const MicxlibRev = "1.0.6";
+
+
+
+
+
+
+let o = new _mediastore_MicxCdnImageObserver__WEBPACK_IMPORTED_MODULE_0__.MicxCdnImageObserver();
+o.observe();
+
+
+/***/ }),
+
+/***/ "./node_modules/@micx/lib-js/dist/mediastore/MicxCdnImageObserver.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@micx/lib-js/dist/mediastore/MicxCdnImageObserver.js ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   MicxCdnImageObserver: () => (/* binding */ MicxCdnImageObserver)
+/* harmony export */ });
+/* harmony import */ var _MicxCdnImgElement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MicxCdnImgElement */ "./node_modules/@micx/lib-js/dist/mediastore/MicxCdnImgElement.js");
+/* harmony import */ var _helper_functions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../helper/functions */ "./node_modules/@micx/lib-js/dist/helper/functions.js");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+
+let cdnIdx = 0;
+class MicxCdnImageObserver {
+    applyToImg(image) {
+        if (image["micx_cdn_observer"] === true)
+            return;
+        image["micx_cdn_observer"] = true;
+        if (image.src.indexOf("/v2/") === -1)
+            return; // Not a CDN image
+        if (!image.hasAttribute("micx_cdn_idx"))
+            image.setAttribute("micx_cdn_idx", "" + cdnIdx++);
+        let e = new _MicxCdnImgElement__WEBPACK_IMPORTED_MODULE_0__.MicxCdnImgElement(image, parseInt(image.getAttribute("micx_cdn_idx")));
+    }
+    observe() {
+        return __awaiter(this, void 0, void 0, function* () {
+            let round = 1;
+            while (true) {
+                yield (0,_helper_functions__WEBPACK_IMPORTED_MODULE_1__.sleep)(20 * round++);
+                document.querySelectorAll("img").forEach(img => {
+                    this.applyToImg(img);
+                });
+                if (round > 50)
+                    round = 50;
+            }
+        });
+    }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@micx/lib-js/dist/mediastore/MicxCdnImgElement.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@micx/lib-js/dist/mediastore/MicxCdnImgElement.js ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   MicxCdnImgElement: () => (/* binding */ MicxCdnImgElement)
+/* harmony export */ });
+/* harmony import */ var _MicxImageUrlDecoderV2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MicxImageUrlDecoderV2 */ "./node_modules/@micx/lib-js/dist/mediastore/MicxImageUrlDecoderV2.js");
+/* harmony import */ var _MicxImageUrlEncoderV2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MicxImageUrlEncoderV2 */ "./node_modules/@micx/lib-js/dist/mediastore/MicxImageUrlEncoderV2.js");
+/* harmony import */ var _helper_functions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../helper/functions */ "./node_modules/@micx/lib-js/dist/helper/functions.js");
+/* harmony import */ var _hit_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../hit-index */ "./node_modules/@micx/lib-js/dist/hit-index.js");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+
+
+
+const loadDirect = 2;
+class MicxCdnImgElement {
+    constructor(image, index) {
+        this.image = image;
+        this.isPreloaded = false;
+        this.myElementIndex = index;
+        let uri = image.src;
+        uri.replace(/^(.*?\/)(v2\/.*)$/, (p0, base, path) => {
+            this.base = base;
+            this.path = path;
+            return "";
+        });
+        let dimensions = (new _MicxImageUrlDecoderV2__WEBPACK_IMPORTED_MODULE_0__.MicxImageUrlDecoderV2(this.path)).decode();
+        this.setOptimalImageDimensions(dimensions);
+        // wait for image to be fully loaded
+        let listener = () => {
+            this.image.removeEventListener("load", listener);
+            this.loadHiRes(dimensions);
+        };
+        this.image.addEventListener("load", listener);
+        if (this.image.complete === true || this.myElementIndex < loadDirect) {
+            this.loadHiRes(dimensions);
+        }
+    }
+    loadHiRes(dimensions) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield (0,_helper_functions__WEBPACK_IMPORTED_MODULE_2__.dom_ready)();
+            // If first load of website: wait 2 seconds to load styles first.
+            if (_hit_index__WEBPACK_IMPORTED_MODULE_3__.hitIndex === 1) {
+                yield (0,_helper_functions__WEBPACK_IMPORTED_MODULE_2__.sleep)(2000);
+            }
+            yield (0,_helper_functions__WEBPACK_IMPORTED_MODULE_2__.sleep)(40); // Settle image size
+            // detect actual dimensions of image element (Fallback innerWidth for Safari Garbage)
+            let w = this.image.getBoundingClientRect().width;
+            if (w === 0 || w === null)
+                w = window.innerWidth;
+            // Get best fitting width from dimensions
+            let bestWidth = parseInt(dimensions.widths[0]);
+            for (let wn of dimensions.widths) {
+                let wnI = parseInt(wn);
+                if (wnI < w) {
+                    break;
+                }
+                bestWidth = wnI;
+            }
+            let e2 = new _MicxImageUrlEncoderV2__WEBPACK_IMPORTED_MODULE_1__.MicxImageUrlEncoderV2(dimensions.id, dimensions.filename);
+            e2.setReatio(dimensions.aspectRatio);
+            e2.addWidth(bestWidth);
+            e2.setExtensions(dimensions.extensions);
+            let url = this.base + "/" + e2.toString();
+            if (this.myElementIndex < loadDirect && !this.isPreloaded) {
+                this.isPreloaded = true;
+                let preloadLink = document.createElement("link");
+                preloadLink.setAttribute("rel", "preload");
+                preloadLink.setAttribute("fetchpriority", "high");
+                preloadLink.setAttribute("as", "image");
+                preloadLink.setAttribute("href", url);
+                document.head.append(preloadLink);
+            }
+            let preload = new Image();
+            preload.src = url;
+            preload.addEventListener("load", () => {
+                this.image.setAttribute("src", url);
+                this.image.classList.remove("micx-image-loader");
+            });
+        });
+    }
+    /**
+     * Set the Image Dimensions to the optimal (best width) for the current screen size
+     *
+     * @private
+     */
+    setOptimalImageDimensions(dimensions) {
+        let aspectRatioMultiplier = dimensions.aspectRatio.split("/").map((v) => parseInt(v));
+        // Devide first by second
+        let aspectRatio = aspectRatioMultiplier[0] / aspectRatioMultiplier[1];
+        let w = parseInt(dimensions.widths[0]);
+        for (let wn of dimensions.widths) {
+            let wnI = parseInt(wn);
+            if (wnI < window.innerWidth) {
+                break;
+            }
+            w = wnI;
+        }
+        if (this.myElementIndex >= loadDirect) {
+            // set lazy loading
+            this.image.setAttribute("loading", "lazy");
+            this.image.setAttribute("src", this.image.getAttribute("src"));
+        }
+        this.image.setAttribute("width", w.toString());
+        this.image.setAttribute("height", (w / aspectRatio).toString());
+        this.image.classList.add("micx-image-loader");
+        if (this.image.hasAttribute("alt") === false)
+            this.image.setAttribute("alt", dimensions.filename);
+    }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/@micx/lib-js/dist/mediastore/MicxImageUrlDecoderV2.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@micx/lib-js/dist/mediastore/MicxImageUrlDecoderV2.js ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   MicxImageUrlDecoderV2: () => (/* binding */ MicxImageUrlDecoderV2),
+/* harmony export */   MicxImageUrlDecoderV2Result: () => (/* binding */ MicxImageUrlDecoderV2Result)
+/* harmony export */ });
+class MicxImageUrlDecoderV2Result {
+}
+class MicxImageUrlDecoderV2 {
+    constructor(url) {
+        this.url = url;
+    }
+    decode() {
+        const parts = this.url.split('/');
+        if (parts.length < 4)
+            throw new Error("Invalid url format");
+        const id = parts[1];
+        let [encodedAspect, encodedWidths] = parts[2].split("_");
+        const [filename, extensions] = parts[3].split(".");
+        encodedWidths = encodedWidths.replaceAll(/([a-zA-Z])/g, (w) => { var _a; return "-" + ((_a = MicxImageUrlDecoderV2.WIDTH_SHORTCUTS[w]) !== null && _a !== void 0 ? _a : w) + "-"; });
+        encodedAspect = encodedAspect.replaceAll(/([a-zA-Z])/g, (w) => { var _a; return (_a = MicxImageUrlDecoderV2.RATIO_SHORTCUTS[w]) !== null && _a !== void 0 ? _a : w; });
+        const aspect = encodedAspect.split('-').join('/');
+        const widths = encodedWidths.split('-').filter(w => w.trim() !== "");
+        return {
+            id,
+            aspectRatio: aspect,
+            widths,
+            filename,
+            extensions: extensions.split("_"),
+        };
+    }
+}
+MicxImageUrlDecoderV2.RATIO_SHORTCUTS = {
+    "a": "1-1",
+    "b": "4-3",
+    "c": "3-2",
+    "d": "16-9",
+    "e": "21-9",
+    "B": "3-4",
+    "C": "2-3",
+    "D": "9-16",
+    "E": "9-21"
+};
+MicxImageUrlDecoderV2.WIDTH_SHORTCUTS = {
+    "a": "260",
+    "b": "414",
+    "c": "896",
+    "d": "1280",
+    "e": "1440",
+    "f": "1920",
+    "g": "2560",
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/@micx/lib-js/dist/mediastore/MicxImageUrlEncoderV2.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@micx/lib-js/dist/mediastore/MicxImageUrlEncoderV2.js ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   MicxImageUrlEncoderV2: () => (/* binding */ MicxImageUrlEncoderV2)
+/* harmony export */ });
+class MicxImageUrlEncoderV2 {
+    constructor(id, filename) {
+        this.id = id;
+        this.filename = filename;
+        this.widths = [];
+        this.extensions = [];
+        this.ratio = '';
+    }
+    setAspectRatio(width, height) {
+        this.ratio = `${width}-${height}`;
+    }
+    setReatio(ratio) {
+        ratio = ratio.replaceAll("/", "-");
+        this.ratio = ratio;
+    }
+    setWidths(widths) {
+        console.log("set widths", widths);
+        this.widths = widths.map(width => width.toString());
+        return this;
+    }
+    addWidth(width) {
+        this.widths.push(width.toString());
+    }
+    setExtensions(extensions) {
+        this.extensions = extensions;
+        return this;
+    }
+    toString() {
+        let widths = this.widths.join("-");
+        let extensions = this.extensions.join("_");
+        let aspect = this.ratio;
+        aspect = aspect.replace(/([0-9\-]+)/, (w) => { var _a; return (_a = MicxImageUrlEncoderV2.RATIO_SHORTCUTS[w]) !== null && _a !== void 0 ? _a : w; });
+        widths = widths.replace(/([0-9]+)/g, (w) => { var _a; return (_a = MicxImageUrlEncoderV2.WIDTH_SHORTCUTS[w]) !== null && _a !== void 0 ? _a : w; });
+        return `v2/${this.id}/${aspect}_${widths}/${this.filename}.${extensions}`;
+    }
+}
+MicxImageUrlEncoderV2.RATIO_SHORTCUTS = {
+    "1-1": "a",
+    "4-3": "b",
+    "3-2": "c",
+    "16-9": "d",
+    "21-9": "e",
+    "3-4": "B",
+    "2-3": "C",
+    "9-16": "D",
+    "9-21": "E"
+};
+MicxImageUrlEncoderV2.WIDTH_SHORTCUTS = {
+    "260": "a",
+    "414": "b",
+    "896": "c",
+    "1280": "d",
+    "1440": "e",
+    "1920": "f",
+    "2560": "g",
+};
 
 
 /***/ }),
@@ -2976,7 +3673,104 @@ __webpack_require__.r(__webpack_exports__);
 
 let html = `
 
-# Header 1
+# Willkommen bei <br>Dr. med. XXX XXX
+{: layout="use: #hero-max"}
+
+
+![Neuronen Hintergrundbild](https://cdn.leuffen.de//leu-stock/v2/7/121-46_gfedcba/AdobeStock_354842358.webp)
+
+Facharzt f\xFCr Neurologie <br> Facharzt f\xFCr Psychiatrie
+
+
+## Hero Section
+{: layout="use: #hero-ribbon"}
+
+
+
+
+### Notfall?
+
+Sie erreichen den \xE4rztlichen Notdienst unter der Telefon-Nr: [116 117](tel:+49116117)
+
+### Termine & Rezeptabholung
+
+Wir sind eine **Terminpraxis**. F\xFCr Terminvergaben, Anfragen und Rezeptabholungen beachten Sie bitte
+die \xD6ffnungszeiten des Empfangs.
+
+### \xD6ffnungszeiten Empfang
+
+{% include el/openhours.html %}
+
+
+## \xDCber mich
+{: layout="use: #sec-card-2col"}
+
+> Dr. med. Rainer Maelger
+
+![Bild Dr. med. Rainer Maelger](https://cdn.leuffen.de//maelger-k31/v2/2/85-94_ba/95760-09.webp){: style="padding: 4rem"}
+
+### Werdegang
+
+Berufst\xE4tigkeit in der Neurologie, Psychiatrie, Inneren Medizin und Orthop\xE4die.
+
+Zuletzt klinisch t\xE4tig als Oberarzt einer neurologischen Rehaklinik. Seit 2001 t\xE4tig als niedergelassener Neurologe
+und Psychiater.
+
+Focus Empfehlung: 2017, 2018, 2019
+
+
+
+## Medizinischer Schwerpunkt
+{: layout="use: #sec-multi-card; cols:2"}
+
+### Neurologie
+
+Interessengebiete:
+
+- Schlaganfall und Arteriosklerose
+- Parkinsonerkrankung
+- Ged\xE4chtnisst\xF6rung
+- Pr\xE4vention und Ern\xE4hrungsmedizin bei neurologischen Erkrankungen
+
+*Bitte beachten: Bei speziellen Medikamenten f\xFCr Multiple Sklerose und Myasthenie wenden Sie sich bitte an ein
+spezialisiertes neurologisches Zentrum.*
+
+Apparative Untersuchungen:
+
+- Farbduplexsonographie der hirnversorgenden Halsgef\xE4\xDFe
+- Messung der Nervenleitgeschwindigkeit bei Verdacht auf Karpaltunnelsyndrom, Polyneuropathie und Ulnaris-Neuropathie
+
+Beispiele f\xFCr h\xE4ufigere Beschwerden: Schw\xE4che und L\xE4hmung. Taubheit und Missempfindungen. Schwindel,
+Gleichgewichtsst\xF6rungen und Gangst\xF6rungen. Bewusstseinsst\xF6rung. Zittern. Kopfschmerzen und sonstige Schmerzen. \xC4nderung des
+Denkverm\xF6gens und der Sprache.
+
+
+### Psychiatrie
+
+- Psychiatrische Diagnostik und Behandlung
+- Interessengebiet: Pr\xE4vention und Ern\xE4hrungsmedizin bei psychischen Erkrankungen
+
+Beispiele f\xFCr h\xE4ufigere Beschwerden: Anspannung, Unruhe, Reizbarkeit, aufdr\xE4ngende Gedanken, Gr\xFCbeln,
+Vermeidung, \xC4ngste, Panikanf\xE4lle. Vegetative Beschwerden wie Herzklopfen, Atembeschwerden, Schwitzen, Schwindel, usw. Schlafst\xF6rungen.
+\xC4nderung der Stimmung, des Antriebs, des Denkverm\xF6gens, der Wahrnehmung und des Verhaltens.
+
+---
+{: .hr}
+
+Bei Vorliegen einer Notlage und akuter Beschwerden: wenden Sie sich bitte direkt an die Aufnahme einer
+Klinik. Empfehlung f\xFCr weitere Informationen: [www.neurologen-und-psychiater-im-netz.org](https://www.neurologen-und-psychiater-im-netz.org)
+
+
+
+
+
+
+
+
+## Kontakt aufnehmen
+{: layout="use: #cta-base"}
+
+[Kontakt](/kontakt)
 
 
 `;
@@ -15655,9 +16449,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../index */ "./index.ts");
 /* harmony import */ var _index_dev__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../index.dev */ "./index.dev.ts");
 /* harmony import */ var _SwitcherElement__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SwitcherElement */ "./src.dev/SwitcherElement.ts");
-/* harmony import */ var _PreviewElement__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PreviewElement */ "./src.dev/PreviewElement.ts");
-/* harmony import */ var _ShowcaseElement__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ShowcaseElement */ "./src.dev/ShowcaseElement.ts");
-
+/* harmony import */ var _ShowcaseElement__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ShowcaseElement */ "./src.dev/ShowcaseElement.ts");
 
 
 
