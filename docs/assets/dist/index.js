@@ -3673,6 +3673,17 @@ __webpack_require__.r(__webpack_exports__);
 
 let html = `
 
+<nav layout="use: #navbar-blox">
+    <div class="brand">Logo</div>
+    <ul class="nav-bar-main">
+        <li><a href="#home">Hello World</a></li>
+    </ul>
+    <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+    </ul>
+</ul>
+</nav>
+
 # Willkommen bei <br>Dr. med. XXX XXX
 {: layout="use: #hero-max"}
 
@@ -3705,9 +3716,9 @@ die \xD6ffnungszeiten des Empfangs.
 ## \xDCber mich
 {: layout="use: #sec-card-2col"}
 
-> Dr. med. Rainer Maelger
+> Dr. med. X. Kelloggs
 
-![Bild Dr. med. Rainer Maelger](https://cdn.leuffen.de//maelger-k31/v2/2/85-94_ba/95760-09.webp){: style="padding: 4rem"}
+![Bild Dr. med. XXX Kelloggs](https://cdn.leuffen.de//leu-stock/v2/26/c_gfedcba/AdobeStock_172186647.webp){: style="padding: 4rem"}
 
 ### Werdegang
 
