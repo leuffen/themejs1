@@ -1,6 +1,7 @@
 import {JodaDescriptionManager} from "@leuffen/jodastyle";
 import {customElement, ka_dom_ready, ka_sleep, KaCustomElement, template} from "@kasimirjs/embed";
-import {SidebarElement} from "./SwitcherElement";
+import {SidebarWrapper} from "@kasimirjs/kit-bootstrap";
+
 
 function getCSSVariables(element) {
     const computedStyles = window.getComputedStyle(element);
@@ -72,7 +73,7 @@ export class StyleEditorElement extends KaCustomElement {
     constructor() {
         super();
 
-        this.wrap(new SidebarElement())
+        this.wrap(new SidebarWrapper())
         let scope = this.init({
             styles: {},
             $fn: {

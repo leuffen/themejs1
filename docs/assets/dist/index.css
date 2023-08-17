@@ -1,0 +1,147 @@
+/*!**********************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./theme1.scss ***!
+  \**********************************************************************************************************************************/
+:root {
+  --layout-container: container;
+}
+
+.theme1 {
+  font-size: 1.1rem;
+  --t-background: #f5f5f5;
+  --t-background-footer: #fff;
+  --t-section-background: transparent;
+  --t-section-background-accent: #e7e7eb;
+  --t-section-background-primary: #D6EED9;
+  --t-text-background: #fff;
+  --t-text-color: #707070;
+  --t-text-background-light: var(--t-background);
+  --t-text-color-accent: var(--bs-gray-900);
+  --t-text-color-primary: var(--bs-primary);
+  --t-header-margin: 0 0 20px 0;
+  --t-paragraf-margin: 0 0 20px 0;
+  --t-section-padding: 40px 0;
+  --t-section-inner-padding: 3rem;
+}
+.theme1 h1, .theme1 h2, .theme1 h3, .theme1 h4, .theme1 h5 {
+  color: var(--t-text-color);
+}
+.theme1 h1 {
+  font-size: 2.4em;
+  line-height: 1.2em;
+}
+.theme1 h2, .theme1 h3, .theme1 h4, .theme1 h5 {
+  line-height: 1.2em;
+}
+.theme1 h3, .theme1 h4, .theme1 h5 {
+  font-size: 1.15em;
+}
+.theme1 p {
+  line-height: 1.4em;
+}
+.theme1 .section blockquote p {
+  font-size: 2.3em;
+}
+.theme1 .card-body {
+  color: var(--t-text-color);
+}
+.theme1 .card-body h3 {
+  font-weight: bold;
+}
+.theme1 .tjs__sec-legal-content {
+  padding-top: 100px;
+}
+.theme1 section:last-child {
+  padding-bottom: 0;
+}
+.theme1 a.btn.btn-primary {
+  color: white !important;
+}
+.theme1 input.btn.btn-primary {
+  color: white !important;
+}
+.theme1 .btn {
+  border-radius: 0;
+}
+.theme1 map {
+  --joda-class: ":: aspect-1x1 :lg: aspcect-16x9";
+}
+.theme1 .title_image {
+  background: linear-gradient(180deg, rgb(230, 225, 221) 0%, rgb(245, 240, 236) 35%, rgb(238, 238, 238) 100%);
+}
+.theme1 .title_image > img {
+  object-position: 80% 0;
+  object-fit: contain;
+}
+.theme1 .as__accordion {
+  border: 1px solid var(--bs-gray-100);
+  --as-accordion-open-bg: #fff;
+}
+.theme1 .as__accordion h3 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.theme1 .as__accordion .section-h3 {
+  border: 1px solid var(--bs-gray-200);
+  background-color: var(--bs-gray-100);
+}
+.theme1 .as__accordion .content {
+  background-color: #fff;
+}
+.theme1 .as__accordion .content p {
+  margin: 20px 20px 20px 0;
+}
+
+.openhours {
+  --joda-class: "table table-borderless";
+}
+/*!***************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src.dev/dev.scss ***!
+  \***************************************************************************************************************************************/
+showcase-element {
+  --aspect-ratio: calc(16 / 9);
+}
+showcase-element.big {
+  --aspect-ratio: 0.5;
+}
+showcase-element .preview {
+  --scale: 0.2;
+  --width: 350px;
+  --height: calc(var(--width) / var(--aspect-ratio));
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  overflow: hidden;
+  display: inline-block;
+  border: 3px solid #ccc;
+}
+showcase-element .preview iframe {
+  position: relative;
+  right: calc(var(--width) / var(--scale) / 2 - var(--width) / 2);
+  bottom: calc(var(--height) / var(--scale) / 2 - var(--height) / 2);
+  width: calc(var(--width) / var(--scale));
+  height: calc(var(--height) / var(--scale));
+  transform: scale(var(--scale));
+}
+showcase-element .preview .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+showcase-element .preview .overlay:hover {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=index.css.map*/
