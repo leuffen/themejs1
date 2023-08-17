@@ -2,6 +2,7 @@
   "name": "@leuffen/themejs1",
   "version": "3.0.3",
   "description": "",
+  "license": "proprietary",
   "main": "./dist/index.js",
   "module": "./dist/index.module.js",
   "directories": {

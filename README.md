@@ -1,4 +1,7 @@
 # themejs1
+
+***This open source software package is commercial! Any use without licence is prohibited!***
+
 ThemeJS Version 1
 
 
