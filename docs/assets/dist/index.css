@@ -1,17 +1,24 @@
 /*!**********************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./theme1.scss ***!
   \**********************************************************************************************************************************/
+/* always add !default to variables */
+.tjs__navbar-blox {
+  --height: 88px !important;
+}
+
 :root {
   --layout-container: container;
 }
 
 .theme1 {
+  color: var(--t-text-color);
+  background: var(--t-background);
   font-size: 1.1rem;
   --t-background: #f5f5f5;
   --t-background-footer: #fff;
   --t-section-background: transparent;
   --t-section-background-accent: #e7e7eb;
-  --t-section-background-primary: #D6EED9;
+  --t-section-background-primary: #b7eaf9;
   --t-text-background: #fff;
   --t-text-color: #707070;
   --t-text-background-light: var(--t-background);
@@ -21,6 +28,54 @@
   --t-paragraf-margin: 0 0 20px 0;
   --t-section-padding: 40px 0;
   --t-section-inner-padding: 3rem;
+}
+.theme1 section h2 {
+  text-transform: uppercase;
+  margin: var(--t-paragraf-margin);
+}
+.theme1 ul > li {
+  color: var(--t-text-color);
+}
+.theme1 ul > li * {
+  color: var(--t-text-color);
+}
+.theme1 h1, .theme1 h2, .theme1 h3, .theme1 h4, .theme1 h5, .theme1 h6 {
+  font-weight: 400;
+  color: var(--t-text-color);
+  margin: var(--t-header-margin, 0 0 20px 0);
+}
+.theme1 h1, .theme1 h2 {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+.theme1 h3 {
+  font-size: 1.5em;
+  line-height: 1.1em;
+}
+.theme1 table {
+  color: inherit;
+}
+.theme1 table > tr {
+  color: inherit;
+}
+.theme1 table > tr > td {
+  color: inherit;
+}
+.theme1 p:empty {
+  margin: 0;
+}
+.theme1 p {
+  margin: var(--t-paragraf-margin);
+  hyphens: auto;
+}
+.theme1 p:last-child, .theme1 table:last-child {
+  margin-bottom: 0;
+}
+.theme1 address p {
+  margin: 0;
+}
+.theme1 section:last-of-type > * {
+  padding-bottom: 0;
 }
 .theme1 h1, .theme1 h2, .theme1 h3, .theme1 h4, .theme1 h5 {
   color: var(--t-text-color);
@@ -37,6 +92,26 @@
 }
 .theme1 p {
   line-height: 1.4em;
+}
+.theme1 .tjs__section-text h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--t-text-color-primary) !important;
+  margin: var(--t-paragraf-margin);
+}
+.theme1 .tjs__section-text blockquote > p {
+  font-size: 2.1em;
+  line-height: 1.2em;
+  color: var(--t-text-color) !important;
+  margin: var(--t-header-margin, 0 0 20px 0);
+  hyphens: manual;
+}
+.theme1 .tjs__section-text .table {
+  --bs-table-color: var(--t-text-color);
+}
+.theme1 .tjs__section-text *:last-child {
+  margin-bottom: 0;
 }
 .theme1 .section blockquote p {
   font-size: 2.3em;

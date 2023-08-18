@@ -1,8 +1,15 @@
+@import "../../variables";
+@import "../_mixins/default-element-format";
 
 :root {
     --layout-container: container;
 }
 .theme1 {
+    @include default-element-format();
+
+    color: var(--t-text-color);
+    background: var(--t-background);
+
 
     h1,h2,h3,h4,h5 {
         color: var(--t-text-color);
@@ -23,6 +30,30 @@
         line-height: 1.4em;
     }
 
+    .tjs__section-text {
+        h2 {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 16px;
+            color: var(--t-text-color-primary) !important;
+            margin: var(--t-paragraf-margin);
+        }
+        blockquote > p {
+            font-size: 2.1em;
+            line-height: 1.2em;
+            color: var(--t-text-color) !important;
+            margin: var(--t-header-margin, 0 0 20px 0);
+            hyphens: manual;
+        }
+
+        .table {
+            --bs-table-color: var(--t-text-color);
+        }
+
+        *:last-child {
+            margin-bottom: 0;
+        }
+    }
 
     .section {
         blockquote p {
@@ -44,7 +75,7 @@
     --t-background-footer: #fff;
     --t-section-background: transparent;
     --t-section-background-accent: #e7e7eb;
-    --t-section-background-primary: #D6EED9;
+    --t-section-background-primary: #{$background-primary};
     --t-text-background: #fff;
     --t-text-color: #707070;
     --t-text-background-light: var(--t-background);

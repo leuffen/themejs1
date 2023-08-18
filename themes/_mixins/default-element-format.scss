@@ -1,50 +1,10 @@
-
-
-.tjs__root-format {
-
-
-
-    color: var(--t-text-color);
-    background: var(--t-background);
-
-    // General Section padding
-    section:last-of-type > * {
-        padding-bottom: 0;
-    }
-
+@mixin default-element-format() {
     section h2 {
         text-transform: uppercase;
-       // font-weight: bold;
+        // font-weight: bold;
 
         margin: var(--t-paragraf-margin);
     }
-
-    .tjs__section-text {
-        h2 {
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 16px;
-            color: var(--t-text-color-primary) !important;
-            margin: var(--t-paragraf-margin);
-        }
-        blockquote > p {
-            font-size: 2.1em;
-            line-height: 1.2em;
-            color: var(--t-text-color) !important;
-            margin: var(--t-header-margin, 0 0 20px 0);
-            hyphens: manual;
-        }
-
-        .table {
-            --bs-table-color: var(--t-text-color);
-        }
-
-        *:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-
 
     ul > li  {
         color: var(--t-text-color);
@@ -105,6 +65,9 @@
         p {
             margin: 0;
         }
+    }
+    section:last-of-type > * {
+        padding-bottom: 0;
     }
 
 }
