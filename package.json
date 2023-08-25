@@ -1,6 +1,6 @@
 {
   "name": "@leuffen/themejs1",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "",
   "license": "proprietary",
   "main": "./dist/index.js",
@@ -25,14 +25,14 @@
   ],
   "author": "",
   "dependencies": {
-    "@leuffen/jodastyle": "^1.0.7",
+    "@leuffen/jodastyle": "^1.0.8",
     "@kasimirjs/embed": "^1.0.8",
     "@leuffen/isl-base": "^1.0.5",
     "bootstrap": "^5.3.0"
   },
   "devDependencies": {
     "@micx/lib-js": "^1.0.18",
-    "@kasimirjs/kit-bootstrap": "^1.0.5",
+    "@kasimirjs/kit-bootstrap": "^1.0.4",
     "markdown-it": "^13.0.1",
     "markdown-it-attrs": "^4.1.6",
     "css-loader": "^6.7.1",

@@ -12,7 +12,7 @@ Joda.registerTemplate("sec-card-2col",
                         <slot></slot>
                     </div>
                     <div class="tjs__sec-card-2col--col-end col-12 col-md-6 image-side order-1 order-md-2">
-                        <slot data-select="img, .children > .section-hr.aside" data-replace></slot>
+                        <slot data-select="img, .children > .section-hr.aside" data-replace data-limit="1"></slot>
                     </div>
                 </div>
             </div>
