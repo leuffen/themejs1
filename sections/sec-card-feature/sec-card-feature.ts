@@ -7,7 +7,7 @@ Joda.registerTemplate("sec-card-feature",
         <div class="tjs__sec-card-feature [[layout.class]]">
             <div class="container">
                 <div class="header_image">
-                    <slot data-select=":scope > .content img, map" data-replace></slot>
+                    <slot data-select=":scope > .content img, map" data-replace data-limit="1"></slot>
                 </div>
                 <div class="row">
                     <div class="col-12 col-lg-6 text-format p-4 p-lg-5 tjs__section-text">
