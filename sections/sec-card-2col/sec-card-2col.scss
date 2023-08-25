@@ -5,13 +5,21 @@
     background: var(--t-section-background);
 
 
+    .aside {
+        --joda-class: p-4 p-lg-5 ;
+    }
+
     .row > .tjs__sec-card-2col--col-start  {
         --joda-class: "col-12 col-md-6 p-4 p-lg-5 order-2 order-md-1";
     }
 
-    .row > .tjs__sec-card-2col--col-end  {
-        --joda-class: "col-12 col-md-6 order-1 order-md-2";
 
+    .row > .tjs__sec-card-2col--col-end  {
+
+        --joda-class: "col-12 col-md-6 order-1 order-md-2";
+        &:has(> .aside) {
+            --joda-class: "col-12 col-md-6 order-2 order-md-1";
+        }
         img {
             height: 100%;
             width: 100%;

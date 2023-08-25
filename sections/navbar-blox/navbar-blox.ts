@@ -14,7 +14,7 @@ Joda.registerTemplate("navbar-blox",
                 </div>
 
                 <div class="secondline" style="box-shadow: 0px 1px 2px #00000029;background: white">
-                    <div class="[[ layout.container ]]">
+                    <div class="tjs__main-container [[ layout.container ]]">
                         <div class="tjs__row1">
 
 
