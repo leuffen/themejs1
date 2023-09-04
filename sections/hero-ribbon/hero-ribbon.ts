@@ -6,6 +6,7 @@ Joda.registerTemplate("hero-ribbon",
     `
 
         <div class="tjs__hero-ribbon">
+            <slot data-select="h2" class="d-none"></slot>
             <div class="tjs__hero-ribbon--wrapper">
                 <div class="tjs__hero-ribbon--container [[layout.container]]">
                     <div class="row ">
