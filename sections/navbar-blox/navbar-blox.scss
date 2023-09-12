@@ -164,9 +164,11 @@
 
     .brand {
         display: grid;
+        min-height: var(--height);
         place-items: center;
         a {
             font-size: 1.4em;
+            line-height: 1.0em;
             color: black;
             text-decoration: none;
         }
