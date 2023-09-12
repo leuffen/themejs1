@@ -12,7 +12,7 @@ Joda.registerTemplate("sec-card-2col",
                         <slot></slot>
                     </div>
                     <div class="tjs__sec-card-2col--col-end image-side ">
-                        <slot class="[[layout.slideshow === true ? 'slideshow' : '']]" data-select="img, .children > .section-hr.aside" [[layout.slideshow !== true ? 'data-limit="1"' : '' ]]></slot>
+                        <slot class="[[layout.slideshow === true ? 'slideshow' : '']]" data-select="img, .children > .section-hr.aside, ul.aside" [[layout.slideshow !== true ? 'data-limit="1"' : '' ]]></slot>
                     </div>
                 </div>
             </div>
