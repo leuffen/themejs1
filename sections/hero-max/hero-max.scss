@@ -1,8 +1,9 @@
 
 
 .tjs__hero-max {
-    --joda-class: ":: mobile :lg: desktop";
+    --s-box-background: rgba(255, 255, 255, 0.8);
 
+    --joda-class: ":: mobile :lg: desktop";
     --layout-image-ratio: 6 / 4;
 
     &.mobile {
@@ -32,7 +33,7 @@
 
         &.box {
             .content {
-                background: rgba(255, 255, 255, 0.8);
+                background: var(--s-box-background);
                 padding: var(--content-padding, 1rem);
             }
 

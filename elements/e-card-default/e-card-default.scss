@@ -11,7 +11,7 @@
         height: 100%;
     }
 
-    --aspect-ratio: 16 / 9;
+    --aspect-ratio: var(--layout-aspect-ratio, 16 / 9);
 
     .tjs__e-card-default__img {
         width: 100%;
