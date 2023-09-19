@@ -5,6 +5,20 @@
     background: var(--t-section-background);
 
 
+
+    map.aside {
+        --joda-class: "";
+        display: block;
+        min-height: 500px;
+        .as__map {
+            min-height: 500px;
+            iframe {
+                min-height: 500px;
+            }
+        }
+
+    }
+
     .aside {
         --joda-class: p-4 p-lg-5 ;
     }
