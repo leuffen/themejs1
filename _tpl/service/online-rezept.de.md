@@ -13,17 +13,18 @@ skipHead: false
 title: Online-Rezept
 type: article
 ---
-## Online Rezept 
+## Online Rezept
 {: layout="use: #sec-card-2col"}
 
-![](https://cdn.leuffen.de//leu-stock/v2/94/c_gfedcba/AdobeStock_102663778.webp)
+![](https://cdn.leuffen.de//leu-stock/v2/96/c_gfedcba/AdobeStock_249986710.webp)
 
 > Jetzt Wiederholungsrezept online anfragen
 
 Mit unserem Online-Rezeptformular können Sie bequem von zu Hause aus ein neues Rezept für Ihre Dauermedikation oder Folgerezepte anfordern.
-Dabei können Sie ganz einfach angeben, an welchem Standort unseres Hausarztzentrums Sie das Rezept abholen möchten. **Bestellungen vor 10:00 Uhr können am Folgetag abgeholt werden.**
+ **Bestellungen vor 10:00 Uhr können am Folgetag abgeholt werden.**
 
 Bitte beachten Sie, dass es sich hierbei noch nicht um das sog. e-Rezept handelt, sondern um eine online Vorbestellung des klassischen Rezepts. Derzeit wird das e-Rezept eingeführt. Wir werden Sie zu gegebener Zeit darüber informieren.
+
 
 
 
