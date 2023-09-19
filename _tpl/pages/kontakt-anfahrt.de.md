@@ -17,7 +17,7 @@ type: article
 ## Hier finden Sie uns
 {: layout="use: #sec-card-feature"}
 
-> Unsere Augenpraxis befindet sich in Wiesbaden
+> Ihre Hausarztpraxis in Neuss Zentrum.
 
 <map data-map-url="{{site.data.general.map_url}}" style="--joda-use: map()"></map>
 
@@ -48,7 +48,7 @@ Anfahrtsbeschreibung mit dem Auto
 ---
 
 [input type="text"  name="Name" required .mb-3]
-[input type="email" name="E-Mail" .mb-3]
+[input type="email" name="E-Mail" required .mb-3]
 [input type="tel" name="Telefon" .mb-3]
 
 ---

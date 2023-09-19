@@ -1,0 +1,22 @@
+desc: Serviceseiten Formulare
+
+is_sortable: true
+
+ptags:
+  - text: In Navigationsleiste anzeigen
+    key: nav
+  - text: Im Footer Navigation anzeigen
+    key: footer
+
+
+layouts:
+  - layout: article
+    text: HTML Artikel
+  - layout: website
+    text: HTML Layout ohne Header für Landingpages und Startseite
+
+forms:
+
+
+defaults:
+  layout: xy

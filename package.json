@@ -1,6 +1,6 @@
 {
   "name": "@leuffen/themejs1",
-  "version": "3.0.11",
+  "version": "3.0.12",
   "description": "",
   "license": "proprietary",
   "main": "./dist/index.js",

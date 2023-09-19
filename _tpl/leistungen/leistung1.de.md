@@ -1,13 +1,11 @@
 ---
-description: "Entdecken Sie spezialisierte Gynäkologie-Dienstleistungen bei Dr. med.
-  Gülide Uysal. Vorsorge, Verhütungsberatung, Kinderwunschbehandlung und mehr. \U0001FA7A\U0001F469‍⚕️
-  Jetzt Termin vereinbaren!"
+description: ""
 image: https://cdn.leuffen.de//leu-stock/v2/63/c_gfedcba/AdobeStock_86161955.webp
 keywords: Makuladiagnostik, Lasertherapie, Intravitreale Injektionen, Sehschule, Augenarztpraxis,
   Augenbehandlung, Augengesundheit
 lang: de
 layout: article
-order: 1
+order: 30
 permalink: ~
 pid: leistungen/leistung1
 ptags:
@@ -16,7 +14,7 @@ published: true
 skipHead: false
 title: Leistung 1
 type: article
-_schiller_instructions: "Ändere die Texte und Bilder. Füge am Ende die CTA ein."
+_schiller_instructions: "Ändere die Texte und Bilder. Füge am Ende die CTA ein. Gehe auf die im Context genannten Leistungen ein."
 ---
 
 ## Gynäkologie
