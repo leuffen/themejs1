@@ -6,7 +6,7 @@ Joda.registerTemplate("hero-max",
     `
 
         <div class="tjs__hero-max [[layout.class]] [[layout.autoheight === false ? '' : 'tjs__hero-max--autoheight' ]]">
-            <slot data-select="img"></slot>
+            <slot data-select="img" class="slideshow"></slot>
             <div class="tjs__hero-max--out-wrapper ">
                 <div class="tjs__hero-max--container [[layout.container]]">
                     <div class="tjs__hero-max--inner-wrapper">
