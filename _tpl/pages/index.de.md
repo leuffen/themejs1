@@ -7,7 +7,7 @@ permalink: /
 pid: pages/index
 ptags: []
 published: true
-seoScore: 8
+order: 1
 title: Titel - Beschreibung
 _schiller_instructions: "Ändere die Texte und Bilder. Füge am Ende die CTA ein. Gehe auf die im Context genannten Informationen ein. Entferne Links zu nicht vorhandenen Seiten."
 ---
