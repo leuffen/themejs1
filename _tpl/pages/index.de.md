@@ -18,6 +18,7 @@ title: Augenpraxis Osman - Spezialisierte Makuladiagnostik und Behandlung
 {: layout="use: #hero-max; cols:2; class: box"}
 
 ![](cdn:///leu-stock/v/26/1920x1280_1200x800_992x661_768x512_480x320_256x256/AdobeStock_114414482.avif_jpeg)
+{: .background}
 
 [Jetzt Termin online vereinbaren](/kontakt){: .btn .btn-primary .btn-lg}
 
