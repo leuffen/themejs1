@@ -166,11 +166,16 @@
         display: grid;
         min-height: var(--height);
         place-items: center;
-        a {
+
+        a,p,img,span {
             font-size: 1.4em;
             line-height: 1.0em;
+            vertical-align: baseline;
             color: black;
             text-decoration: none;
+        }
+        img {
+            padding-right: 10px;
         }
     }
 

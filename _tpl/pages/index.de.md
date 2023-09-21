@@ -1,9 +1,6 @@
 ---
-description: Buchen Sie jetzt Ihren Termin online bei der Augenarztpraxis Bassel Osman.
-  Wir bieten spezialisierte Makuladiagnostik, Lasertherapie, intravitreale Injektionen
-  und Sehschule. Erfahren Sie mehr über unsere Leistungen!
-keywords: Augenarztpraxis, Bassel Osman, Makuladiagnostik, Lasertherapie, intravitreale
-  Injektionen, Sehschule, Augenheilkunde, Makuladegeneration, Netzhauterkrankungen
+description: 
+keywords: 
 lang: de
 layout: website
 permalink: /
@@ -11,7 +8,8 @@ pid: pages/index
 ptags: []
 published: true
 seoScore: 8
-title: Augenpraxis Osman - Spezialisierte Makuladiagnostik und Behandlung
+title: Titel - Beschreibung
+_schiller_instructions: "Ändere die Texte und Bilder. Füge am Ende die CTA ein. Gehe auf die im Context genannten Informationen ein. Entferne Links zu nicht vorhandenen Seiten."
 ---
 
 # Willkommen bei Ihrer <br>Augenpraxis B. Mustermann
@@ -74,7 +72,9 @@ Unsere Lasertherapie wird zur Behandlung von verschiedenen Augenerkrankungen ein
 [Unsere Therapien](/leistungen/therapien.de.html){: .btn .btn-primary .p-3}
 
 
-
+## &nbsp;
+{: .text-center}
+[zu unseren Leistungen](/leistungen){: .btn .btn-primary .fs-3 .p-3 .mb-5}
 
 
 ## Testemonial
