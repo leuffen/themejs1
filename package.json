@@ -1,6 +1,7 @@
 {
   "name": "@leuffen/themejs1",
-  "version": "4.0.4",
+  "version": "4.0.3",
+
   "description": "",
   "license": "proprietary",
   "main": "./dist/index.js",
@@ -29,6 +30,8 @@
     "@leuffen/jodastyle": "^1.0.8",
     "@kasimirjs/embed": "^1.0.8",
     "@leuffen/isl-base": "^1.0.5",
+    "@leuffen/liscom": "^1.0.2",
+    "@leuffen/liweco-base": "^2.0.2",
     "bootstrap": "^5.3.0"
   },
   "devDependencies": {

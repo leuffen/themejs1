@@ -5,7 +5,7 @@ icon: bi bi-phone
 image: https://cdn.leuffen.de//leu-stock/v2/60/418-279_gfedcba/AdobeStock_99592855.webp
 lang: de
 layout: article
-order: 3
+order: 80
 permalink: /ueber-uns
 pid: pages/ueber-uns
 ptags:

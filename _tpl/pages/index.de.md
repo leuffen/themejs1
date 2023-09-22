@@ -7,7 +7,7 @@ permalink: /
 pid: pages/index
 ptags: []
 published: true
-seoScore: 8
+order: 1
 title: Titel - Beschreibung
 _schiller_instructions: "Ändere die Texte und Bilder. Füge am Ende die CTA ein. Gehe auf die im Context genannten Informationen ein. Entferne Links zu nicht vorhandenen Seiten."
 ---
@@ -16,6 +16,7 @@ _schiller_instructions: "Ändere die Texte und Bilder. Füge am Ende die CTA ein
 {: layout="use: #hero-max; cols:2; class: box"}
 
 ![](cdn:///leu-stock/v/26/1920x1280_1200x800_992x661_768x512_480x320_256x256/AdobeStock_114414482.avif_jpeg)
+{: .background}
 
 [Jetzt Termin online vereinbaren](/kontakt){: .btn .btn-primary .btn-lg}
 

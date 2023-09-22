@@ -4,7 +4,7 @@ icon: bi bi-phone
 image: https://cdn.leuffen.de//leu-stock/v2/75/3997-1332_gfedcba/AdobeStock_408777375.webp
 lang: de
 layout: article
-order: 4
+order: 99
 permalink: /kontakt
 pid: pages/kontakt-anfahrt
 ptags:
