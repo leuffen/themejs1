@@ -12,15 +12,27 @@
         max-height: 60vh;
         min-height: 250px;
         width: 100%;
-        padding-bottom: 40px
+        padding-bottom: 40px;
+
+        &:has(slot:empty) {
+            visibility: hidden;
+            min-height: 0;
+            height: 0;
+        }
+
+        & > slot {
+            width: 100%;
+            height: 100%;
+
+            & > img, & > div {
+                object-fit: cover;
+                object-position: center center;
+                width: 100%;
+                height: 100%
+            }
+        }
     }
 
-    .imagewrapper > img {
-        object-fit: cover;
-        object-position: center center;
-        width: 100%;
-        height: 100%;
-    }
 
     h1 {
         padding: 20px;

@@ -1,15 +1,21 @@
 :root {
-    --t-background: #f5f5f5;
-    --t-background-footer: #fff;
+    --t-background: #{$background};
+    --t-background-footer: #{$background-footer};
     --t-section-background: transparent;
-    --t-section-background-accent: #e7e7eb;
+    --t-section-background-accent: #{$background-accent};
     --t-section-background-primary: #D6EED9;
+
+    --t-section-border-color: #{$section-border-color};
+    --t-section-border-radius: #{$section-border-radius};
+
     --t-text-background: #fff;
     --t-text-color: #707070;
     --t-text-background-light: var(--t-background);
     --t-text-color-accent: var(--bs-gray-900);
     --t-text-color-primary: var(--bs-primary);
+    --t-header-text-transform: var(--header-text-transform);
 
+    --t-border-color: #{$border-color};
     --t-navbar-height: 88px;
 
     /* What to substract from 100vh to start the next elemment after fullsize header */

@@ -13,6 +13,7 @@ $danger:    #bf1c0a !default;
 $warning:   #bf760a !default;
 $dark:      #006837 !default;
 
+$background: #802020 !default;
 $background-primary:        #b7eaf9 !default;
 $background-accent:         #ddd    !default;
 
@@ -26,10 +27,20 @@ $paragraph-margin-bottom:   1.5rem !default;
 $minibar-text-color:        black !default;
 $minibar-color:             transparent !default;
 
+$section-border-radius:             0 !default;
 $border-radius:             0 !default;
+
+$section-border-color:      #ddd !default;
 
 $text-color: #707070 !default;
 
+$text-footer: $text-color !default;
+$background-footer: $background !default;
 
 
+$background-dark: #000 !default;
+$text-dark: #fff !default;
+$border-color: #999 !default;
+
+$header-text-transform: uppercase !default;
 

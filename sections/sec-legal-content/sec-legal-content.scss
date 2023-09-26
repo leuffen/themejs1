@@ -6,7 +6,8 @@
 
     .inner-wrapper {
 
-        border: 1px solid var(--bs-gray-500);
+        border: 1px solid var(--t-section-border-color);
+        border-radius: var(--t-section-border-radius);
         background-color: white;
         padding: var(--t-section-inner-padding);
 
