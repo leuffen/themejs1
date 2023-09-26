@@ -6,7 +6,7 @@ Joda.registerTemplate("e-card-default",
     `
         <div class="tjs__e-card-default">
             <div class="tjs__e-card-default__img">
-                <slot data-select="img" data-replace></slot>
+                <slot data-select="img"></slot>
             </div>
 
             <div class="tjs__e-card-default__body text-format">

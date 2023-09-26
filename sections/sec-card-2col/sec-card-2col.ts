@@ -7,7 +7,7 @@ Joda.registerTemplate("sec-card-2col",
 
         <div class="tjs__sec-card-2col">
             <div class="tjs__sec-card-2col--container [[layout.container]]">
-                <div class="row [[layout.order === 'reverse' ? 'flex-row-reverse': '']]">
+                <div class="row [[layout.order === 'reverse' ? 'flex-row-reverse': '']] [[layout.mobile_reverse === 'yes' ? ':: flex-row-reverse :lg:': '']]">
                     <div class="tjs__sec-card-2col--col-start tjs__section-text">
                         <slot></slot>
                     </div>
