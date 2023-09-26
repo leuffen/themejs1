@@ -45,6 +45,14 @@
         overflow: hidden;
         border-top: 1px solid var(--t-section-background);
         text-align: center;
+
+        img {
+            filter: grayscale(100%);
+            &:hover {
+                filter: grayscale(0%);
+            }
+        }
+
     }
     h3 {
         margin-top: 20px;
@@ -71,8 +79,12 @@
         }
      }
     .content {
-          --joda-class: ":: border-bottom :xl: border-end";
+         border-right: 1px solid var(--t-section-border-color);
+        &:last-of-type {
+            border-right: none;
+        }
       }
+
     .content:last-of-type {
            --joda-class: unset;
        }
