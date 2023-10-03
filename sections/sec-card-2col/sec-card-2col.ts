@@ -1,11 +1,13 @@
 import {Joda} from "@leuffen/jodastyle";
 
 
+
+
 Joda.registerTemplate("sec-card-2col",
     // language=HTML
     `
 
-        <div class="tjs__sec-card-2col">
+        <section class="tjs__sec-card-2col">
             <div class="tjs__sec-card-2col--container [[layout.container]]">
                 <div class="row [[layout.order === 'reverse' ? 'flex-row-reverse': '']] [[layout.mobile_reverse === 'yes' ? ':: flex-row-reverse :lg:': '']]">
                     <div class="tjs__sec-card-2col--col-start tjs__section-text">
@@ -16,5 +18,5 @@ Joda.registerTemplate("sec-card-2col",
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     `);
