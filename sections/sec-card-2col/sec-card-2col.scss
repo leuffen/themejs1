@@ -60,7 +60,7 @@
 
 }
 
-.section-h2:nth-of-type(odd) .tjs__sec-card-2col .row {
+.tjs__sec-card-2col:nth-of-type(odd) .row {
     flex-direction: row-reverse;
     //--joda-class: "flex-row-reverse";
 }
