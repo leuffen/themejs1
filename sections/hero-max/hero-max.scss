@@ -60,6 +60,7 @@
 
         & > .tjs__hero-max--out-wrapper {
             position: absolute;
+            z-index: 2;
             top: 0;
             bottom: 0;
             width: 100%;

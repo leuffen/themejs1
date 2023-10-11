@@ -15,7 +15,7 @@ Joda.registerTemplate(
                         <slot></slot>
                     </div>
                     <div class="tjs__sec-card-2col--col-end image-side :: col-12 :lg: col-[[12 - layout.cols]] ">
-                        <div class="ratio ratio-16x9 [[layout.slideshow !== true ? 'd-none' : '']]"></div>
+
                         <slot class="[[layout.slideshow === true ? 'slideshow' : '']]" data-select="img, .children > .section-hr.aside, .aside" [[layout.slideshow !== true ? 'data-limit="1"' : '' ]]></slot>
                     </div>
                 </div>
