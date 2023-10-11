@@ -9,8 +9,10 @@
         --joda-class: "";
         display: block;
         min-height: 500px;
+
         .as__map {
             min-height: 500px;
+
             iframe {
                 min-height: 500px;
             }
@@ -19,34 +21,40 @@
     }
 
     .aside {
-        --joda-class: p-4 p-lg-5 ;
+        --joda-class: p-4 p-lg-5;
     }
 
 
-
-    .row > .tjs__sec-card-2col--col-start  {
+    .row > .tjs__sec-card-2col--col-start {
         order: 99;
     }
 
 
-    .row > .tjs__sec-card-2col--col-end  {
+    .row > .tjs__sec-card-2col--col-end {
         order: 50;
+
         slot {
             display: block;
             width: 100%;
             height: 100%;
         }
+
         img {
             height: 100%;
             width: 100%;
             object-position: center center;
             object-fit: cover;
         }
+
+        .slideshow {
+            min-height: 350px;
+
+        }
     }
 
 
     .tjs__sec-card-2col--container {
-          border: 1px solid var(--t-section-border-color);
+        border: 1px solid var(--t-section-border-color);
         border-radius: var(--t-section-border-radius);
         overflow: hidden;
         background-color: white;

@@ -1,6 +1,5 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const {ESBuildMinifyPlugin} = require("esbuild-loader");
 
 module.exports = {
     entry: {
@@ -25,6 +24,12 @@ module.exports = {
                         }
                     }
                 ],
+
+
+                include: [
+                    path.resolve(__dirname, "src"),
+                    path.resolve(__dirname, "workspaces")
+                ]
             },
             {
                 enforce: 'pre',
@@ -44,7 +49,7 @@ module.exports = {
         extensions: ['.tsx', '.ts', '.js'],
     },
 
-    devtool: "eval",
+    //devtool: "eval",
     // switch to: 'development' to debug
     mode: "production",
 
@@ -59,14 +64,10 @@ module.exports = {
 
 
     ],
+
     optimization: {
         minimize: true,
-        usedExports: true,
-        minimizer: [
-            new ESBuildMinifyPlugin({
-                target: "es2015"
-            })
-        ]
+        usedExports: "global"
     },
     output: {
         filename: '[name].js',
