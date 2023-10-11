@@ -1,5 +1,5 @@
 {{ site.data.general.name}}<br>
-{% if site.data.general.name2 != null %}{{site.data.general.name2}}<br>{% endif %}
+{%- if site.data.general.name2 != null -%}{{site.data.general.name2}}<br>{%- endif -%}
 {{ site.data.general.street }} <br>
 {{ site.data.general.zip }} {{ site.data.general.city }}<br><br>
 <span>{% include do/trans.html val="Telefon" %}:</span> <b><a href="tel:{{site.data.general.phone1}}" title="Telefon" class="text-decoration-none">{{site.data.general.phone1_text}}</a></b><br>

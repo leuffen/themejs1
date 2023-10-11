@@ -1,6 +1,6 @@
 @mixin default-element-format() {
     section h2 {
-        text-transform: uppercase;
+        text-transform: var(--t-header-text-transform, none);
         // font-weight: bold;
 
         margin: var(--t-paragraf-margin);

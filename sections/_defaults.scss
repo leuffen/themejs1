@@ -13,7 +13,7 @@
     --t-text-background-light: var(--t-background);
     --t-text-color-accent: var(--bs-gray-900);
     --t-text-color-primary: var(--bs-primary);
-    --t-header-text-transform: var(--header-text-transform);
+    --t-header-text-transform: #{$header-text-transform};
 
     --t-border-color: #{$border-color};
     --t-navbar-height: 88px;
@@ -26,5 +26,6 @@
 
     --t-section-padding: 40px 0;
     --t-section-inner-padding: 3rem;
+
 
 }
