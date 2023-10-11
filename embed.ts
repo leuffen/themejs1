@@ -1,3 +1,3 @@
-import {initLoader} from "@leuffen/liscom/loader";
+import {initLoader} from "@leuffen/liscom-loader";
 
 initLoader()
