@@ -18,7 +18,7 @@ type: article
 _schiller_instructions: ""
 ---
 ## Ihre Hausarztpraxis in Freudenstadt-Wittlensweiler
-{: layout="use: #sec-card-2col; mobile_reverse: no"}
+{: layout="use: #sec-card-2col; class:text-first" }
 
 
 {% include el/address.html %}
