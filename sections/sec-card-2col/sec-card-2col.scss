@@ -5,7 +5,6 @@
     background: var(--t-section-background);
 
 
-
     map.aside {
         --joda-class: "";
         display: block;
@@ -26,16 +25,12 @@
 
 
     .row > .tjs__sec-card-2col--col-start  {
-        --joda-class: "col-12 col-lg-6 p-4 p-lg-5 order-2 order-lg-1";
+        order: 99;
     }
 
 
     .row > .tjs__sec-card-2col--col-end  {
-
-        --joda-class: "col-12 col-lg-6 order-1 order-lg-2";
-        &:has(> slot > .aside) {
-            --joda-class: "col-12 col-lg-6 order-3 order-lg-1";
-        }
+        order: 50;
         slot {
             display: block;
             width: 100%;
@@ -60,7 +55,8 @@
 
 }
 
-.tjs__sec-card-2col:nth-of-type(odd) .row {
+.tjs__sec-card-2col.desktop:nth-of-type(odd) .row {
     flex-direction: row-reverse;
-    //--joda-class: "flex-row-reverse";
+
 }
+
