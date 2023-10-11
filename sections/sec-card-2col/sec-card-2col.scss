@@ -25,6 +25,12 @@
     }
 
 
+    &.mobile.text-first {
+        .row > .tjs__sec-card-2col--col-start {
+        order: 1;
+        }
+    }
+
     .row > .tjs__sec-card-2col--col-start {
         order: 99;
     }
