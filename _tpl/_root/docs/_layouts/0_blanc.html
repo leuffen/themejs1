@@ -6,7 +6,7 @@ layout: null
 <head>
     <base href="{% if site.baseurl == "" or site.baseurl == null %}/{% else %}{{ site.baseurl }}{% endif %}">
 
-    <meta name="google-site-verification" content="_KjVejDq0FutLH5_94v9Oq9nUIox549Ksb1LHjtUHXc" />
+    <meta name="google-site-verification" content="NN1A2XEV3PkleJTab6JgTUjJxadD8L_j1ZFHXf8D19Y" />
 
     <link rel="canonical" href="{{ site.data.general.site_base_url }}{{ page.url }}"/>
     <meta charset="utf-8">
@@ -77,12 +77,14 @@ layout: null
         {{ js | replace: "</script>", "<\/script>"}}
     </script>
 
-    <script src="assets/dist/index.js" type="module" async></script>
-    <link rel="preload" href="assets/dist/style_custom.css" as="style"  onload="this.onload=null;this.rel='stylesheet';">
-    <link rel="preload" href="assets/dist/style.css" as="style" onload="this.onload=null;this.rel='stylesheet';this.nextElementSibling.rel='preload'">
-    <link rel="" href="assets/dist/style_late.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
 
 
 </head>
 {{ content }}
+
+<script src="assets/dist/index.js" type="module" defer async></script>
+<link rel="preload" href="assets/dist/style_custom.css" as="style"  onload="this.onload=null;this.rel='stylesheet';">
+<link rel="preload" href="assets/dist/style.css" as="style" onload="this.onload=null;this.rel='stylesheet';this.nextElementSibling.rel='preload'">
+<link rel="" href="assets/dist/style_late.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 </html>
