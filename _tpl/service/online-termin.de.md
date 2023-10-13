@@ -34,7 +34,7 @@ Für **alle anderen Termine** nutzen Sie bitte unser Anfrageformular:
 [select required type="select" name="Termingrund" data-options="Vorsorgekoloskopie, Koloskopie,  Gastroskopie, Sprechstunde und Beratung, Sonografie, Lebersprechstunde,  Sprechstunde für chr. entzündliche Darmerkrankung, allgemeine gastroenterologische Sprecdhstunde" .mb-3]
 [select required type="select" name="Überweisung vom Hausarzt" data-options="Ja, Nein" .mb-3]
 [textarea name="Ihre Nachricht" .mb-3 style="height: 120px;"]
-[input type="checkbox" name="Ihre Nachricht" label="Ich akzeptiere die Datenschutzbestimmungen" required .mb-3]
+[input type="checkbox" name="Datenschutz" label="Ich akzeptiere die Datenschutzbestimmungen" required .mb-3]
 [input type="submit" value="Absenden" .btn .btn-primary .btn-lg .mt-3]
 
 
