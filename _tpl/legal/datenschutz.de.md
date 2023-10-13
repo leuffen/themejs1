@@ -6,10 +6,13 @@ ptags:
 - footernav
 - mininav
 title: Datenschutz
-pid: pages/datenschutz
-description: "Wir nehmen den Schutz Ihrer persönlichen Daten ernst. \U0001F6E1️ Erfahren
-  Sie mehr über unsere Datenschutzpraktiken und üben Sie Ihre Rechte aus. Klicken
-  Sie jetzt!"
+pid: legal/datenschutz
+description: "\U0001F512 Ihre Privatsphäre ist uns wichtig! Erfahren Sie mehr über
+  unseren Datenschutz und wie wir Ihre Daten schützen. Vertraulichkeit garantiert.
+  \U0001F6E1️"
+order: 0
+image: ""
+_schiller_instructions: ""
 ---
 Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten
 vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
@@ -31,6 +34,7 @@ Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
 
 
 {{ site.data.general.name}}<br>
+{%- if site.data.general.name2 != null -%}{{site.data.general.name2}}<br>{% endif %}
 {{site.data.general.street}}<br>
 {{site.data.general.zip}} {{site.data.general.city}}<br><br>
 Telefon: <a href="tel:{{site.data.general.phone1}}">{{site.data.general.phone1_text}}</a><br>
@@ -122,15 +126,15 @@ Die meisten der von uns verwendeten Cookies sind so genannte “Session-Cookies�
 Besuchs automatisch gelöscht. Andere Cookies bleiben auf Ihrem Endgerät gespeichert bis Sie diese löschen.
 Diese Cookies ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen.
 
-Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur 
-im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische 
-Löschen der Cookies beim Schließen des Browser aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität 
+Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur
+im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische
+Löschen der Cookies beim Schließen des Browser aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität
 dieser Website eingeschränkt sein.
 
-Cookies, die zur Durchführung des elektronischen Kommunikationsvorgangs oder zur Bereitstellung bestimmter, von Ihnen 
-erwünschter Funktionen (z.B. Warenkorbfunktion) erforderlich sind, werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO 
-gespeichert. Der Websitebetreiber hat ein berechtigtes Interesse an der Speicherung von Cookies zur technisch 
-fehlerfreien und optimierten Bereitstellung seiner Dienste. Soweit andere Cookies (z.B. Cookies zur Analyse 
+Cookies, die zur Durchführung des elektronischen Kommunikationsvorgangs oder zur Bereitstellung bestimmter, von Ihnen
+erwünschter Funktionen (z.B. Warenkorbfunktion) erforderlich sind, werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO
+gespeichert. Der Websitebetreiber hat ein berechtigtes Interesse an der Speicherung von Cookies zur technisch
+fehlerfreien und optimierten Bereitstellung seiner Dienste. Soweit andere Cookies (z.B. Cookies zur Analyse
 Ihres Surfverhaltens) gespeichert werden, werden diese in dieser Datenschutzerklärung gesondert behandelt.
 
 
@@ -202,34 +206,34 @@ Weitere Informationen zu Google reCAPTCHA sowie die Datenschutzerklärung von Go
 
 {% if site.data.general.tools.googlemaps %}
 ### Google Maps
-    
-Diese Seite nutzt über eine API den Kartendienst Google Maps. Anbieter ist die Google Inc., 1600 Amphitheatre Parkway, 
-Mountain View, CA 94043, USA.         
 
-Zur Nutzung der Funktionen von Google Maps ist es notwendig, Ihre IP Adresse zu speichern. Diese Informationen werden 
-in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Der Anbieter 
-dieser Seite hat keinen Einfluss auf diese Datenübertragung.         
+Diese Seite nutzt über eine API den Kartendienst Google Maps. Anbieter ist die Google Inc., 1600 Amphitheatre Parkway,
+Mountain View, CA 94043, USA.
 
-Die Nutzung von Google Maps erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote und an 
-einer leichten Auffindbarkeit der von uns auf der Website angegebenen Orte. Dies stellt ein berechtigtes 
-Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar. 
+Zur Nutzung der Funktionen von Google Maps ist es notwendig, Ihre IP Adresse zu speichern. Diese Informationen werden
+in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Der Anbieter
+dieser Seite hat keinen Einfluss auf diese Datenübertragung.
 
-Mehr Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von 
+Die Nutzung von Google Maps erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote und an
+einer leichten Auffindbarkeit der von uns auf der Website angegebenen Orte. Dies stellt ein berechtigtes
+Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.
+
+Mehr Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von
 Google: https://www.google.de/intl/de/policies/privacy/.         
 {% endif %}
 
 {% if site.data.general.tools.jameda %}
 ### jameda-Plug-In
 
-Unsere Homepage nutzt Plug-Ins der jameda GmbH, St.-Cajetan-Straße 41, 81669 München. Wenn Sie eine unserer mit 
-einem Jameda- Plug-Ins ausgestatteten Seiten besuchen, wird eine Verbindung zu den Servern von Jameda hergestellt. 
-Dabei wird dem Jameda-Server mitgeteilt, welche unserer Seiten Sie besucht haben. Jameda erhebt Informationen über 
-die Nutzung von HYPERLINK „https://www.arzt-datenschutz.de/www.jameda.de“ \t „_blank“ www.jameda.de von einzelnen 
-Rechnern aus. Mit dem Sammeln solcher Informationen beabsichtigt Jameda sein Online-Angebot zu individualisieren. 
-Wenn Sie mit dem Plug-In interagieren, zum Beispiel den „Empfehlen“-Button betätigen oder einen Kommentar abgeben, 
-wird die entsprechende Information von Ihrem Browser direkt an Jameda übermittelt und dort gespeichert. Den Zweck und 
-Umfang der jeweiligen Datenerhebung und Informationen zur weiteren Verarbeitung und Nutzung der Daten durch die Anbieter 
-sowie Ihre diesbezüglichen Rechte und Einstellungsmöglichkeiten zum Schutz Ihrer Privatsphäre erfahren Sie auf den 
+Unsere Homepage nutzt Plug-Ins der jameda GmbH, St.-Cajetan-Straße 41, 81669 München. Wenn Sie eine unserer mit
+einem Jameda- Plug-Ins ausgestatteten Seiten besuchen, wird eine Verbindung zu den Servern von Jameda hergestellt.
+Dabei wird dem Jameda-Server mitgeteilt, welche unserer Seiten Sie besucht haben. Jameda erhebt Informationen über
+die Nutzung von HYPERLINK „https://www.arzt-datenschutz.de/www.jameda.de“ \t „_blank“ www.jameda.de von einzelnen
+Rechnern aus. Mit dem Sammeln solcher Informationen beabsichtigt Jameda sein Online-Angebot zu individualisieren.
+Wenn Sie mit dem Plug-In interagieren, zum Beispiel den „Empfehlen“-Button betätigen oder einen Kommentar abgeben,
+wird die entsprechende Information von Ihrem Browser direkt an Jameda übermittelt und dort gespeichert. Den Zweck und
+Umfang der jeweiligen Datenerhebung und Informationen zur weiteren Verarbeitung und Nutzung der Daten durch die Anbieter
+sowie Ihre diesbezüglichen Rechte und Einstellungsmöglichkeiten zum Schutz Ihrer Privatsphäre erfahren Sie auf den
 Seiten von Jameda in der Datenschutzerklärung unter: https://www.jameda.de/jameda/datenschutz.php
 
-{% endif %}
+{% endif %}teilweise so genannte Cookies. Cookies richten auf Ihrem Rechner keinen Schaden an und enthalten keine Viren. Cookies dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen. Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und die Ihr Browser speichert

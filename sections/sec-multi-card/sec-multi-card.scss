@@ -58,6 +58,10 @@
             .tjs__sec-multi-card__item__body {
                 @extend  .p-4;
                 height: 100%;
+
+                .content > *:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
 

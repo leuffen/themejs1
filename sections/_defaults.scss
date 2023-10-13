@@ -19,7 +19,7 @@
     --t-navbar-height: 88px;
 
     /* What to substract from 100vh to start the next elemment after fullsize header */
-    --t-fullsize-modifier: 150px;
+    --t-fullsize-modifier: #{$hero-fullsize-modifier};
 
     --t-header-margin: 0 0 20px 0;
     --t-paragraf-margin: 0 0 20px 0;

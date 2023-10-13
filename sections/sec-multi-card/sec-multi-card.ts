@@ -6,10 +6,10 @@ Joda.registerTemplate("sec-multi-card__item",
         <div class="col tjs__sec-multi-card__item">
             <div class="wrapper">
 
-                <slot class="tjs__sec-multi-card__item-img" data-select="img"></slot>
+                <slot class="tjs__sec-multi-card__item-img [[layout.img_class]]" data-select="img"></slot>
 
 
-                <div class="tjs__sec-multi-card__item__body text-format">
+                <div class="tjs__sec-multi-card__item__body text-format ">
                     <slot></slot>
                 </div>
             </div>
