@@ -114,5 +114,5 @@ Unser freundliches und kompetentes Team unterstützt Dr. Osman mit langjähriger
 ---
 
 [textarea name="Ihre Nachricht" required .mb-3 style="height: 120px;"]
-[input type="checkbox" name="Ihre Nachricht" label="Ich akzeptiere die Datenschutzbestimmungen" required .mb-3]
+[input type="checkbox" name="Datenschutz" label="Ich akzeptiere die Datenschutzbestimmungen" required .mb-3]
 [input type="submit" name="Absenden" value="Absenden" class="btn btn-primary btn-lg" .my-3]

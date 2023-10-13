@@ -38,7 +38,7 @@ Bitte beachten Sie, dass es sich hierbei noch nicht um das sog. e-Rezept handelt
 [input type="tel" name="Telefon" .mb-3]
 [textarea name="Medikament" required .mb-3]
 [textarea name="Ihre Nachricht (optional)" .mb-3 style="height: 120px;"]
-[input type="checkbox" name="Ihre Nachricht" label="Ich akzeptiere die Datenschutzbestimmungen" required .mb-3]
+[input type="checkbox" name="Datenschutz" label="Ich akzeptiere die Datenschutzbestimmungen" required .mb-3]
 [input type="submit" value="Absenden" .btn .btn-primary .btn-lg .mt-3]
 
 
