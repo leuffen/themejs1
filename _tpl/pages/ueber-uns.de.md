@@ -19,7 +19,7 @@ type: article
 ## Ein kompetentes Team für Ihre Augengesundheit
 {: layout="use: #sec-card-2col"}
 
-![](cdn:///leu-stock/v/64/1920x1280_1200x800_992x661_768x512_480x320_256x256/AdobeStock_495434983.avif_jpeg)
+![](https://cdn.leuffen.de//leu-stock/v2/60/418-279_gfedcba/AdobeStock_99592855.webp)
 
 > Ein Team mit Leidenschaft
 
