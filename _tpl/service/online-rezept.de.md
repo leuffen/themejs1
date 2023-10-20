@@ -7,18 +7,22 @@ layout: article
 order: 70
 permalink: /online-rezept
 pid: service/online-rezept
-ptags:
+ptags: ~
 published: true
 skipHead: false
 title: Online-Rezept
 type: article
+_schiller_template: service/online-rezept
+_schiller_instructions: ""
 ---
 ## Online Rezept
 {: layout="use: #sec-card-2col"}
 
+> Jetzt Wiederholungsrezept online anfragen
+
+
 ![](https://cdn.leuffen.de//leu-stock/v2/96/c_gfedcba/AdobeStock_249986710.webp)
 
-> Jetzt Wiederholungsrezept online anfragen
 
 Mit unserem Online-Rezeptformular können Sie bequem von zu Hause aus ein neues Rezept für Ihre Dauermedikation oder Folgerezepte anfordern.
  **Bestellungen vor 10:00 Uhr können am Folgetag abgeholt werden.**
