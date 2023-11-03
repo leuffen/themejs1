@@ -92,9 +92,11 @@ Unsere Lasertherapie wird zur Behandlung von verschiedenen Augenerkrankungen ein
 ## Ein erfahrener Augenarzt für Ihre Gesundheit
 {: layout="use: #sec-card-2col"}
 
+> Ihr vertrauensvoller Ansprechpartner
+
 ![](cdn:///leu-stock/v/64/1920x1280_1200x800_992x661_768x512_480x320_256x256/AdobeStock_495434983.avif_jpeg)
 
-> Ihr vertrauensvoller Ansprechpartner
+
 
 Dr. Osman ist ein erfahrener Facharzt für Augenheilkunde und spezialisiert auf die Behandlung von Makuladegeneration und anderen Netzhauterkrankungen.
 
