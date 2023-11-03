@@ -5,10 +5,12 @@ lang: de
 layout: website
 permalink: /
 pid: pages/index
-ptags: []
+ptags: 
+  - nav
 published: true
 order: 1
 title: Titel - Beschreibung
+short_title: Home
 _schiller_instructions: "Ändere die Texte und Bilder. Füge am Ende die CTA ein. Gehe auf die im Context genannten Informationen ein. Entferne Links zu nicht vorhandenen Seiten."
 ---
 
@@ -26,12 +28,12 @@ _schiller_instructions: "Ändere die Texte und Bilder. Füge am Ende die CTA ein
 
 ### Aktuelles
 
-
+<liweco-news></liweco-news>
 
 ### Notfallbehandlung
 
-In unserer Augenpraxis bieten wir eine umfassende Diagnostik und Behandlung von Sehstörungen bei Kindern und Erwachsenen an.
-
+Bei akuten Notfällen: Telefon [112](tel:112).
+Ärztlicher Bereitschaftsdienst ab 18:00 Uhr und Wochenende/Feiertage: Telefon [116 117](tel:116117).
 
 ### Sprechstundenzeiten
 
