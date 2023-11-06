@@ -10,6 +10,7 @@
         &>slot {
             display: block;
             position: relative;
+            min-height: 66vh;
             aspect-ratio: var(--layout-image-ratio, 5 / 4);
         }
         & > slot > img {
