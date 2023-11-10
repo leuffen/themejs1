@@ -38,7 +38,7 @@
             }
 
         }
-
+        min-height: var(--layout-min-height, 400px);
         position: relative;
         &.tjs__hero-max--autoheight {
             height: calc(100vh - var(--t-fullsize-modifier, 200px));
