@@ -10,6 +10,7 @@
         &>slot {
             display: block;
             position: relative;
+            min-height: 66vh;
             aspect-ratio: var(--layout-image-ratio, 5 / 4);
         }
         & > slot > img {
@@ -38,7 +39,7 @@
             }
 
         }
-
+        min-height: var(--layout-min-height, 400px);
         position: relative;
         &.tjs__hero-max--autoheight {
             height: calc(100vh - var(--t-fullsize-modifier, 200px));
@@ -85,6 +86,9 @@
         font-size: calc(1.5em + 1vw);
     }
 
+    .slideshow:empty {
+        display: none;
+    }
 
     h1.glow {
         color: white;
@@ -100,10 +104,11 @@
 
 
     .tjs__hero-max--section-text {
-        --joda-class: "col-12 col-lg-7";
     }
 
     .offsetmodifier {
         height: 100px;
     }
+
+
 }

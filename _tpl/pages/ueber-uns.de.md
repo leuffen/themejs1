@@ -19,9 +19,10 @@ type: article
 ## Ein kompetentes Team für Ihre Augengesundheit
 {: layout="use: #sec-card-2col"}
 
+> Ein Team mit Leidenschaft
+
 ![](https://cdn.leuffen.de//leu-stock/v2/60/418-279_gfedcba/AdobeStock_99592855.webp)
 
-> Ein Team mit Leidenschaft
 
 In unserer Praxis werden Sie von Augenarzt Bassel Osman behandelt. Er ist ein erfahrener Facharzt für Augenheilkunde. Unterstützt wird er durch ein intensiv geschultes und langjährig erfahrenes Team von medizinischen Fachangestellten, spezialisiert auf Makuladiagnostik und Lasertherapie. 
 

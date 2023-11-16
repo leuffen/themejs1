@@ -5,6 +5,11 @@
     background: var(--t-section-background);
 
 
+    .tjs__sec-card-2col--col-start > slot > .children > *:last-child {
+        margin-bottom: 0 !important;
+    }
+
+
     map.aside {
         --joda-class: "";
         display: block;
@@ -65,6 +70,12 @@
         overflow: hidden;
         background-color: white;
         padding: 0;
+    }
+
+    h3 {
+        margin-top: 1.5rem;
+        font-size: 1.2em;
+        font-weight: 600;
     }
 
 }
