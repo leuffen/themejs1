@@ -1,7 +1,7 @@
 ---
 description: ""
 icon: bi bi-phone
-image: https://cdn.leuffen.de//leu-stock/v2/93/c_gfedcba/AdobeStock_57857048_1_.webp
+image: hhttps://cdn.leuffen.de//leu-stock/v2/59/72-35_gfedcba/calendar-flat-lay-dates-and-schedules-2022-11-08-05-25-21-utc.webp
 lang: de
 layout: article
 order: 71
@@ -18,7 +18,7 @@ type: article
 
 > Jetzt Termin anfragen
 
-![](https://cdn.leuffen.de//leu-stock/v2/93/c_gfedcba/AdobeStock_57857048_1_.webp)
+![](https://cdn.leuffen.de//leu-stock/v2/58/140-89_gfedcba/calendar-2022-11-14-06-54-22-utc.webp)
 
 
 [Termin für Vorsorgekoloskopie / Lebersprechstunde über ClickDoc online buchen](https://clickdoc.de/cd-de/institution/Eberswalde/Gastroenterologische%20Praxis%20Eberswalde/ab6becf5-bdef-4a8b-880f-685f135b5591){: target="_blanc"}.
