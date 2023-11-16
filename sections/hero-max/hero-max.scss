@@ -86,6 +86,9 @@
         font-size: calc(1.5em + 1vw);
     }
 
+    .slideshow:empty {
+        display: none;
+    }
 
     h1.glow {
         color: white;
@@ -101,7 +104,6 @@
 
 
     .tjs__hero-max--section-text {
-        --joda-class: "col-12 col-lg-7";
     }
 
     .offsetmodifier {

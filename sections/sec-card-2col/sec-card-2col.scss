@@ -5,6 +5,11 @@
     background: var(--t-section-background);
 
 
+    .tjs__sec-card-2col--col-start > slot > .children > *:last-child {
+        margin-bottom: 0 !important;
+    }
+
+
     map.aside {
         --joda-class: "";
         display: block;

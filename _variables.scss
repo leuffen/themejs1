@@ -13,6 +13,12 @@ $danger:    #bf1c0a !default;
 $warning:   #bf760a !default;
 $dark:      #006837 !default;
 
+$soft-primary: lighten($primary, 40%) !default;
+$soft-success: lighten($success, 40%) !default;
+$soft-danger: lighten($danger, 50%) !default;
+$soft-warning: lighten($warning, 50%) !default;
+$soft-dark: lighten($dark, 40%) !default;
+
 $background: rgba(217, 217, 217, 0.24) !default;
 $background-primary:        #b7eaf9 !default;
 $background-accent:         #ddd    !default;
