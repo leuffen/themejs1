@@ -30,8 +30,8 @@ _schiller_instructions: "Ändere die Texte und Bilder. Füge am Ende die CTA ein
 
 ### Notfallbehandlung
 
-In unserer Augenpraxis bieten wir eine umfassende Diagnostik und Behandlung von Sehstörungen bei Kindern und Erwachsenen an.
-
+Bei akuten Notfällen: Telefon [112](tel:112).
+Ärztlicher Bereitschaftsdienst ab 18:00 Uhr und Wochenende/Feiertage: Telefon [116 117](tel:116117).
 
 ### Sprechstundenzeiten
 
