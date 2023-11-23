@@ -18,7 +18,7 @@ type: website
 # Willkommen in der Hausarztpraxis Graß
 {: layout="use: #hero-max; cols:7; class: box"}
 
-![](https://cdn.leuffen.de//leu-stock/v2/63/c_gfedcba/AdobeStock_86161955.webp)
+![](https://cdn.leuffen.de//leu-stock/v2/32/304-205_gfedcba/AdobeStock_138200241.webp)
 {: .background}
 
 [Jetzt Termin vereinbaren](/kontakt){: .btn .btn-primary .btn-lg .m-1}
@@ -59,33 +59,32 @@ Für weitere Informationen oder zur Terminvereinbarung kontaktieren Sie uns bitt
 
 
 ## Unsere Leistungen
-{: layout="use: #sec-multi-card; cols:2"}
+{: layout="use: #sec-multi-card; cols:3"}
 
-
-
-### Vorsorge und individuelle Beratung
-
-![Zettel und Handy mit Vorsorgeuntersuchung](https://cdn.leuffen.de//leu-stock/v2/31/c_gfedcba/AdobeStock_114414482.webp)
-
-Ihre Gesundheit ist unser Anliegen. Durch frühzeitige Vorsorgeuntersuchungen können potenzielle Gesundheitsrisiken erkannt 
-und entsprechend gehandelt werden. Egal ob Jugendschutzuntersuchungen, Hautkrebs-Früherkennung oder spezielle Beratungen – 
-wir sind für Sie und Ihre Gesundheit da
+### Vorsorge
 
 ![](https://cdn.leuffen.de//leu-stock/v2/70/77-51_gfedcba/AdobeStock_87378997.webp)
 
-[Vorsorge & Beratung](/leistungen/vorsorge.de.html){: .btn .btn-primary .p-3}
+Wir bieten eine umfassende Vorsorgeuntersuchung an, um Krankheiten frühzeitig zu erkennen und zu behandeln.
+
+### Diagnostik
+
+![](https://cdn.leuffen.de//leu-stock/v2/22/460-307_gfedcba/AdobeStock_484261570.webp)
+
+Unsere Praxis ist mit modernsten Diagnosegeräten ausgestattet, um eine genaue und schnelle Diagnose zu gewährleisten.
+
+### Therapie
+
+![](https://cdn.leuffen.de//leu-stock/v2/9/1024-683_gfedcba/AdobeStock_417585744.webp)
+
+Wir bieten eine breite Palette von Therapien an, um eine effektive Behandlung zu gewährleisten.
+
+---
+{: .section-h2}
 
 
-### Diagnostik und Behandlung
-
-![Ultraschalluntersuchung Bauch](https://cdn.leuffen.de//leu-stock/v2/22/460-307_gfedcba/AdobeStock_484261570.webp)
-
-Mit modernsten Diagnoseverfahren stehen wir Ihnen zur Seite, um akute und chronische Erkrankungen zu identifizieren und zu behandeln. Von umfassenden 
-Herz-Lungen Untersuchungen über Labordiagnostik bis zur hochmodernen Sonografie – wir sorgen für Klarheit über Ihren Gesundheitszustand. 
-Unsere spezialisierte Altersmedizin bietet zudem individuelle Lösungen für ältere Patienten
-
-[Mehr zu Diagnostik und Behandlungen](/leistungen/diagnostik.de.html){: .btn .btn-primary .p-3}
-
+[Unsere Leistungen](/leistungen){: .btn .btn-primary .btn-lg .mb-3}
+{: .text-center}
 
 
 

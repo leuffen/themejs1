@@ -6,8 +6,7 @@ layout: article
 order: 80
 permalink: /termin
 pid: pages/termin
-ptags:
-- nav
+ptags:  []
 published: true
 short_title: Termin vereinbaren
 skipHead: false

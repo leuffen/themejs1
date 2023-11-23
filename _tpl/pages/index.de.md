@@ -15,7 +15,7 @@ _schiller_instructions: "Ändere die Texte und Bilder. Füge am Ende die CTA ein
 ---
 
 # Willkommen bei Ihrer <br>Augenpraxis B. Mustermann
-{: layout="use: #hero-max; cols:6; class: box"}
+{: layout="use: #hero-max; cols:7; class: box"}
 
 ![](cdn:///leu-stock/v/26/1920x1280_1200x800_992x661_768x512_480x320_256x256/AdobeStock_114414482.avif_jpeg)
 {: .background}
@@ -37,7 +37,9 @@ Bei akuten Notfällen: Telefon [112](tel:112).
 
 ### Sprechstundenzeiten
 
+<liweco-collapse-openhour-table>
 {% include el/openhours.html %}
+</liweco-collapse-openhour-table>
 
 
 
