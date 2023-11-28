@@ -13,10 +13,11 @@ title: Impressum
 _schiller_template: legal/impressum
 order: 0
 image: ""
-_schiller_instructions: Ändere die Zuständigen Stellen und Regelungen auf die in dem
-  Bundesland geltenden Stellen. Ändere die Links und Anschriften. Verändere nicht
-  die Stuktur der Überschriften. Wandle alles Links zu markdown-links um! Die Anschrift
+_schiller_instructions: Ändere Namen, Berufsbezeichung, die zuständigen Stellen und Regelungen auf die in dem
+  Bezirk geltenden Stellen. Ändere die Links und Anschriften. Verändere nicht
+  die Struktur der Überschriften. Wandle alles Links zu markdown-links um! Die Anschrift
   und Überschrift "Impressum" nicht generieren. Diese werden automatisch erzeugt.
+  Setze platzhalter [daten fehlen] für fehlende Angaben, die für ein korrektes Impressum nötig sind.
 ---
 ### Berufsbezeichnung
 MD (Univ. Ningarhar) Fahim Azizi
@@ -32,8 +33,9 @@ Erwerb der Approbation im Jahr 2014 in Dresden
 Facharztanerkennung für Innere Medizin und Kardiologie im Jahr 2021 in Hannover
 {: .address}
 
-### Zuständige Kammer 
-Körperschaft des öffentlichen Rechts (KdöR)
+### Zuständige Kammer
+
+Landesärztekammer Hessen
 Hanauer Landstraße 15
 60314 Frankfurt am Main
 T 069 976720
@@ -42,7 +44,8 @@ https://www.laekh.de/
 {: .address}
 
 ### Zuständige Kassenärztliche Vereinigung
-Körperschaft des öffentlichen Rechts (KdöR)
+
+Kassenärztliche Vereinigung Hessen
 Europa-Allee 90
 60486 Frankfurt am Main
 T 069 247417777

@@ -12,7 +12,7 @@ layout: null
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0, shrink-to-fit=no">
 
-    <title>{% if page.type != 'website' %}{{ page.title | strip_html | escape }} - {%endif%}{{ site.data.general.title }}</title>
+    <title>{{ page.title | strip_html | escape }}{% if page.type != 'website' %} - {{ site.data.general.title }}{%endif%}</title>
     <meta name="description" content="{{ page.description | strip_newlines| strip_html  | escape | replace: "  ", " " | replace: "  ", " "  | replace: "  ", " " | lstrip}}">
     <meta name="keywords" content="{{ page.keywords | strip_newlines | escape }}">
     <meta name="last-modified" content="{{ site.time }}">
