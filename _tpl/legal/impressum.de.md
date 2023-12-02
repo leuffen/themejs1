@@ -24,6 +24,10 @@ _schiller_instructions: |
 
 Elise Musterfrau, Mathildenstr. 9-11, 45130 Essen
 
+### Umsatzsteuer-Identifikationsnummer
+
+DEXXXXXXXXX
+
 ### Gesetzliche Berufsbezeichnung
 
 Fachärztin für Allgmeinmedizin
