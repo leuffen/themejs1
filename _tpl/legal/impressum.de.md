@@ -13,56 +13,53 @@ title: Impressum
 _schiller_template: legal/impressum
 order: 0
 image: ""
-_schiller_instructions: Ändere Namen, Berufsbezeichung, die zuständigen Stellen und Regelungen auf die in dem
-  Bezirk geltenden Stellen. Ändere die Links und Anschriften. Verändere nicht
-  die Struktur der Überschriften. Wandle alles Links zu markdown-links um! Die Anschrift
-  und Überschrift "Impressum" nicht generieren. Diese werden automatisch erzeugt.
-  Setze platzhalter [daten fehlen] für fehlende Angaben, die für ein korrektes Impressum nötig sind.
+_schiller_instructions: |
+    Ändere die Angaben in den untenstehenden H3 Elmeenten. Füge keine Überschriften hinzu.
+    Tausche die Adresse der Kammer und Aufsichtsbehörde durch die für die Praxis zuständigen aus.
+    Füge die Berufsrechtlichen Regelungen ein, die im Bereich der Praxis gelten (Länder und Fachspezifische Regelungen).
 ---
-### Berufsbezeichnung
-MD (Univ. Ningarhar) Fahim Azizi
-Facharzt für Innere Medizin und Kardiologie
 
-### Rechtsform
-Einzelpraxis
 
-### Gesetzliche Berufsbezeichnung:
-MD (Doctor of Medicine) in Universität Ningarhar
-MBBS ( Bachelor of Medicine and Surgery )
-Erwerb der Approbation im Jahr 2014 in Dresden
-Facharztanerkennung für Innere Medizin und Kardiologie im Jahr 2021 in Hannover
-{: .address}
+### Verantwortliche/r i.S.d. § 18 Abs. 2 MStV
+
+Elise Musterfrau, Mathildenstr. 9-11, 45130 Essen
+
+### Gesetzliche Berufsbezeichnung
+
+Fachärztin für Allgmeinmedizin
+Staat, in dem die Berufsbezeichnung verliehen wurde: Bundesrepublik Deutschland
+
 
 ### Zuständige Kammer
 
-Landesärztekammer Hessen
-Hanauer Landstraße 15
-60314 Frankfurt am Main
-T 069 976720
-info@laekh.de
-https://www.laekh.de/
+Ärztekammer Nordrhein
+Straße 1-3
+12345 Stadt
+[https://www.xyz.de](https://www.xyz.de)
 {: .address}
 
-### Zuständige Kassenärztliche Vereinigung
+### Aufsichtsbehörde
 
-Kassenärztliche Vereinigung Hessen
-Europa-Allee 90
-60486 Frankfurt am Main
-T 069 247417777
-beratung-frankfurt@kvhessen.de
-www.kvhessen.de
+Kassenärztliche Vereinigung Nordrhein
+Straße 1-9
+12345 Stadt
+[https://www.xyz.de](https://www.xyz.de)
 {: .address}
 
 ### Berufsrechtliche Regelungen
 
--https://www.gesetze-im-internet.de/b_o/BJNR018570961.html
--https://www.sozialgesetzbuch-sgb.de/sgbv/1.html
--https://www.gesetze-im-internet.de/heilprg/BJNR002510939.html
--https://www.gesetze-im-internet.de/zo-_rzte/BJNR005720957.html
--https://www.gesetze-im-internet.de/_appro_2002/BJNR240500002.html
-- Berufsordnung für Ärzte
-- Heilberufegesetz 
-- Gebührenordnung für Ärzte (GOÄ)
+- Heilberufegesetzt NRW https://www.aekno.de/aerzte/gesetze-verordnungen/heilberufsgesetz-nrw
 
-Patienten können die Regelungen auf folgender Internetseite einsehen:
-https://www.laekh.de/aerzte/berufsrecht/berufsordnung
+### Berufshaftpflichtversicherung
+Versicherung Xy
+Straße 1-2
+12345 Stadt
+{: .address}
+
+Räumlicher Geltungsbereich der Versicherung: Bundesrepublik Deutschland
+
+### Streitschlichtung
+
+Plattform der EU-Kommission zur Online-Streitbeilegung: https://ec.europa.eu/odr
+
+Wir sind zu einer Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle weder verpflichtet noch bereit. 
