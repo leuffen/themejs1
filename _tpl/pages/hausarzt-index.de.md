@@ -12,7 +12,7 @@ ptags:
 published: true
 seoScore: 8
 short_title: Home
-title: Hausarztpraxis Grass in
+title: Hausarztpraxis
 type: website
 ---
 # Willkommen in der Hausarztpraxis Graß
