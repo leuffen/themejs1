@@ -61,6 +61,19 @@ Für weitere Informationen oder zur Terminvereinbarung kontaktieren Sie uns bitt
 ![](https://cdn.leuffen.de//leu-stock/v2/69/131-86_gfedcba/AdobeStock_319898261.webp)
 
 
+---
+{: layout="use: #sec-card-2col; cols: 12" .section-h2 }
+
+
+### Aktuelle Informationen zum Coronavirus
+{: layout="use: #infobox; type: danger; icon: bi-exclamation-octagon-fill"}
+
+Corona- Test positiv bitte zuerst **NUR** telefonisch melden
+
+Coronaimpfung ab sofort nach Terminvereinbarung
+
+
+
 ## Unsere Leistungen
 {: layout="use: #sec-multi-card; cols:3"}
 

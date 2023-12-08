@@ -59,6 +59,24 @@ Kontaktieren Sie uns für weitere Informationen oder vereinbaren Sie einen Termi
 ![](cdn:///leu-stock/v/68/1920x1280_1200x800_992x661_768x512_480x320_256x256/close-up-view-of-beautiful-blue-female-eye-2021-08-26-22-25-43-utc.avif_jpeg){: style="padding: 40px"}
 
 
+
+
+
+
+---
+{: layout="use: #sec-card-2col; cols: 12" .section-h2 }
+
+
+### Aktuelle Informationen zum Coronavirus
+{: layout="use: #infobox; type: danger; icon: bi-exclamation-octagon-fill"}
+
+Corona- Test positiv bitte zuerst **NUR** telefonisch melden
+
+Coronaimpfung ab sofort nach Terminvereinbarung
+
+
+
+
 ## Unsere Leistungen
 {: layout="use: #sec-multi-card; cols:2"}
 
