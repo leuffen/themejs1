@@ -21,8 +21,11 @@ type: website
 ![](https://cdn.leuffen.de//leu-stock/v2/32/304-205_gfedcba/AdobeStock_138200241.webp)
 {: .background}
 
-[Jetzt Termin vereinbaren](/kontakt){: .btn .btn-primary .btn-lg .m-1}
-[Rezept online anfragen](/online-rezept){: .btn .btn-primary .btn-lg .m-1}
+[[i class="bi bi-calendar-plus-fill fs-3"]<br>Jetzt Termin vereinbaren](/kontakt){: .btn .btn-primary .text-center .btn-lg .m-1 style="width:30%;min-width: 100px;;hyphens: none;"}
+[[i class="bi bi-card-heading fs-3"]<br>Rezept online anfragen](/online-rezept){: .btn .btn-primary .text-center .btn-lg .m-1 style="width:30%;min-width: 100px;hyphens: none;"}
+[[i class="bi bi-box-arrow-up-right fs-3"]<br>Überweisung an Facharzt](/online-ueberweisung){: .btn .btn-primary .text-center .btn-lg .m-1 style="width:30%;min-width: 100px;hyphens: none;"}
+
+
 
 
 ## Übersicht

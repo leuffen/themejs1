@@ -20,7 +20,10 @@ _schiller_instructions: "Ändere die Texte und Bilder. Füge am Ende die CTA ein
 ![](cdn:///leu-stock/v/26/1920x1280_1200x800_992x661_768x512_480x320_256x256/AdobeStock_114414482.avif_jpeg)
 {: .background}
 
-[Jetzt Termin online vereinbaren](/kontakt){: .btn .btn-primary .btn-lg}
+[[i class="bi bi-calendar-plus-fill fs-3"]<br>Jetzt Termin vereinbaren](/kontakt){: .btn .btn-primary .text-center .btn-lg .m-1 style="width:30%;min-width: 100px;;hyphens: none;"}
+[[i class="bi bi-card-heading fs-3"]<br>Rezept online anfragen](/online-rezept){: .btn .btn-primary .text-center .btn-lg .m-1 style="width:30%;min-width: 100px;hyphens: none;"}
+[[i class="bi bi-box-arrow-up-right fs-3"]<br>Überweisung an Facharzt](/online-ueberweisung){: .btn .btn-primary .text-center .btn-lg .m-1 style="width:30%;min-width: 100px;hyphens: none;"}
+
 
 
 ## Headerbar
