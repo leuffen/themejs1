@@ -11,6 +11,7 @@ pid: pages/anfahrt
 ptags:
 - nav
 published: true
+body_class: ~
 short_title: Anfahrt
 skipHead: false
 title: Anfahrt

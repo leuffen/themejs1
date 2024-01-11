@@ -18,6 +18,7 @@ ptags:
 - nav
 published: true
 skipHead: false
+body_class: ~
 title: Unsere Leistungen
 type: article
 ---

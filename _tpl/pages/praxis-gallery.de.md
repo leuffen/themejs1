@@ -12,6 +12,7 @@ ptags:
 - nav
 published: true
 skipHead: false
+body_class: ~
 title: Praxis
 type: article
 ---

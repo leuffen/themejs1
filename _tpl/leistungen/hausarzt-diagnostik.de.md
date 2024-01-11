@@ -12,6 +12,7 @@ ptags:
 published: true
 skipHead: false
 title: Diagnostik
+body_class: ~
 type: article
 keywords: ~
 ---

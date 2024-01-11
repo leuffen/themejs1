@@ -10,6 +10,7 @@ pid: pages/kontakt-anfahrt
 ptags:
 - nav
 published: true
+body_class: ~
 skipHead: false
 title: Kontakt & Anfahrt
 type: article

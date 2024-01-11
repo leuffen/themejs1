@@ -10,6 +10,7 @@ pid: service/online-termin
 ptags:
 published: true
 skipHead: false
+body_class: ~
 title: Terminanfrage / Online Termin
 type: article
 ---

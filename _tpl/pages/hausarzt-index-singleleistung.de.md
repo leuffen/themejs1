@@ -12,6 +12,7 @@ ptags:
 published: true
 seoScore: 8
 short_title: Home
+body_class: ~
 title: Hausarztpraxis
 type: website
 ---
