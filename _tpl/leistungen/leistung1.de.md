@@ -13,6 +13,7 @@ ptags:
 published: true
 skipHead: false
 title: Leistung 1
+body_class: ~
 type: article
 _schiller_instructions: "Ändere die Texte und Bilder. Füge am Ende die CTA ein. Gehe auf die im Context genannten Leistungen ein."
 ---

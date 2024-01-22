@@ -10,6 +10,7 @@ ptags:
 - mininav
 published: true
 title: Impressum
+body_class: ~
 _schiller_template: legal/impressum
 order: 0
 image: ""

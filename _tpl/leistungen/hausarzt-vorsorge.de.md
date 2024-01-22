@@ -11,6 +11,7 @@ ptags:
 published: true
 skipHead: false
 title: Vorsorge
+body_class: ~
 type: article
 keywords: ~
 ---

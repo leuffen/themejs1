@@ -11,6 +11,7 @@ ptags: ~
 published: true
 skipHead: false
 title: Online-Rezept
+body_class: ~
 type: article
 _schiller_template: service/online-rezept
 _schiller_instructions: ""

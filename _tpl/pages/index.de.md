@@ -10,6 +10,7 @@ ptags:
 published: true
 order: 1
 title: Titel - Beschreibung
+body_class: ~
 short_title: Home
 _schiller_instructions: "Ändere die Texte und Bilder. Füge am Ende die CTA ein. Gehe auf die im Context genannten Informationen ein. Entferne Links zu nicht vorhandenen Seiten."
 ---

@@ -11,6 +11,7 @@ description: "\U0001F512 Ihre Privatsphäre ist uns wichtig! Erfahren Sie mehr �
   unseren Datenschutz und wie wir Ihre Daten schützen. Vertraulichkeit garantiert.
   \U0001F6E1️"
 order: 0
+body_class: ~
 image: ""
 _schiller_instructions: ""
 ---

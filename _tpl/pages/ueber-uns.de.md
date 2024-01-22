@@ -12,6 +12,7 @@ ptags:
 - nav
 published: true
 short_title: Über uns
+body_class: ~
 skipHead: false
 title: Über uns
 type: article
