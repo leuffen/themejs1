@@ -2,8 +2,6 @@
 _schiller_instructions: |-
   Aufteilung in: Vorsorge, Therapie, Diagnostik
 
-  Folgende Leistungen werden angeboten:
-  Ultraschall, EKG, Belastungs-EKA, Lufo, Lanzeit-Blutdruck. Impfungen, DMP, CheckUp, Hautscreening, Hausärztliche Leistungen
 _schiller_template: leistungen/hausarzt-vorsorge
 description: "Schützen Sie Ihre Gesundheit mit unseren Vorsorgeuntersuchungen \U0001FA7A.
   Früherkennung ist der Schlüssel zur Prävention. Jetzt Termin vereinbaren! \U0001F4C5"
