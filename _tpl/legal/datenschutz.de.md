@@ -237,4 +237,4 @@ Umfang der jeweiligen Datenerhebung und Informationen zur weiteren Verarbeitung 
 sowie Ihre diesbezüglichen Rechte und Einstellungsmöglichkeiten zum Schutz Ihrer Privatsphäre erfahren Sie auf den
 Seiten von Jameda in der Datenschutzerklärung unter: https://www.jameda.de/jameda/datenschutz.php
 
-{% endif %}teilweise so genannte Cookies. Cookies richten auf Ihrem Rechner keinen Schaden an und enthalten keine Viren. Cookies dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen. Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und die Ihr Browser speichert
+{% endif %}
