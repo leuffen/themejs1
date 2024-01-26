@@ -9,7 +9,7 @@ ptags:
 - nav
 published: true
 order: 1
-title: Frauenärztin
+title: ~
 body_class: ~
 short_title: Home
 _schiller_instructions: Ändere die Texte und Bilder. Füge am Ende die CTA ein. Gehe
