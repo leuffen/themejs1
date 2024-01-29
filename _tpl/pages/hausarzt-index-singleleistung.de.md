@@ -13,7 +13,7 @@ published: true
 seoScore: 8
 short_title: Home
 body_class: ~
-title: Hausarztpraxis
+title: ~
 type: website
 ---
 # Willkommen in der Hausarztpraxis Graß

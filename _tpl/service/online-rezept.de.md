@@ -28,7 +28,6 @@ _schiller_instructions: ""
 Mit unserem Online-Rezeptformular können Sie bequem von zu Hause aus ein neues Rezept für Ihre Dauermedikation oder Folgerezepte anfordern.
  **Bestellungen vor 10:00 Uhr können am Folgetag abgeholt werden.**
 
-Bitte beachten Sie, dass es sich hierbei noch nicht um das sog. e-Rezept handelt, sondern um eine online Vorbestellung des klassischen Rezepts. Derzeit wird das e-Rezept eingeführt. Wir werden Sie zu gegebener Zeit darüber informieren.
 
 
 

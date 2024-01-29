@@ -22,8 +22,6 @@ type: article
 ![](https://cdn.leuffen.de//leu-stock/v2/58/140-89_gfedcba/calendar-2022-11-14-06-54-22-utc.webp)
 
 
-[Termin für Vorsorgekoloskopie / Lebersprechstunde über ClickDoc online buchen](https://clickdoc.de/cd-de/institution/Eberswalde/Gastroenterologische%20Praxis%20Eberswalde/ab6becf5-bdef-4a8b-880f-685f135b5591){: target="_blanc"}.
-
 Für **alle anderen Termine** nutzen Sie bitte unser Anfrageformular:
 
 ---
