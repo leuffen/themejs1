@@ -19,6 +19,17 @@ Joda.registerTemplate("hero-max",
             </div>
         </section>
 
-    `, {
-    cols: "6",
-    });
+    `,
+    {
+        cols: "6",
+        'aspect-ratio': "5/4",
+    },
+    {
+        onAfterConnectedCallback: (el) => {
+            let wrapper = el.querySelector(".tjs__hero-max--out-wrapper") as HTMLElement;
+            if (wrapper.textContent.trim() === "")
+                wrapper.style.display = "none"; // Remove Wrapper if empty
+        }
+    }
+
+    );

@@ -4,22 +4,26 @@
     --s-box-background: rgba(255, 255, 255, 0.8);
 
     --joda-class: ":: mobile :lg: desktop";
-    --layout-image-ratio: 6 / 4;
+    --layout-image-ratio: 16 / 10;
 
     &.mobile {
         &>slot {
             display: block;
             position: relative;
-            min-height: 66vh;
-            aspect-ratio: var(--layout-image-ratio, 5 / 4);
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            aspect-ratio: var(--layout-image-ratio, 16 / 9);
         }
         & > slot > img {
             object-fit: cover;
+            object-position: center top;
             height: 100%;
             width: 100%;
         }
 
         & > .tjs__hero-max--out-wrapper {
+
             position: relative;
 
             display: flex;
@@ -55,6 +59,7 @@
             & > img {
                 height: 100%;
                 object-fit: cover;
+                object-position: center center;
                 width: 100%;
             }
         }
