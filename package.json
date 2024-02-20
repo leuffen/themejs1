@@ -5,7 +5,7 @@
   "description": "",
   "license": "proprietary",
   "main": "./dist/index.js",
-  "module": "./dist/index.module.js",
+  "module": "./dist/index.js",
   "directories": {
     "doc": "docs",
     "themes": "themes"
