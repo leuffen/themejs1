@@ -46,7 +46,7 @@ Wir bitten um eine Terminvereinbarung.
 
 ### Notfälle
 
-Außerhalb der Sprechstundenzeiten wenden sie sich bitte an den KVB-Bereitschaftsdienst unter der Telefonnummer [116 117](tel:116117) oder den Notruf unter [112](tel:112).
+Außerhalb der Sprechstundenzeiten wenden sie sich bitte an den KV-Bereitschaftsdienst unter der Telefonnummer [116 117](tel:116117) oder den Notruf unter [112](tel:112).
 
 
 

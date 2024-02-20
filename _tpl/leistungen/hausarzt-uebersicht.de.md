@@ -1,6 +1,6 @@
 ---
 _schiller_instructions: |-
-  Aufteilung in: Vorsorge, Therapie, Diagnostik
+  Aufteilung in: Vorsorge, Therapie, Diagnostik. Do not add headlines before the first headline! Always and with a cta element!
 
 _schiller_template: leistungen/hausarzt-vorsorge
 description: "Schützen Sie Ihre Gesundheit mit unseren Vorsorgeuntersuchungen \U0001FA7A.
