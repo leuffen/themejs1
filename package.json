@@ -1,13 +1,13 @@
 {
   "name": "@leuffen/themejs1",
-  "version": "6.1.23",
+  "version": "6.1.24",
 
   "description": "",
   "license": "proprietary",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "exports": {
-    ".": [
+    "./index": [
       "./dist/index.js",
       "./index.scss"
     ],
