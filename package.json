@@ -1,12 +1,16 @@
 {
   "name": "@leuffen/themejs1",
-  "version": "6.1.21",
+  "version": "6.1.22",
 
   "description": "",
   "license": "proprietary",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "exports": {
+    ".": [
+      "./dist/index.js",
+      "./index.scss"
+    ],
     "./embed": [
         "./dist/embed/index.js",
         "./embed.scss"
