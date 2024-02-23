@@ -1,6 +1,6 @@
 {
   "name": "@leuffen/themejs1",
-  "version": "6.1.22",
+  "version": "6.1.23",
 
   "description": "",
   "license": "proprietary",
@@ -12,7 +12,7 @@
       "./index.scss"
     ],
     "./embed": [
-        "./dist/embed/index.js",
+        "./dist/embed.js",
         "./embed.scss"
     ],
     "./index.dev": [
