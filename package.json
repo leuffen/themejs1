@@ -1,6 +1,6 @@
 {
   "name": "@leuffen/themejs1",
-  "version": "6.1.16",
+  "version": "6.1.17",
 
   "description": "",
   "license": "proprietary",
@@ -19,8 +19,7 @@
     "/elements",
     "/sections",
     "/_tpl",
-    "*.scss",
-    "*.ts"
+    "*.scss"
   ],
   "workspaces": [
     "workspaces/*"
