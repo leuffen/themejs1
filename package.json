@@ -7,6 +7,10 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "exports": {
+     ".": [
+      "./dist/index.js",
+      "./index.scss"
+    ],
     "./index": [
       "./dist/index.js",
       "./index.scss"
