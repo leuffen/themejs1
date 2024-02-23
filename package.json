@@ -1,14 +1,19 @@
 {
   "name": "@leuffen/themejs1",
-  "version": "6.1.19",
+  "version": "6.1.20",
 
   "description": "",
   "license": "proprietary",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "exports": {
-    "./embed": "./dist/embed.js",
-    "./index.dev": "./dist/index.dev.js"
+    "./embed": [
+        "./dist/embed/index.js",
+        "./embed.scss"
+    ],
+    "./index.dev": [
+      "./dist/index.dev.js"
+    ]
   },
   "directories": {
     "doc": "docs",
