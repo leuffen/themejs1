@@ -1,7 +1,7 @@
 ---
 description: ""
 icon: bi bi-phone
-image: hhttps://cdn.leuffen.de//leu-stock/v2/59/72-35_gfedcba/calendar-flat-lay-dates-and-schedules-2022-11-08-05-25-21-utc.webp
+image: ~
 lang: de
 layout: article
 order: 71

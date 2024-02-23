@@ -5,7 +5,7 @@ _schiller_instructions: |-
 _schiller_template: leistungen/hausarzt-vorsorge
 description: "Schützen Sie Ihre Gesundheit mit unseren Vorsorgeuntersuchungen \U0001FA7A.
   Früherkennung ist der Schlüssel zur Prävention. Jetzt Termin vereinbaren! \U0001F4C5"
-image: https://cdn.leuffen.de//leu-stock/v2/70/77-51_gfedcba/AdobeStock_87378997.webp
+image: ~
 keywords: ~
 lang: de
 layout: article
