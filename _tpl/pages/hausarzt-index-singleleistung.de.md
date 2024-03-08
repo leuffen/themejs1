@@ -3,7 +3,7 @@ description: "Entdecken Sie die Hausarztpraxis Graß in Frensdorf. Professionell
   Versorgung, Vorsorge, Diagnostik und IGeL-Leistungen. \U0001FA7A\U0001F469‍⚕️ Jetzt
   Termin vereinbaren! \U0001F4DE"
 _schiller_instructions: |-
-  Aktualisiere die Leistungen nach den Gliederungspunkte. Wähle passende Bilder aus. Aktualisiere alle Texte passend zum Context.
+  Aktualisiere die Leistungen nach den Gliederungspunkte. Ersetze Bilder der Leistungen durch passende Bilder. Aktualisiere alle Texte passend zum Context.
 
 keywords: ~
 lang: de
