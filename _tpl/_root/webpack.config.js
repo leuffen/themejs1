@@ -40,8 +40,7 @@ module.exports = {
                 test: /\.(scss|css)$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
                 include: [
-                    path.resolve(__dirname, "src"),
-                    path.resolve(__dirname, "workspaces")  // Required for workspaces
+                    path.resolve(__dirname, "src") // It should not be necessary to include workspaces here
                 ]
             },
 
