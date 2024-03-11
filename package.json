@@ -9,15 +9,18 @@
   "exports": {
      ".": [
       "./dist/index.js",
+       "./index.ts",
       "./index.scss"
     ],
     "./index": [
       "./dist/index.js",
+      "./index.ts",
       "./index.scss"
     ],
     "./embed": [
-      "./dist/embed.js",
-      "./embed.scss"
+        "./dist/embed.js",
+        "./embed.ts",
+        "./embed.scss"
     ],
     "./index.dev": [
       "./dist/index.dev.js"
