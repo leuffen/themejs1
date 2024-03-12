@@ -1,6 +1,6 @@
 {
   "name": "@leuffen/themejs1",
-  "version": "6.1.32",
+  "version": "6.1.33",
 
   "description": "",
   "license": "proprietary",
@@ -30,7 +30,8 @@
     ],
     "./theme1": [
       "./theme1.scss"
-    ]
+    ],
+    "./font/": "./font/"
   },
   "directories": {
     "doc": "docs",
@@ -42,6 +43,7 @@
     "/templates",
     "/themes",
     "/docs",
+    "/font",
     "/elements",
     "/sections",
     "/_tpl",

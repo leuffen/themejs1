@@ -6,6 +6,8 @@ von "wir" als Praxis. Schreibe professionell, freundlich und informativ. Schreib
 explizit vor Namen im Context genannt wurden.
 
 
+
+
 Gliederung für Leistungen: (Allgemeinmediziner)
 - Vorsorge
 - Diagnostik
@@ -15,6 +17,9 @@ Gliederung für Leistungen: (Zahnarzt)
 - Prophylaxe
 - Zahnerhaltung
 - Zahnersatz
+
+Teile die Leitungen in die 3 Gliederungsbereiche ein. Ordne die Leistungen den Bereichen zu.
+Erstelle einen kurzen Text zu jeder Leistung als Accordion.
 
 
 Folgende Bilder stehen zur Verfügung:
