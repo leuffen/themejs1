@@ -59,8 +59,10 @@ Joda.registerTemplate(
             let changer = () => {
                 if (window.scrollY > 1) {
                     navbar.classList.add("scrolled");
+                    navbar.classList.remove("unscrolled");
                 } else {
                     navbar.classList.remove("scrolled");
+                    navbar.classList.add("unscrolled");
                 }
 
                 let isScrollingUp = window.scrollY < lastY;

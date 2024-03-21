@@ -21,7 +21,7 @@
     --layout-burger-color: var(--t-accent);
     --layout-menu-color: var(--bs-primary);
     --layout-image-height: 80px;
-
+    --layout-zoom-ratio: 2;
 
     &>.navbar {
         background-color: var(--layout-bg-default);
@@ -35,6 +35,12 @@
             height: auto;
 
             width: 50%;
+        }
+
+
+        &.unscrolled {
+            padding-bottom: 400px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.97) 20%, rgba(0,0,0,0) 100%);
         }
 
         &.scrolled {
@@ -75,7 +81,7 @@
                 img {
                     height: var(--layout-image-height);
                     transition: all 0.25s ease-in-out;
-                    width: auto;  transform: translateY(50%) scale(2);
+                    width: auto;  transform: translateY(50%) scale(var(--layout-zoom-ratio));
                     max-width: 70vw;
                 }
 
