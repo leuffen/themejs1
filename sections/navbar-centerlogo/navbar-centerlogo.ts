@@ -4,25 +4,26 @@ import {Joda, JodaDescriptionManager} from "@leuffen/jodastyle";
 
 const html = `
 
-    <nav class="navbar-centerlogo navbar :: mobile :xl:">
-        <div class="navbar__wrapper [[ layout.container ]]">
-            <slot class="" data-select="ul.navbar-top "></slot>
+    <nav class="navbar-centerlogo">
+        <div class="navbar">
+            <div class="navbar__wrapper [[ layout.container ]]">
+                <slot class="" data-select="ul.navbar-top "></slot>
 
-            <slot class="navbar__logo" data-select="[[ layout.slot_logo_selector ]]"></slot>
+                <slot class="navbar__logo" data-select="[[ layout.slot_logo_selector ]]"></slot>
 
-            <div class="burger-menu" onclick="this.closest('nav').classList.toggle('sidebar')">
-                <div class="burger-menu__text">
-                    [[ layout.burger_text ]]
+                <div class="burger-menu" onclick="this.closest('nav').classList.toggle('sidebar')">
+                    <div class="burger-menu__text">
+                        [[ layout.burger_text ]]
+                    </div>
+                    <div class="burger-menu__burger">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
-                <div class="burger-menu__burger">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
+
             </div>
-
         </div>
-
 
         <aside>
             <div class="backdrop" onclick="this.closest('nav').classList.remove('sidebar')"></div>
@@ -44,20 +45,36 @@ Joda.registerTemplate(
     html,
     {
         slot_logo_selector: ".brand",
-        burger_text: "Menu",
-        container: "container"
+        burger_text: "Menü",
+        container: "container",
 
+        scrollup_position: 300
     },
     {
-        "onAfterConnectedCallback": (element: HTMLElement) => {
+        "onAfterAllTemplatesConnectedCallback": (element: HTMLElement) => {
             // If the page is scrolled down, the navbar should be sticky
             // Update this on scroll event
-            window.addEventListener("scroll", () => {
+            let lastY = 0;
+            let navbar = element.querySelector(".navbar")
+            let changer = () => {
                 if (window.scrollY > 1) {
-                    element.classList.add("scrolled");
+                    navbar.classList.add("scrolled");
                 } else {
-                    element.classList.remove("scrolled");
+                    navbar.classList.remove("scrolled");
                 }
-            });
+
+                let isScrollingUp = window.scrollY < lastY;
+                lastY = window.scrollY;
+
+                if (window.scrollY > 800 && ! isScrollingUp) {
+                    navbar.classList.add("scrollup");
+                } else {
+                    navbar.classList.remove("scrollup");
+                }
+
+            }
+
+            window.addEventListener("scroll", changer, {passive: true});
+            changer()
         }
     });

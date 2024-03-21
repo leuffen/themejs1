@@ -17,75 +17,88 @@
 
     --layout-bg-default: transparent;
     --layout-bg-sticky: #fff;
-    --layout-bg-sticky-shadow: 0px 1px 2px #000;
+    --layout-bg-sticky-shadow: 0px 1px 5px rgba(0, 0, 0, 0.6);
     --layout-burger-color: var(--t-accent);
     --layout-menu-color: var(--bs-primary);
     --layout-image-height: 80px;
 
 
-    background-color: var(--layout-bg-default);
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    height: auto;
-    z-index: 999;
-
-    .brand img {
-        height: auto;
-
-        width: 50%;
-    }
-
-    &.scrolled img.brand {
-        width: auto;
-        height: 80px;
-
-    }
-
-
-    &>.navbar__wrapper {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        flex-direction: row;
-
-        & > *{
-            flex-grow: 1;
-            display: flex;
-            width: 33%;
-        }
-        &>.navbar__logo {
-            transition: all 0.5s ease-in-out;
-            align-items: center;
-            justify-content: center;
-            display: flex;
-
-
-            img {
-                height: var(--layout-image-height);
-                transition: all 0.25s ease-in-out;
-                width: auto;  transform: translateY(50%) scale(2);
-                max-width: 70vw;
-            }
-
-        }
-        @import "burger-menu";
-
-    }
-
-    transition: background-color 0.2s ease-in-out;
-
-
-
-    &.scrolled {
-        height: var(--layout-scrolled-height);
-        position: fixed;
+    &>.navbar {
+        background-color: var(--layout-bg-default);
+        position: absolute;
         top: 0;
         width: 100vw;
-        background-color: var(--layout-bg-sticky);
-        .navbar__logo img {
-            transform: translateY(0) scale(1);
+        height: auto;
+        z-index: 999;
+
+        .brand img {
+            height: auto;
+
+            width: 50%;
         }
+
+        &.scrolled {
+            box-shadow: var(--layout-bg-sticky-shadow);
+            img.brand {
+                width: auto;
+                height: 80px;
+
+            }
+        }
+
+
+        transform: translateY(0);
+        transition: all 0.3s ease-in-out;
+        &.scrollup {
+            transform: translateY(-100%);
+        }
+
+
+        &>.navbar__wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            flex-direction: row;
+
+            & > *{
+                flex-grow: 1;
+                display: flex;
+                width: 33%;
+            }
+            &>.navbar__logo {
+                transition: all 0.5s ease-in-out;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+
+
+                img {
+                    height: var(--layout-image-height);
+                    transition: all 0.25s ease-in-out;
+                    width: auto;  transform: translateY(50%) scale(2);
+                    max-width: 70vw;
+                }
+
+            }
+            @import "burger-menu";
+
+        }
+
+
+
+
+
+        &.scrolled {
+            height: var(--layout-scrolled-height);
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            background-color: var(--layout-bg-sticky);
+            .navbar__logo img {
+                transform: translateY(0) scale(1);
+            }
+        }
+
     }
 
 
