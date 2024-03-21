@@ -6,14 +6,14 @@
 
 //$font-family-base: Ubuntu-R,sans-serif;
 $font-family-base: sans-serif !default;
+$font-family-header: $font-family-base !default;
 
-
+$accent:    #f19045 !default;
 $primary:   #a3979b !default;
 $success:   #22b573 !default;
 $danger:    #bf1c0a !default;
 $warning:   #bf760a !default;
 $dark:      #006837 !default;
-
 
 $soft-primary: lighten($primary, 40%) !default;
 $soft-success: lighten($success, 40%) !default;
@@ -29,6 +29,8 @@ $content-offset-top:        100px !default;
 $content-height-adjustment: 200px !default;
 
 $font-size-base:            0.9rem  !default;
+$font-size-header:          1.8rem  !default;
+
 $line-height-base:          1.2     !default;
 $paragraph-margin-bottom:   1.5rem !default;
 
@@ -52,3 +54,5 @@ $border-color: #999 !default;
 
 $header-text-transform: uppercase !default;
 $hero-fullsize-modifier: 200px !default;
+
+

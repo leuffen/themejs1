@@ -1,5 +1,6 @@
 
 import "./navbar-blox/navbar-blox";
+import "./navbar-centerlogo/navbar-centerlogo";
 import "./sec-legal-content/sec-legal-content";
 import "./sec-testimonial-ribbon/sec-testimonial-ribbon";
 import "./sec-card-2col/sec-card-2col";

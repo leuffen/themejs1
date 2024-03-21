@@ -5,6 +5,12 @@
     --t-section-background-accent: #{$background-accent};
     --t-section-background-primary: #D6EED9;
 
+
+    --t-font-family-base: #{$font-family-base};
+    --t-font-family-header: #{$font-family-header};
+
+
+
     --t-section-border-color: #{$section-border-color};
     --t-section-border-radius: #{$section-border-radius};
 
@@ -27,5 +33,6 @@
     --t-section-padding: 40px 0;
     --t-section-inner-padding: 3rem;
 
+    --t-accent: #{$accent};
 
 }

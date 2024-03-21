@@ -1,0 +1,175 @@
+@import "bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "bootstrap/scss/variables";
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+
+
+.navbar-centerlogo {
+
+    --layout-bg-default: transparent;
+    --layout-bg-sticky: #fff;
+    --layout-bg-sticky-shadow: 0px 1px 2px #000;
+    --layout-burger-color: var(--t-accent);
+    --layout-menu-color: var(--bs-primary);
+    --layout-image-height: 80px;
+
+
+    background-color: var(--layout-bg-default);
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: auto;
+    z-index: 999;
+
+    .brand img {
+        height: auto;
+
+        width: 50%;
+    }
+
+    &.scrolled img.brand {
+        width: auto;
+        height: 80px;
+
+    }
+
+
+    &>.navbar__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+        & > *{
+            flex-grow: 1;
+            display: flex;
+            width: 33%;
+        }
+        &>.navbar__logo {
+            transition: all 0.5s ease-in-out;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+
+
+            img {
+                height: var(--layout-image-height);
+                transition: all 0.25s ease-in-out;
+                width: auto;  transform: translateY(50%) scale(2);
+                max-width: 70vw;
+            }
+
+        }
+        @import "burger-menu";
+
+    }
+
+    transition: background-color 0.2s ease-in-out;
+
+
+
+    &.scrolled {
+        height: var(--layout-scrolled-height);
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        background-color: var(--layout-bg-sticky);
+        .navbar__logo img {
+            transform: translateY(0) scale(1);
+        }
+    }
+
+
+
+    aside {
+        &>.backdrop {
+            position: fixed;
+            background-color: var(--nav-sidbar-backgrond-color, $primary);
+            opacity: 0.4;
+            top:0; bottom: 0; left: 0; right: 0;
+            width: 100%;
+            height: 100%;
+            transform: scale(0%);
+            -webkit-transform: scale(0, 0);
+            transition: all 0.1s ease-in-out;
+            z-index:9998;
+        }
+        &>.menu {
+
+
+            position: fixed;
+            top: 0; bottom: 0; right: 0;
+            width: 90vw;
+            max-width: 300px;
+            z-index: 9999;
+            transform: translateX(100%);
+            background-color: var(--nav-sidbar-backgrond-color, $primary);
+            // Do big black shadow
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            transition: all 0.2s ease-in-out;
+
+            ul {
+                padding: 0;
+                margin: 0;
+                &>li {
+                    list-style: none;
+                    width: 100%;
+                    &>a {
+                        &:hover {
+                            background-color: var(--nav-sidbar-backgrond-color-hover, darken($primary, 10%));
+                        }
+
+                        display: block;
+                        text-decoration: none;
+                        width: 100%;
+                        padding: 15px;
+                        color: $white;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                    }
+                }
+            }
+
+            &>.menu-header {
+                width: 100%;
+                border-bottom: 1px solid rgba(255, 255,255,0.5);
+                display: flex;
+                align-content: center;
+                justify-content: end;
+
+                &>svg {
+                    cursor: pointer;
+                    margin: 20px;
+                    color: $white;
+                    height: 38px;
+                    width: 38px;
+                }
+            }
+        }
+
+    }
+
+    &.sidebar {
+        aside {
+            &>.backdrop {
+                transform: scale(100%);
+                -webkit-transform: scale(100%, 100%);
+            }
+            &>.menu {
+                transform: translateX(0%);
+            }
+
+
+        }
+    }
+
+
+}

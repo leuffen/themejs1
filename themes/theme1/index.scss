@@ -55,6 +55,7 @@
             text-transform: var(--t-header-text-transform, uppercase);
             font-weight: bold;
             font-size: 16px;
+            font-family: var(--t-font-family-base);
             color: var(--t-text-color-primary) !important;
             margin: var(--t-paragraf-margin);
         }
@@ -62,6 +63,7 @@
         h2, blockquote > p {
             font-size: 1.9em;
             line-height: 1.2em;
+            font-family: var(--t-font-family-header);
             color: var(--t-text-color) !important;
             margin: var(--t-header-margin, 0 0 20px 0);
             hyphens: manual;
