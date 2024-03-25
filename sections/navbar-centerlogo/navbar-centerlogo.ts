@@ -5,6 +5,8 @@ import {Joda, JodaDescriptionManager} from "@leuffen/jodastyle";
 const html = `
 
     <nav class="navbar-centerlogo">
+        <div class="backdrop"></div>
+        <div class="e--spacer"></div>
         <div class="navbar">
             <div class="navbar__wrapper [[ layout.container ]]">
                 <slot class="" data-select="ul.navbar-top "></slot>
@@ -48,10 +50,12 @@ Joda.registerTemplate(
         burger_text: "Menü",
         container: "container",
 
-        scrollup_position: 300
+        scrollup_position: 100
     },
     {
         "onAfterAllTemplatesConnectedCallback": (element: HTMLElement) => {
+            // Query css variable --layout-scrollup from elment
+
             // If the page is scrolled down, the navbar should be sticky
             // Update this on scroll event
             let lastY = 0;
@@ -68,7 +72,7 @@ Joda.registerTemplate(
                 let isScrollingUp = window.scrollY < lastY;
                 lastY = window.scrollY;
 
-                if (window.scrollY > 800 && ! isScrollingUp) {
+                if (window.scrollY > 250 && ! isScrollingUp) {
                     navbar.classList.add("scrollup");
                 } else {
                     navbar.classList.remove("scrollup");
