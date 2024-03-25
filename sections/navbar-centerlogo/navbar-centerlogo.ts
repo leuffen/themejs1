@@ -5,8 +5,8 @@ import {Joda, JodaDescriptionManager} from "@leuffen/jodastyle";
 const html = `
 
     <nav class="navbar-centerlogo">
-        <div class="backdrop"></div>
         <div class="e--spacer"></div>
+        <div class="e--backdrop"></div>
         <div class="navbar">
             <div class="navbar__wrapper [[ layout.container ]]">
                 <slot class="" data-select="ul.navbar-top "></slot>
