@@ -54,7 +54,7 @@
   ],
   "author": "",
   "dependencies": {
-    "@leuffen/jodastyle": "^3.0.9",
+    "@leuffen/jodastyle": "^3.1.0",
     "@kasimirjs/embed": "^1.0.8",
     "@leuffen/isl-base": "^3.0.4",
     "@leuffen/liscom": "^2.0.8",
