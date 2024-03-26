@@ -9,19 +9,13 @@ Joda.registerTemplate("hero-max",
             <slot data-select="img.background, :scope>.content>p.background>img" class="slideshow"></slot>
             <div class="tjs__hero-max--out-wrapper ">
                 <div class="tjs__hero-max--container [[layout.container]] ">
-                    <div class="tjs__hero-max--inner-wrapper :: :xxl: col-[[layout.cols]]">
-                            <div class="tjs__hero-max--section-text">
-                                <slot></slot>
-                            </div>
-                        </div>
-                    </div>
+                    <slot class="content" data-select=".slide || :scope > * "></slot>
                 </div>
             </div>
         </section>
 
     `,
     {
-        cols: "6",
         'aspect-ratio': "5/4",
     },
     {

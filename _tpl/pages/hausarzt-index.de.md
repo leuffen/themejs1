@@ -16,13 +16,16 @@ body_class: ~
 title: ~
 type: website
 ---
-# Willkommen in der Hausarztpraxis Graß
-{: layout="use: #hero-max; cols:7; class: box"}
+---
+{: layout="use: #hero-max;"}
 
-![](https://cdn.leuffen.de//leu-stock/v2/63/c_gfedcba/AdobeStock_86161955.webp)
+![](https://cdn.leuffen.de//leu-stock/v2/32/304-205_gfedcba/AdobeStock_138200241.webp)
 {: .background}
 
-[[i class="bi bi-calendar-plus-fill fs-3"]<br>Jetzt Termin vereinbaren](/kontakt){: .btn .btn-primary .text-center .btn-lg .m-1 style="width:30%;min-width: 100px;;hyphens: none;"}
+# Augenarzt<br>Prof. Dr. Daniel Salchow
+{: .section-h3 layout="use: #hero-slide" .sec-box .sec-slide}
+
+[[i class="bi bi-calendar-plus-fill fs-3"]<br>Jetzt Termin vereinbaren](/termin){: .btn .btn-primary .text-center .btn-lg .m-1 style="width:30%;min-width: 100px;;hyphens: none;" target="_blank"}
 [[i class="bi bi-card-heading fs-3"]<br>Rezept online anfragen](/online-rezept){: .btn .btn-primary .text-center .btn-lg .m-1 style="width:30%;min-width: 100px;hyphens: none;"}
 [[i class="bi bi-box-arrow-up-right fs-3"]<br>Überweisung an Facharzt](/online-ueberweisung){: .btn .btn-primary .text-center .btn-lg .m-1 style="width:30%;min-width: 100px;hyphens: none;"}
 
