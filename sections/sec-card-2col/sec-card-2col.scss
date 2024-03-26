@@ -4,7 +4,10 @@
     padding: var(--t-section-padding);
     background: var(--t-section-background);
 
+
     --layout-title-aspect-ratio: 16 / 9;
+
+
 
     .tjs__sec-card-2col--col-start > slot > .children > *:last-child {
         margin-bottom: 0 !important;
