@@ -3,7 +3,7 @@
     --t-background-footer: #{$background-footer};
     --t-section-background: transparent;
     --t-section-background-accent: #{$background-accent};
-    --t-section-background-primary: #D6EED9;
+    --t-section-background-primary: #{$soft-primary};
 
 
     --t-font-family-base: #{$font-family-base};
@@ -34,5 +34,8 @@
     --t-section-inner-padding: 3rem;
 
     --t-accent: #{$accent};
+    --t-primary: #{$primary};
+    --t-soft-primary: #{$soft-primary};
+    --t-soft-accent: #{$soft-accent};
 
 }
