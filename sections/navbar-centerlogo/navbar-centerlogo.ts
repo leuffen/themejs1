@@ -13,6 +13,8 @@ const html = `
 
                 <slot class="navbar__logo" data-select="[[ layout.slot_logo_selector ]]"></slot>
 
+
+
                 <div class="burger-menu" onclick="this.closest('nav').classList.toggle('sidebar')">
                     <div class="burger-menu__text">
                         [[ layout.burger_text ]]
