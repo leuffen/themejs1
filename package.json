@@ -54,12 +54,12 @@
   ],
   "author": "",
   "dependencies": {
-    "@leuffen/jodastyle": "^3.1.0",
-    "@kasimirjs/embed": "^1.0.8",
-    "@leuffen/isl-base": "^3.0.4",
-    "@leuffen/liscom": "^2.0.8",
-    "@leuffen/liscom-loader": "^1.0.6",
-    "@leuffen/liweco-base": "^2.0.2",
+    "@leuffen/jodastyle": "^3.1.2",
+    "@kasimirjs/embed": "^1.0.23",
+    "@leuffen/isl-base": "^3.0.7",
+    "@leuffen/liscom": "^2.0.10",
+    "@leuffen/liscom-loader": "^1.0.9",
+    "@leuffen/liweco-base": "^2.0.3",
     "@micx/lib-js": "^1.0.22",
     "bootstrap": "^5.3.0"
 
