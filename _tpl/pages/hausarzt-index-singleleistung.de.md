@@ -25,7 +25,7 @@ type: website
 ![](https://cdn.leuffen.de//leu-stock/v2/32/304-205_gfedcba/AdobeStock_138200241.webp)
 {: .background}
 
-# Augenarzt<br>Prof. Dr. Daniel Salchow
+# Augenarzt<br>Prof. Dr. Daniel Mustermann
 {: .section-h3 layout="use: #hero-slide; align-self: self-end; justify-self: left; x-adjust: 0%; y-adjust: 0% " .sec-box .sec-slide}
 
 ---
