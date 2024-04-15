@@ -9,7 +9,7 @@
 
 ### Links
 
-{% assign navi2 = site.pages | where: "lang", page.lang | where: "ptags", "footernav" | sort: "order" %}
+{% assign navi2 = site.pages | where: "lang", "de" | where: "ptags", "footernav" | sort: "order" %}
 {%- for it in navi2 -%}
 {%- assign title = it.short_title | default: it.title -%}
 - [{{title}}]({%- include do/link.html pid=it.pid -%})
