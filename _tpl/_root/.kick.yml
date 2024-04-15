@@ -11,6 +11,11 @@ command:
   jekyll: |
     jekyll serve -s /opt/docs -d /var/www/html --drafts --livereload --port 4000 --livereload-port 4100 --host 0.0.0.0
 
+
+  # Create a Backup to send to customer
+  export:
+      - "jekyll build -s /opt/docs -d /tmp/build && tar -cf /opt/backup_html.tar --transform 's,^,www/,' -C /tmp/build --exclude='./.*' . && tar -rf /opt/backup_html.tar --transform 's,^,source/,' -C /opt/docs --exclude='./.*' . && gzip /opt/backup_html.tar"
+
   dev:
     - killall jekyll ||  echo "no job"
     - killall webpack ||  echo "no job"
