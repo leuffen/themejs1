@@ -15,7 +15,7 @@ const html = `
                     <div class="isl-navbar-switch2__nav--logo">
                         <slot data-select=".brand"></slot>
                     </div>
-                    <div class="isl-navbar-switch2__nav--items">
+                    <div class="isl-navbar-switch2__nav--items :: d-none :xl: d-block">
                         <slot data-select="ul.navbar-main" data-child-class="isl-navbar-switch2__nav--items-item"></slot>
                     </div>
                     <div class="isl-navbar-switch2__nav--mobile-menu :: :xl: d-none" >
