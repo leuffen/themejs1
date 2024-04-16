@@ -2,7 +2,9 @@
 {%- if site.data.general.name2 != null -%}{{site.data.general.name2}}<br>{%- endif -%}
 {{ site.data.general.street }} <br>
 {{ site.data.general.zip }} {{ site.data.general.city }}<br><br>
+{%- if site.data.general.phone1_text != null -%}
 <span>{% include do/trans.html val="Telefon" %}:</span> <b><a href="tel:{{site.data.general.phone1}}" title="Telefon" class="text-decoration-none">{{site.data.general.phone1_text}}</a></b><br>
+{%- endif -%}
 {%- if site.data.general.fax1_text != null -%}
 <span>{% include do/trans.html val="Telefax" %}:</span> <b>{{site.data.general.fax1_text}}</b><br>
 {%- endif -%}

@@ -1,7 +1,10 @@
 .tjs__sec-testimonial-ribbon {
-    padding: var(--t-section-padding);
 
-    background-color: var(--t-section-background);
+    --layout-bg: var(--t-section-background);
+    --layout-bg-ribbon: var(--t-soft-primary);
+
+    padding: var(--t-section-padding);
+    background-color: var(--layout-bg);
 
     &.mobile {
         padding-top: 40px;
@@ -26,7 +29,7 @@
     & > .tjs__sec-testimonial-ribbon--wrapper {
         padding-top: 40px;
         padding-bottom: 40px;
-        background-color: var(--t-section-background-primary);
+        background-color: var(--layout-bg-ribbon);
         font-size: 1.2em;
         font-style: italic;
         letter-spacing: 1px;
