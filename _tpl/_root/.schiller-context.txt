@@ -7,6 +7,10 @@ explizit vor Namen im Context genannt wurden.
 
 
 
+Gliederung der Leistungen: (Onkologie)
+- Diagnostik und Bewertung
+- Behandlung
+- Nachsorge und Support
 
 Gliederung für Leistungen: (Allgemeinmediziner)
 - Vorsorge
@@ -77,3 +81,11 @@ Für HNO-Ärzte:
 ![Untersuchung des Ohrs durch Arzt](https://cdn.leuffen.de//leu-stock/v2/145/c_gfedcba/AdobeStock_176115459.webp)
 ![Untersuchung der Nase durch Arzt](https://cdn.leuffen.de//leu-stock/v2/146/92-63_gfedcba/AdobeStock_10636763.webp)
 ![Symbolbild Frau seitlich mit Ohr und Wellen](https://cdn.leuffen.de//leu-stock/v2/137/211-98_gfedcba/AdobeStock_170518761.webp)
+
+Für Onkologen:
+![Ambulante Chemotherapie](https://cdn.leuffen.de//leu-stock/v2/168/c_gfedcba/AdobeStock_158928583.webp)
+![Untersuchung in der Radiologie](https://cdn.leuffen.de//leu-stock/v2/169/d_gfedcba/AdobeStock_236237534.webp)
+![Titelbild mit Schleife](https://cdn.leuffen.de//leu-stock/v2/170/17-7_gfedcba/AdobeStock_225991855.webp)
+![Patientin mit Kopftuch vor blauem Hintergrund](https://cdn.leuffen.de//leu-stock/v2/171/c_gfedcba/AdobeStock_432408903.webp)
+
+Nutze generische Bilder, wenn kein passendes Bild zum Inhalt vorliegt.
