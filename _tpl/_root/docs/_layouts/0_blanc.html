@@ -85,7 +85,11 @@ layout: null
         {{ js | replace: "</script>", "<\/script>"}}
     </script>
 
-
+    {% comment %} ======== Liquid script for alternative language links ======= {% endcomment %}
+    {%- assign alt_lang_pages = site.pages | where: "pid", page.pid | where_exp: "item", "item.lang != page.lang" -%}
+    {%- for alt_page in alt_lang_pages -%}
+    <link rel="alternate" href="{{ alt_page.url | absolute_url }}" hreflang="{{ alt_page.lang }}" />
+    {% endfor %}
 
 
 </head>
