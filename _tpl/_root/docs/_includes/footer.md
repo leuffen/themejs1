@@ -1,5 +1,5 @@
 
-### Kontakt
+### {% include do/trans.html val="Kontakt" %}
 
 {% include el/address.html %}
 
