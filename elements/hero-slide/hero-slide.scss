@@ -6,7 +6,7 @@
     --layout-text-shadow: 0 0 2px rgba(255, 255, 255, 1);
     --layout-align-self: center;
     --layout-justify-self: center;
-    --layout-cols: 6;
+    --layout-cols: 12;
 
     --layout-y-adjust: 25%;
     --layout-x-adjust: 25%;
@@ -35,6 +35,10 @@
     }
     &.mobile {
         width: 100%;
+
+        .btn {
+            width: 100%;
+        }
     }
 
 

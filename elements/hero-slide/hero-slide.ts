@@ -4,7 +4,7 @@ Joda.registerTemplate("hero-slide",
     // language=HTML
     `
 
-        <article class="hero-slide :: mobile :xl: desktop">
+        <article class="hero-slide :: mobile :lg: desktop">
             <slot></slot>
         </article>
 

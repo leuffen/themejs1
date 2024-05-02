@@ -31,7 +31,7 @@
 
 
     --e-zoom-ratio: var(--layout-zoom-ratio);
-    @media (width < 750px) {
+    @media (width < $breakpoint-mobile) {
         --e-zoom-ratio: var(--layout-zoom-ratio-mobile);
     }
 
@@ -39,7 +39,7 @@
 
 
     &>.e--spacer {
-        @media (width < 750px) {
+        @media (width < $breakpoint-mobile) {
             height: var(--layout-spacer-height-mobile);
         }
         height: var(--layout-spacer-height);
