@@ -85,6 +85,19 @@
 
     }
 
+    &.reverse {
+        &.mobile.text-first {
+            .row > .tjs__sec-card-2col--col-start {
+                order: 99;
+            }
+        }
+
+        .row > .tjs__sec-card-2col--col-start {
+            order: 1;
+
+        }
+    }
+
 
     .row > .tjs__sec-card-2col--col-end {
         order: 50;
@@ -122,10 +135,16 @@
     // Padding
     .tjs__sec-card-2col--col-end {
         padding: var(--layout-padding);
+        &:has(> slot > img) {
+            padding: 0;
+        }
     }
+
     &.mobile .tjs__sec-card-2col--col-end {
         padding: var(--layout-padding-mobile);
     }
+
+
 
     .tjs__sec-card-2col--col-start {
         padding: var(--layout-padding);

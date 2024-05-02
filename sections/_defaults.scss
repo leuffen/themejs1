@@ -4,3 +4,9 @@
 section:last-child {
     padding-bottom: 0;
 }
+
+div.content {
+    &>p:last-child {
+        margin-bottom: 0;
+    }
+}

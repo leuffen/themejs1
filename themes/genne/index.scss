@@ -2,7 +2,7 @@
 
 $primary: #354b68 !default;
 $soft-primary: #dbe2e7 !default;
-$accent: #9c8b58 !default;
+$accent: #9C8B58 !default;
 $soft-secondary: #F8F8F9 !default;
 
 $background: white !default;
@@ -63,3 +63,17 @@ section.tjs-hero-title-small {
 section.tjs-legal-content {
     --layout-margin-top: 200px;
 }
+
+.tjs__sec-multi-card__item,.tjs__sec-card-2col {
+    img {
+        filter: grayscale(70%);
+        transition: all 0.8s ease-in-out;
+    }
+    &:hover {
+        img {
+            filter: grayscale(0%);
+        }
+    }
+}
+
+
