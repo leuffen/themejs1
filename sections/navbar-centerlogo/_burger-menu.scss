@@ -16,8 +16,8 @@
     & > .burger-menu__text {
         padding-right: 5px;
         font-family: var(--t-font-family-header);
-        font-size: var(--t-font-size-header);
-        color: var(--t-text-color-primary);
+        font-size: var(--t-font-size-h5);
+        color: var(--t-primary);
         @media (width < 768px) {
             display: none;
         }

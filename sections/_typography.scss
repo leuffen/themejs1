@@ -1,0 +1,72 @@
+
+
+
+
+html {
+    font-size: var(--t-front-size-root);
+    font-family: var(--t-font-family-base);
+    line-height: var(--t-line-height-base);
+}
+
+
+h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5 {
+     color: var(--t-primary);
+    line-height: var(--t-line-height-header);
+}
+h1, .h1 {
+    color: var(--t-accent);
+    font-family: var(--t-font-family-header);
+    font-size: var(--t-font-size-h1);
+    margin-bottom: 0;
+}
+
+h2, .h2 {
+    font-family: var(--t-font-family-header);
+    font-size: var(--t-font-size-h2);
+}
+h3, .h3 {
+    font-size: var(--t-font-size-h3);
+}
+h4, .h4 {
+    font-size: var(--t-font-size-h4);
+}
+h5, h5 {
+    font-size: var(--t-font-size-h5);
+}
+
+.heading-style-default {
+    h1,h2,h3,h4,h5,h6 {
+        text-align: center;
+        color: var(--t-primary);
+
+    }
+    h1,h2,h3,h4,h5,h6 :has(+ blockquote) {
+        margin-bottom: 0;
+    }
+    h2 + blockquote > p{
+        text-align: center;
+        color: var(--t-accent);
+        font-size: var(--t-font-size-h5);
+    }
+}
+
+blockquote {
+    color: var(--t-primary);
+    font-family: var(--t-font-family-base);
+}
+
+p {
+    color: var(--t-font-color-base);
+    font-size: var(--t-font-size-base);
+    line-height: var(--t-line-height-base);
+    margin-bottom: var(--t-paragraf-margin-bottom);
+
+
+}
+
+.tjs__section-text {
+    &>*:last-child {
+        margin-bottom: 0;
+    }
+}
+

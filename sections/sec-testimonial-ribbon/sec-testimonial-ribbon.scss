@@ -1,55 +1,93 @@
-.tjs__sec-testimonial-ribbon {
+.tjs-testimonial-ribbon {
 
-    --layout-bg: var(--t-section-background);
-    --layout-bg-ribbon: var(--t-soft-primary);
+
+    --layout-section-background: var(--t-background-primary);
+    --layout-image-size: 200px;
+    --layout-image-size-mobile: 120px;
+    --layout-section-padding: var(--layout-section-padding);
+
+
+    --layout-content-padding: 40px;
+
+    --layout-font-size: 1.3rem;
 
     padding: var(--t-section-padding);
     background-color: var(--layout-bg);
 
+
+
+
+
+    .x--wrapper {
+        background-color: var(--layout-section-background);
+
+        padding-top: var(--layout-section-padding);
+
+    }
+
+    &.mobile .x--wrapper {
+        margin-top: calc(var(--layout-image-size-mobile) / 2);
+    }
+    .x--row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
     &.mobile {
-        padding-top: 40px;
-    }
-
-    &.mobile > .tjs__sec-testimonial-ribbon--wrapper {
-        margin-top: 75px;
-
-        .image-round {
-            width: 150px;
-            height: 150px;
-            position: relative;
-            top: -150px;
-            margin-bottom: -150px;
+        .x--row {
+            flex-direction: column;
         }
     }
 
-    h2 {
-        display: none;
+    &.mobile div.x--image > slot{
+        margin-top: -50%;
+
     }
+    &.mobile div.x--image {
+        padding: 0;
+    }
+    &.mobile div.x--image > slot {
+        border: 4px solid var(--layout-section-background);
+    }
+    div.x--image {
 
-    & > .tjs__sec-testimonial-ribbon--wrapper {
-        padding-top: 40px;
-        padding-bottom: 40px;
-        background-color: var(--layout-bg-ribbon);
-        font-size: 1.2em;
-        font-style: italic;
-        letter-spacing: 1px;
+        position: relative;
+        padding: var(--layout-content-padding);
+        &>slot {
 
-        & > .tjs__sec-testimonial-ribbon--container {
-            margin-top: 40px;
+            display: block;
+            width: var(--layout-image-size);
+            height: var(--layout-image-size);
+            border: 1px solid white;
+            border-radius: 100%;
+            &>img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 100%;
+            }
         }
-    }
-
-
-    .text-format {
 
     }
+    slot.x--text {
+        padding: var(--layout-content-padding);
+        display: block;
+        h2,h3 {
+            display: none;
+        }
 
-    .image-round img {
-        border-radius: 100%;
-        border: 2px solid white;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
+
+        p {
+            font-size: var(--layout-font-size);
+            line-height: 1.5;
+            font-weight: lighter;
+            font-style: italic;
+        }
+        p:last-child {
+            margin-bottom: 0;
+            font-weight: normal;
+        }
     }
 }
 

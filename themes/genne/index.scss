@@ -3,95 +3,21 @@
 $primary: #354b68 !default;
 $soft-primary: #dbe2e7 !default;
 $accent: #9c8b58 !default;
+$soft-secondary: #F8F8F9 !default;
 
+$background: white !default;
+$background-primary:  #F8F8F9 !default;
+$background-accent: $soft-primary !default;
+
+@import "../_defaults/headering-style-flex";
+@import "../_defaults/headering-style-hero";
+@import "../_defaults/sprechzeiten-table-highlight";
 
 :root {
     --layout-container: container;
-
+    --layout-soft-background: #{$soft-secondary};
 }
 html body .tjs__hero-max {
-
-    h1 {
-        color: var(--t-accent);
-        font-family: var(--t-font-family-header);
-        font-size: 36px;
-        margin-bottom: 0;
-    }
-    blockquote {
-        color: var(--t-primary);
-        font-family: var(--t-font-family-header);
-        font-size: 52px;
-    }
-
-    h1,h2,h3,h4,h5 {
-        color: var(--t-text-color);
-    }
-
-    font-size: var(--t-font-size-base);
-    h1 {
-        font-size: 2.4em;
-        line-height: 1.2em;
-    }
-    h2, h3,h4,h5 {
-        line-height: 1.2em;
-
-    }
-    h3,h4,h5 {
-        font-size: 1.15em;
-    }
-
-    p {
-        line-height: 1.4em;
-    }
-
-
-
-    table > tbody > tr > td {
-        background: transparent;
-    }
-
-    .tjs__section-text {
-        h2:has(+ blockquote) {
-            text-transform: var(--t-header-text-transform, uppercase);
-            font-weight: bold;
-            font-size: 16px;
-            color: var(--t-text-color-primary) !important;
-            margin: var(--t-paragraf-margin);
-        }
-
-        h2, blockquote > p {
-            font-size: 1.9em;
-            line-height: 1.2em;
-            color: var(--t-text-color) !important;
-            margin: var(--t-header-margin, 0 0 20px 0);
-            hyphens: manual;
-        }
-
-        .table {
-            --bs-table-color: var(--t-text-color);
-        }
-
-        *:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    .section {
-        blockquote p {
-            font-size: 2.3em;
-        }
-    }
-
-
-    .card-body {
-        h3 {
-            font-weight: bold;
-        }
-        color: var(--t-text-color);
-    }
-
-
-
     --t-background-footer: #fff;
     --t-section-background: transparent;
     --t-text-background: #fff;
@@ -99,41 +25,41 @@ html body .tjs__hero-max {
     --t-text-color-accent: var(--bs-gray-900);
     --t-text-color-primary: var(--bs-primary);
 
-
     --t-header-margin: 0 0 20px 0;
     --t-paragraf-margin: 0 0 20px 0;
 
     --t-section-padding: 40px 0;
     --t-section-inner-padding: 3rem;
 
-    .tjs__sec-legal-content {
-        padding-top: 100px;
-    }
-
-    section:last-child {
-        padding-bottom: 0;
-    }
-
-    //    background: var(--bs-light);
-
-    a.btn.btn-primary {
-        color: white !important;
-    }
-    input.btn.btn-primary {
-        color: white !important;
-    }
-
-    .btn {
-        border-radius: var(--t-border-radius)
-    }
-
-    map {
-        --joda-class: ":: aspect-1x1 :lg: aspcect-16x9";
-    }
-
-
     // linear gradient from top white to black
     --layout-desktop-overlay1-background: linear-gradient(180deg, rgba(255,255,255,1) 20%, var(--t-soft-primary) 90%);
     --layout-desktop-overlay3-background: linear-gradient(180deg, rgba(255,255,255,1) 20%, rgba(0,0,0,0) 90%);
     --layout-desktop-image-mask: linear-gradient(-90deg, rgba(255,255,255,1) 30%, rgba(0,0,0,0) 80%);
+}
+
+
+section.tjs__sec-card-2col {
+    --t-section-background: transparent;
+    --layout-container-background: var(--t-background-primary);
+    --layout-border: 0px;
+
+    .box {
+        background-color: white;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+}
+
+section.tjs__sec-testimonial-ribbon {
+    --layout-bg:  var(--t-background-primary)
+
+}
+
+section.tjs-hero-title-small {
+    --layout-margin-top: 200px;
+}
+
+section.tjs-legal-content {
+    --layout-margin-top: 200px;
 }

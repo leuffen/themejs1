@@ -12,7 +12,7 @@ Joda.registerTemplate("hero-max",
             <div class="x-overlay x-overlay3"></div>
             <div class="tjs__hero-max--out-wrapper ">
                 <div class="tjs__hero-max--container [[layout.container]] ">
-                    <slot class="content" data-select=".slide || :scope > * "></slot>
+                    <slot class="content heading-style-hero" data-select=".slide || :scope > * "></slot>
                 </div>
             </div>
         </section>

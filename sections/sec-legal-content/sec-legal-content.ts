@@ -5,7 +5,7 @@ Joda.registerTemplate("sec-legal-content",
     // language=HTML
     `
 
-        <section class="tjs__sec-legal-content :: mobile :lg:">
+        <section class="tjs-legal-content :: mobile :lg:">
             <div class="out-wrapper">
                 <div class="container p-0">
                     <div class="inner-wrapper :: p-4 :lg: p-5">

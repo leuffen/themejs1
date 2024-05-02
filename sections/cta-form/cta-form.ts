@@ -6,7 +6,7 @@ Joda.registerTemplate("cta-form",
         <section class="tjs__cta-form">
             <form  data-micx-formmail-preset="default" data-micx-formmail-sent-message="E-Mail erfolgreich gesendet!">
                 <div class="container">
-                    <slot data-select=":scope h2"></slot>
+                    <slot class="heading-style-default" data-select=":scope h2, :scope blockquote"></slot>
                 </div>
                 <div class="wrapper">
                     <div class="container">

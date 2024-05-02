@@ -1,41 +1,6 @@
-:root {
-    --t-background: #{$background};
-    --t-background-footer: #{$background-footer};
-    --t-section-background: transparent;
-    --t-section-background-accent: #{$background-accent};
-    --t-section-background-primary: #{$soft-primary};
-
-
-    --t-font-family-base: #{$font-family-base};
-    --t-font-family-header: #{$font-family-header};
 
 
 
-    --t-section-border-color: #{$section-border-color};
-    --t-section-border-radius: #{$section-border-radius};
-
-    --t-text-background: #fff;
-    --t-text-color: #707070;
-    --t-text-background-light: var(--t-background);
-    --t-text-color-accent: var(--bs-gray-900);
-    --t-text-color-primary: var(--bs-primary);
-    --t-header-text-transform: #{$header-text-transform};
-
-    --t-border-color: #{$border-color};
-    --t-navbar-height: 88px;
-
-    /* What to substract from 100vh to start the next elemment after fullsize header */
-    --t-fullsize-modifier: #{$hero-fullsize-modifier};
-
-    --t-header-margin: 0 0 20px 0;
-    --t-paragraf-margin: 0 0 20px 0;
-
-    --t-section-padding: 40px 0;
-    --t-section-inner-padding: 3rem;
-
-    --t-accent: #{$accent};
-    --t-primary: #{$primary};
-    --t-soft-primary: #{$soft-primary};
-    --t-soft-accent: #{$soft-accent};
-
+section:last-child {
+    padding-bottom: 0;
 }

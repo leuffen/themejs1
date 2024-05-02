@@ -16,5 +16,12 @@
             padding: var(--layout-padding);
         }
     }
+    slot {
+        &>div.content {
+            &>*:last-child {
+                margin-bottom: 0;
+            }
+        };
+    }
 
 }
