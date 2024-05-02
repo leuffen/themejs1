@@ -1,36 +1,33 @@
-@import "../../variables";
-@import "../_mixins/default-element-format";
 
 
+$primary: #354b68 !default;
+$soft-primary: #dbe2e7 !default;
+$accent: #9c8b58 !default;
 
 
 :root {
     --layout-container: container;
 
-
-
-    --t-border-radius: #{$section-border-radius};
-    --t-background-footer: #{$background-footer};
-    --t-text-footer: #{$text-footer};
-    --t-footer-header-color: #{$text-footer};
-    --t-section-border-color: #{$section-border-color};
-    --t-background-dark: #{$background-dark};
-    --t-text-dark: #{$text-dark};
-    --t-header-dark: #{$text-dark};
-    --t-link-dark: #{$text-dark};
 }
-.theme1 {
-    @include default-element-format();
-    --t-background: #{$background};
-    color: var(--t-text-color);
-    background: var(--t-background);
+html body .tjs__hero-max {
 
+    h1 {
+        color: var(--t-accent);
+        font-family: var(--t-font-family-header);
+        font-size: 36px;
+        margin-bottom: 0;
+    }
+    blockquote {
+        color: var(--t-primary);
+        font-family: var(--t-font-family-header);
+        font-size: 52px;
+    }
 
     h1,h2,h3,h4,h5 {
         color: var(--t-text-color);
     }
 
-    font-size: $font-size-base;
+    font-size: var(--t-font-size-base);
     h1 {
         font-size: 2.4em;
         line-height: 1.2em;
@@ -58,7 +55,6 @@
             text-transform: var(--t-header-text-transform, uppercase);
             font-weight: bold;
             font-size: 16px;
-            font-family: var(--t-font-family-base);
             color: var(--t-text-color-primary) !important;
             margin: var(--t-paragraf-margin);
         }
@@ -66,7 +62,6 @@
         h2, blockquote > p {
             font-size: 1.9em;
             line-height: 1.2em;
-            font-family: var(--t-font-family-header);
             color: var(--t-text-color) !important;
             margin: var(--t-header-margin, 0 0 20px 0);
             hyphens: manual;
@@ -99,9 +94,7 @@
 
     --t-background-footer: #fff;
     --t-section-background: transparent;
-    --t-section-background-primary: #{$background-primary};
     --t-text-background: #fff;
-    --t-text-color: #{$text-color};
     --t-text-background-light: var(--t-background);
     --t-text-color-accent: var(--bs-gray-900);
     --t-text-color-primary: var(--bs-primary);
@@ -131,7 +124,7 @@
     }
 
     .btn {
-        border-radius: $border-radius;
+        border-radius: var(--t-border-radius)
     }
 
     map {
@@ -139,36 +132,8 @@
     }
 
 
-    .title_image {
-        background: linear-gradient(180deg, rgba(230,225,221,1) 0%, rgba(245,240,236,1) 35%, rgba(238,238,238,1) 100%);;
-        & > img {
-            object-position: 80% 0;
-            object-fit: contain;
-        }
-    }
-
-    .as__accordion {
-        border: 1px solid var(--bs-gray-100);
-        --as-accordion-open-bg: #fff;
-        h3 {
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-        .section-h3 {
-            border: 1px solid var(--bs-gray-200);
-            background-color: var(--bs-gray-100);
-        }
-        .content {
-            background-color: #fff;
-            p,ul,ol {
-                margin: 20px 20px 20px 0;
-            }
-        }
-
-    }
-
-
-}
-.openhours {
-    --joda-class: "table table-borderless";
+    // linear gradient from top white to black
+    --layout-desktop-overlay1-background: linear-gradient(180deg, rgba(255,255,255,1) 20%, var(--t-soft-primary) 90%);
+    --layout-desktop-overlay3-background: linear-gradient(180deg, rgba(255,255,255,1) 20%, rgba(0,0,0,0) 90%);
+    --layout-desktop-image-mask: linear-gradient(-90deg, rgba(255,255,255,1) 30%, rgba(0,0,0,0) 80%);
 }

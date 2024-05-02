@@ -15,3 +15,4 @@ import "./hero-title-small/hero-title-small";
 import "./cta-form/cta-form";
 import "./image-gallery1/image-gallery1";
 import "./infobox/infobox";
+import "./subheader/subheader";

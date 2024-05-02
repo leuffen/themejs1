@@ -59,3 +59,14 @@ $header-text-transform: uppercase !default;
 $hero-fullsize-modifier: 200px !default;
 
 
+:root {
+    --t-soft-primary: #{$soft-primary};
+    --t-accent: #{$accent};
+    --t-primary: #{$primary};
+
+    --t-font-family-base: #{$font-family-base};
+    --t-font-family-header: #{$font-family-header};
+
+    --t-font-size-base: #{$font-size-base};
+    --t-font-size-header: #{$font-size-header};
+}

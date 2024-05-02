@@ -31,6 +31,7 @@
     "./theme1": [
       "./theme1.scss"
     ],
+    "./themes/": "./themes/",
     "./font/": "./font/"
   },
   "directories": {
