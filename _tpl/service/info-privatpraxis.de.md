@@ -27,7 +27,7 @@ availLangs:
 ## PATIENT WERDEN
 {: layout="use: #sec-card-2col"}
 
-> IHR WEG ZUR BEHANDLUNG
+> Ihr Weg zur Behandlung
 
 Wir sind eine Privatpraxis. Auf dieser Seite finden Sie alle Informationen zum Ablauf und den Kosten der Behandlung.
 
@@ -61,7 +61,7 @@ Bitte bringen Sie zur ausführlichen Erstanamnese all Ihre Unterlagen zu Ihrer G
 und den ausgefüllten Anamnesebogen mit.
 
 ## Kosten
-{: layout="use: #sec-card-2col"}
+{: layout="use: #sec-card-2col;mobile_reverse: yes"}
 
 > Die Kosten der Behandlung
 
@@ -88,7 +88,7 @@ Patienten, die eine private Zusatzversicherung für Naturheilverfahren haben, er
 
 
 ## Kostenbeispiele
-{: layout="use: #sec-card-2col"}
+{: layout="use: #sec-card-2col;mobile_reverse: yes"}
 
 Die Gesamtkosten setzen sich aus einzelnen Bausteinen zusammen, hier einige Beispiele:
 
