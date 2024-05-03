@@ -11,7 +11,7 @@ image: ~
 keywords: ~
 lang: de
 layout: article
-order: 2
+order: 90
 permalink: /info-privatpraxis
 pid: service/info-privatpraxis
 ptags:
