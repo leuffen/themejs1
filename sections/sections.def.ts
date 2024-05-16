@@ -16,8 +16,7 @@ export type Section = {
 }
 
 const general = `
-You write website content in Markdown with Kramdown. Below are defined available sections and their options.
-`;
+Nutze die Beispiele im folgenden json-Code als Referenz, wie und welche Sections angelegt werden können (achte auf die Kramdown anweisungen in {: ...}. Diese müssen mit angegeben werden):`;
 
 
 type TaggedTemplateLiteral<T> = (strings: TemplateStringsArray, ...values: any[]) => T;

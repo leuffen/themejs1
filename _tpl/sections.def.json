@@ -1,5 +1,5 @@
 {
-  "general": "\nYou write website content in Markdown with Kramdown. Below are defined available sections and their options.\n",
+  "general": "\nNutze die Beispiele im folgenden json-Code als Referenz, wie und welche Sections angelegt werden können (achte auf die Kramdown anweisungen in {: ...}. Diese müssen mit angegeben werden):",
   "available_sections": [
     {
       "name": "index",
