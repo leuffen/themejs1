@@ -14,7 +14,7 @@ import "./cta-base/cta-base.def";
 
 import {SECTIONS} from "./sections.def";
 
-fs.writeFile("sections.def.json", JSON.stringify(SECTIONS, null, 2), (err) => {
+fs.writeFile(__dirname + "/../_tpl/sections.def.json", JSON.stringify(SECTIONS, null, 2), (err) => {
     if (err) {
         console.error(err);
         return;
