@@ -13,9 +13,10 @@ ul.image-list {
 
     list-style: none;
     &>li {
-        width: calc(100% / var(--layout-columns));
         padding: 10px;
         min-width: var(--layout-min-width);
+
+        flex: 1 1 calc(100% / var(--layout-columns));
 
         img {
             height: var(--layout-image-height);
