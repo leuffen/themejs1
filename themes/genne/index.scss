@@ -47,6 +47,11 @@ section.tjs__sec-card-2col {
         background-color: white;
         padding: 20px;
         margin-bottom: 20px;
+
+        // Hide empty news section
+        &:has(liweco-news.no-news) {
+            display: none;
+        }
     }
 
 }
