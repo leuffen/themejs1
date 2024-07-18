@@ -4,7 +4,8 @@ description: "Entdecken Sie die Hausarztpraxis Graß in Frensdorf. Professionell
   Termin vereinbaren! \U0001F4DE"
 _schiller_instructions: |-
   Aktualisiere die Leistungen nach den Gliederungspunkte. Ersetze Bilder der Leistungen durch passende Bilder. Aktualisiere alle Texte passend zum Context.
-
+_shiller_tags: base
+_shiller_target_pid: pages/index
 keywords: ~
 lang: de
 layout: website

@@ -1,4 +1,5 @@
 ---
+_shiller_tags: base
 description: 'Ihr Zahnarzt in Hannover-Südstadt:  Dr. M.C. Müller . Kontaktieren Sie
   uns für Ihren Termin!'
 _schiller_instructions: |-

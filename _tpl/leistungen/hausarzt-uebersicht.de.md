@@ -1,4 +1,5 @@
 ---
+_shiller_tags: base
 _schiller_instructions: |-
   Erstelle eine H2 Section für jeden Gliederungspunkt. Wähle
   passende Bilder aus. Nutze H3 Elemente als Accordion für zusätzliche Texte. Behalte

@@ -5,6 +5,7 @@ lang: de
 layout: legal/impressum
 permalink: /impressum
 pid: legal/impressum
+
 ptags:
 - footernav
 - mininav
@@ -14,6 +15,7 @@ body_class: ~
 _schiller_template: legal/impressum
 order: 0
 image: ""
+_shiller_tags: base
 _schiller_instructions: |
     Ändere die Angaben in den untenstehenden H3 Elmeenten. Füge keine Überschriften hinzu!
     Tausche die Adresse der Kammer und Aufsichtsbehörde durch die für die Praxis zuständigen aus.

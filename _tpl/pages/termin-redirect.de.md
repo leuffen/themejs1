@@ -1,4 +1,5 @@
 ---
+_shiller_tags: base
 description: ""
 icon: bi bi-phone
 lang: de

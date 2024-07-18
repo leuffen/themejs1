@@ -13,6 +13,7 @@ description: "\U0001F512 Ihre Privatsphäre ist uns wichtig! Erfahren Sie mehr �
 order: 0
 body_class: ~
 image: ""
+_shiller_tags: base
 _schiller_instructions: ""
 ---
 Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten
