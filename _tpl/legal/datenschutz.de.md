@@ -14,7 +14,8 @@ order: 0
 body_class: ~
 image: ""
 _shiller_tags: base
-_schiller_instructions: ""
+# False: do not aigen this file (copy only)
+_shiller_instructions: false
 ---
 Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten
 vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
