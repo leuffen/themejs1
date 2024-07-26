@@ -1,6 +1,6 @@
 ---
 _shiller_tags: base
-_schiller_instructions: null
+_schiller_instructions: null    # Do not AI update this file
 description: ""
 icon: bi bi-phone
 lang: de
