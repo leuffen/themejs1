@@ -55,7 +55,7 @@
         },
         "termin_url": {
             "type": "string",
-            "description": "URL for appointments. If not provided in context use /online-termin as fallback"
+            "description": "URL for appointments. If not provided in context use /termin as fallback"
         },
         "map_url": {
             "type": "string",
