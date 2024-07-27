@@ -30,70 +30,12 @@
         color: var(--t-text-color);
     }
 
-    font-size: $font-size-base;
-    h1 {
-        font-size: 2.4em;
-        line-height: 1.2em;
-    }
-    h2, h3,h4,h5 {
-        line-height: 1.2em;
-
-    }
-    h3,h4,h5 {
-        font-size: 1.15em;
-    }
-
-    p {
-        line-height: 1.4em;
-    }
-
 
 
     table > tbody > tr > td {
         background: transparent;
     }
 
-    .tjs__section-text {
-        h2:has(+ blockquote) {
-            text-transform: var(--t-header-text-transform, uppercase);
-            font-weight: bold;
-            font-size: 16px;
-            font-family: var(--t-font-family-base);
-            color: var(--t-text-color-primary) !important;
-            margin: var(--t-paragraf-margin);
-        }
-
-        h2, blockquote > p {
-            font-size: 1.9em;
-            line-height: 1.2em;
-            font-family: var(--t-font-family-header);
-            color: var(--t-text-color) !important;
-            margin: var(--t-header-margin, 0 0 20px 0);
-            hyphens: manual;
-        }
-
-        .table {
-            --bs-table-color: var(--t-text-color);
-        }
-
-        *:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    .section {
-        blockquote p {
-            font-size: 2.3em;
-        }
-    }
-
-
-    .card-body {
-        h3 {
-            font-weight: bold;
-        }
-        color: var(--t-text-color);
-    }
 
 
 
