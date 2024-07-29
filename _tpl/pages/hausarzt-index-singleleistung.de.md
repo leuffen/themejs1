@@ -23,7 +23,7 @@ type: website
 ---
 {: layout="use: #hero-max;"}
 
-![](https://cdn.leuffen.de//leu-stock/v2/32/304-205_gfedcba/AdobeStock_138200241.webp)
+![](https://cdn.leuffen.de//leu-stock/v2/212/125-58_gfedcba/AdobeStock_437404171.webp)
 {: .background}
 
 # Augenarzt<br>Prof. Dr. Daniel Mustermann
