@@ -1,26 +1,32 @@
 {
   "name": "@leuffen/themejs1",
-  "version": "8.1.6",
+  "version": "8.1.7",
   "description": "",
   "license": "proprietary",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "exports": {
-    ".": [
-      "./dist/index.js",
-      "./index.ts",
-      "./index.scss"
-    ],
-    "./index": [
-      "./dist/index.js",
-      "./index.ts",
-      "./index.scss"
-    ],
-    "./embed": [
-      "./dist/embed.js",
-      "./embed.ts",
-      "./embed.scss"
-    ],
+    ".": {
+      "import": {
+        "types": "./index.ts",
+        "default": "./dist/index.js"
+      },
+      "require": "./dist/index.js"
+    },
+    "./index": {
+      "import": {
+        "types": "./index.ts",
+        "default": "./dist/index.js"
+      },
+      "require": "./dist/index.js"
+    },
+    "./embed": {
+      "import": {
+        "types": "./embed.ts",
+        "default": "./dist/embed.js"
+      },
+      "require": "./dist/embed.js"
+    },
     "./index.dev": [
       "./dist/index.dev.js"
     ],
