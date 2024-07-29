@@ -3,7 +3,7 @@ description: "Entdecken Sie die Hausarztpraxis Graß in Frensdorf. Professionell
   Versorgung, Vorsorge, Diagnostik und IGeL-Leistungen. \U0001FA7A\U0001F469‍⚕️ Jetzt
   Termin vereinbaren! \U0001F4DE"
 _schiller_instructions: |-
-  Aktualisiere die Leistungen nach den Gliederungspunkte. Ersetze Bilder der Leistungen durch passende Bilder. Aktualisiere alle Texte passend zum Context.
+  Aktualisiere die Leistungen nach den Gliederungspunkte. Ersetze Bilder der Leistungen durch passende Bilder. Aktualisiere alle Texte passend zum Context. Ersetze die Namen durch die echten Namen aus dem Context.
 _shiller_tags: base
 _shiller_target_pid: pages/index
 keywords: ~
@@ -27,7 +27,7 @@ type: website
 {: .background}
 
 # Augenarzt<br>Prof. Dr. Daniel Mustermann
-{: .section-h3 layout="use: #hero-slide; align-self: self-end; justify-self: left; x-adjust: 0%; y-adjust: 0% " .sec-box .sec-slide}
+{: .section-h3 layout="use: #hero-slide; align-self: center; cols: 6; justify-self: left; x-adjust: 0%; y-adjust: 0% " .sec-box .sec-slide}
 
 ---
 {: .section-h4 layout="use: #button-group"}
