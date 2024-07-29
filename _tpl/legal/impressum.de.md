@@ -16,10 +16,11 @@ _schiller_template: legal/impressum
 order: 0
 image: ""
 _shiller_tags: base
-_schiller_instructions: |
+_shiller_instructions: |
     Ändere die Angaben in den untenstehenden H3 Elmeenten. Füge keine Überschriften hinzu!
     Tausche die Adresse der Kammer und Aufsichtsbehörde durch die für die Praxis zuständigen aus.
     Füge die Berufsrechtlichen Regelungen ein, die im Bereich der Praxis gelten (Länder und Fachspezifische Regelungen).
+    Füge Namen und Berufsbezeichnung für alle Ärzte ein. Verantwortliche Person ist der Auftraggeber nach Context.
     DO NOT add or modify the headlines! 
 ---
 
