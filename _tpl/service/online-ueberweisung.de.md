@@ -12,8 +12,10 @@ published: true
 skipHead: false
 title: Online-Überweisung
 type: article
-_schiller_template: service/online-rezept
-_schiller_instructions: ""
+_shiller_template: service/online-rezept
+_shiller_instructions: ""
+_shiller_tags: base
+_shiller_target_pid: service/online-ueberweisung
 ---
 ## Online Überweisung
 {: layout="use: #sec-card-2col"}

@@ -13,6 +13,8 @@ skipHead: false
 body_class: ~
 title: Terminanfrage / Online Termin
 type: article
+_shiller_tags: base
+_shiller_target_pid: service/online-termin
 ---
 ## Online Termin vereinbaren
 {: layout="use: #sec-card-2col"}

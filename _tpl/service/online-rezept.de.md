@@ -13,8 +13,10 @@ skipHead: false
 title: Online-Rezept
 body_class: ~
 type: article
-_schiller_template: service/online-rezept
-_schiller_instructions: ""
+_shiller_tags: base
+_shiller_target_pid: service/online-rezept
+_shiller_template: service/online-rezept
+_shiller_instructions: ""
 ---
 ## Online Rezept
 {: layout="use: #sec-card-2col"}

@@ -49,7 +49,8 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
+        // Try .js (package) first - than try tsx (typescript) - than ts (typescript)
+        extensions: ['.js', '.tsx', '.ts', '.scss'],
     },
 
     //devtool: "eval",
