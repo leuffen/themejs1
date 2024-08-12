@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+    "outDir": "./",
     "noImplicitAny": false,
     "declaration": true,
     "module": "es6",
@@ -20,7 +20,8 @@
   },
   "include": [
     "src/**/*",
-    "*"
+
+    "*.ts"
   ],
   "exclude": [
     "./test"
