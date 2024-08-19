@@ -71,9 +71,26 @@
             }
 
         }
+        .highlight-white {
+            .content {
+                h1 {
+                    color: white;
+                    font-size: 48px;
+                    line-height: 1.2;
+                    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+                    font-weight: normal;
+                }
+                small {
+                    color: white;
+                    font-size: 24px;
+                    font-weight: normal;
+
+                }
+            }
+        }
 
         .tjs__hero-max--container {
-            margin-top: var(--layout-desktop-top-space, 200px);
+           // margin-top: var(--layout-desktop-top-space, 200px);
             height: 100%;
         }
 
