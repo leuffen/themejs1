@@ -102,6 +102,10 @@
     .row > .tjs__sec-card-2col--col-end {
         order: 50;
 
+        &:has( > slot.emptyslot) {
+            display: none;
+        }
+
         slot {
             display: block;
             width: 100%;
