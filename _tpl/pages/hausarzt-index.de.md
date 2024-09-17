@@ -69,7 +69,7 @@ Für weitere Informationen oder zur Terminvereinbarung kontaktieren Sie uns bitt
 
 
 ## Unsere Leistungen
-{: layout="use: #sec-multi-card; cols:2"}
+{: layout="use: #sec-multi-card; cols:2; aspect-ratio: 16/9;"}
 
 
 

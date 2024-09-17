@@ -10,7 +10,7 @@ A Header with callout and text followed by a card elements per h3 row with image
 
 example("Leistungsübersicht auf Startseite mit Überschift, darunter 3 Columns mit Bild und Text. Danach eine Zeile mit einem Button zu den Leistungen")`
 ## Unsere Leistungen
-{: layout="use: #sec-multi-card; cols:3"}
+{: layout="use: #sec-multi-card; cols:3;aspect-ratio: 16/9;"}
 
 ### Vorsorge
 
@@ -42,7 +42,7 @@ Wir bieten eine breite Palette von Therapien an, um eine effektive Behandlung zu
 
 example("Mitarbeiter mit jeweils 3 Cards nebeneinander. (kann beliebig lang werden). Hier ist der Header mittels .d-none ausgeblendet (falls vorher bereits ein Cards Element steht).")`
 ## Unsere Mitarbeiter
-{: layout="use: #sec-multi-card; cols:3" .d-none}
+{: layout="use: #sec-multi-card; cols:3;aspect-ratio: 16/9;" .d-none}
 
 ### Nicoleta Avrinte
 
