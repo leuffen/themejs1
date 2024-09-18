@@ -152,7 +152,7 @@ Unser freundliches und kompetentes Team unterstützt die Ärzte mit langjährige
 
 [input type="text"  name="Name" required .mb-3]
 [input type="email" name="E-Mail" required data-invalid-msg="Bitte geben Sie eine gültige E-Mail Adresse ein" .mb-3]
-[input type="tel" name="Telefon" .mb-3]
+[input type="tel" name="Telefon" required .mb-3]
 
 ---
 

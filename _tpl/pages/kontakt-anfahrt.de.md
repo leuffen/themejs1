@@ -26,6 +26,7 @@ type: article
 
 {% include el/address.html %}
 
+**Unsere Praxis im 1. OG ist barrierefrei über den Aufzug erreichbar ???!!!**
 
 ---
 {: layout="use: accordion()"}
@@ -44,6 +45,8 @@ Anfahrtsbeschreibung mit dem Auto
 
 
 
+
+
 ## Schreiben Sie uns. Wir melden uns umgehend bei Ihnen.
 {: layout="use: #cta-form"}
 
@@ -52,7 +55,7 @@ Anfahrtsbeschreibung mit dem Auto
 
 [input type="text"  name="Name" required .mb-3]
 [input type="email" name="E-Mail" required .mb-3]
-[input type="tel" name="Telefon" .mb-3]
+[input type="tel" name="Telefon" required .mb-3]
 
 ---
 
