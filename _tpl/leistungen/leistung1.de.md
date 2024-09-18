@@ -170,4 +170,4 @@ Nach einer Diagnose welche  letztendlich einer kleinen Operation bedarf, stehen 
 ## Jetzt Beratungstermin vereinbaren
 {: layout="use: #cta-base"}
 
-[Kontakt](/kontakt)
+[Home](/) [Kontakt](/kontakt)

@@ -15,6 +15,8 @@ title: Videosprechstunde
 type: article
 _schiller_template: service/online-videosprechstunde
 _schiller_instructions: ""
+_shiller_tags: base
+_shiller_target_pid: service/online-videosprechstunde
 ---
 ## Videosprechstunde
 {: layout="use: #sec-card-2col; mobile_reverse: yes "}
@@ -52,4 +54,4 @@ So funktioniert's:
 ## Erfahren Sie mehr über uns
 {: layout="use: #cta-base"}
 
-[Unsere Untersuchungen](/leistungen/untersuchungen.de.html) [Über Uns](/ueber-uns) [Kontakt](/kontakt)
+[Home](/) [Unsere Untersuchungen](/leistungen/untersuchungen.de.html) [Über Uns](/ueber-uns) [Kontakt](/kontakt)

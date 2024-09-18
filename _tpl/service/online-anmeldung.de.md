@@ -15,6 +15,8 @@ title: Online Anmeldung
 type: article
 _schiller_template: service/online-termin
 _schiller_instructions: ""
+_shiller_tags: base
+_shiller_target_pid: service/online-anmeldung
 ---
 ## Anmeldung für Patienten
 {: layout="use: #sec-card-2col"}
