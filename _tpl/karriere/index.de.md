@@ -1,21 +1,21 @@
 ---
 description: ""
 image: https://cdn.leuffen.de//leu-stock/v2/148/c_gfedcba/AdobeStock_249086908.webp
-keywords: Makuladiagnostik, Lasertherapie, Intravitreale Injektionen, Sehschule, Augenarztpraxis,
-  Augenbehandlung, Augengesundheit
+keywords: 
 lang: de
 layout: article
 order: 85
 pid: karriere/index
+permalink: /karriere
 ptags:
-- nav
+- footernav
 published: true
 skipHead: false
 title: Jobs
 type: article
-_schiller_instructions: Ändere die Texte und Bilder. Füge am Ende die CTA ein. Gehe
-  auf die im Context genannten Leistungen ein.
-_schiller_template: leistungen/leistung1
+_shiller_tags: base
+_shiller_target_pid: pages/index
+_schiller_instructions: Ändere die Texte und Bilder. Füge am Ende die CTA ein. Füge für jeden Job ein neues H3 Accordion-Element ein.
 ---
 ## Karriere
 {: layout="use: #sec-card-2col"}
@@ -78,5 +78,5 @@ Dann freuen wir uns auf Ihre Bewerbung. Gerne per Email.
 ## Interesse geweckt?
 {: layout="use: #cta-base"}
 
-Schicken Sie Ihre Bewerbung an: info@cardiomed-neheim.de
+Schicken Sie Ihre Bewerbung an: info@domain.de
 
