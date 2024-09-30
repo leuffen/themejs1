@@ -1,4 +1,5 @@
 pagebuilder: https://pagebuilder.leuffen.de/e/falk-k43/default
+# Important: site_base_url - Always with https://www.! - No trailing slash!
 site_base_url: https://www.praxis-dr-falk.de
 subscription_id: falk-k43
 
