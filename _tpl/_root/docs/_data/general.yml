@@ -1,14 +1,14 @@
 pagebuilder: https://pagebuilder.leuffen.de/e/falk-k43/default
-# Important: site_base_url - Always with https://www.! - No trailing slash!
-site_base_url: https://www.praxis-dr-falk.de
-subscription_id: falk-k43
+# Important: site_base_url - Always with https://www.! - No trailing slash! - Keep UNKNOWN_DOMAIN.XXX unless domain was explicitly stated!
+site_base_url: https://www.UNKNOWN_DOMAIN.XXX
+subscription_id: muster-k43
 
 # Titel der Website
-title: Praxis Dr. Heike Falk - hausärztlich internistische Praxis in Freudenstadt-Wittlensweiler
+title: Praxis Dr. Heike Muster - hausärztlich internistische Praxis in Musterstadt
 
 
 # Name der Praxis
-name:  Praxis Dr. Heike Falk
+name:  Praxis Dr. Heike Muster
 name2: ~
 
 
@@ -16,10 +16,10 @@ name2: ~
 desc: Fachärztin für Innere Medizin
 
 fachrichtung: Hausärztlich internistische Praxis
-logoalt: Dr. Heike Falk
-street: Ortsstr. 13
+logoalt: Dr. Heike Muster
+street: Musterstraße. 13
 zip: 72250
-city: Freudenstadt-Wittlensweiler
+city: Musterstadt
 
 
 
@@ -36,8 +36,8 @@ phone1_text: "(0 74 41) 81 605"
 phone1: "+49744181605"
 fax1_text: "(07441) 51 722"
 
-email: mail@praxis-dr-falk.de
-domain:
+email: mail@UNKNOWN_DOMAIN.XXX
+domain: www.UNKNOWN_DOMAIN.XXX
 
 
 
