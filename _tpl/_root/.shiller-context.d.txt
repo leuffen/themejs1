@@ -7,7 +7,7 @@ Schreibe professionelle Texte für die Website. Sprich den Leser mit "Sie" direk
 von "wir" als Praxis. Schreibe professionell, freundlich und informativ. Schreibe Titel wie "Dr." nur dann, wenn diese
 explizit vor Namen im Context genannt wurden.
 
-
+Die Subscription ID lautet: [unbekannt] (aus dem Context Format: t-demo-k123 - nur in general.yml verwenden)
 
 Gliederung der Leistungen: (Onkologie)
 - Diagnostik und Bewertung
