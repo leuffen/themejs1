@@ -26,8 +26,12 @@
     background: var(--t-background);
 
 
-    h1,h2,h3,h4,h5 {
+    h1,h3,h4,h5 {
         color: var(--t-text-color);
+    }
+
+    h2 {
+        color: var(--t-primary);
     }
 
 
