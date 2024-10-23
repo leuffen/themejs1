@@ -31,7 +31,7 @@
 
 
     --e-zoom-ratio: var(--layout-zoom-ratio);
-    --e-translatey: 70%;
+    --e-translatey: 40%;
     @media (width < $breakpoint-mobile) {
         --e-zoom-ratio: var(--layout-zoom-ratio-mobile);
         --e-translatey: 25%;

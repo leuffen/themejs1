@@ -16,6 +16,8 @@ $background-accent: $soft-primary !default;
 :root {
     --layout-container: container;
     --layout-soft-background: #{$soft-secondary};
+    --t-border-radius: #{$section-border-radius};
+
 }
 html body .tjs__hero-max {
     --t-background-footer: #fff;

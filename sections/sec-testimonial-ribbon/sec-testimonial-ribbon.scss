@@ -6,6 +6,7 @@
     --layout-image-size-mobile: 120px;
     --layout-section-padding: var(--layout-section-padding);
 
+    --layout-background-image: none;
 
     --layout-content-padding: 40px;
 
@@ -20,7 +21,6 @@
 
     .x--wrapper {
         background-color: var(--layout-section-background);
-
         padding-top: var(--layout-section-padding);
 
     }
