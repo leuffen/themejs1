@@ -97,7 +97,7 @@
         min-height: var(--layout-desktop-min-height);
         position: relative;
         &.tjs__hero-max--autoheight {
-            height: calc(100vh - var(--t-fullsize-modifier, 200px));
+            height: calc(100vh - var(--t-fullsize-modifier, 50px));
             min-height: var(--layout-desktop-min-height);
             max-height: var(--layout-destkop-max-height);
         }
