@@ -33,7 +33,7 @@ availLangs:
 Wenn Sie mit unserem Service zufrieden waren, freuen wir uns über Ihre Bewertung bei Google. Ihre positive Rückmeldung hilft uns, anderen Patienten zu zeigen, dass sie bei uns in guten Händen sind.
 
 
-[![](https://cdn.leuffen.de//leu-stock-free/v2/68/a_ba/google_g_icon_download.webp){: style="height:30px;width:auto"} Jetzt bei Google bewerten]({{ site.data.gerneral.google_rating_link }}){: .btn .btn-primary .btn-lg .mt-3}
+[![](https://cdn.leuffen.de//leu-stock-free/v2/68/a_ba/google_g_icon_download.webp){: style="height:30px;width:auto"} Jetzt bei Google bewerten]({{ site.data.general.google_rating_link }}){: .btn .btn-primary .btn-lg .mt-3}
 
 
 ### Kritik oder Verbesserungs&shy;vorschläge?
