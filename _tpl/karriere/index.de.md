@@ -78,5 +78,5 @@ Dann freuen wir uns auf Ihre Bewerbung. Gerne per Email.
 ## Interesse geweckt?
 {: layout="use: #cta-base"}
 
-Schicken Sie Ihre Bewerbung an: info@domain.de
+Schicken Sie Ihre Bewerbung an: {{site.data.general.email}}
 
