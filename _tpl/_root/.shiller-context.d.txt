@@ -24,6 +24,14 @@ Gliederung für Leistungen: (Zahnarzt)
 - Zahnerhaltung
 - Zahnersatz
 
+Gliederung für Leistungen: (Psychologen & Psychotherapeuten)
+- Psychische Erkrankungen und Störungen
+- [ggf Schwerpunktthema]
+- Therapieansätze und Begleitung
+
+[Für andere Fachbereiche entwickle eine eigene Gliederung, die für die angegebenen Leistungen Sinn ergeben. Falls
+keine Leistungen angegeben sind, nimm ein Standard-Leistungsspektrum für den Fachbereich an.]
+
 Teile die Leitungen in die 3 Gliederungsbereiche ein. Ordne die Leistungen den Bereichen zu.
 Erstelle einen kurzen Text zu jeder Leistung als Accordion.
 
