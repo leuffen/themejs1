@@ -36,7 +36,7 @@ Teile die Leitungen in die 3 Gliederungsbereiche ein. Ordne die Leistungen den B
 Erstelle einen kurzen Text zu jeder Leistung als Accordion.
 
 
-Folgende Bilder stehen zur Verfügung:
+Folgende Bilder stehen zur Verfügung (suche passende auch Fachübergreifend aus):
 
 Titelbilder für Startseite (wähle passende aus)
 ![Generisch Titelbild für Ärzte](https://cdn.leuffen.de//leu-stock/v2/212/125-58_gfedcba/AdobeStock_437404171.webp)
@@ -115,6 +115,18 @@ Für Zahnärzte:
 ![Kiefer wird mit Dentalspiegel untersucht](https://cdn.leuffen.de//leu-stock/v2/266/c_gfedcba/AdobeStock_867819587.webp)
 
 
+Für Orthopäden und Unfallchirurgen:
+![Young Woman from the back in a physiotherapy clinic, illustrating spinal scoliosis. Osteopathic medicine and physiotherapy. With blurred background of modern hospital or clinic](https://cdn.leuffen.de//leu-stock/v2/273/138-61_gfedcba/AdobeStock_1061031656.webp)
+![Chiropractic treatment, Back pain relief. Physiotherapy for senior male patient, Kinesiology](https://cdn.leuffen.de//leu-stock/v2/274/62-41_gfedcba/AdobeStock_309254478.webp)
+![Akupunktur](https://cdn.leuffen.de//leu-stock/v2/177/121-81_gfedcba/AdobeStock_4843944.webp)
+![A dark amber glass bottle with hyaluronic acid or facial serum, on a beige background.Copy space for your design. Front look.](https://cdn.leuffen.de//leu-stock/v2/275/c_gfedcba/AdobeStock_1132657049.webp)
+![Stoßwellentherapie](https://cdn.leuffen.de//leu-stock/v2/276/52-35_gfedcba/AdobeStock_84942601.webp)
+![Holistic medicine approach. Healthy food eating, dietary supplements, healing herbs and flowers. wooden background,](https://cdn.leuffen.de//leu-stock/v2/277/c_gfedcba/AdobeStock_390312995.webp)
+![Beautiful woman in white bathrobe drink water during medical procedure in beauty clinic. Infustionstherapie](https://cdn.leuffen.de//leu-stock/v2/278/c_gfedcba/AdobeStock_529026930.webp)
+![acte médical,injection chez le médecin ou l'infirmière](https://cdn.leuffen.de//leu-stock/v2/279/155-114_gfedcba/AdobeStock_57226207.webp)
+![Lumbar spine displaced herniated disc fragment, spinal nerve and bone. Model for treatment medical in the orthopedic department.](https://cdn.leuffen.de//leu-stock/v2/280/c_gfedcba/AdobeStock_1051530780.webp)
+
+
 Allergologie und Ästhetik:
 ![Frau bekommt Laserbehandlung im Gesicht](https://cdn.leuffen.de//leu-stock/v2/271/790-527_gfedcba/AdobeStock_316276354.webp)
 ![Generisches Allergie / Heuschnupfen Bild Frau mit Taschentuch](https://cdn.leuffen.de//leu-stock/v2/270/c_gfedcba/AdobeStock_198299642.webp)
@@ -137,4 +149,4 @@ Für Hebammen und Frauenärzte:
 ![Säugling in Windeln im Bett hell](https://cdn.leuffen.de//leu-stock/v2/175/c_gfedcba/AdobeStock_100664610.webp)
 ![Schwangere Frauen im Kursraum](https://cdn.leuffen.de//leu-stock/v2/176/201-106_gfedcba/AdobeStock_616406996.webp)
 
-Nutze generische Bilder, wenn kein passendes Bild zum Inhalt vorliegt.
+Nutze generische Bilder, wenn kein passendes Bild zum Inhalt vorliegt. Übersetze die Beschreibung immer ins Deutsche.
