@@ -1,9 +1,14 @@
 
-
+$section-border-radius:             0 !default;
 $primary: #354b68 !default;
 $soft-primary: #dbe2e7 !default;
 $accent: #9C8B58 !default;
 $soft-secondary: #F8F8F9 !default;
+
+.btn-primary {
+    color: white !important;
+}
+
 
 $background: white !default;
 $background-primary:  #F8F8F9 !default;
