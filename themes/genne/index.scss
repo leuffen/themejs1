@@ -85,12 +85,12 @@ section.tjs-legal-content {
 
 .tjs__sec-multi-card__item,.tjs__sec-card-2col {
     img {
-        filter: grayscale(70%);
+       // filter: grayscale(70%);
         transition: all 0.8s ease-in-out;
     }
     &:hover {
         img {
-            filter: grayscale(0%);
+           // filter: grayscale(0%);
         }
     }
 }
