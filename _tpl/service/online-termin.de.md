@@ -24,7 +24,7 @@ _shiller_target_pid: service/online-termin
 ![](https://cdn.leuffen.de//leu-stock/v2/58/140-89_gfedcba/calendar-2022-11-14-06-54-22-utc.webp)
 
 
-Für **alle anderen Termine** nutzen Sie bitte unser Anfrageformular:
+Bitte nutzen Sie unser Terminformular für Ihre Anfrage:
 
 ---
 {: layout="use: #e-form" .mt-5}
