@@ -3,11 +3,14 @@ Website für [Praxistyp] [unbekannt] in [unbekannt]
 
 [Anschrift der Praxis, Telefonnummer und Öffnungszeiten]
 
+Die Subscription ID lautet: [unbekannt] (aus dem Context Format: t-demo-k123 - nur in general.yml verwenden)
+Die Domain lautet: [hier domain mit https://www einfügen - falls verfügbar]
+
 Schreibe professionelle Texte für die Website. Sprich den Leser mit "Sie" direkt an. Sprich
 von "wir" als Praxis. Schreibe professionell, freundlich und informativ. Schreibe Titel wie "Dr." nur dann, wenn diese
 explizit vor Namen im Context genannt wurden.
 
-Die Subscription ID lautet: [unbekannt] (aus dem Context Format: t-demo-k123 - nur in general.yml verwenden)
+
 
 Gliederung der Leistungen: (Onkologie)
 - Diagnostik und Bewertung
@@ -35,6 +38,7 @@ keine Leistungen angegeben sind, nimm ein Standard-Leistungsspektrum für den Fa
 Teile die Leitungen in die 3 Gliederungsbereiche ein. Ordne die Leistungen den Bereichen zu.
 Erstelle einen kurzen Text zu jeder Leistung als Accordion.
 
+[Alle weiteren verfügbaren Informationen aus dem Context hier einbauen]
 
 Folgende Bilder stehen zur Verfügung (suche passende auch Fachübergreifend aus):
 
