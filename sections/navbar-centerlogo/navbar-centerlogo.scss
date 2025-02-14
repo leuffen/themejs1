@@ -26,15 +26,25 @@
     --layout-backdrop-height: 20px;
 
     --layout-spacer-height: 0px;
-    --layout-spacer-color: rgba(255,255,255,1);
     --layout-spacer-height-mobile: calc(var(--layout-image-height) * var(--layout-zoom-ratio-mobile));
 
+
+    --layout-spacer-color: rgba(255,255,255,1);
+
+    --layout-justify-navbar-items: center;
 
     --e-zoom-ratio: var(--layout-zoom-ratio);
     --e-translatey: 40%;
     @media (width < $breakpoint-mobile) {
         --e-zoom-ratio: var(--layout-zoom-ratio-mobile);
         --e-translatey: 25%;
+    }
+
+
+    &.logo-left {
+        --layout-zoom-ratio: 1;
+        --layout-zoom-ratio-mobile: 1;
+
     }
 
 
@@ -96,10 +106,14 @@
 
 
         &>.navbar__wrapper {
-            display: flex;
+            position: relative;
+            width: 100%;
+            display: block;
             justify-content: space-between;
             flex-wrap: nowrap;
             flex-direction: row;
+
+
 
             & > *{
                 flex-grow: 1;
@@ -109,8 +123,9 @@
             &>.navbar__logo {
                 transition: all 0.5s ease-in-out;
                 align-items: center;
-                justify-content: center;
+                justify-content: var(--layout-justify-navbar-items);
                 display: flex;
+                width: 100%;
 
 
                 img {
