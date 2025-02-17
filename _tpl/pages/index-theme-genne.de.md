@@ -36,7 +36,8 @@ type: website
 In unserer HNO-Praxis am Senftenberger See erhalten Sie individuelle und erstklassige medizinische Versorgung.
 {: style="max-width: 450px;"}
 
-[Entdecken Sie unsere Leistungen](#leistungen){: .btn .btn-outline-primary .btn-lg .my-3}
+[Online Termin vereinbaren](/online-termin){: .btn .btn-primary .btn-lg .mt-3 .my-3}
+[Unsere Online-Services](#online-services){: .btn .btn-outline-primary .btn-lg .mt-3 .my-3}
 
 
 
@@ -82,18 +83,22 @@ Wir freuen uns darauf, Sie auf Ihrem Weg zu einer umfassenden Gesundheit begleit
 
 
 
-#### <i class="bi  bi-calendar-week-fill"></i> Termine online buchen
-{: .sec-box}
+#### <i class="bi  bi-calendar-week-fill"></i> Online-Services
+{: .sec-box id="online-services"}
 
-Nutzen Sie unser Online-Formular für Ihren persönlichen Terminwunsch.
+Auch online immer für Sie da: Ohne Wartezeit, bequem und schnell:
 
 [Online Termin vereinbaren](/online-termin){: .btn .btn-primary .btn-lg .mt-3 .w-100}
+[Online Rezept](/online-rezept){: .btn .btn-outline-primary .btn-lg .mt-3 .w-100}
+[Online Überweisung](/online-ueberweisung){: .btn .btn-outline-primary .btn-lg .mt-3 .w-100}
+[Videosprechstunde](/online-videosprechstunde){: .btn .btn-outline-primary .btn-lg .mt-3 .w-100}
 
 
 
 #### <i class="bi bi-clock"></i> Unsere Sprechzeiten
 {: .sec-box}
 
+<!-- hier immer include stehen lassen - die Öffnungszeiten werden darüber eingebunden -->
 {% include el/openhours.html %}
 
 

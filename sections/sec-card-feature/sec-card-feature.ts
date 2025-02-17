@@ -14,7 +14,7 @@ Joda.registerTemplate("sec-card-feature",
                         <slot></slot>
                     </div>
                     <div class="col-12 col-lg-6 text-format p-4 p-lg-5">
-                        <slot data-select=":scope > .children"></slot>
+                        <slot data-select=".aside || :scope > .children"></slot>
                     </div>
                 </div>
             </div>
