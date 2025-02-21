@@ -76,7 +76,21 @@ Dann freuen wir uns auf Ihre Bewerbung. Gerne per Email.
 <!-- @todo: Nachfolgend Call to Action: Immer Einfügen und Links/Text anpassen -->
 
 ## Interesse geweckt?
-{: layout="use: #cta-base"}
+{: layout="use: #cta-form"}
 
-Schicken Sie Ihre Bewerbung an: {{site.data.general.email}}
+> Bewirb dich jetzt
+
+---
+
+[select name="Anrede" data-options="Frau, Herr, Divers" required .mb-3]
+[input type="text"  name="Name" required .mb-3]
+[input type="email" name="E-Mail" required data-invalid-msg="Bitte geben Sie eine gültige E-Mail Adresse ein" .mb-3]
+[input type="tel" name="Telefon" required .mb-3]
+
+---
+
+[input type="text"  name="Bewerbung als" required .mb-3]
+[textarea name="Ihre Nachricht (optional)" .mb-3 style="height: 120px;"]
+[input type="checkbox" name="Datenschutz" label="Ich akzeptiere die Datenschutzbestimmungen" required .mb-3]
+[input type="submit" name="Absenden" value="Absenden" class="btn btn-primary btn-lg" .my-3]
 
