@@ -23,6 +23,7 @@
     --layout-image-height: 80px;
     --layout-zoom-ratio: 1.6;
     --layout-zoom-ratio-mobile: 1.3;
+    --layout-translatey-mobile: 25%;
     --layout-backdrop-height: 20px;
 
     --layout-spacer-height: 0px;
@@ -37,7 +38,7 @@
     --e-translatey: 40%;
     @media (width < $breakpoint-mobile) {
         --e-zoom-ratio: var(--layout-zoom-ratio-mobile);
-        --e-translatey: 25%;
+        --e-translatey: var(--layout-translatey-mobile);
     }
 
 

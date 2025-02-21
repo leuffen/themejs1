@@ -7,3 +7,5 @@ libs/
 /workspaces
 .keystore.yml
 /backup_html.tar.gz
+.pnpm-store
+pnpm-lock.yaml
