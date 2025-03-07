@@ -40,7 +40,7 @@ Erstelle einen kurzen Text zu jeder Leistung als Accordion.
 
 [Alle weiteren verfügbaren Informationen aus dem Context hier einbauen]
 
-Folgende Bilder stehen zur Verfügung (suche passende auch Fachübergreifend aus - generische Bilder immer mit drin stehen lassen):
+Folgende Bilder stehen zur Verfügung (suche passende auch Fachübergreifend aus - alle generischen Bilder und Titelbilder immer mit drin stehen lassen):
 
 Titelbilder für Startseite (wähle passende aus)
 ![Generisch Titelbild für Ärzte](https://cdn.leuffen.de//leu-stock/v2/212/125-58_gfedcba/AdobeStock_437404171.webp)
