@@ -12,6 +12,11 @@ sass:
   sass_dir: _sass_disabled
 
 livereload: true
+exclude:
+    - "*.bak"
+    - ".*"
+    - "*~"
+    - "~*"
 
 defaults:
   - scope:
