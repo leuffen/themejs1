@@ -1,10 +1,43 @@
 
 Website für [Praxistyp] [unbekannt] in [unbekannt]
 
-[Anschrift der Praxis, Telefonnummer und Öffnungszeiten]
+## Praxisname, Praxisart, Anschrift, Telefon, Telefax, E-Mail, Website etc.
 
-Die Subscription ID lautet: [unbekannt] (aus dem Context Format: t-demo-k123 - nur in general.yml verwenden)
-Die Domain lautet: [hier domain mit https://www einfügen - falls verfügbar]
+[hier einfügen]
+
+## SEO Keywords (Vorschläge generieren - Texte sollten sich daran orientieren)
+
+[hier einfügen]
+
+## Öffnungszeiten
+
+[hier einfügen]
+
+## Berufsbezeichnung der Ärzte, Facharztausbildungen, Approbationen (achte darauf, dass Titel nur dann und exakt wie im Context genannt werden)
+
+[hier einfügen]
+
+## Subscription ID
+
+[hier einfügen]
+
+## Domain (mit https://www)
+
+[hier einfügen]
+
+## Leistungen
+
+[hier einfügen]
+
+## Mitarbeiter
+
+[hier einfügen]
+
+## Hinweise zur Praxis (z.B. Barrierefreiheit, Parkplätze, Anfahrt, Fahrradstellplätze)
+
+[hier einfügen]
+
+## Bearbeitungshinweise
 
 Schreibe professionelle Texte für die Website. Sprich den Leser mit "Sie" direkt an. Sprich
 von "wir" als Praxis. Schreibe professionell, freundlich und informativ. Schreibe Titel wie "Dr." nur dann, wenn diese
