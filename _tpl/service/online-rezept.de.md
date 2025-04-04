@@ -43,7 +43,7 @@ Mit unserem Online-Rezeptformular können Sie bequem von zu Hause aus ein neues 
 [input type="date" name="Geburtsdatum" required .mb-3]
 [input type="email" name="E-Mail" required .mb-3]
 [input type="tel" name="Telefon" required .mb-3]
-[textarea name="Medikament" required .mb-3]
+[textarea name="Medikament mit Dosierung" required .mb-3]
 [textarea name="Ihre Nachricht (optional)" .mb-3 style="height: 120px;"]
 [input type="checkbox" name="Datenschutz" label="Ich akzeptiere die Datenschutzbestimmungen" required .mb-3]
 [input type="submit" value="Absenden" .btn .btn-primary .btn-lg .mt-3]
