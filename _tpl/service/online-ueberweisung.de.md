@@ -37,6 +37,7 @@ Ganz einfach online eine Überweisung zu einem Facharzt bestellen! Bitte beachte
 [input type="email" name="E-Mail" required .mb-3]
 [input type="tel" name="Telefon" required .mb-3]
 [select name="Überweisung an" data-options="Gastroenterologie, Kardiologe, Dermatologe, Gefäßchirurg, Psychiater, Gastroenterologe, Urologe, HNO, Augenarzt, Neurologe, Orthopäde, Chirurg, Proktologe, Endokrinologe, Hämatologe/Onkologe, Angiologe, Diabetologe, Nephrologe, Pneumologe" required .mb-3]
+[input type="text"  name="Grund der Überweisung" required .mb-3]
 [textarea name="Ihre Nachricht (optional)" .mb-3 style="height: 120px;"]
 [input type="checkbox" name="Datenschutz" label="Ich akzeptiere die Datenschutzbestimmungen" required .mb-3]
 [input type="submit" value="Absenden" .btn .btn-primary .btn-lg .mt-3]
