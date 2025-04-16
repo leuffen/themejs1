@@ -69,6 +69,10 @@
     .aside {
         --joda-class: p-4 p-lg-5;
     }
+    iframe.aside {
+        --joda-class: "";
+
+    }
 
     .aside-content {
     }
