@@ -34,10 +34,12 @@ type: website
 {: .section-h4 layout="use: #button-group"}
 [[i class="bi bi-house-add-fill fs-3"]<br>Jetzt als **neuer Patient** anmelden](/online-anmeldung){: .btn .btn-primary}
 [[i class="bi bi-calendar-plus-fill fs-3"]<br>Jetzt **Termin** vereinbaren](/termin){: .btn .btn-primary .text-center}
+[[i class="bi bi-people-fill fs-3"]<br>**Infos für Zuweiser**](/online-zuweiser){: .btn .btn-primary .text-center}
 
 [[i class="bi bi-card-heading fs-3"]<br>**Rezept** online anfragen](/online-rezept){: .btn .btn-primary .text-center }
 [[i class="bi bi-box-arrow-up-right fs-3"]<br>**Überweisung** an Facharzt](/online-ueberweisung){: .btn .btn-primary .text-center}
 [[i class="bi bi-camera-video-fill fs-3"]<br>**Videosprechstunde**](/online-videosprechstunde){: .btn .btn-primary .text-center}
+
 
 
 
