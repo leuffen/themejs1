@@ -3,7 +3,7 @@ _shiller_tags: base
 
 description: 'Bisher keine Beschreibung'
 icon: bi bi-phone
-image: https://cdn.leuffen.de//leu-stock/v2/75/3997-1332_gfedcba/AdobeStock_408777375.webp
+image: ~
 lang: de
 layout: article
 order: 99
