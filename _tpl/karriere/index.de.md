@@ -15,7 +15,7 @@ title: Jobs
 type: article
 _shiller_tags: base
 _shiller_target_pid: karriere/index
-_schiller_instructions: Ändere die Texte und Bilder. Füge am Ende die CTA ein. Füge für jeden Job ein neues H3 Accordion-Element ein.
+_schiller_instructions: Ändere die Texte und Bilder. Füge am Ende die CTA ein. Füge für jeden Job ein neues H3 ein.
 ---
 ## Karriere
 {: layout="use: #sec-card-2col"}

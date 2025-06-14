@@ -16,7 +16,7 @@ body_class: ~
 title: Informationen für Zuweiser / Ärzte
 type: article
 _shiller_tags: base
-_shiller_target_pid: service/online-termin
+_shiller_target_pid: service/online-zuweiser
 ---
 ## Informationen für Zuweiser / Ärzte
 {: layout="use: #sec-card-2col; cols: 12"}
