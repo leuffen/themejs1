@@ -7,10 +7,10 @@
     --layout-desktop-overlay2-background: none;
     --layout-desktop-overlay3-background: none;
     --layout-desktop-image-mask: none;
-
+    --fullsize-modifier: 250px;
     --layout-desktop-top-space: 200px;
     --layout-desktop-min-height: 600px;
-    --layout-desktop-max-height: 1100px;
+    --layout-destkop-max-height: 1200px;
 
     --joda-class: ":: mobile :xl: desktop";
     --layout-image-ratio: 16 / 10;
@@ -97,7 +97,7 @@
         min-height: var(--layout-desktop-min-height);
         position: relative;
         &.tjs__hero-max--autoheight {
-            height: calc(100vh - var(--t-fullsize-modifier, 50px));
+            height: calc(100vh - var(--fullsize-modifier, 50px));
             min-height: var(--layout-desktop-min-height);
             max-height: var(--layout-destkop-max-height);
         }

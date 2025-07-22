@@ -10,7 +10,7 @@
     "author": "",
     "dependencies": {
         "@leuffen/themejs1": "^8.0.6",
-        "@nextrap/nte-nav": "^0.2.25",
+        "@nextrap/nte-nav": "^1.0.4",
         "@nextrap/style-base": "^1.1.5"
     },
     "devDependencies": {
