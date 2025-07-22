@@ -11,7 +11,7 @@ Joda.registerTemplate(
         <section class="tjs__sec-card-2col [[layout.class]] :: mobile :lg: desktop">
             <div class="tjs__sec-card-2col--container [[layout.container]]">
                 <slot class="title" data-select="img.title || .title > img"></slot>
-                <div class="row [[layout.order === 'reverse' ? 'flex-column-reverse': '']] [[layout.mobile_reverse === 'yes' ? ':: flex-column-reverse :lg:': '']]">
+                <div class="row [[layout.order === 'reverse' ? ':: flex-column-reverse :lg: flex-row-reverse': '']] [[layout.mobile_reverse === 'yes' ? ':: flex-column-reverse :lg:': '']]">
                     <div class="tjs__sec-card-2col--col-start heading-style-flex :: col-12 :lg: col-[[layout.cols]]">
                         <slot></slot>
                     </div>
