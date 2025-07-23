@@ -16,6 +16,8 @@ layout: 2_script
 
 
 <nte-navbar class="fixed autoborder autoshadow" scroll-threshold="500" style="--spacer-height: 125px">
+
+    <!-- ================== TOPBAR ================== -->
     <nte-navbar-line class="hide-on-scroll">
         <nte-nav class="style-undecorated size-sm" style="font-size: 1.2rem;">
             <ul>
@@ -31,6 +33,9 @@ layout: 2_script
             </ul>
         </nte-nav>
     </nte-navbar-line>
+
+
+    <!-- ================== MAIN NAVBAR ================== -->
     <nte-navbar-line>
 
 
@@ -46,7 +51,7 @@ layout: 2_script
         <!-- Image: -->
         <!--a href="/" slot="brand"><img src="/assets/logo128t.svg" alt="{{ site.data.general.logoalt }}" height="84" class="p-1 loader-image" ></a-->
 
-        <nte-nav class="nav-horizontal" mode="master" breakpoint="9999px" transfer-to="#navSidebar">
+        <nte-nav data-group-name="nav1" class="nav-horizontal" mode="master" breakpoint="9999px" transfer-to="#navSidebar">
             <span slot="menu-text">Menü</span>
             <ul>
                 {% include el/navbar.html ptag="nav" %}
@@ -55,8 +60,8 @@ layout: 2_script
     </nte-navbar-line>
 </nte-navbar>
 
-<nte-offcanvas id="navSidebar">
-    <nte-burger slot="header" data-nt-dismiss="offcanvas" open></nte-burger>
+<nte-offcanvas id="navSidebar" data-group-name="nav1">
+    <nte-burger slot="header" data-group-name="nav1" data-nt-dismiss="offcanvas" open></nte-burger>
     <nte-nav class="nav-vertical"></nte-nav>
 </nte-offcanvas>
 
