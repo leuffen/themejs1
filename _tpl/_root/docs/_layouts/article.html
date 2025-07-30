@@ -9,7 +9,7 @@ layout: 3_3_1_content
     <h1 layout="use: #hero-title-small">{{ page.title }}</h1>
 
 
-    {% if page.image %}
+    {% if page.image && page.image != "" %}
     <img src="{{ page.image }}">
     {% endif %}
     {% if page.header %}
