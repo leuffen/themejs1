@@ -1,0 +1,39 @@
+
+
+ul.image-list {
+    --layout-columns: 3;
+    --layout-image-height: 64px;
+    --layout-min-width: 200px;
+
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+    padding-left: 0;
+
+    list-style: none;
+    &>li {
+        padding: 10px;
+        min-width: var(--layout-min-width);
+
+        flex: 1 1 calc(100% / var(--layout-columns));
+
+        // Center text vertically
+        display: flex;
+        align-items: center;
+        img {
+            height: var(--layout-image-height);
+            width: var(--layout-image-height);
+            border-radius: 100%;
+            padding: 4px;
+            border: 1px solid #ccc;
+            background-color: white;
+            object-fit: cover;
+            float: left;
+            margin-right: 10px;
+        }
+
+    }
+
+
+}

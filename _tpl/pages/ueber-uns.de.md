@@ -1,11 +1,12 @@
 ---
+_shiller_tags: base
 description: 'Ihr Zahnarzt in Hannover-Südstadt:  Dr. M.C. Müller . Kontaktieren Sie
   uns für Ihren Termin!'
 _schiller_instructions: |-
   Erstelle eine H2 Section für jeden Arzt. Aktualisiere die Texte.
 
 icon: bi bi-phone
-image: https://cdn.leuffen.de//leu-stock/v2/60/418-279_gfedcba/AdobeStock_99592855.webp
+image: ~
 lang: de
 layout: article
 order: 80

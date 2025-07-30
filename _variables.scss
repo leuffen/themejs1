@@ -4,17 +4,26 @@
 /* always add !default to variables */
 
 
+
 //$font-family-base: Ubuntu-R,sans-serif;
 $font-family-base: sans-serif !default;
+$font-family-header: $font-family-base !default;
 
+$line-height-base: 1.5 !default;
+$line-height-header: 1.2 !default;
 
+//$enable-dark-mode: false !default;
+
+$accent:    #f19045 !default;
 $primary:   #a3979b !default;
 $success:   #22b573 !default;
 $danger:    #bf1c0a !default;
 $warning:   #bf760a !default;
 $dark:      #006837 !default;
 
+$breakpoint-mobile: 992px !default;
 
+$soft-accent: lighten($accent, 40%) !default;
 $soft-primary: lighten($primary, 40%) !default;
 $soft-success: lighten($success, 40%) !default;
 $soft-danger: lighten($danger, 50%) !default;
@@ -22,14 +31,19 @@ $soft-warning: lighten($warning, 50%) !default;
 $soft-dark: lighten($dark, 40%) !default;
 
 $background: rgba(217, 217, 217, 0.24) !default;
-$background-primary:        #b7eaf9 !default;
+$background-primary:       lighten($primary, 40%) !default;
 $background-accent:         #ddd    !default;
 
 $content-offset-top:        100px !default;
 $content-height-adjustment: 200px !default;
 
+$font-size-root:            16px    !default;
 $font-size-base:            0.9rem  !default;
+$font-size-header:          2.8rem  !default;
+$font-color-base:            #444    !default;
+
 $line-height-base:          1.2     !default;
+$line-height-header:        1.2     !default;
 $paragraph-margin-bottom:   1.5rem !default;
 
 $minibar-text-color:        black !default;
@@ -52,3 +66,44 @@ $border-color: #999 !default;
 
 $header-text-transform: uppercase !default;
 $hero-fullsize-modifier: 200px !default;
+
+
+:root {
+    --t-soft-primary: #{$soft-primary};
+    --t-accent: #{$accent};
+    --t-primary: #{$primary};
+
+    --t-background: #{$background};
+    --t-background-primary: #{$background-primary};
+    --t-background-accent: #{$background-accent};
+
+    --t-font-family-base: #{$font-family-base};
+    --t-font-family-header: #{$font-family-header};
+
+    --t-font-color-base: #{$font-color-base};
+    --t-font-size-root: #{$font-size-root};
+    --t-font-size-base: #{$font-size-base};
+    --t-font-size-header: #{$font-size-header};
+    --t-font-size-h1: var(--t-font-size-header);
+    --t-font-size-h2: calc(var(--t-font-size-header) * 0.7);
+    --t-font-size-h3: calc(var(--t-font-size-header) * 0.6);
+    --t-font-size-h4: calc(var(--t-font-size-header) * 0.5);
+    --t-font-size-h5: calc(var(--t-font-size-header) * 0.4);
+
+    --t-paragraf-margin-bottom: #{$paragraph-margin-bottom};
+
+    --t-line-height-base: #{$line-height-base};
+    --t-line-height-header: #{$line-height-header};
+
+    // The Space between sections
+    --t-section-padding: 40px 0;
+    --t-section-inner-padding: 3rem;
+
+    --t-section-border-color: #{$section-border-color};
+    --t-section-border-radius: #{$section-border-radius};
+
+
+
+    --t-border-color: #{$border-color};
+
+}

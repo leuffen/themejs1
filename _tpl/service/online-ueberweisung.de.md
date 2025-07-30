@@ -12,8 +12,10 @@ published: true
 skipHead: false
 title: Online-Überweisung
 type: article
-_schiller_template: service/online-rezept
-_schiller_instructions: ""
+_shiller_template: service/online-rezept
+_shiller_instructions: ""
+_shiller_tags: base
+_shiller_target_pid: service/online-ueberweisung
 ---
 ## Online Überweisung
 {: layout="use: #sec-card-2col"}
@@ -33,7 +35,7 @@ Ganz einfach online eine Überweisung zu einem Facharzt bestellen! Bitte beachte
 [input type="text"  name="Name" required .mb-3]
 [input type="date" name="Geburtsdatum" required .mb-3]
 [input type="email" name="E-Mail" required .mb-3]
-[input type="tel" name="Telefon" requried .mb-3]
+[input type="tel" name="Telefon" required .mb-3]
 [select name="Überweisung an" data-options="Gastroenterologie, Kardiologe, Dermatologe, Gefäßchirurg, Psychiater, Gastroenterologe, Urologe, HNO, Augenarzt, Neurologe, Orthopäde, Chirurg, Proktologe, Endokrinologe, Hämatologe/Onkologe, Angiologe, Diabetologe, Nephrologe, Pneumologe" required .mb-3]
 [input type="text"  name="Grund der Überweisung" required .mb-3]
 [textarea name="Ihre Nachricht (optional)" .mb-3 style="height: 120px;"]

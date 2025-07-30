@@ -13,6 +13,8 @@ skipHead: false
 body_class: ~
 title: Terminanfrage / Online Termin
 type: article
+_shiller_tags: base
+_shiller_target_pid: service/online-termin
 ---
 ## Online Termin vereinbaren
 {: layout="use: #sec-card-2col"}
@@ -22,7 +24,7 @@ type: article
 ![](https://cdn.leuffen.de//leu-stock/v2/58/140-89_gfedcba/calendar-2022-11-14-06-54-22-utc.webp)
 
 
-Für **alle anderen Termine** nutzen Sie bitte unser Anfrageformular:
+Bitte nutzen Sie unser Terminformular für Ihre Anfrage:
 
 ---
 {: layout="use: #e-form" .mt-5}

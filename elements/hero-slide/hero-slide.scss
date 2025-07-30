@@ -1,0 +1,51 @@
+
+
+.hero-slide {
+
+    --layout-box-color: rgba(255, 255, 255, 0.8);
+    --layout-text-shadow: 0 0 2px rgba(255, 255, 255, 1);
+    --layout-align-self: center;
+    --layout-justify-self: center;
+    --layout-cols: 12;
+
+    --layout-border-radius: var(--t-border-radius);
+
+    --layout-y-adjust: 25%;
+    --layout-x-adjust: 25%;
+
+    align-self: var(--layout-align-self);
+    justify-self: var(--layout-justify-self);
+
+
+
+    &.desktop {
+        margin-top: var(--layout-y-adjust);
+        margin-left: var(--layout-x-adjust);
+        border-radius: var(--layout-border-radius);
+        width: calc(100% / 12 * var(--layout-cols));
+        &.box {
+            padding: 10px;
+            background-color: var(--layout-box-color);
+        }
+
+        &.glow {
+            &>slot {
+                &>h1,h2,h3,&>p {
+                    text-shadow: var(--layout-text-shadow);
+                }
+            }
+        }
+    }
+    &.mobile {
+        width: 100%;
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+
+
+
+
+}

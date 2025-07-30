@@ -1,11 +1,12 @@
 ---
-_schiller_instructions: ""
+_shiller_instructions: "Passe bilder an"
 description: ""
 icon: bi bi-phone
 image: ~
 lang: de
 layout: article
 order: 30
+_shiller_tags: base
 permalink: /praxis
 pid: pages/praxis
 ptags:

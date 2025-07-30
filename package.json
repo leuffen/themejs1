@@ -1,38 +1,12 @@
 {
   "name": "@leuffen/themejs1",
-  "version": "6.1.35",
 
+  "version": "9.0.0",
   "description": "",
   "license": "proprietary",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "exports": {
-     ".": [
-      "./dist/index.js",
-       "./index.ts",
-      "./index.scss"
-    ],
-    "./index": [
-      "./dist/index.js",
-      "./index.ts",
-      "./index.scss"
-    ],
-    "./embed": [
-        "./dist/embed.js",
-        "./embed.ts",
-        "./embed.scss"
-    ],
-    "./index.dev": [
-      "./dist/index.dev.js"
-    ],
-    "./late": [
-      "./late.scss"
-    ],
-    "./theme1": [
-      "./theme1.scss"
-    ],
-    "./font/": "./font/"
-  },
+  "main": "./index.js",
+  "module": "./index.js",
+
   "directories": {
     "doc": "docs",
     "themes": "themes"
@@ -47,42 +21,50 @@
     "/elements",
     "/sections",
     "/_tpl",
-    "*.scss"
+    "*.scss",
+    "*.json",
+    "*.js",
+    "*.md"
   ],
   "workspaces": [
     "workspaces/*"
   ],
   "author": "",
   "dependencies": {
-    "@leuffen/jodastyle": "^3.0.9",
-    "@kasimirjs/embed": "^1.0.8",
-    "@leuffen/isl-base": "^3.0.4",
-    "@leuffen/liscom": "^2.0.8",
-    "@leuffen/liscom-loader": "^1.0.6",
-    "@leuffen/liweco-base": "^2.0.2",
-    "@micx/lib-js": "^1.0.22",
-    "bootstrap": "^5.3.0"
-  },
-  "devDependencies": {
-    "@micx/lib-js": "^1.0.18",
+    "@nextrap/base": "^1.0.0",
+    "@nextrap/nte-nav": "^1.0.0",
+    "@kasimirjs/embed": "^1.0.23",
     "@kasimirjs/kit-bootstrap": "^1.0.4",
+    "@leuffen/isl-base": "^3.0.7",
+    "@leuffen/jodastyle": "^3.1.4",
+    "@leuffen/liscom": "^2.0.10",
+    "@leuffen/liscom-loader": "^1.1.10",
+    "@leuffen/liweco-base": "^3.0.0",
+    "@micx/lib-js": "^1.0.24",
+    "@types/node": "^20.12.12",
+    "bootstrap": "^5.3.0",
+    "css-loader": "^7.1.2",
+    "dart-sass": "^1.25.0",
+    "esbuild-loader": "^4.3.0",
     "markdown-it": "^13.0.1",
     "markdown-it-attrs": "^4.1.6",
-    "css-loader": "^6.7.1",
-    "dart-sass": "^1.25.0",
-    "esbuild-loader": "^2.20.0",
-    "mini-css-extract-plugin": "^2.6.1",
+    "mini-css-extract-plugin": "^2.9.2",
     "raw-loader": "^4.0.2",
-    "sass": "^1.56.1",
-    "sass-loader": "^13.0.2",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1"
+    "sass": "^1.89.2",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.100.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
   },
   "scripts": {
     "make.mjs": "tsc -d",
     "build": "npm run make.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "tsx": "^4.10.3",
+    "typescript": "^5.4.5"
   }
 }

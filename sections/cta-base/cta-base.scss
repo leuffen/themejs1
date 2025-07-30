@@ -1,10 +1,11 @@
 
 
 .tjs__cta-base {
+    --layout-padding: var(--t-section-padding);
+    --layout-background-color: var(--t-background-accent);
+    padding: var(--layout-padding) !important;
 
-    padding: var(--t-section-padding) !important;
-
-    background: var(--t-section-background-accent);
+    background: var(--layout-background-color);
 
      h2, p {
         text-align: center;

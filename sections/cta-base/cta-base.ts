@@ -6,7 +6,7 @@ Joda.registerTemplate("cta-base",
 
         <section class="tjs__cta-base">
             <div class="[[layout.container]]">
-                <slot></slot>
+                <slot class="heading-style-default"></slot>
             </div>
         </section>
     `);

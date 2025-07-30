@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+    "outDir": "./",
     "noImplicitAny": false,
     "declaration": true,
-    "module": "esnext",
+    "module": "es6",
     "target": "es6",
     "allowJs": true,
     "esModuleInterop": true,
@@ -20,7 +20,8 @@
   },
   "include": [
     "src/**/*",
-    "*"
+
+    "*.ts"
   ],
   "exclude": [
     "./test"

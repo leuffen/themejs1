@@ -1,0 +1,36 @@
+
+.heading-style-flex {
+    h2:has(+ blockquote) {
+        text-transform: var(--t-header-text-transform, uppercase);
+        font-size: var(--t-font-size-base);
+        font-family: var(--t-font-family-base);
+        color: var(--t-accent) !important;
+        margin-bottom: var(--t-paragraf-margin-bottom);
+        font-weight: bold;
+    }
+
+    h2 + blockquote > p {
+        font-size: var(--t-font-size-h2);
+        line-height: var(--t-line-height-header);
+        font-family: var(--t-font-family-header);
+        color: var(--t-primary) !important;
+        margin: var(--t-header-margin, 0 0 20px 0);
+        hyphens: manual;
+    }
+
+    h1:has(+ blockquote) {
+
+        font-size: var(--t-font-size-h4);
+        color: var(--t-accent) !important;
+        margin-bottom: var(--t-paragraf-margin-bottom);
+    }
+
+    h1 + blockquote > p {
+        font-size: var(--t-font-size-h1);
+        color: var(--t-primary) !important;
+        line-height: var(--t-line-height-header);
+
+        margin: var(--t-header-margin, 0 0 20px 0);
+        hyphens: manual;
+    }
+}

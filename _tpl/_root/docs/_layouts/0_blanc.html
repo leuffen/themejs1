@@ -85,14 +85,18 @@ layout: null
         {{ js | replace: "</script>", "<\/script>"}}
     </script>
 
-
+    {% comment %} ======== Liquid script for alternative language links ======= {% endcomment %}
+    {%- assign alt_lang_pages = site.pages | where: "pid", page.pid | where_exp: "item", "item.lang != page.lang" -%}
+    {%- for alt_page in alt_lang_pages -%}
+    <link rel="alternate" href="{{ alt_page.url | absolute_url }}" hreflang="{{ alt_page.lang }}" />
+    {% endfor %}
 
 
 </head>
 {{ content }}
 
-<script src="assets/dist/index.js" type="module" defer async></script>
-<link rel="preload" href="assets/dist/style_custom.css" as="style"  onload="this.onload=null;this.rel='stylesheet';">
-<link rel="preload" href="assets/dist/style.css" as="style" onload="this.onload=null;this.rel='stylesheet';this.nextElementSibling.rel='preload'">
-<link rel="" href="assets/dist/style_late.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<script src="assets/dist/index.js?{{ site.time | date: '%Y%m%d%H%M%S' }}" type="module" defer async></script>
+<link rel="preload" href="assets/dist/style_custom.css?{{ site.time | date: '%Y%m%d%H%M%S' }}" as="style"  onload="this.onload=null;this.rel='stylesheet';">
+<link rel="preload" href="assets/dist/style.css?{{ site.time | date: '%Y%m%d%H%M%S' }}" as="style" onload="this.onload=null;this.rel='stylesheet';this.nextElementSibling.rel='preload'">
+<link rel="" href="assets/dist/style_late.css?{{ site.time | date: '%Y%m%d%H%M%S' }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 </html>

@@ -1,0 +1,27 @@
+
+
+.tjs-subheader {
+    --layout-background: var(--t-soft-primary);
+    --layout-padding: 25px;
+
+
+    padding: var(--t-section-padding);
+
+    &>.x-wrapper {
+        padding: 0;
+        &>.x-inner {
+            text-align: center;
+            color: var(--t-primary);
+            background: var(--layout-background);
+            padding: var(--layout-padding);
+        }
+    }
+    slot {
+        &>div.content {
+            &>*:last-child {
+                margin-bottom: 0;
+            }
+        };
+    }
+
+}

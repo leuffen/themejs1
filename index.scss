@@ -8,3 +8,9 @@
 @import "@leuffen/isl-base/style";
 @import "@leuffen/jodastyle";
 @import "@leuffen/liscom";
+
+@use "@nextrap/nte-nav";
+
+.tjs__hero-max.desktop > slot > img:first-of-type {
+    opacity: 0;
+}

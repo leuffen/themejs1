@@ -1,0 +1,15 @@
+@forward "variables";
+
+@use "@nextrap/style-base" with (
+    $primary: $primary,
+    $accent: $accent
+);
+
+@import "@nextrap/nte-nav";
+
+nte-navbar-line {
+    --background: white;
+    nte-nav {
+        --text-color: black;
+    }
+}

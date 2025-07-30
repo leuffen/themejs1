@@ -8,7 +8,8 @@
     },
     "table": {
       "type": "array",
-      "items": {
+        "description": "Table with opening hours. Provide a dedicated row for each day in the week (Mo - Fr).",
+        "items": {
         "type": "object",
         "properties": {
           "day": {
@@ -50,7 +51,8 @@
     },
     "vacation": {
       "type": "array",
-      "items": {
+        "description": "List of vacation days. Provide a dedicated row for each vacation day. Always provide a demo entry with start and enddate in the past",
+        "items": {
         "type": "object",
         "properties": {
           "from": {

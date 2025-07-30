@@ -1,0 +1,98 @@
+
+$section-border-radius:             0 !default;
+$primary: #354b68 !default;
+$soft-primary: #dbe2e7 !default;
+$accent: #9C8B58 !default;
+$soft-secondary: #F8F8F9 !default;
+
+.btn-primary {
+    color: white !important;
+}
+
+
+$background: white !default;
+$background-primary:  #F8F8F9 !default;
+$background-accent: $soft-primary !default;
+
+@import "../_defaults/headering-style-flex";
+@import "../_defaults/headering-style-hero";
+@import "../_defaults/sprechzeiten-table-highlight";
+
+:root {
+    --layout-container: container;
+    --layout-soft-background: #{$soft-secondary};
+    --t-border-radius: #{$section-border-radius};
+
+}
+html body .tjs__hero-max {
+    --t-background-footer: #fff;
+    --t-section-background: transparent;
+    --t-text-background: #fff;
+    --t-text-background-light: var(--t-background);
+    --t-text-color-accent: var(--bs-gray-900);
+    --t-text-color-primary: var(--bs-primary);
+
+    --t-header-margin: 0 0 20px 0;
+    --t-paragraf-margin: 0 0 20px 0;
+
+    --t-section-padding: 40px 0;
+    --t-section-inner-padding: 3rem;
+
+    // linear gradient from top white to black
+    --layout-desktop-overlay1-background: linear-gradient(180deg, rgba(255,255,255,1) 20%, var(--t-soft-primary) 100%);
+    --layout-desktop-overlay3-background: linear-gradient(180deg, rgba(255,255,255,1) 20%, rgba(0,0,0,0) 100%);
+    --layout-desktop-image-mask: linear-gradient(-90deg, rgba(255,255,255,1) 30%, rgba(0,0,0,0) 100%);
+}
+
+.as__accordion .content p {
+    margin-right: 1rem;
+}
+.as__accordion .content p:last-child {
+    margin-bottom: 1rem;
+}
+
+section.tjs__sec-card-2col {
+    --t-section-background: transparent;
+    --layout-container-background: var(--t-background-primary);
+    --layout-border: 0px;
+
+    .box {
+        background-color: white;
+        padding: 20px;
+        margin-bottom: 20px;
+
+        // Hide empty news section
+        &:has(liweco-news.no-news) {
+            display: none;
+        }
+    }
+
+}
+
+section.tjs__sec-testimonial-ribbon {
+    --layout-bg:  var(--t-background-primary)
+
+}
+
+section.tjs-hero-title-small {
+    --layout-margin-top: 200px;
+    --layout-margin-top-mobile: 20px;
+}
+
+section.tjs-legal-content {
+    --layout-margin-top: 200px;
+}
+
+.tjs__sec-multi-card__item,.tjs__sec-card-2col {
+    img {
+       // filter: grayscale(70%);
+        transition: all 0.8s ease-in-out;
+    }
+    &:hover {
+        img {
+           // filter: grayscale(0%);
+        }
+    }
+}
+
+

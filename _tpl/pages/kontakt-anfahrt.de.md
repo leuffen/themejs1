@@ -1,7 +1,9 @@
 ---
+_shiller_tags: base
+
 description: 'Bisher keine Beschreibung'
 icon: bi bi-phone
-image: https://cdn.leuffen.de//leu-stock/v2/75/3997-1332_gfedcba/AdobeStock_408777375.webp
+image: ~
 lang: de
 layout: article
 order: 99
@@ -24,6 +26,7 @@ type: article
 
 {% include el/address.html %}
 
+**Unsere Praxis im 1. OG ist barrierefrei über den Aufzug erreichbar ???!!!**
 
 ---
 {: layout="use: accordion()"}
@@ -39,6 +42,8 @@ Anfahrtsbeschreibung mit dem Fahrrad
 ### [i class="bi bi-car-front-fill text-primary"] Anfahrt mit dem Auto
 
 Anfahrtsbeschreibung mit dem Auto
+
+
 
 
 

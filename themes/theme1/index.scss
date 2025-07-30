@@ -1,5 +1,8 @@
 @import "../../variables";
 @import "../_mixins/default-element-format";
+@import "../_defaults/headering-style-flex";
+
+
 
 :root {
     --layout-container: container;
@@ -23,25 +26,12 @@
     background: var(--t-background);
 
 
-    h1,h2,h3,h4,h5 {
+    h1,h3,h4,h5 {
         color: var(--t-text-color);
     }
 
-    font-size: $font-size-base;
-    h1 {
-        font-size: 2.4em;
-        line-height: 1.2em;
-    }
-    h2, h3,h4,h5 {
-        line-height: 1.2em;
-
-    }
-    h3,h4,h5 {
-        font-size: 1.15em;
-    }
-
-    p {
-        line-height: 1.4em;
+    h2 {
+        color: var(--t-primary);
     }
 
 
@@ -50,46 +40,12 @@
         background: transparent;
     }
 
-    .tjs__section-text {
-        h2:has(+ blockquote) {
-            text-transform: var(--t-header-text-transform, uppercase);
-            font-weight: bold;
-            font-size: 16px;
-            color: var(--t-text-color-primary) !important;
-            margin: var(--t-paragraf-margin);
-        }
 
-        h2, blockquote > p {
-            font-size: 1.9em;
-            line-height: 1.2em;
-            color: var(--t-text-color) !important;
-            margin: var(--t-header-margin, 0 0 20px 0);
-            hyphens: manual;
-        }
-
-        .table {
-            --bs-table-color: var(--t-text-color);
-        }
-
-        *:last-child {
-            margin-bottom: 0;
+    footer {
+        p {
+            color: inherit;
         }
     }
-
-    .section {
-        blockquote p {
-            font-size: 2.3em;
-        }
-    }
-
-
-    .card-body {
-        h3 {
-            font-weight: bold;
-        }
-        color: var(--t-text-color);
-    }
-
 
 
     --t-background-footer: #fff;
@@ -155,15 +111,35 @@
         }
         .content {
             background-color: #fff;
-            p {
+            p,ul,ol {
                 margin: 20px 20px 20px 0;
             }
         }
 
     }
 
+    liweco-collapse-openhour-table {
+        table {
+            width: 100%;
+
+        }
+        width: 100%;
+        display: block;
+    }
+    .openhours {
+        tr {
+            td:first-child {
+                // Test should be on top of the cell
+                vertical-align: top;
+                font-weight: bold;
+                padding-right: 20px;
+            }
+            border-bottom: 1px solid var(--bs-gray-200);
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
 
 }
-.openhours {
-    --joda-class: "table table-borderless";
-}
+

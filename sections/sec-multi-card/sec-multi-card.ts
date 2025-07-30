@@ -22,7 +22,7 @@ Joda.registerTemplate("sec-multi-card",
     `
 
         <section class="tjs__sec-multi-card">
-            <div class="container header" style="--joda-on-empty-class: d-none;">
+            <div class="container header heading-style-default" style="--joda-on-empty-class: d-none;">
                 <slot class="tjs__section-text" data-select=":scope > .content"></slot>
             </div>
             <div class="container">

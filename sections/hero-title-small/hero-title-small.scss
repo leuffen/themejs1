@@ -1,4 +1,15 @@
-.tjs__hero-title-small {
+.tjs-hero-title-small {
+
+    --layout-margin-top: 0;
+    --layout-margin-top-mobile: 0;
+
+
+    margin-top: var(--layout-margin-top);
+
+    @media (max-width: $breakpoint-mobile) {
+        margin-top: var(--layout-margin-top-mobile);
+    }
+
     width: 100%;
     align-items: center;
     position: relative;

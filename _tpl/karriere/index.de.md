@@ -1,21 +1,21 @@
 ---
 description: ""
 image: https://cdn.leuffen.de//leu-stock/v2/148/c_gfedcba/AdobeStock_249086908.webp
-keywords: Makuladiagnostik, Lasertherapie, Intravitreale Injektionen, Sehschule, Augenarztpraxis,
-  Augenbehandlung, Augengesundheit
+keywords: 
 lang: de
 layout: article
 order: 85
 pid: karriere/index
+permalink: /karriere
 ptags:
-- nav
+- footernav
 published: true
 skipHead: false
 title: Jobs
 type: article
-_schiller_instructions: Ändere die Texte und Bilder. Füge am Ende die CTA ein. Gehe
-  auf die im Context genannten Leistungen ein.
-_schiller_template: leistungen/leistung1
+_shiller_tags: base
+_shiller_target_pid: karriere/index
+_schiller_instructions: Ändere die Texte und Bilder. Füge am Ende die CTA ein. Füge für jeden Job ein neues H3 ein.
 ---
 ## Karriere
 {: layout="use: #sec-card-2col"}
@@ -76,7 +76,21 @@ Dann freuen wir uns auf Ihre Bewerbung. Gerne per Email.
 <!-- @todo: Nachfolgend Call to Action: Immer Einfügen und Links/Text anpassen -->
 
 ## Interesse geweckt?
-{: layout="use: #cta-base"}
+{: layout="use: #cta-form"}
 
-Schicken Sie Ihre Bewerbung an: info@cardiomed-neheim.de
+> Bewirb dich jetzt
+
+---
+
+[select name="Anrede" data-options="Frau, Herr, Divers" required .mb-3]
+[input type="text"  name="Name" required .mb-3]
+[input type="email" name="E-Mail" required data-invalid-msg="Bitte geben Sie eine gültige E-Mail Adresse ein" .mb-3]
+[input type="tel" name="Telefon" required .mb-3]
+
+---
+
+[input type="text"  name="Bewerbung als" required .mb-3]
+[textarea name="Ihre Nachricht (optional)" .mb-3 style="height: 120px;"]
+[input type="checkbox" name="Datenschutz" label="Ich akzeptiere die Datenschutzbestimmungen" required .mb-3]
+[input type="submit" name="Absenden" value="Absenden" class="btn btn-primary btn-lg" .my-3]
 

@@ -1,0 +1,28 @@
+
+
+table.openhours {
+    --layout-row-padding: 5px;
+    width: 100%;
+    color: var(--t-primary);
+    &>tbody {
+        &>tr {
+            td {
+               padding-top: var(--layout-row-padding);
+               padding-bottom: var(--layout-row-padding);
+            }
+
+            border-bottom: 1px solid var(--t-soft-primary);
+            &>td:nth-child(1) {
+                font-weight: bold;
+                padding-right: 0;
+            }
+            &>td:nth-child(2) {
+                text-align: right;
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+}

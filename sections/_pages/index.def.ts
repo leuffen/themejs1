@@ -1,33 +1,31 @@
----
-description: "Entdecken Sie die Hausarztpraxis Graß in Frensdorf. Professionelle medizinische
-  Versorgung, Vorsorge, Diagnostik und IGeL-Leistungen. \U0001FA7A\U0001F469‍⚕️ Jetzt
-  Termin vereinbaren! \U0001F4DE"
-_schiller_instructions: |-
-  Aktualisiere die Leistungen nach den Gliederungspunkte. Ersetze Bilder der Leistungen durch passende Bilder. Aktualisiere alle Texte passend zum Context.
+import {defineSection, example, SectionLayoutGroup} from "../sections.def";
 
-keywords: ~
-lang: de
-layout: website
-permalink: /
-pid: pages/index
-ptags:
-- nav
-published: true
-seoScore: 8
-short_title: Home
-body_class: ~
-title: ~
-type: website
+defineSection('index', SectionLayoutGroup.Page)`
+
+This is a examples of a whole page with multiple sections. It is the index site of the website.
+
+
+`;
+
+
+example("Startsite with a mix of sections.")`
 ---
-# Willkommen in der Hausarztpraxis Graß
-{: layout="use: #hero-max; cols:7; class: box"}
+{: layout="use: #hero-max;"}
 
 ![](https://cdn.leuffen.de//leu-stock/v2/32/304-205_gfedcba/AdobeStock_138200241.webp)
 {: .background}
 
-[[i class="bi bi-calendar-plus-fill fs-3"]<br>Jetzt Termin vereinbaren](/termin){: .btn .btn-primary .text-center .btn-lg .m-1 style="width:30%;min-width: 100px;;hyphens: none;" target="_blank"}
-[[i class="bi bi-card-heading fs-3"]<br>Rezept online anfragen](/online-rezept){: .btn .btn-primary .text-center .btn-lg .m-1 style="width:30%;min-width: 100px;hyphens: none;"}
-[[i class="bi bi-box-arrow-up-right fs-3"]<br>Überweisung an Facharzt](/online-ueberweisung){: .btn .btn-primary .text-center .btn-lg .m-1 style="width:30%;min-width: 100px;hyphens: none;"}
+# Augenarzt<br>Prof. Dr. Daniel Mustermann
+{: .section-h3 layout="use: #hero-slide; align-self: self-end; justify-self: left; x-adjust: 0%; y-adjust: 0% " .sec-box .sec-slide}
+
+---
+{: .section-h4 layout="use: #button-group"}
+[[i class="bi bi-house-add-fill fs-3"]<br>Jetzt als **neuer Patient** anmelden](/online-anmeldung){: .btn .btn-primary}
+[[i class="bi bi-calendar-plus-fill fs-3"]<br>Jetzt **Termin** vereinbaren](/termin){: .btn .btn-primary .text-center}
+
+[[i class="bi bi-card-heading fs-3"]<br>**Rezept** online anfragen](/online-rezept){: .btn .btn-primary .text-center }
+[[i class="bi bi-box-arrow-up-right fs-3"]<br>**Überweisung** an Facharzt](/online-ueberweisung){: .btn .btn-primary .text-center}
+[[i class="bi bi-camera-video-fill fs-3"]<br>**Videosprechstunde**](/online-videosprechstunde){: .btn .btn-primary .text-center}
 
 
 
@@ -58,7 +56,7 @@ Außerhalb der Sprechstundenzeiten wenden sie sich bitte an den KV-Bereitschafts
 
 > Individuelle und professionelle medizinische Versorgung
 
-In unserer Praxis bieten wir individuelle und professionelle medizinische Versorgung an. Unser Angebot umfasst Vorsorgemedizin, Impfungen, Herz-Lungen Diagnostik, Sonografie, Altersmedizin, Kleine Chirurgie und Begleitung bei chronischen Erkrankungen. 
+In unserer Praxis bieten wir individuelle und professionelle medizinische Versorgung an. Unser Angebot umfasst Vorsorgemedizin, Impfungen, Herz-Lungen Diagnostik, Sonografie, Altersmedizin, Kleine Chirurgie und Begleitung bei chronischen Erkrankungen.
 
 Für weitere Informationen oder zur Terminvereinbarung kontaktieren Sie uns bitte!
 
@@ -165,3 +163,5 @@ Unser freundliches und kompetentes Team unterstützt die Ärzte mit langjährige
 [textarea name="Ihre Nachricht" required .mb-3 style="height: 120px;"]
 [input type="checkbox" name="Datenschutz" label="Ich akzeptiere die Datenschutzbestimmungen" required .mb-3]
 [input type="submit" name="Absenden" value="Absenden" class="btn btn-primary btn-lg" .my-3]
+
+`;

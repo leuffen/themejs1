@@ -1,0 +1,23 @@
+
+.heading-style-hero {
+
+
+    h1:has(+ blockquote) {
+
+        font-size: var(--t-font-size-h4);
+        color: var(--t-accent) !important;
+        margin-bottom: 0;
+        font-family: var(--t-font-family-header);
+
+    }
+
+    h1 + blockquote > p {
+        font-size: var(--t-font-size-h1);
+        color: var(--t-primary) !important;
+        line-height: var(--t-line-height-header);
+        font-family: var(--t-font-family-header);
+
+        margin: var(--t-header-margin, 0 0 20px 0);
+        hyphens: manual;
+    }
+}
