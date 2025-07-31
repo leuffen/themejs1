@@ -75,6 +75,8 @@ Erstelle einen kurzen Text zu jeder Leistung als Accordion.
 
 Folgende Bilder stehen zur Verfügung (alle generischen Bilder und Titelbilder immer mit drin stehen lassen):
 
+
+
 Titelbilder für Startseite:
 ![Generisch Titelbild für Ärzte](https://cdn.leuffen.de//leu-stock/v2/212/125-58_gfedcba/AdobeStock_437404171.webp)
 ![Generisch Titelbild für Ärzte2](https://cdn.leuffen.de//leu-stock/v2/211/167-69_gfedcba/AdobeStock_412929752.webp)
@@ -87,6 +89,10 @@ Titelbilder für Startseite:
 ![Für Zahnärzte2](https://cdn.leuffen.de//leu-stock/v2/19/83-24_gfedcba/AdobeStock_585153469.webp)
 ![Hintergrund mit rotem Herz](https://cdn.leuffen.de//leu-stock/v2/111/158-67_gfedcba/AdobeStock_336838919.webp)
 
+Platzhalter für Portrait Ärzte & Mitarbeiter (immer verwenden, wenn kein Portrait-Bild vorhanden ist):
+![Platzhalter Ärztin - kein Bild vorhanden](https://cdn.leuffen.de//leu-stock/v2/165/91-87_ba/default-person-female.webp)
+![Platzhalter Arzt - kein Bild vorhanden](https://cdn.leuffen.de//leu-stock/v2/164/107-92_ba/default-person-male.webp)
+
 Generische Bilder:
 ![Kalender mit groß Vorsorgeuntersuchung](https://cdn.leuffen.de//leu-stock/v2/70/77-51_gfedcba/AdobeStock_87378997.webp)
 ![Terminkalender mit Stift](https://cdn.leuffen.de//leu-stock/v2/58/140-89_gfedcba/calendar-2022-11-14-06-54-22-utc.webp)
@@ -94,8 +100,6 @@ Generische Bilder:
 ![Hintergrund bunte Farbexplosion](https://cdn.leuffen.de//leu-stock/v2/115/91-51_gfedcba/AdobeStock_611165970.webp)
 ![Headerbild: Hände halten Smiley](https://cdn.leuffen.de//leu-stock/v2/211/167-69_gfedcba/AdobeStock_412929752.webp)
 ![Headerbild: Hände halten Herz](https://cdn.leuffen.de//leu-stock/v2/210/c_gfedcba/AdobeStock_285562393.webp)
-![Platzhalter Ärztin - kein Bild vorhanden](https://cdn.leuffen.de//leu-stock/v2/165/91-87_ba/default-person-female.webp)
-![Platzhalter Arzt - kein Bild vorhanden](https://cdn.leuffen.de//leu-stock/v2/164/107-92_ba/default-person-male.webp)
 ![Generischer Platzhalter - kein Bild vorhanden](https://cdn.leuffen.de//leu-stock/v2/24/c_gfedcba/AdobeStock_570703983.webp)
 ![Lächelder Mann in Großaufnahme](https://cdn.leuffen.de//leu-stock/v2/195/c_gfedcba/AdobeStock_513258614.webp)
 ![Symbolbild Tabletten mit Blumen - Naturheilkunde](https://cdn.leuffen.de//leu-stock/v2/187/2-1_gfedcba/AdobeStock_718558029.webp)
