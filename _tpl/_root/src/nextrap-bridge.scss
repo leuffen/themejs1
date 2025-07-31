@@ -2,7 +2,8 @@
 
 @use "@nextrap/style-base" with (
     $primary: $primary,
-    $accent: $accent
+    $accent: $accent,
+    $enableScrollOffset: true
 );
 
 @import "@nextrap/nte-nav";

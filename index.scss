@@ -14,3 +14,6 @@
 .tjs__hero-max.desktop > slot > img:first-of-type {
     opacity: 0;
 }
+body {
+    scroll-margin-top: var(--nt-scroll-margin-top);
+}
