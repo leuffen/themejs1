@@ -8,8 +8,15 @@
 @import "@nextrap/nte-nav";
 
 nte-navbar-line {
+    &.topbar {
+        nte-nav {
+            --text-color: var(--nt-primary) !important;
+        }
+    }
     --background: white;
     nte-nav {
         --text-color: black;
     }
 }
+
+
