@@ -31,7 +31,7 @@
   ],
   "author": "",
   "dependencies": {
-    "@nextrap/base": "^1.0.0",
+    "@nextrap/style-base": "^1.0.0",
     "@nextrap/nte-nav": "^1.0.0",
     "@kasimirjs/embed": "^1.0.23",
     "@kasimirjs/kit-bootstrap": "^1.0.4",
