@@ -37,7 +37,7 @@ In unserer HNO-Praxis am Senftenberger See erhalten Sie individuelle und erstkla
 {: style="max-width: 450px;"}
 
 [Online Termin vereinbaren](/online-termin){: .btn .btn-primary .btn-lg .mt-3 .my-3}
-[Unsere Online-Services](#online-services){: .btn .btn-outline-primary .btn-lg .mt-3 .my-3}
+[Online Services](#online-services){: .btn .btn-outline-primary .btn-lg .mt-3 .my-3}
 
 
 
@@ -88,10 +88,13 @@ Wir freuen uns darauf, Sie auf Ihrem Weg zu einer umfassenden Gesundheit begleit
 
 Auch online immer für Sie da: Ohne Wartezeit, bequem und schnell:
 
-[Online Termin vereinbaren](/online-termin){: .btn .btn-primary .btn-lg .mt-3 .w-100}
+[Termin vereinbaren](/termin){: .btn .btn-primary .btn-lg .mt-3 .w-100}
+[Online Anmeldung](/online-anmeldung){: .btn .btn-outline-primary .btn-lg .mt-3 .w-100}
 [Online Rezept](/online-rezept){: .btn .btn-outline-primary .btn-lg .mt-3 .w-100}
+[Online Heilmittelverordnung](/online-heilmittelverordnung){: .btn .btn-outline-primary .btn-lg .mt-3 .w-100}
 [Online Überweisung](/online-ueberweisung){: .btn .btn-outline-primary .btn-lg .mt-3 .w-100}
 [Videosprechstunde](/online-videosprechstunde){: .btn .btn-outline-primary .btn-lg .mt-3 .w-100}
+[Informationen für Zuweiser](/online-zuweiser){: .btn .btn-outline-primary .btn-lg .mt-3 .w-100}
 
 
 

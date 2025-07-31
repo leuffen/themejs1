@@ -19,7 +19,7 @@ _shiller_tags: base
 _shiller_target_pid: service/online-anmeldung
 ---
 ## Anmeldung für Patienten
-{: layout="use: #sec-card-2col"}
+{: layout="use: #sec-card-2col; order: reverse"}
 
 > Jetzt als Patient anmelden
 
@@ -30,7 +30,7 @@ Bitte füllen Sie das untenstehende Formular mit Ihren persönlichen Daten aus. 
 
 
 ---
-{: layout="use: #e-form" .aside .mt-5}
+{: layout="use: #e-form" .aside}
 
 
 [input type="text"  name="Name*" required .mb-3]
