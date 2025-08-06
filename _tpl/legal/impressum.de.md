@@ -27,7 +27,7 @@ _shiller_instructions: |
 
 ### Verantwortliche/r i.S.d. § 18 Abs. 2 MStV
 
-Elise Musterfrau, Mathildenstr. 9-11, 45130 Essen
+Elise Musterfrau
 
 ### Umsatzsteuer-Identifikationsnummer
 
@@ -35,7 +35,8 @@ DEXXXXXXXXX
 
 ### Gesetzliche Berufsbezeichnung
 
-Fachärztin für Allgmeinmedizin
+Ärztin/Fachärztin für Allgmeinmedizin
+
 Staat, in dem die Berufsbezeichnung verliehen wurde: Bundesrepublik Deutschland
 
 
