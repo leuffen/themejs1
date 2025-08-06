@@ -27,7 +27,7 @@ Website für [Praxistyp] [unbekannt] in [unbekannt]
 
 ## Leistungen
 
-[hier einfügen]
+[hier einfügen: In Stichpunkten nur Gliederungspunkte mit Unterpunkten - keine Texte!]
 
 ## Mitarbeiter
 
@@ -72,6 +72,11 @@ Teile die Leitungen in die 3 Gliederungsbereiche ein. Ordne die Leistungen den B
 Erstelle einen kurzen Text zu jeder Leistung als Accordion.
 
 [Alle weiteren verfügbaren Informationen aus dem Context hier einbauen]
+
+
+## Bilder
+
+[Alle Bilder mit URL hier einfügen - immer alle Bilder und Titelbilder verwenden, die im Context angegeben sind.]
 
 Folgende Bilder stehen zur Verfügung (alle generischen Bilder und Titelbilder immer mit drin stehen lassen):
 

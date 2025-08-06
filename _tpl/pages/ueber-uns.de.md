@@ -3,7 +3,7 @@ _shiller_tags: base
 description: 'Ihr Zahnarzt in Hannover-Südstadt:  Dr. M.C. Müller . Kontaktieren Sie
   uns für Ihren Termin!'
 _schiller_instructions: |-
-  Erstelle eine H2 Section für jeden Arzt. Aktualisiere die Texte.
+  Erstelle eine H2 Section für jeden Arzt. Aktualisiere die Texte. Erstelle eine h3 section unter Unsere Mitarbeiter für jeden Mitarbeiter. Aktualisiere die Texte. 
 
 icon: bi bi-phone
 image: ~
@@ -49,6 +49,34 @@ Als Facharzt für Augenheilkunde führe ich eine spezialisierte Praxis in Wiesba
 |  2009             |  Promotion : ST-Elevation Myocardial Infarktion - University of Aleppo |
 |  2003-2009        | Medizinstudium - University of Aleppo     |
 {: .table}
+
+
+
+
+
+
+## Unsere Mitarbeiter
+{: layout="use: #sec-multi-card; cols:3; aspect-ratio: 1/1"}
+
+### Vorname Name1
+
+![Vorname Name1](https://cdn.leuffen.de//leu-stock/v2/165/91-87_ba/default-person-female.webp)
+
+Medizinische Fachangestellte
+
+### Vorname Name 2
+
+![Vorname Name2](https://cdn.leuffen.de//leu-stock/v2/165/91-87_ba/default-person-female.webp)
+
+Medizinische Fachangestellte
+
+### Vorname Name 3 usw.
+
+![Vorname Name 3](https://cdn.leuffen.de//leu-stock/v2/164/107-92_ba/default-person-male.webp)
+
+Medizinische Fachangestellte
+
+
 
 ## Kontakt
 {: layout="use: #cta-base"}
