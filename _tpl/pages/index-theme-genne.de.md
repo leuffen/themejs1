@@ -105,6 +105,18 @@ Auch online immer für Sie da: Ohne Wartezeit, bequem und schnell:
 {% include el/openhours.html %}
 
 
+## Jobs & Bewerbung
+{: layout="use: #sec-card-2col; cols:8"}
+
+> Werden Sie Teil unseres Teams
+
+![](https://cdn.leuffen.de//leu-stock/v2/147/c_gfedcba/AdobeStock_131548362.webp)
+
+Wir suchen neue Mitarbeiter für unser Team. Werden Sie Teil unseres Teams und unterstützen Sie uns bei der medizinischen Versorgung unserer Patienten. Wir freuen uns auf Ihre Bewerbung.
+
+[Offene Stellen & Bewerbung](/karriere){: .btn .btn-primary .btn-lg .mb-3}
+
+
 ---
 {: layout="use: #subheader" .section-h2}
 
