@@ -1,6 +1,7 @@
 ---
 _shiller_tags: base
-
+_schiller_instructions: Lasse liquid-platzhalter und includes so stehen. Die Adresse
+  wird damit eingeblendet!
 description: 'Bisher keine Beschreibung'
 icon: bi bi-phone
 image: ~
