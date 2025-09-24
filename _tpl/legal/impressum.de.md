@@ -68,8 +68,3 @@ Straße 1-2
 
 Räumlicher Geltungsbereich der Versicherung: Bundesrepublik Deutschland
 
-### Streitschlichtung
-
-Plattform der EU-Kommission zur Online-Streitbeilegung: https://ec.europa.eu/odr
-
-Wir sind zu einer Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle weder verpflichtet noch bereit. 
