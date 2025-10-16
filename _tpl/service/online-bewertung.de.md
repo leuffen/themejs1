@@ -12,7 +12,7 @@ ptags:
 published: true
 skipHead: false
 body_class: ~
-title: Online Bewerten
+title: Online bewerten
 type: article
 _schiller_template: service/online-bewertung
 _schiller_instructions: Lege eine Seite an mit einem Anonymen formular, um Verbesserungsvorschläge
@@ -22,7 +22,7 @@ _schiller_instructions: Lege eine Seite an mit einem Anonymen formular, um Verbe
 availLangs:
 - de
 ---
-## Online Bewerten
+## Online bewerten
 {: layout="use: #sec-card-2col"}
 
 > Ihre Meinung zählt!
