@@ -1,7 +1,7 @@
 {
   "name": "@leuffen/themejs1",
 
-  "version": "9.0.12",
+  "version": "9.0.13",
   "description": "",
   "license": "proprietary",
   "main": "./index.js",
