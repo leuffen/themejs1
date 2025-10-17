@@ -39,7 +39,7 @@
     "@leuffen/jodastyle": "^3.1.4",
     "@leuffen/liscom": "^2.0.10",
     "@leuffen/liscom-loader": "^1.1.10",
-    "@leuffen/liweco-base": "^3.0.0",
+    "@leuffen/liweco-base": "^3.0.1",
     "@micx/lib-js": "^1.0.24",
     "@types/node": "^20.12.12",
     "bootstrap": "^5.3.0",
