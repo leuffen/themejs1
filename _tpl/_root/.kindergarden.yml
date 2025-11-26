@@ -15,7 +15,7 @@ environments:
                     This file contains all information about the project. Take names, profession etc. from this file.
             -   name: "editor instructions"
                 include:
-                    - "./node_modules/@leuffen/themejs1/edit_instructions.txt"
+                    - "./node_modules/@leuffen/themejs1/edit_instructions.md"
                 instructions: |
                     This file contains information about how to edit markdown or yaml. files. Befolge die Anweisungen
                     in dieser Datei.
