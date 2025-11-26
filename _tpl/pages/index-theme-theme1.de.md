@@ -4,7 +4,7 @@ description: "Entdecken Sie die Hausarztpraxis Graß in Frensdorf. Professionell
   Termin vereinbaren! \U0001F4DE"
 _schiller_instructions: |-
   Aktualisiere die Leistungen nach den Gliederungspunkte. Ersetze Bilder der Leistungen durch passende Bilder. Aktualisiere alle Texte passend zum Context. Ersetze die Namen durch die echten Namen aus dem Context.
-  Übernimm wörtliche Textblöcke aus dem Context, wenn diese passen. Orientiere dich im Schreibstil am Context.
+  Übernimm wörtliche Textblöcke aus dem Context, wenn diese passen. Orientiere dich im Schreibstil am Context. Ändere die Buttons in der ersten Section (Neuer Patient - Videosprechstunde) nicht!
 _shiller_tags: base
 _shiller_target_pid: pages/index
 keywords: ~
