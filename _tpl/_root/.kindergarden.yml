@@ -4,6 +4,7 @@ environments:
     coder:
         files:
             -   name: "project files"
+                enabeld: true
                 include:
                     - "./docs/**/*.(md|yml|yaml)"
                 instructions: |
