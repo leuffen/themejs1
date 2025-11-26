@@ -43,3 +43,8 @@ Text 2
 
 
 Achtung! zwischen HR oder H-Tag und Anweisungen in {: layout...} darf keine Leerzeile existieren!
+
+
+## Bearbeitungshinweise aus Quelldateien
+
+Beachte und befolge die `_shiller_instructions` im header der Dateien.
