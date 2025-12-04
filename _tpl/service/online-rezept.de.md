@@ -1,7 +1,7 @@
 ---
 description: ""
 icon: bi bi-phone
-image: https://cdn.leuffen.de//leu-stock/v2/94/c_gfedcba/AdobeStock_102663778.webp
+image: ~
 lang: de
 layout: article
 order: 70
@@ -28,7 +28,7 @@ _shiller_instructions: ""
 
 
 Mit unserem Online-Rezeptformular können Sie bequem von zu Hause aus ein neues Rezept für Ihre Dauermedikation oder Folgerezepte anfordern.
-**Bestellungen vor 10:00 Uhr können am Folgetag abgeholt werden.**
+**Bestellungen vor 17:00 Uhr können am Folgetag abgeholt oder in der Apotheke eingelöst werden.**
 
 **Bitte beachten Sie: Vor dem ersten E-Rezept im Quartal muss Ihre Krankenkassenkarte eingelesen werden.**
 
