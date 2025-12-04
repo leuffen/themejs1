@@ -1,7 +1,7 @@
 ---
 description: ""
 icon: bi bi-phone
-image: https://cdn.leuffen.de//leu-stock/v2/69/131-86_gfedcba/AdobeStock_319898261.webp
+image: ~
 lang: de
 layout: article
 order: 71
@@ -25,7 +25,10 @@ _shiller_target_pid: service/online-ueberweisung
 ![](https://cdn.leuffen.de//leu-stock/v2/96/c_gfedcba/AdobeStock_249986710.webp)
 
 Ganz einfach online eine Überweisung zu einem Facharzt bestellen! Bitte beachten Sie, dass dies nur für wiederkehrende Termine wie beispielsweise beim Diabetologen oder Kardiologen gilt und vorher mit einem Arzt abgeklärt werden muss.  
-**Bestellungen vor 10:00 Uhr können am Folgetag abgeholt werden.**
+**Bestellungen vor 17:00 Uhr können am Folgetag abgeholt werden.**
+
+**Bitte beachten Sie: Vor der ersten Überweisung im Quartal muss Ihre Krankenkassenkarte eingelesen werden.**
+
 
 
 
