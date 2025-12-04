@@ -1,7 +1,7 @@
 {
   "name": "@leuffen/themejs1",
 
-  "version": "9.0.16",
+  "version": "10.0.1",
   "description": "",
   "license": "proprietary",
   "main": "./index.js",
@@ -40,7 +40,7 @@
     "@leuffen/liscom": "^2.0.10",
     "@leuffen/liscom-loader": "^1.1.10",
     "@leuffen/liweco-base": "^3.0.1",
-    "@micx/lib-js": "^1.0.24",
+    "@micx/lib-js": "^2.0.2",
     "@types/node": "^20.12.12",
     "bootstrap": "^5.3.0",
     "css-loader": "^7.1.2",
