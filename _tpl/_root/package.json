@@ -9,7 +9,7 @@
     ],
     "author": "",
     "dependencies": {
-        "@leuffen/themejs1": "^10.0.0"
+        "@leuffen/themejs1": "^11.0.0"
     },
     "devDependencies": {
     }
