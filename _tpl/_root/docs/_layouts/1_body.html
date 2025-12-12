@@ -4,12 +4,17 @@ layout: 0_blanc
 
 <body class="theme1 tjs__root-format {{page.body_class}}">
 <micx-cdn-image-loader default-size-adjust=":1.5;1200:1">
-<joda-content style="overflow: hidden;">
-    {{ content }}
+    <tj-responsive>
 
-    <!-- included from fragments.html -->
 
-</joda-content>
+        <joda-content style="overflow: hidden;">
+
+            {{ content }}
+
+            <!-- included from fragments.html -->
+
+        </joda-content>
+    </tj-responsive>
 </micx-cdn-image-loader>
 </body>
 
