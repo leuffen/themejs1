@@ -43,4 +43,5 @@ Bitte nutzen Sie unser Terminformular für Ihre Anfrage:
 ## Erfahren Sie mehr über uns
 {: layout="use: #cta-base"}
 
-[Unsere Untersuchungen](/leistungen/untersuchungen.de.html) [Über Uns](/ueber-uns) [Kontakt](/kontakt)
+[Home](/)
+[Kontakt & Anfahrt](/kontakt)

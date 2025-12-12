@@ -56,4 +56,5 @@ Bitte nutzen Sie das untenstehende Formular, um uns Ihre Anregungen mitzuteilen.
 ## Erfahren Sie mehr über uns
 {: layout="use: #cta-base"}
 
-[Unsere Untersuchungen](/leistungen/untersuchungen.de.html) [Über Uns](/ueber-uns) [Kontakt](/kontakt)
+[Home](/)
+[Kontakt & Anfahrt](/kontakt)

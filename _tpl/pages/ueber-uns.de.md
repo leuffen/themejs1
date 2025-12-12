@@ -83,6 +83,6 @@ Medizinische Fachangestellte
 
 Informationen zu Behandlungen, Sprechstundenzeiten und Kontaktdaten finden Sie auf den nachfolgenden Seiten. 
 
-[Unsere Diagnostik](/leistungen/diagnostik.de.html)
-[Unsere Therapien](/leistungen/therapien.de.html)
-[Kontakt](/kontakt)
+[Home](/)
+[Leistungen](/leistungen)
+[Kontakt & Anfahrt](/kontakt)

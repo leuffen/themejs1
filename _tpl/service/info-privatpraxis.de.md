@@ -117,4 +117,5 @@ Wir beginnen mit einem ausführlichen Erstgespräch (nach Aufwand, 75-170€) un
 ## Erfahren Sie mehr über uns
 {: layout="use: #cta-base"}
 
-[Unsere Untersuchungen](/leistungen/untersuchungen.de.html) [Über Uns](/ueber-uns) [Kontakt](/kontakt)
+[Home](/)
+[Kontakt & Anfahrt](/kontakt)

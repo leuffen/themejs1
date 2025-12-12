@@ -32,5 +32,5 @@ type: article
 
 Informationen zu unseren Leistungen, Sprechstundenzeiten und Kontaktdaten finden Sie auf den nachfolgenden Seiten. 
 
-[Unsere Leistungen](/leistungen)
-[Kontakt](/kontakt)
+[Home](/)
+[Kontakt & Anfahrt](/kontakt)

@@ -59,4 +59,5 @@ Wir werden uns umgehend mit Ihnen oder Ihrem Patienten in Verbindung setzen, um 
 ## Erfahren Sie mehr über uns
 {: layout="use: #cta-base"}
 
-[Unsere Leistungen](/leistungen) [Über uns](/ueber-uns) [Kontakt & Anfahrt](/kontakt)
+[Home](/)
+[Kontakt & Anfahrt](/kontakt)

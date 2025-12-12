@@ -54,4 +54,5 @@ So funktioniert's:
 ## Erfahren Sie mehr über uns
 {: layout="use: #cta-base"}
 
-[Home](/) [Unsere Untersuchungen](/leistungen/untersuchungen.de.html) [Über Uns](/ueber-uns) [Kontakt](/kontakt)
+[Home](/)
+[Kontakt & Anfahrt](/kontakt)

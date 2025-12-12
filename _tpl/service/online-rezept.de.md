@@ -50,4 +50,5 @@ Mit unserem Online-Rezeptformular können Sie bequem von zu Hause aus ein neues 
 ## Fragen? Wir sind für Sie da!
 {: layout="use: #cta-base"}
 
-[Kontakt](/kontakt)
+[Home](/)
+[Kontakt & Anfahrt](/kontakt)

@@ -51,4 +51,5 @@ Ganz einfach online eine Heilmittelverordnung online anfragen! Dies betrifft Hei
 ## Fragen? Wir sind für Sie da!
 {: layout="use: #cta-base"}
 
-[Kontakt](/kontakt)
+[Home](/)
+[Kontakt & Anfahrt](/kontakt)

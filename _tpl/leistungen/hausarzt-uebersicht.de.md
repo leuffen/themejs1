@@ -202,5 +202,6 @@ Langzeit-Blutdruckmessungen können helfen, Bluthochdruck zu diagnostizieren und
 
 Informationen zu unseren Leistungen, Sprechstundenzeiten und Kontaktdaten finden Sie auf den nachfolgenden Seiten.
 
-[Kontakt & Anfahrt](/kontakt)
 [Home](/)
+[Über uns](/ueber-uns)
+[Kontakt & Anfahrt](/kontakt)

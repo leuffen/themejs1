@@ -50,4 +50,5 @@ Ganz einfach online eine Überweisung zu einem Facharzt bestellen! Bitte beachte
 ## Fragen? Wir sind für Sie da!
 {: layout="use: #cta-base"}
 
-[Kontakt](/kontakt)
+[Home](/)
+[Kontakt & Anfahrt](/kontakt)
