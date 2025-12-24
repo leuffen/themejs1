@@ -2,35 +2,78 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./theme1.scss ***!
   \**********************************************************************************************************************************/
 /* always add !default to variables */
-.tjs__navbar-blox {
-  --height: 88px !important;
+:root {
+  --t-soft-primary: white;
+  --t-accent: #f19045;
+  --t-primary: #a3979b;
+  --t-background: rgba(217, 217, 217, 0.24);
+  --t-background-primary: white;
+  --t-background-accent: #ddd;
+  --t-font-family-base: sans-serif;
+  --t-font-family-header: sans-serif;
+  --t-font-color-base: #444;
+  --t-font-size-root: 16px;
+  --t-font-size-base: 0.9rem;
+  --t-font-size-header: 2.8rem;
+  --t-font-size-h1: var(--t-font-size-header);
+  --t-font-size-h2: calc(var(--t-font-size-header) * 0.7);
+  --t-font-size-h3: calc(var(--t-font-size-header) * 0.6);
+  --t-font-size-h4: calc(var(--t-font-size-header) * 0.5);
+  --t-font-size-h5: calc(var(--t-font-size-header) * 0.4);
+  --t-paragraf-margin-bottom: 1.5rem;
+  --t-line-height-base: 1.5;
+  --t-line-height-header: 1.2;
+  --t-section-padding: 40px 0;
+  --t-section-inner-padding: 3rem;
+  --t-section-border-color: #ddd;
+  --t-section-border-radius: 0;
+  --t-border-color: #999;
+}
+
+.heading-style-flex h2:has(+ blockquote) {
+  text-transform: var(--t-header-text-transform, uppercase);
+  font-size: var(--t-font-size-base);
+  font-family: var(--t-font-family-base);
+  color: var(--t-accent) !important;
+  margin-bottom: var(--t-paragraf-margin-bottom);
+  font-weight: bold;
+}
+.heading-style-flex h2 + blockquote > p {
+  font-size: var(--t-font-size-h2);
+  line-height: var(--t-line-height-header);
+  font-family: var(--t-font-family-header);
+  color: var(--t-primary) !important;
+  margin: var(--t-header-margin, 0 0 20px 0);
+  hyphens: manual;
+}
+.heading-style-flex h1:has(+ blockquote) {
+  font-size: var(--t-font-size-h4);
+  color: var(--t-accent) !important;
+  margin-bottom: var(--t-paragraf-margin-bottom);
+}
+.heading-style-flex h1 + blockquote > p {
+  font-size: var(--t-font-size-h1);
+  color: var(--t-primary) !important;
+  line-height: var(--t-line-height-header);
+  margin: var(--t-header-margin, 0 0 20px 0);
+  hyphens: manual;
 }
 
 :root {
   --layout-container: container;
+  --t-border-radius: 0;
+  --t-background-footer: rgba(217, 217, 217, 0.24);
+  --t-text-footer: #707070;
+  --t-footer-header-color: #707070;
+  --t-section-border-color: #ddd;
+  --t-background-dark: #3b3b3b;
+  --t-text-dark: #fff;
+  --t-header-dark: #fff;
+  --t-link-dark: #fff;
 }
 
-.theme1 {
-  color: var(--t-text-color);
-  background: var(--t-background);
-  font-size: 1.1rem;
-  --t-background: #f5f5f5;
-  --t-background-footer: #fff;
-  --t-section-background: transparent;
-  --t-section-background-accent: #e7e7eb;
-  --t-section-background-primary: #b7eaf9;
-  --t-text-background: #fff;
-  --t-text-color: #707070;
-  --t-text-background-light: var(--t-background);
-  --t-text-color-accent: var(--bs-gray-900);
-  --t-text-color-primary: var(--bs-primary);
-  --t-header-margin: 0 0 20px 0;
-  --t-paragraf-margin: 0 0 20px 0;
-  --t-section-padding: 40px 0;
-  --t-section-inner-padding: 3rem;
-}
 .theme1 section h2 {
-  text-transform: uppercase;
+  text-transform: var(--t-header-text-transform, none);
   margin: var(--t-paragraf-margin);
 }
 .theme1 ul > li {
@@ -77,50 +120,36 @@
 .theme1 section:last-of-type > * {
   padding-bottom: 0;
 }
-.theme1 h1, .theme1 h2, .theme1 h3, .theme1 h4, .theme1 h5 {
+.theme1 {
+  --t-background: rgba(217, 217, 217, 0.24);
+  color: var(--t-text-color);
+  background: var(--t-background);
+}
+.theme1 h1, .theme1 h3, .theme1 h4, .theme1 h5 {
   color: var(--t-text-color);
 }
-.theme1 h1 {
-  font-size: 2.4em;
-  line-height: 1.2em;
+.theme1 h2 {
+  color: var(--t-primary);
 }
-.theme1 h2, .theme1 h3, .theme1 h4, .theme1 h5 {
-  line-height: 1.2em;
+.theme1 table > tbody > tr > td {
+  background: transparent;
 }
-.theme1 h3, .theme1 h4, .theme1 h5 {
-  font-size: 1.15em;
+.theme1 footer p {
+  color: inherit;
 }
-.theme1 p {
-  line-height: 1.4em;
-}
-.theme1 .tjs__section-text h2 {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 16px;
-  color: var(--t-text-color-primary) !important;
-  margin: var(--t-paragraf-margin);
-}
-.theme1 .tjs__section-text blockquote > p {
-  font-size: 2.1em;
-  line-height: 1.2em;
-  color: var(--t-text-color) !important;
-  margin: var(--t-header-margin, 0 0 20px 0);
-  hyphens: manual;
-}
-.theme1 .tjs__section-text .table {
-  --bs-table-color: var(--t-text-color);
-}
-.theme1 .tjs__section-text *:last-child {
-  margin-bottom: 0;
-}
-.theme1 .section blockquote p {
-  font-size: 2.3em;
-}
-.theme1 .card-body {
-  color: var(--t-text-color);
-}
-.theme1 .card-body h3 {
-  font-weight: bold;
+.theme1 {
+  --t-background-footer: #fff;
+  --t-section-background: transparent;
+  --t-section-background-primary: white;
+  --t-text-background: #fff;
+  --t-text-color: #707070;
+  --t-text-background-light: var(--t-background);
+  --t-text-color-accent: var(--bs-gray-900);
+  --t-text-color-primary: var(--bs-primary);
+  --t-header-margin: 0 0 20px 0;
+  --t-paragraf-margin: 0 0 20px 0;
+  --t-section-padding: 40px 0;
+  --t-section-inner-padding: 3rem;
 }
 .theme1 .tjs__sec-legal-content {
   padding-top: 100px;
@@ -162,12 +191,26 @@
 .theme1 .as__accordion .content {
   background-color: #fff;
 }
-.theme1 .as__accordion .content p {
+.theme1 .as__accordion .content p, .theme1 .as__accordion .content ul, .theme1 .as__accordion .content ol {
   margin: 20px 20px 20px 0;
 }
-
-.openhours {
-  --joda-class: "table table-borderless";
+.theme1 liweco-collapse-openhour-table table {
+  width: 100%;
+}
+.theme1 liweco-collapse-openhour-table {
+  width: 100%;
+  display: block;
+}
+.theme1 .openhours tr td:first-child {
+  vertical-align: top;
+  font-weight: bold;
+  padding-right: 20px;
+}
+.theme1 .openhours tr {
+  border-bottom: 1px solid var(--bs-gray-200);
+}
+.theme1 .openhours tr:last-child {
+  border-bottom: none;
 }
 /*!***************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src.dev/dev.scss ***!

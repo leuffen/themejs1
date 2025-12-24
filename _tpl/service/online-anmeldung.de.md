@@ -24,7 +24,7 @@ _shiller_target_pid: service/online-anmeldung
 > Jetzt als Patient anmelden
 
 
-Wir freuen uns sehr über Ihr Interesse an unserer Praxis. Da wir noch dabei sind, die letzten Vorbereitungen für unsere Eröffnung zu treffen, bieten wir Ihnen die Möglichkeit, sich vorab zu registrieren. Sobald unsere Praxis eröffnet ist, werden wir uns umgehend bei Ihnen melden, um einen Termin zu vereinbaren.
+Wir freuen uns sehr über Ihr Interesse an unserer Praxis.
 
 Bitte füllen Sie das untenstehende Formular mit Ihren persönlichen Daten aus. Ihre Daten werden selbstverständlich vertraulich behandelt und nur für interne Zwecke verwendet.
 

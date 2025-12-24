@@ -168,6 +168,16 @@ abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen �
 Aufbewahrungsfristen – bleiben unberührt.
 
 
+### Content Delivery Network (CDN)
+
+Diese Website nutzt ein Content Delivery Network (CDN) zur optimierten Auslieferung von Bildern und Downloads. Der CDN-Dienst wird
+unter der Domain cdn.leuffen.de betrieben und auf der Infrastruktur von Google Cloud gehostet. Bei der Nutzung des CDNs
+werden technisch notwendige Daten (insbesondere IP-Adresse, Datum und Uhrzeit des Zugriffs, angeforderte Ressource sowie
+Browserinformationen) verarbeitet, um eine stabile, sichere und performante Bereitstellung der Website zu gewährleisten.
+
+Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer sicheren und
+effizienten Bereitstellung unseres Onlineangebots). Mit Google besteht ein Auftragsverarbeitungsvertrag gemäß Art. 28 DSGVO.
+
 ## Analyse Tools und Plugins
 
 {% if site.data.general.tools.recaptcha %}
@@ -191,6 +201,7 @@ Weitere Informationen zu Google reCAPTCHA sowie die Datenschutzerklärung von Go
 <a href="https://www.google.com/intl/de/policies/privacy/">https://www.google.com/intl/de/policies/privacy/</a> und
 <a href="https://www.google.com/recaptcha/intro/android.html">https://www.google.com/recaptcha/intro/android.html</a>.
 {% endif %}
+
 
 
 {% if site.data.general.tools.googlemaps %}
