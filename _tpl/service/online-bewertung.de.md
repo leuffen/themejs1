@@ -46,6 +46,7 @@ Bitte nutzen Sie das untenstehende Formular, um uns Ihre Anregungen mitzuteilen.
 ---
 {: layout="use: #e-form"  .mt-5}
 
+[input type="hidden" name="type" value="Bewertung" .d-none]
 [textarea  name="Ihr Verbesserungsvorschlag*" placeholder="Ihr Verbesserungsvorschlag" required .mb-3 style="height: 120px;"]
 [input type="submit" value="Absenden" .btn .btn-primary .btn-lg .mt-3]
 

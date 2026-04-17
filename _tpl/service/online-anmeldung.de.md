@@ -32,7 +32,7 @@ Bitte füllen Sie das untenstehende Formular mit Ihren persönlichen Daten aus. 
 ---
 {: layout="use: #e-form" .aside}
 
-
+[input type="hidden" name="type" value="Anmeldung" .d-none]
 [input type="text"  name="Name*" required .mb-3]
 [input type="date" name="Geburtsdatum*" required .mb-3]
 [input type="email" name="E-Mail*" required .mb-3]

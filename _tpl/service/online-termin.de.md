@@ -29,6 +29,7 @@ Bitte nutzen Sie unser Terminformular für Ihre Anfrage:
 ---
 {: layout="use: #e-form" .mt-5}
 
+[input type="hidden" name="type" value="Termin" .d-none]
 [input type="text"  name="Name" required .mb-3]
 [input type="email" name="E-Mail" required .mb-3]
 [input type="tel" name="Telefon" required .mb-3]

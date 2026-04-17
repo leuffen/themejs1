@@ -37,6 +37,7 @@ Mit unserem Online-Rezeptformular können Sie bequem von zu Hause aus ein neues 
 ---
 {: layout="use: #e-form" .mt-5}
 
+[input type="hidden" name="type" value="Rezept" .d-none]
 [input type="text"  name="Name" required .mb-3]
 [input type="text" name="Geburtsdatum" required .mb-3]
 [input type="email" name="E-Mail" required .mb-3]

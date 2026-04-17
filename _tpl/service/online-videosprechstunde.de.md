@@ -39,7 +39,7 @@ So funktioniert's:
 ---
 {: layout="use: #e-form" .section-h4  .mt-5}
 
-
+[input type="hidden" name="type" value="Videosprechstunde" .d-none]
 [input type="hidden"  name="Terminart" value="Videosprechstunde" required .mb-3]
 [input type="text"  name="Name" required .mb-3]
 [input type="date" name="Geburtsdatum" required .mb-3]

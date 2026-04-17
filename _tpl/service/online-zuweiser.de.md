@@ -34,6 +34,7 @@ Wir werden uns umgehend mit Ihnen oder Ihrem Patienten in Verbindung setzen, um 
 ---
 {: layout="use: #e-form" .mt-5}
 
+[input type="hidden" name="type" value="Zuweiseranfrage" .d-none]
 [input type="text"  name="Ihr Name" required .mb-3]
 [input type="email" name="Ihre E-Mail" required .mb-5]
 

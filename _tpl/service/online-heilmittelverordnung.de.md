@@ -37,8 +37,9 @@ Ganz einfach online eine Heilmittelverordnung online anfragen! Dies betrifft Hei
 ---
 {: layout="use: #e-form" .mt-5}
 
+[input type="hidden" name="type" value="Heilmittelverordnung" .d-none]
 [input type="text"  name="Name" required .mb-3]
-[input type="date" name="Geburtsdatum" required .mb-3]
+[input type="text" name="Geburtsdatum" required .mb-3]
 [input type="email" name="E-Mail" required .mb-3]
 [input type="tel" name="Telefon" required .mb-3]
 [input type="text" name="Verordnetes Heilmittel" required .mb-3]

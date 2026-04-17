@@ -35,6 +35,7 @@ Ganz einfach online eine Überweisung zu einem Facharzt bestellen! Bitte beachte
 ---
 {: layout="use: #e-form" .mt-5}
 
+[input type="hidden" name="type" value="Überweisung" .d-none]
 [input type="text"  name="Name" required .mb-3]
 [input type="text" name="Geburtsdatum" required .mb-3]
 [input type="email" name="E-Mail" required .mb-3]
