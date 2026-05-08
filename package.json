@@ -26,6 +26,10 @@
     "*.js",
     "*.md"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leuffen/themejs2"
+  },
   "workspaces": [
     "workspaces/*"
   ],

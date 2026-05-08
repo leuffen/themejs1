@@ -3,9 +3,17 @@ on:
   push:
   release:
     types: [created]
+
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-22.04
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@v3
 
@@ -19,7 +27,6 @@ jobs:
       - run: npm update
       - run: npm ci
       - run: npm run build
-      - run: npm publish --access public --tag latest
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm publish --access public --tag latest --provenance
+
 
